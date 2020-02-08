@@ -12,11 +12,11 @@
     <title>Blaze Barber Landing Page</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Custom fonts for this template -->
     <link
-      href="vendor/fontawesome-free/css/all.min.css"
+      href="/../fontawesome-free/css/all.min.css"
       rel="stylesheet"
       type="text/css"
     />
@@ -42,7 +42,7 @@
     />
 
     <!-- Custom styles for this template -->
-    <link href="css/agency.min.css" rel="stylesheet" />
+    <link href="/../css/agency.css" rel="stylesheet" />
   </head>
 
   <body id="page-top">
@@ -89,12 +89,12 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/home') }}" >Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('login') }}"class="btn btn-primary">Login</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a href="{{ route('register') }}"class="btn btn-primary">Register</a>
                         @endif
                     @endauth
                 </div>
@@ -110,7 +110,7 @@
     <!-- Header -->
     <header class="masthead">
       <div class="container">
-        <div class="intro-text">PRAGMA table_info(table_name)
+        <div class="intro-text">
 
           <div class="intro-lead-in">Welcome to Big Boy Blaze!</div>
           <div class="intro-heading text-uppercase">It's Nice To Meet You</div>
@@ -1033,19 +1033,19 @@
     </div>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/../jquery/jquery.min.js"></script>
+    <script src="/../bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="/../jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Contact form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
+    <script src="/../js/jqBootstrapValidation.js"></script>
+    <script src="/../js/contact_me.js"></script>
 
     
     <!-- Custom scripts for this template -->
-    <script src="js/agency.min.js"></script>
+    <script src="/../js/agency.min.js"></script>
 
   </body>
 </html>
