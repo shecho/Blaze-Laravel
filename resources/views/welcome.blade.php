@@ -139,7 +139,7 @@
         <div class="row text-center">
           <div class="col-md-4">
             <span class="fa-stack fa-4x">
-              <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                  <i class="fas fa-circle fa-stack-2x text-secundary"></i>
               <i class="fas fa-cut fa-stack-1x fa-inverse"></i>
             </span>
             <h4 class="service-heading">HairCuts</h4>
@@ -151,7 +151,7 @@
           </div>
           <div class="col-md-4">
             <span class="fa-stack fa-4x">
-              <i class="fas fa-circle fa-stack-2x text-primary"></i>
+              <i class="fas fa-circle fa-stack-2x text-secundary"></i>
               <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
             </span>
             <h4 class="service-heading">Beuty and Care Products</h4>
@@ -163,7 +163,7 @@
           </div>
           <div class="col-md-4">
             <span class="fa-stack fa-4x">
-              <i class="fas fa-circle fa-stack-2x text-primary"></i>
+              <i class="fas fa-circle fa-stack-2x text-secundary"></i>
               <i class="fas fa-gamepad fa-stack-1x fa-inverse"></i>
             </span>
             <h4 class="service-heading">And more</h4>
