@@ -20,10 +20,12 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
+Route::post('/createNewDate','DateController@createDate')->name('createNewDate');
+
 /* crear el profile
  */
 
-/* crear barber */
+
 
 /* crear date */
 

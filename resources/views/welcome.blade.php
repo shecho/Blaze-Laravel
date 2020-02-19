@@ -9,6 +9,9 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+
     <title>Blaze Barber Landing Page</title>
 
     <!-- Bootstrap core CSS -->
@@ -115,7 +118,7 @@
           <div class="intro-lead-in">Welcome to Big Boy Blaze!</div>
           <div class="intro-heading text-uppercase">It's Nice To Meet You</div>
 
-          <button type="button" class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" data-toggle="modal" data-target="#create-date" data-whatever="@mdo">Create Date</button>
+          <button  type="button" class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" data-toggle="modal" data-target="#create-date" data-whatever="@mdo">Create Date</button>
 
         
 
@@ -132,6 +135,8 @@
                 </div>
                 <div class="modal-body">
                   <form>
+                  @csrf
+                    <input type="hidden" value="{{ csrf_token() }}" id="token"/>
                     <div class="form-group">
                       {{-- <label for="recipient-name" class="col-form-label text-dark" place>Full name</label> --}}
                       <input placeholder="Full name" type="text" class="form-control" id="recipient-name">
@@ -141,19 +146,19 @@
                       <input placeholder="Phone" type="text"  class="form-control" id="message-text">
 
                       {{-- <label for="message-text" class="col-form-label text-dark">Day</label> --}}
-                      <input placeholder="Day" type="text"  class="form-control" id="message-text">
+                      <input placeholder="Day" type="text"  class="form-control" id="date-day">
 
                       {{-- <label for="message-text" class="col-form-label text-dark">Time</label> --}}
-                      <input placeholder="Time" type="text"  class="form-control" id="message-text">
+                      <input placeholder="Time" type="text"  class="form-control" id="date-time">
                       {{-- <label for="message-text" class="col-form-label text-dark">Barber</label> --}}
-                      <input placeholder="Barber" type="text"  class="form-control" id="message-text">
+                      {{-- <input placeholder="Barber" type="text"  class="form-control" id="message-text"> --}}
 
                     </div>
                   </form>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                  <button type="button" class="btn btn-primary"> Confirm</button>
+                  <button id="confirm-date" type="button" class="btn btn-primary"> Confirm</button>
                 </div>
               </div>
             </div>
@@ -1095,6 +1100,7 @@
     
     <!-- Custom scripts for this template -->
     <script src="/../js/agency.min.js"></script>
+    <script src="/../js/date.js"></script>
 
   </body>
 </html>
