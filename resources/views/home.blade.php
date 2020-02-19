@@ -1,3 +1,5 @@
+{{-- confimrar con J si en esta vista se puede desplegar el perfil del usurio inmediatamente o es mejor hacer u redirect
+     --}}
 @extends('layouts.app')
 
 @section('content')
@@ -13,8 +15,15 @@
                             {{ session('status') }}
                         </div>
                     @endif
+                    <a name="" id="" class="btn btn-primary" href="#" role="button">
+                        Profile
+                        
+                    </a>
 
-                    You are logged in!
+
+                    <a name="" id="" class="btn btn-primary" href="#" role="button">
+                        Ceate Date <i class="fa fa-database" aria-hidden="true"></i>
+                    </a>
                 </div>
             </div>
         </div>

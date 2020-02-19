@@ -18,3 +18,14 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+/* crear el profile
+ */
+
+/* crear barber */
+
+/* crear date */
+
+/*  */
+

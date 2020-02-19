@@ -1,15 +1,16 @@
-{{-- esta vista contiene los datos del usio registrado.abnf
-  Solo se van a mostrar los datos basicos y aparecera un boton para Agendar citas
+{{-- esta  vista muestra la ciata agendada por el usuario o el cliete
+    id Consecutivo del la cita
+    Nombre del usuario/cliente 
+    Telefono de contacto
+    Fecha del servicio
+    Horario del servicio
+    Cantidad de servicios
+    Nombre del barbero
+    
+    Boton de cancelacion
+    --}}
 
 
-  -Pendiente agregar el boton para editar los datos que redirecciones a settings
-  
-  --}}
-
-@extends('layouts.app')
-
-
-@section('content')
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -42,17 +43,24 @@
       </div>
       <ul class="pricing-list">
 
+        <li><strong>Id</strong>  12314567 </li>
         <li><strong>E-mail</strong>  abc@bnm.com </li>
        
         <li><strong>Phone Number</strong> 3194865030</li>
         <div class="border"></div>
-        <li><strong>Adress</strong> Direccion</li>
+        <li><strong>Service Date</strong> 01/12/19</li>
+
+        <li><strong>Service Time</strong> 5:30</li>
+
+        <li><strong>Service quantitty</strong> xxx</li>
+
+
         <div class="border"></div>
-        <li><strong>#Dates</strong> 12  </li>
+        <li><strong>Barber</strong> Andres  </li>
         <div class="border"></div>
       
       </ul>
-      <a href="#">Crate Date</a>
+      <a href="#">Cancel Date</a>
 
     </div>
 
@@ -61,5 +69,3 @@
 </body>
 
 </html>
-
-@endsection

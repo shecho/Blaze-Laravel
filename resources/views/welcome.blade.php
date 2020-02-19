@@ -115,12 +115,61 @@
           <div class="intro-lead-in">Welcome to Big Boy Blaze!</div>
           <div class="intro-heading text-uppercase">It's Nice To Meet You</div>
 
-          <a
-            class="btn btn-primary btn-xl text-uppercase js-scroll-trigger"
-            href="#services"
-            >Create Date</a
-          >
+          <button type="button" class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" data-toggle="modal" data-target="#create-date" data-whatever="@mdo">Create Date</button>
+
+        
+
+          {{--Modeal create date  --}}
+          
+          <div class="modal fade" id="create-date" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title text-dark" id="ModalLabel">Create new Date</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                      {{-- <label for="recipient-name" class="col-form-label text-dark" place>Full name</label> --}}
+                      <input placeholder="Full name" type="text" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="form-group">
+                      {{-- <label  for="message-text" class="col-form-label text-dark">Telefono</label> --}}
+                      <input placeholder="Phone" type="text"  class="form-control" id="message-text">
+
+                      {{-- <label for="message-text" class="col-form-label text-dark">Day</label> --}}
+                      <input placeholder="Day" type="text"  class="form-control" id="message-text">
+
+                      {{-- <label for="message-text" class="col-form-label text-dark">Time</label> --}}
+                      <input placeholder="Time" type="text"  class="form-control" id="message-text">
+                      {{-- <label for="message-text" class="col-form-label text-dark">Barber</label> --}}
+                      <input placeholder="Barber" type="text"  class="form-control" id="message-text">
+
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn btn-primary"> Confirm</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
         </div>
+
+
+{{-- modal --}}
+
+
+
+
+
+
         <div clas="">Photo by Nick Demou from Pexels</div>
       </div>
     </header>
