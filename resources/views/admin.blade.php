@@ -1,4 +1,4 @@
-{{-- esta vista tiene va vista de panel de control del admin y debe permitir hacer consultas de citas 
+{{-- esta vista tiene va vista de panel de control del admin y debe permitir hacer consultas de crraeo1itas 
     
 el Staff sera estatico hasta otra proxima version pues el Admin solo va a agragar un barbero en la pagina hasta que lleve mas de un año 
 
