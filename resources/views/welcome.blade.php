@@ -143,16 +143,22 @@
                     </div>
                     <div class="form-group">
                       {{-- <label  for="message-text" class="col-form-label text-dark">Telefono</label> --}}
+                      <div class="form-group">
                       <input placeholder="Phone" type="text"  class="form-control" id="message-text">
-
+                    </div>
+                    <div class="form-group">
                       {{-- <label for="message-text" class="col-form-label text-dark">Day</label> --}}
                       <input placeholder="Day" type="text"  class="form-control" id="date-day">
-
+                    </div>
                       {{-- <label for="message-text" class="col-form-label text-dark">Time</label> --}}
+                      <div class="form-group">
                       <input placeholder="Time" type="text"  class="form-control" id="date-time">
                       {{-- <label for="message-text" class="col-form-label text-dark">Barber</label> --}}
                       {{-- <input placeholder="Barber" type="text"  class="form-control" id="message-text"> --}}
+                    </div>
+                      <div class="form-group" id="modal-response">
 
+                      </div>
                     </div>
                   </form>
                 </div>
@@ -640,12 +646,12 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <input
-                      class="form-control"
-                      id="name"
-                      type="text"
-                      placeholder="Your Name *"
-                      required="required"
-                      data-validation-required-message="Please enter your name."
+                        class="form-control"
+                        id="name"
+                        type="text"
+                        placeholder="Your Name *"
+                        required="required"
+                        data-validation-required-message="Please enter your name."
                     />
                     <p class="help-block text-danger"></p>
                   </div>

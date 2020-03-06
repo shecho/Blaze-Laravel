@@ -12,6 +12,7 @@ const sendForm = () => {
     let time = document.getElementById("date-time").value
     let token = document.getElementById("token").value
 
+    
     let data = {
         fullName: fullName,
         phone: phone,
@@ -29,11 +30,39 @@ const sendForm = () => {
         .then(data => {
             console.log(data);
             datajson = data});
+
+
+            // comfirm message 
+            // pendiente de validar la respusta del backgroundBlendMode: 
+            const modalRes = () => {
+                if(!fullName ||!phone || !day ||!time){
+                    modalResponse.innerHTML=`
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        Please fill all the data"
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>`
+            
+                }
+                else{
+                modalResponse.innerHTML=`
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                New date created
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+                </div> `
+                }
+            }
+modalRes()            
             
 }
 
 
+let modalResponse= document.getElementById('modal-response')
 
 document.getElementById('confirm-date').addEventListener('click',sendForm)
+// document.getElementById('confirm-date').addEventListener('click',modalRes)
 
 
