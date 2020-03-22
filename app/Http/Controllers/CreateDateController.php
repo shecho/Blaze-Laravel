@@ -8,11 +8,11 @@ Use Date;
 
 class createDateController extends Controller
 {
-    public function createDate(Request $request)
+    public function CreateDate(Request $request)
     {
         //capturar datos: se realiza al definir como parametro de la función un objeto de tipo Request
         //guardar en base de datos
-        $newDate = new createDate();
+        $newDate = new CreateDate();
         $newDate->userName = $request->userName;
         $newDate->userPhone = $request->userPhone;
         $newDate->day = $request->day;

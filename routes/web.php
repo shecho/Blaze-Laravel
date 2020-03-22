@@ -20,7 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::post('/createNewDate','DateController@createDate')->name('createNewDate');
+Route::post('/createNewDate','CreateDateController@createDate')->name('createNewDate');
 
 /* crear el profile
  */
