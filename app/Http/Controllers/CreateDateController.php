@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-Use Date;
+Use CreateDate;
 
 class createDateController extends Controller
 {
@@ -12,7 +12,7 @@ class createDateController extends Controller
     {
         //capturar datos: se realiza al definir como parametro de la función un objeto de tipo Request
         //guardar en base de datos
-        $newDate = new CreateDate();
+        $newDate = new CreateDate();    
         $newDate->userName = $request->userName;
         $newDate->userPhone = $request->userPhone;
         $newDate->day = $request->day;

@@ -24,7 +24,7 @@ Route::post('/createNewDate','CreateDateController@createDate')->name('createNew
 
 /* crear el profile
  */
-
+    
 
 
 /* crear date */
