@@ -14,48 +14,24 @@ const sendForm = () => {
 
     
     let data = {
-        fullName: fullName,
-        phone: phone,
-        day: day,
-        time: time,
-        _token: token
+        "userName": fullName,
+        "userPhone": phone,
+        "day": day,
+        "time": time,
+        "_token": token
     };
+
+    var url = 'https://blaze.app/createNewDate/';
+fetch(url, {
+  method: 'POST', // or 'PUT'
+  body: JSON.stringify(data), // data can be `string` or {object}!
+  headers:{
+    'Content-Type': 'application/json',
+  }
+}).then(res => res.json())
+.catch(error => console.error('Error:', error))
+.then(response => console.log('Success:', response));
     
-    fetch("http://localhost:8000/createNewDate" , {
-        method: 'POST', // or 'PUT'
-        body: JSON.stringify(data), // data can be `string` or {object}!
-        headers:{'Content-Type': 'application/json'},
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')})
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-            datajson = data});
-
-
-            // comfirm message 
-            // pendiente de validar la respusta del backgroundBlendMode: 
-            const modalRes = () => {
-                if(!fullName ||!phone || !day ||!time){
-                    modalResponse.innerHTML=`
-                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                        Please fill all the data"
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>`
-            
-                }
-                else{
-                modalResponse.innerHTML=`
-                <div class="alert alert-success alert-dismissible fade show" role="alert">
-                New date created
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-                </div> `
-                }
-            }
-modalRes()            
             
 }
 
