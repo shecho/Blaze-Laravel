@@ -148,14 +148,33 @@
                     </div>
                     <div class="form-group">
                       {{-- <label for="message-text" class="col-form-label text-dark">Day</label> --}}
-                      <input placeholder="Day" type="text"  class="form-control" id="date-day">
+                      <input type="date"  class="form-control" id="date-day">
                     </div>
                       {{-- <label for="message-text" class="col-form-label text-dark">Time</label> --}}
                       <div class="form-group">
-                      <input placeholder="Time" type="text"  class="form-control" id="date-time">
-                      {{-- <label for="message-text" class="col-form-label text-dark">Barber</label> --}}
-                      {{-- <input placeholder="Barber" type="text"  class="form-control" id="message-text"> --}}
-                    </div>
+                        <select class="form-control" name="time" id="date-time">
+                          <option value="9">9 am</option>
+                          <option value="10">10 am</option>
+                          <option value="11">11 am</option>
+                          <option value="12">12 am</option>
+                          
+                          <option value="2">2 pm</option>
+                          <option value="3">3 pm</option>
+                          <option value="4">4 pm</option>
+                          <option value="5">5 pm</option>
+                        </select>
+                        {{-- <label for="message-text" class="col-form-label text-dark">Barber</label> --}}
+                        {{-- <input placeholder="Barber" type="text"  class="form-control" id="message-text"> --}}
+                      </div>
+                      <div class="form-group">
+                        <select class="form-control" name="time" id="barber">
+                          <option value="1">Barbero 1</option>
+                          <option value="2">Barbero 2</option>
+                          <option value="3">Barbero 3</option>
+                        </select>
+                        {{-- <label for="message-text" class="col-form-label text-dark">Barber</label> --}}
+                        {{-- <input placeholder="Barber" type="text"  class="form-control" id="message-text"> --}}
+                      </div>
                       <div class="form-group" id="modal-response">
 
                       </div>

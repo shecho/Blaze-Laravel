@@ -14,6 +14,6 @@ class CreateDate extends Model
      * @var array
      */
     protected $fillable = [
-        'userName', 'userPhone', 'day','time'
+        'userName', 'userPhone', 'day','time','barber'
     ];
 }
