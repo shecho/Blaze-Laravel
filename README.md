@@ -1,3 +1,60 @@
+
+# Big Boy Blaze
+
+This is a personal that aims to achive more than just study and online tutorials
+
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development purposes. See deployment for notes on how to deploy the project on a live system.
+
+## Prerequisites
+This project runs in Laravel 6.14.0 
+and uses PHP Cli   7.4.4 
+also uses npm 6.13.0. for some frontend dependencias
+ 
+Dependencies are the following:
+
+PHP  @ 7.4.4<br />
+fideloper/proxy @ 4.0<br />
+laravel/tinker @ 2.0<br />
+
+Production:<br />
+      
+Development:<br />
+
+Axios   @ 0.19<br />
+Bootstrap @ 4.0.0<br />
+cross-env @ 7.0<br />
+Jquerry @ 3.2<br />
+laravel-mix @ 5.0.1<br />
+lodash @ 4.17.13<br />
+popper.js @ 1.12<br />
+resolve-url-loader @ 2.3.1<br />
+laravel-mix @ 5.0.1<br />
+sass @ 1.20.1<br />
+sass-loader @ 7.*<br />
+vue @ 2.5.17<br />
+vue-template-compiler @ 2.6.17<br />
+facade/ignition @ 1.4<br />
+fzaninotto/faker @ 1.9.1<br />
+laravel/ui @ 1.1<br />
+mockery/mockery @ 1.0<br />
+nunomaduro/collision @ 3.0<br />
+phpunit/phpunit @ 8.0<br />
+
+
+Install the npm dendencies with the following command, just make usre you place the terminal inside the folders that the packpage.json is located at:
+
+
+```
+npm install 
+```
+- For the Laravel dependencies just install Laravel Frameworks from the oficial website: 
+
+
+
+####You can find the Laravel information here: 
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
@@ -27,51 +84,174 @@ Laravel has the most extensive and thorough [documentation](https://laravel.com/
 
 If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+## Security Vulnerabilities
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed. 
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
+
+### Runn
+
+To run a development make sure you have installed the dependencies  listed before then run the next scripts:
+
+
+```
+php artisan serve
+```
+- Go to laravel documentation for detailed informations about commands
+
+## Running the tests
+
+Go to laravel documentation
+
+
+## Built With
+
+* [Laravel](https://laravel.com/docsl) - Main framework
+* [PHP](https://www.php.net/manual/es/intro-whatis.php) - Main Backend Languaje 
+* [Composer](https://getcomposer.org/) - Package and Dependency Management
 
 ## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
-## Code of Conduct
+## Versioning
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+We use [SemVer](http://semver.org/) for versioning. 
 
-## Security Vulnerabilities
+## Authors
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+* **Sergio Valencia Aguirre** - Backend and templated frontend UI/UX * - [shecho](https://github.com/shecho)
+* **Katty Alejandra** - *Frontend developer and Db* - [Akatty](https://github.com/Alejandra61)
+
+<!-- * **Sergio Valencia Aguirre** - *Frontend developer* - [Shecho](https://github.com/shecho) -->
+
+
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* Just learn Laravel by doing
+* Started with 3 guys and ended only 2. Hope the best for the one who quited at the middle of the project although.
+* Special thanks to our teacher. We didn't learn anything from you but was really good to realize that you need to create a self learning path.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## License
 
