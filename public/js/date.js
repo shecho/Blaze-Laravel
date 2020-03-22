@@ -21,17 +21,41 @@ const sendForm = () => {
         "_token": token
     };
 
-    var url = 'https://blaze.app/createNewDate/';
-fetch(url, {
-  method: 'POST', // or 'PUT'
-  body: JSON.stringify(data), // data can be `string` or {object}!
-  headers:{
-    'Content-Type': 'application/json',
-  }
-}).then(res => res.json())
-.catch(error => console.error('Error:', error))
-.then(response => console.log('Success:', response));
+    const modalRes = () => {
+        if(!fullName ||!phone || !day ||!time){
+            modalResponse.innerHTML=`
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                Please fill all the data"
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>`
     
+        }
+        else{
+        modalResponse.innerHTML=`
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+        New date created
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+        </div> `
+        }
+    }
+    modalRes()
+
+    var url = 'https://blaze.app/createNewDate/';
+    fetch(url, {
+    method: 'POST', // or 'PUT'
+    body: JSON.stringify(data), // data can be `string` or {object}!
+    headers:{
+        'Content-Type': 'application/json',
+    }
+    }).then(res => res.json())
+    .catch(error => console.error('Error:', error))
+    .then(response => console.log('Success:', response));
+
+ 
             
 }
 
