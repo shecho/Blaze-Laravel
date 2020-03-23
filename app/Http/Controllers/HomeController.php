@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\CreateDate;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,21 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $citas = CreateDate::all();
+        //dd($citas);
+        return view('home', compact('citas'));
+    }
+    public function filterByDay(Request $request)
+    {
+        $citas= CreateDate::where('day', $request->dateDayFilter)->get();        
+        //dd($citas);
+        return view('home', compact('citas'));
+    }
+    
+    public function filterByRange(Request $request)
+    {
+        $citas= CreateDate::where('day',">" ,$request->dateDayFilterIni)->where('day',"<",$request->dateDayFilterEnd)->get();
+        //dd($citas);
+        return view('home', compact('citas'));
     }
 }
