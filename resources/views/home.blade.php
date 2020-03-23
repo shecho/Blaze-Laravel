@@ -1,5 +1,3 @@
-{{-- confimrar con J si en esta vista se puede desplegar el perfil del usurio inmediatamente o es mejor hacer u redirect
-     --}}
 @extends('layouts.app')
 
 @section('content')
@@ -83,7 +81,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                    <button id="confirm-date-test" type="button" class="btn btn-dark"> Confirm</button>
+                                    <button id="confirm-date" type="button" class="btn btn-dark"> Confirm</button>
                                 </div>
                             </div>
                         </div>
