@@ -122,7 +122,7 @@
 
         
 
-          {{--Modeal create date  --}}
+          {{--Modal create date  --}}
           
           <div class="modal fade" id="create-date" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -144,7 +144,7 @@
                     <div class="form-group">
                       {{-- <label  for="message-text" class="col-form-label text-dark">Telefono</label> --}}
                       <div class="form-group">
-                      <input placeholder="Phone" type="nummber"  class="form-control" id="message-text">
+                      <input placeholder="Phone" type="number"  class="form-control" id="message-text">
                     </div>
                     <div class="form-group">
                       {{-- <label for="message-text" class="col-form-label text-dark">Day</label> --}}
