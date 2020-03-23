@@ -36,4 +36,5 @@ class createDateController extends Controller
         return $response;
         //capturar datos: se realiza al definir como parametro de la función un objeto de tipo Request      
     }
+
 }

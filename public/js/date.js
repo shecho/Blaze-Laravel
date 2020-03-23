@@ -23,7 +23,7 @@ const sendForm = () =>
     };
     modalValidate(fullName,phone,day,time)
 
-    var url = 'createNewDate/';
+    var url = 'https://blaze.app/createNewDate/';
     fetch(url, {
     method: 'POST', // or 'PUT'
     body: JSON.stringify(data), // data can be `string` or {object}!
