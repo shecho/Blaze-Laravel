@@ -15,12 +15,13 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <a name="" id="" class="btn btn-primary" href="#" role="button">
+                    <a name="" id="" class="btn btn-primary" href="/profile" role="button">
                         Profile                        
                     </a>
                     <a name="" id="" class="btn btn-primary" href="#" role="button">
                         Ceate Date <i class="fa fa-database" aria-hidden="true"></i>
                     </a>
+                    @if(Auth::user()->id == 1)
                     <form method="POST" action="{{ route('filterByDay') }}">
                         <input name="dateDayFilter" type="date" placeholder="filtar por día">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -54,6 +55,7 @@
                     </tr>
                     @endforeach
                     </table>
+                    @endif
                 </div>
             </div>
         </div>

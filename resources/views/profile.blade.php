@@ -42,14 +42,13 @@
       </div>
       <ul class="pricing-list">
 
-        <li><strong>E-mail</strong>  abc@bnm.com </li>
+      <li><strong>Nombre</strong> {{ $user->name }}</li>
+
+        <li><strong>E-mail</strong> {{ $user->email }}</li>
        
-        <li><strong>Phone Number</strong> 3194865030</li>
+        <li><strong>Phone Number</strong> {{ $user->phone }}</li>
         <div class="border"></div>
-        <li><strong>Adress</strong> Direccion</li>
-        <div class="border"></div>
-        <li><strong>#Dates</strong> 12  </li>
-        <div class="border"></div>
+        
       
       </ul>
       <a href="#">Crate Date</a>

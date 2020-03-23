@@ -41,4 +41,24 @@ class HomeController extends Controller
         //dd($citas);
         return view('home', compact('citas'));
     }
+
+    ///fase1
+    ///definir el usuario admin como
+    ///crear una constante con el id del usuario admin
+    /// se define que siempre el usuario con id = 1 es el administrador del sistema
+
+
+    ///en la vista home se debe validar el tipo de usuario que inicio sesión
+
+    
+    /// si el usuario es administrador se presentan los registros de todas las citas
+    /// adicionalmente las opciones de realizar reportes.
+    /// Si el usuario no es admin se muestra el boton de perfil y el de crear cita
+
+
+
+
+    ///fase 2 de este requerimiento comprende reutilizar el modal de citas y crear un enlace
+    /// a la vista de perfil y ajustar esta vista
+    
 }
