@@ -144,7 +144,7 @@
                     <div class="form-group">
                       {{-- <label  for="message-text" class="col-form-label text-dark">Telefono</label> --}}
                       <div class="form-group">
-                      <input placeholder="Phone" type="text"  class="form-control" id="message-text">
+                      <input placeholder="Phone" type="nummber"  class="form-control" id="message-text">
                     </div>
                     <div class="form-group">
                       {{-- <label for="message-text" class="col-form-label text-dark">Day</label> --}}
