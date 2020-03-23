@@ -21,6 +21,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/createNewDate','CreateDateController@CreateDate');
 Route::post('/filterByDay','HomeController@filterByDay')->name('filterByDay');
+Route::post('/filterByRange','HomeController@filterByRange')->name('filterByRange');
 
 
 /* crear el profile

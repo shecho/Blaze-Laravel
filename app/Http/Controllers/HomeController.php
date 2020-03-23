@@ -34,4 +34,11 @@ class HomeController extends Controller
         //dd($citas);
         return view('home', compact('citas'));
     }
+    
+    public function filterByRange(Request $request)
+    {
+        $citas= CreateDate::where('day',">" ,$request->dateDayFilterIni)->where('day',"<",$request->dateDayFilterEnd)->get();
+        //dd($citas);
+        return view('home', compact('citas'));
+    }
 }

@@ -26,6 +26,13 @@
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <button type="submit" class="btn btn-primary" id="filterByDay">filtar por día</button>
                     </form>
+
+                    <form method="POST" action="{{ route('filterByRange') }}">
+                        <input name="dateDayFilterIni" type="date" placeholder="filtar por día">
+                        <input name="dateDayFilterEnd" type="date" placeholder="filtar por día">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        <button type="submit" class="btn btn-primary" id="filterByDay">filtar por día</button>
+                    </form>
                     <br>
                     <table class="table table-dark" border="1">
                     <tr>
