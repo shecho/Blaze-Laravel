@@ -19,7 +19,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <!-- Bootstrap core CSS -->
-    <link href="/../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- <link href="/../bootstrap/css/bootstrap.min.css" rel="stylesheet" /> -->
 </head>
 <body>
     <div id="app">
@@ -78,22 +78,22 @@
             @yield('content')
         </main>
     </div>
-    <script src="/../js/admin.js"></script>
+    <!-- <script src="/../js/admin.js"></script> -->
      <!-- Bootstrap core JavaScript -->
-     <script src="/../jquery/jquery.min.js"></script>
-    <script src="/../bootstrap/js/bootstrap.bundle.min.js"></script>
+     <!-- <script src="/../jquery/jquery.min.js"></script>
+    <script src="/../bootstrap/js/bootstrap.bundle.min.js"></script> -->
 
     <!-- Plugin JavaScript -->
-    <script src="/../jquery-easing/jquery.easing.min.js"></script>
+    <!-- <script src="/../jquery-easing/jquery.easing.min.js"></script> -->
 
     <!-- Contact form JavaScript -->
-    <script src="/../js/jqBootstrapValidation.js"></script>
-    <script src="/../js/contact_me.js"></script>
+    <!-- <script src="/../js/jqBootstrapValidation.js"></script>
+    <script src="/../js/contact_me.js"></script> -->
 
     
-    <!-- Custom scripts for this template -->
+    <!-- Custom scripts for this template
     <script src="/../js/agency.min.js"></script>
-    
+     -->
 
 </body>
 </html>
