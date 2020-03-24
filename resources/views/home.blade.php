@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container ">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-10">
             <div class="card">
                 <div class="card-header">Control Panel</div>
 
@@ -94,60 +94,72 @@
 
 
                 @if(Auth::user()->id == 1)
+                <div class="containner reports">
+                    <div class="container">
+                        <div class="card-header">Reports</div>
+                        <div class="m-4">
+                            <div class="row justify-content-around">
+                                <form class="text-center" method="POST" action="{{ route('filterByDay') }}">
+                                    <input class="form-control" name="dateDayFilter" type="date" placeholder="filtar por día">
+                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                    <div>
+                                        <button type="submit" class="btn btn-outline-dark mt-2 text-center" id="filterByDay">filtar por día</button>
+                                    </div>
+                                </form>
 
-                <div class="container">
-                    <div class="card-header">Reports</div>
-                    <div class="m-4">
-                        <div class="row justify-content-around">
-                            <form class="text-center" method="POST" action="{{ route('filterByDay') }}">
-                                <input class="form-control" name="dateDayFilter" type="date" placeholder="filtar por día">
-                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                <div>
-                                    <button type="submit" class="btn btn-outline-dark mt-2 text-center" id="filterByDay">filtar por día</button>
-                                </div>
-                            </form>
 
+                                <form class="text-center" method="POST" action="{{ route('filterByRange') }}">
+                                    <input class="form-control mb-2" name="dateDayFilterIni" type="date" placeholder="filtar por día">
+                                    <input class="form-control bt-2" name="dateDayFilterEnd" type="date" placeholder="filtar por día">
+                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                    <div>
+                                        <button type="submit" class="btn btn-outline-dark mt-2" id="filterByDay">filtar por fechas</button>
+                                    </div>
 
-                            <form class="text-center" method="POST" action="{{ route('filterByRange') }}">
-                                <input class="form-control mb-2" name="dateDayFilterIni" type="date" placeholder="filtar por día">
-                                <input class="form-control bt-2" name="dateDayFilterEnd" type="date" placeholder="filtar por día">
-                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                <div>
-                                    <button type="submit" class="btn btn-outline-dark mt-2" id="filterByDay">filtar por fechas</button>
-                                </div>
-
-                            </form>
+                                </form>
+                            </div>
                         </div>
                     </div>
+                    <br>
+                    <div class="col-lg-12 grid-margin stretch-card">
+                        <div class="card table table-dark text-center">
+                            <table class="table table-dark text-center" border="1">
+
+                                <thead>
+                                    <tr>
+                                        <th>id</th>
+                                        <th>usuario</th>
+                                        <th>telefono</th>
+                                        <th>día</th>
+                                        <th>hora</th>
+                                        <th>barbero</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                @foreach($citas as $cita)
+                               
+                                    <tr>
+                                        <td>{{ $cita->id }}</td>
+                                        <td>{{ $cita->userName }}</td>
+                                        <td>{{ $cita->userPhone }}</td>
+                                        <td>{{ $cita->day }}</td>
+                                        <td>{{ $cita->time }}</td>
+                                        <td>{{ $cita->barber }}</td>
+
+                                    </tr>
+                               
+
+                                @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    @endif
                 </div>
-                <br>
-                <div class="container m-0 p-0">
-                    <table class="table table-dark text-center" border="1">
-                        <tr>
-                            <th>id</th>
-                            <th>usuario</th>
-                            <th>telefono</th>
-                            <th>día</th>
-                            <th>hora</th>
-                            <th>barbero</th>
-                        </tr>
-                        @foreach($citas as $cita)
-                        <tr>
-                            <td>{{ $cita->id }}</td>
-                            <td>{{ $cita->userName }}</td>
-                            <td>{{ $cita->userPhone }}</td>
-                            <td>{{ $cita->day }}</td>
-                            <td>{{ $cita->time }}</td>
-                            <td>{{ $cita->barber }}</td>
-                        </tr>
-                        @endforeach
-                    </table>
-                </div>
-                @endif
             </div>
         </div>
     </div>
-</div>
 </div>
 <!-- <script src="/../js/date.js"></script> -->
 @endsection
