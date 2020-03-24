@@ -148,7 +148,7 @@
                     </div>
                     <div class="form-group">
                       {{-- <label for="message-text" class="col-form-label text-dark">Day</label> --}}
-                      <input type="date"  class="form-control" id="date-day">
+                      <input min="2020-04-10" max="2020-04-30" type="date"  class="form-control" id="date-day">
                     </div>
                       {{-- <label for="message-text" class="col-form-label text-dark">Time</label> --}}
                       <div class="form-group">
