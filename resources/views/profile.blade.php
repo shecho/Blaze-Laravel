@@ -12,9 +12,9 @@
 @section('content')
 <!--  -->
 
-<div class="container text-center">
+<div class="col-md-6 container text-center">
   <div class="row text-center border">
-    <div class="card-body">
+    <div class="card-body bg-light text-dark">
       <div class="pricing-header">
 
         <div class="price profile-photo-container h1">
