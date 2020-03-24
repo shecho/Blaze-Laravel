@@ -18,13 +18,18 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="/../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!--Custom css  -->
+   <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/d4bbca006e.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                     Big Boy Blaze
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -77,5 +82,21 @@
         </main>
     </div>
     <script src="/../js/admin.js"></script>
+     <!-- Bootstrap core JavaScript -->
+        
+
+    <!-- Plugin JavaScript -->
+    <!-- <script src="/../jquery-easing/jquery.easing.min.js"></script> -->
+
+    <!-- Contact form JavaScript -->
+    <!-- <script src="/../js/jqBootstrapValidation.js"></script> -->
+    <script src="/../js/contact_me.js"></script>
+
+    
+    <!-- Custom scripts for this template
+    <script src="/../js/agency.min.js"></script>
+     -->
+     <script src="/../js/date.js"></script>
+
 </body>
 </html>
