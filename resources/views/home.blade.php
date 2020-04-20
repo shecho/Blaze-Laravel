@@ -4,8 +4,8 @@
 <div class="container ">
     <div class="row justify-content-center">
         <div class="col-md-10">
-            <div class="card">
-                <div class="card-header">Control Panel</div>
+            <div class="card lightOverlay">
+                <div class="card-header bg-dark">Control Panel</div>
 
 
                 <div class="card-body">
@@ -14,12 +14,18 @@
                         {{ session('status') }}
                     </div>
                     @endif
+                    
                     <a name="" id="" class="btn btn-dark" href="/profile" role="button">
                         Profile
                     </a>
                     <!-- butoon -->
                     <button type="button" class="btn btn-dark js-scroll-trigger" data-toggle="modal" data-target="#create-date" data-whatever="@mdo">Create Date</button>
-                    <!--  -->
+
+                    <a target="blank" href="https://api.whatsapp.com/send?phone=5703194853019&text=Hola%20quisiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x">
+                    
+                         <i class="fab 	fa-whatsapp fa-stack-1xa text-success"></i>
+                    </a>
+                            <!--  -->
 
                     {{--Modal create date  --}}
 
@@ -81,6 +87,11 @@
                                     </form>
                                 </div>
                                 <div class="modal-footer">
+
+                    <a target="blank" href="https://api.whatsapp.com/send?phone=5703194853019&text=Hola%20quisiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x">
+                    
+                    <i class="fab 	fa-whatsapp fa-stack-1xa text-success"></i>
+               </a>
                                     <button type="button" class="btn btn-dark" data-dismiss="modal">Cancel</button>
                                     <button id="confirm-date" type="button" class="btn btn-dark" onclick="sendForm()"> Confirm</button>
                                 </div>
@@ -96,7 +107,7 @@
                 @if(Auth::user()->id == 1)
                 <div class="containner reports">
                     <div class="container">
-                        <div class="card-header">Reports</div>
+                        <div class="card-header bg-dark">Reports</div>
                         <div class="m-4">
                             <div class="row justify-content-around">
                                 <form class="text-center" method="POST" action="{{ route('filterByDay') }}">
@@ -121,8 +132,8 @@
                         </div>
                     </div>
                     <br>
-                    <div class="col-lg-12 grid-margin stretch-card">
-                        <div class="card table table-dark text-center">
+                    <div class="col-lg-12 grid-margin stretch-card overflow-auto">
+                        <div class="card table table-dark text-center overflow-auto">
                             <table class="table table-dark text-center" border="1">
 
                                 <thead>

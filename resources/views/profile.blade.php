@@ -1,8 +1,5 @@
 {{-- esta vista contiene los datos del usio registrado.abnf
   Solo se van a mostrar los datos basicos y aparecera un boton para Agendar citas
-
-
-  -Pendiente agregar el boton para editar los datos que redirecciones a settings
   
   --}}
 
@@ -13,24 +10,34 @@
 <!--  -->
 
 <div class="col-md-6 container text-center">
-  <div class="row text-center border">
-    <div class="card-body bg-light text-dark">
+<div class="card-header bg-dark">Profile</div>
+  <div class="row text-center border ">
+    
+    <div class="card-body lightOverlay text-dark">
+      
       <div class="pricing-header">
+        
 
         <div class="price profile-photo-container h1">
           <i class="fas fa-user-circle profile-photo "></i>
         </div>
-        <h5 class="card-title h2">{{ $user->name }}</h5>
+       <div class="d-flex justify-content-center">
+          <h5 class="card-title h2">{{ $user->name }}</h5>
+          <a href="#" class="text-dark m-2">
+            <i class="fas fa-pencil-alt "></i>
+          </a> 
+       </div>
+
       </div>
       <div class="pricing-list">
 
-
+  
 
         <div class="d-flex justify-content-center m-2 align-items-center">
-          <div class="m-2">
+          <a class="m-2">
             <i class="far fa-envelope h2 bold"></i>
 
-          </div>
+          </a>
           <p> {{ $user->email }}</p>
         </div>
         <!-- try -->
@@ -54,9 +61,9 @@
           <p class="m-2"> {{ $user->phone }}
 
           </p>
-          <!-- <div>
-            <i class="fas fa-pencil-alt btn btn-light"></i>
-          </div> -->
+          <a href="#" class="text-dark">
+            <i class="fas fa-pencil-alt "></i>
+          </a>
 
         </div>
         <div class="border"></div>

@@ -699,7 +699,7 @@
                     <input
                       class="form-control"
                       id="phone"
-                      type="tel"
+                      type="number"
                       placeholder="Your Phone *"
                       required="required"
                       data-validation-required-message="Please enter your phone number."
