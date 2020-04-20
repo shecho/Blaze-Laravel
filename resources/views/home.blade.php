@@ -127,18 +127,24 @@
 
                                 <thead>
                                     <tr>
+                                        <th>Admin</th>
                                         <th>id</th>
-                                        <th>usuario</th>
-                                        <th>telefono</th>
-                                        <th>día</th>
-                                        <th>hora</th>
-                                        <th>barbero</th>
+                                        <th>User</th>
+                                        <th>Phone</th>
+                                        <th>Day</th>
+                                        <th>Hour</th>
+                                        <th>Barber</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($citas as $cita)
                                
                                     <tr>
+                                        <td>
+                                        <button>
+                                            <i class="fas fa-trash"></i>
+                                        </button>   
+                                        </td>
                                         <td>{{ $cita->id }}</td>
                                         <td>{{ $cita->userName }}</td>
                                         <td>{{ $cita->userPhone }}</td>
