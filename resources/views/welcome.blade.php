@@ -182,8 +182,18 @@
                   </form>
                 </div>
                 <div class="modal-footer">
+
+                
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                   <button id="confirm-date" type="button" class="btn btn-primary"> Confirm</button>
+
+                  <div class="">
+                  <a target="blank" href="https://api.whatsapp.com/send?phone=5703194853019&text=Hola%20quisiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x">
+              
+                    <i class="fab 	fa-whatsapp fa-stack-1xa text-success"></i>
+                  </a>
+                </div>
+                  
                 </div>
               </div>
             </div>
@@ -654,7 +664,7 @@
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">Contact Us</h2>
             <h3 class="section-subheading text-muted">
-              Lorem ipsum dolor sit amet consectetur.
+              Let us know what you think.
             </h3>
           </div>
         </div>
@@ -719,6 +729,10 @@
                   >
                     Send Message
                   </button>
+                  <a target="blank" href="https://api.whatsapp.com/send?phone=5703194853019&text=Hola%20Quiesiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x">
+             
+                     <i class="fab 	fa-whatsapp fa-stack-1x fa-inverse"></i>
+                  </a>
                 </div>
               </div>
             </form>
@@ -732,22 +746,22 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-md-4">
-            <span class="copyright">Copyright &copy; Your Website 2019</span>
+            <span class="copyright">Copyright &copy; CABAC Creations.Co 2020</span>
           </div>
           <div class="col-md-4">
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
-                <a href="#">
+                <a  target="blank" href="https://twitter.com/explore">
                   <i class="fab fa-twitter"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
+                <a  target="blank" href="https://www.facebook.com/">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
               </li>
-              <li class="list-inline-item">
-                <a href="#">
+              <li  class="list-inline-item">
+                <a target="blank" href="https://www.linkedin.com/">
                   <i class="fab fa-linkedin-in"></i>
                 </a>
               </li>
@@ -1084,16 +1098,12 @@
                     alt=""
                   />
                   <p>
-                    Use this area to describe your project. Lorem ipsum dolor
-                    sit amet, consectetur adipisicing elit. Est blanditiis
-                    dolorem culpa incidunt minus dignissimos deserunt repellat
-                    aperiam quasi sunt officia expedita beatae cupiditate,
-                    maiores repudiandae, nostrum, reiciendis facere nemo!
+                    This proyects is been created for barber shop Blaze
                   </p>
                   <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Window</li>
-                    <li>Category: Photography</li>
+                    <li>Date: April 2020</li>
+                    <li>Client: Andres</li>
+                    <li>Category: Barbershop</li>
                   </ul>
                   <button
                     class="btn btn-primary"
