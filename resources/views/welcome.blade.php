@@ -263,7 +263,7 @@
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">Procducts</h2>
             <h3 class="section-subheading text-muted">
-              Lorem ipsum dolor sit amet consectetur.
+              Beuty a care products
             </h3>
           </div>
         </div>
@@ -286,7 +286,7 @@
               />
             </a>
             <div class="portfolio-caption">
-              <h4>Threads</h4>
+              <h4>Pomades</h4>
               <p class="text-muted">Illustration</p>
             </div>
           </div>
@@ -308,8 +308,8 @@
               />
             </a>
             <div class="portfolio-caption">
-              <h4>Explore</h4>
-              <p class="text-muted">Graphic Design</p>
+              <h4>Beard traetments</h4>
+              <p class="text-muted">Design</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -330,7 +330,7 @@
               />
             </a>
             <div class="portfolio-caption">
-              <h4>Finish</h4>
+              <h4>Dyeing</h4>
               <p class="text-muted">Identity</p>
             </div>
           </div>
@@ -352,7 +352,7 @@
               />
             </a>
             <div class="portfolio-caption">
-              <h4>Lines</h4>
+              <h4>Tools</h4>
               <p class="text-muted">Branding</p>
             </div>
           </div>
@@ -374,7 +374,7 @@
               />
             </a>
             <div class="portfolio-caption">
-              <h4>Southwest</h4>
+              <h4>Vaporizers</h4>
               <p class="text-muted">Website Design</p>
             </div>
           </div>
@@ -396,8 +396,8 @@
               />
             </a>
             <div class="portfolio-caption">
-              <h4>Window</h4>
-              <p class="text-muted">Photography</p>
+              <h4>Suplies</h4>
+              <p class="text-muted">MAny suplies for you</p>
             </div>
           </div>
         </div>
@@ -535,7 +535,7 @@
         <div class="row">
           <div class="col-sm-4">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="#" alt="" />
+              <img class="mx-auto rounded-circle" src="img/barbers/barber2.jpg" alt="" />
               <h4>Kay Garland</h4>
               <p class="text-muted">Barber and Styler</p>
               <ul class="list-inline social-buttons">
@@ -559,7 +559,7 @@
           </div>
           <div class="col-sm-4">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="#" alt="" />
+              <img class="mx-auto rounded-circle" src="img/barbers/barber1.jpg" alt="barber1 img" />
               <h4>Andres</h4>
               <p class="text-muted">Owner manager and Old School Barber</p>
               <ul class="list-inline social-buttons">
@@ -583,7 +583,7 @@
           </div>
           <div class="col-sm-4">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="#" alt="" />
+          <img class="mx-auto rounded-circle" src="img/barbers/barber2.jpg" alt="" />
               <h4>Pertersen</h4>
               <p class="text-muted">Barber and ...</p>
               <ul class="list-inline social-buttons">
