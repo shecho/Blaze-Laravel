@@ -87,3 +87,9 @@ document.getElementById('confirm-date').addEventListener('click', sendForm)
 
 // document.getElementById('confirm-date').addEventListener('click',modalRes)
 // let button20=  document.querySelector("#confirm-date")
+
+
+
+// borrar citas de la base de datos
+// editar el perfil del usuario
+// crear un reporte de usuarios
