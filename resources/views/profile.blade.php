@@ -1,5 +1,4 @@
-{{-- esta vista contiene los datos del usio registrado.abnf
-  Solo se van a mostrar los datos basicos y aparecera un boton para Agendar citas
+{{-- datos de usuario
   
   --}}
 

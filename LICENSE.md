@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2020  CABAC's Creations.Co  Shecho and Akatty
+Copyright (c) 2020  COBAC's Company creation  [shecho](https://github.com/shecho) and  [Akatty](https://github.com/Alejandra61)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
