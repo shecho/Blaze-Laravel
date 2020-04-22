@@ -21,8 +21,13 @@
           <i class="fas fa-user-circle profile-photo "></i>
         </div>
        <div class="d-flex justify-content-center">
-          <h5 class="card-title h2">{{ $user->name }}</h5>
-          <a href="#" class="text-dark m-2">
+          <h5 class="card-title h2" id="user-name-id">{{ $user->name }}</h5>
+
+         <div class="" id="input-name-content" >
+            <!-- <input class="h6" type="text" name="newName" id="edit-name" value="{{ $user->name }}"> -->
+         </div>
+
+          <a href="#" class="text-dark m-2"  onclick="editName()" >
             <i class="fas fa-pencil-alt "></i>
           </a> 
        </div>
@@ -54,13 +59,14 @@
         <!--  -->
 
         <div class="d-flex justify-content-center m-2 align-items-center">
-          <div class="m-2">
-            <i class="fab fa-whatsapp h2"></i>
+          <div class="m-2" >
+            <i class="fab fa-whatsapp h2" id="" onclick=""></i>
           </div>
-          <p class="m-2"> {{ $user->phone }}
-
-          </p>
-          <a href="#" class="text-dark">
+          <p class="m-2" id="user-phone-id"> {{ $user->phone }}</p>
+         <div id="input-phone-content">
+           <!-- <input value="{{ $user->phone }}" type="number" name="newPhone" id="edit-phone"> -->
+         </div>
+          <a href="#" class="text-dark" onclick="editPhone()">
             <i class="fas fa-pencil-alt "></i>
           </a>
 

@@ -4,7 +4,9 @@
 3. procesar las respuesta para saber si la cita se asigno 
 4. mostrar el mensaje 
 */
-console.log("script linked");
+console.log("script linked2");
+
+
 
 function sendForm() {
     console.log('Inside function send form');
@@ -57,7 +59,7 @@ function modalValidate(fullName, phone, day, time) {
 }
 
 function modalResponse(state) {
-    console.log("inside modal response");
+    // console.log("inside modal response");
     var modal = document.getElementById('modal-response')
     if (state === 1) {
         console.log("inside If  true modal response");
@@ -78,15 +80,12 @@ function modalResponse(state) {
         </button>`
     }
 }
-// const buttonTest = () => {
 
-//     button20.innerHTML= 'Cambio de nombre'
-// }
+
+
+
 var modal = document.getElementById('modal-response')
 document.getElementById('confirm-date').addEventListener('click', sendForm)
-
-// document.getElementById('confirm-date').addEventListener('click',modalRes)
-// let button20=  document.querySelector("#confirm-date")
 
 
 

@@ -124,6 +124,8 @@
     <script src="/../js/agency.min.js"></script>
      -->
      <script src="/../js/date.js"></script>
+     <script src="/../js/deleteDate.js"></script>
+     <script src="/../js/edidProfile.js"></script>
 
 </body>
 </html>

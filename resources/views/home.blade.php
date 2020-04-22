@@ -150,10 +150,10 @@
                                 <tbody>
                                 @foreach($citas as $cita)
                                
-                                    <tr>
+                                    <tr id="table-row-id">
                                         <td>
-                                        <button>
-                                            <i class="fas fa-trash"></i>
+                                        <button id="delete-date-btn" onclick="deleteDate()" >
+                                            <i class="fas fa-trash" id="trashIcon"></i>
                                         </button>   
                                         </td>
                                         <td>{{ $cita->id }}</td>
@@ -178,5 +178,5 @@
         </div>
     </div>
 </div>
-<!-- <script src="/../js/date.js"></script> -->
+
 @endsection
