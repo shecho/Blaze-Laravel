@@ -89,7 +89,7 @@ function showDates(){
     let hasAclass = showTable.classList.contains("d-none")
     // console.log(hasAclass);
     if(hasAclass){
-       showButton.innerText =`Cheack all Dates`;
+       showButton.innerText =`Check all Dates`;
         
     }
     else{
@@ -99,6 +99,22 @@ function showDates(){
 
 }
 
+
+function showFilter(){
+ 
+    let filterContainer= document.getElementById("filter-container-id")
+    filterContainer.classList.toggle("d-none")
+    let showFilterButton = document.getElementById("show-filters-id")
+    let hasAclass = showTable.classList.contains("d-none")
+    if(hasAclass){
+        showFilterButton.innerText =`Check Filter`;
+         
+     }
+     else{
+        showFilterButton.innerText =`Collapse Filters`;
+     }
+    
+}
 
 // funcion para obtener la hora
 function getCurrentDate (){

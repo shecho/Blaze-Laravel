@@ -108,14 +108,20 @@
                     <div class="container">
                         <div class="card-header bg-dark">Reports</div>
                        
-
-                        <div class="m-4">
-                            <div class="row justify-content-around">
+                        <div class="card-header">
+                            <button id="show-dates-id" onclick="showDates()" type="submit" class="btn btn-outline-dark mt-2 btn-sm" id="filterByDay">Check all Dates</button>
+                            
+                            <button id="show-filters-id" onclick="showFilter()" type="submit" class="btn btn-outline-dark btn-sm mt-2">Show Filters</button>
+                            
+                        </div>
+                       
+                        <div class="m-2">
+                            <div id="filter-container-id" class="row justify-content-around d-none">
                                 <form class="text-center" method="POST" action="{{ route('filterByDay') }}">
                                     <input class="form-control" name="dateDayFilter" type="date" placeholder="filtar por día">
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                     <div>
-                                        <button type="submit" class="btn btn-outline-dark mt-2 text-center" id="filterByDay">filtar por día</button>
+                                        <button type="submit" class="btn btn-outline-dark mt-2 text-center" id="filterByDay">Filter by Day</button>
                                     </div>
                                 </form>
 
@@ -125,7 +131,7 @@
                                     <input class="form-control bt-2" name="dateDayFilterEnd" type="date" placeholder="filtar por día">
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                     <div>
-                                        <button type="submit" class="btn btn-outline-dark mt-2" id="filterByDay">filtar por fechas</button>
+                                        <button type="submit" class="btn btn-outline-dark mt-2" id="filterByDay">Filter by Range</button>
                                     </div>
 
                                 </form>
@@ -134,9 +140,7 @@
                     </div>
                     <br>
                     <div class="col-lg-12 grid-margin stretch-card overflow-auto">
-                        <div class="card-header">
-                            <button id="show-dates-id" onclick="showDates()" type="submit" class="btn     btn-outline-dark mt-2 text-center" id="filterByDay">Consultar Todas las citas</button>
-                        </div>
+                        
                         <div class="card table table-dark text-center overflow-auto">
                             <table class="table table-dark text-center" border="1">
                                 
