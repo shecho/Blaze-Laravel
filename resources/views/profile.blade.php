@@ -74,8 +74,11 @@
         </div>
         <div class="border"></div>
       </div>
-
       <button type="button" class="btn btn-dark   js-scroll-trigger" data-toggle="modal" data-target="#create-date" data-whatever="@mdo">Create Date</button>
+      <a target="blank" href="https://api.whatsapp.com/send?phone=5703194853019&text=Hola%20quisiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x">
+        <i class="fab 	fa-whatsapp fa-stack-1xa text-success"> </i>
+      </a>
+      
 
     </div>
   </div>
@@ -86,8 +89,8 @@
 <div class="modal fade" id="create-date" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title text-dark" id="ModalLabel">Create new Date</h5>
+      <div class="modal-header bg-dark text-light">
+        <h5 class="modal-title " id="ModalLabel">Create new Date</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -140,7 +143,11 @@
           </div>
         </form>
       </div>
+      
       <div class="modal-footer">
+      <a target="blank" href="https://api.whatsapp.com/send?phone=5703194853019&text=Hola%20quisiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x">
+        <i class="fab 	fa-whatsapp fa-stack-1xa text-success"> </i>
+      </a>
         <button type="button" class="btn btn-dark" data-dismiss="modal">Cancel</button>
         <button 
           id="confirm-date"

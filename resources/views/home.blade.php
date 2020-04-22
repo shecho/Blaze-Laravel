@@ -32,8 +32,8 @@
                     <div class="modal fade" id="create-date" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title text-dark" id="ModalLabel">Create new Date</h5>
+                                <div class="modal-header bg-dark text-lght">
+                                    <h5 class="modal-title " id="ModalLabel">Create new Date</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -74,8 +74,8 @@
                                             <div class="form-group">
                                                 <select class="form-control" name="time" id="barber">
                                                     <option value="1">Barbero 1</option>
-                                                    <option value="2">Barbero 2</option>
-                                                    <option value="3">Barbero 3</option>
+                                                    <!-- <option value="2">Barbero 2</option>
+                                                    <option value="3">Barbero 3</option> -->
                                                 </select>
                                                 {{-- <label for="message-text" class="col-form-label text-dark">Barber</label> --}}
                                                 {{-- <input placeholder="Barber" type="text"  class="form-control" id="message-text"> --}}
@@ -88,10 +88,9 @@
                                 </div>
                                 <div class="modal-footer">
 
-                    <a target="blank" href="https://api.whatsapp.com/send?phone=5703194853019&text=Hola%20quisiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x">
-                    
-                    <i class="fab 	fa-whatsapp fa-stack-1xa text-success"></i>
-               </a>
+                                <a target="blank" href="https://api.whatsapp.com/send?phone=5703194853019&text=Hola%20quisiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x">
+                                    <i class="fab 	fa-whatsapp fa-stack-1xa text-success"> </i>
+                                </a>
                                     <button type="button" class="btn btn-dark" data-dismiss="modal">Cancel</button>
                                     <button id="confirm-date" type="button" class="btn btn-dark" onclick="sendForm()"> Confirm</button>
                                 </div>
