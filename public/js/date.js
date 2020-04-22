@@ -44,7 +44,7 @@ function modalValidate(fullName, phone, day, time) {
     console.log("function modal validate");
     var modal = document.getElementById('modal-response')
     if (!fullName || !phone || !day || !time) {
-        console.log("inside if modal validate")
+        // console.log("inside if modal validate")
 
         modal.innerHTML = `
         <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -74,7 +74,7 @@ function modalResponse(state) {
         console.log("inside If Negative modal response");
         modal.innerHTML = `
         <div class="alert alert-success alert-dismissible fade show" role="alert">
-        your date has been 
+        your date has been scheduled
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
         </button>`
@@ -89,11 +89,11 @@ function showDates(){
     let hasAclass = showTable.classList.contains("d-none")
     // console.log(hasAclass);
     if(hasAclass){
-       showButton.innerText =`Consultar todas las citas`;
+       showButton.innerText =`Cheack all Dates`;
         
     }
     else{
-        showButton.innerText =`Acultar todas las citas`;
+        showButton.innerText =`Collapse all Dates`;
     }
    
 
@@ -124,7 +124,6 @@ document.getElementById('confirm-date').addEventListener('click', sendForm)
 
 // borrar citas de la base de datos 
 // editar el perfil del usuario
-// crear un reporte de usuarios
-
+// crear un reporte de usuariosaaa
 
 

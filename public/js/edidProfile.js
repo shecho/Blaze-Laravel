@@ -24,18 +24,40 @@ const SaveNewName = () => {
     saveNewName.style.visibility= "hidden"
     console.log("saving")
 
+
    let inputValue = document.getElementById("edit-name").value
    console.log(inputValue);
+    // aqui debe hacer el  envio al backend
 
    if(inputValue == "" || inputValue == " "){
-       console.log("error")
+         console.log("error")
+        
    }
    else{
-    // enviar datos al backend
+    //enviar datos al backend
+        // let data = {
+        //     "userName": inputValue,
+        //     // "_token": token
+        // };
+        // console.log(data);
+
+        // let ulr = "profile/";
+
+        // fetch(ulr, {
+        //     method: 'POST', // or 'PUT'
+        //     body: JSON.stringify(data), // data can be `string` or {object}!
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //     }
+        // }).then(response => response.json())
+        // .then(data => data)
+        // //1 cuando ya esxiste una cita, 0 cuando se creo correctamente
+        // console.log(data);
+
+
 
    }
 
-   
    let editName= document.getElementById('edit-name')
    editName.style.display = "none"
 
@@ -107,6 +129,33 @@ const editPhone = () => {
 
 
  }
+// --------------------------------------------------------------------------
+// const sendNewUserData = () => {
+//     console.log("sending data to backend")
+//     let newName = document.getElementById('edit-name').value
+//     console.log(newName);
+
+//     let data = {
+//         "userName": fullName,
+//         // "_token": token
+//     };
+//     console.log(data);
+
+//     let ulr = "profile/";
+
+//     fetch(url, {
+//         method: 'POST', // or 'PUT'
+//         body: JSON.stringify(data), // data can be `string` or {object}!
+//         headers: {
+//             'Content-Type': 'application/json',
+//         }
+//     }).then(response => response.json())
+//     .then(data => data)
+//     //1 cuando ya esxiste una cita, 0 cuando se creo correctamente
+//     console.log(data);
+// }
+// ---------------------------------------------------------------------------
+
 // let nameInput = document.getElementById('edit-name')
 // nameInput.style.display = "none"
 
