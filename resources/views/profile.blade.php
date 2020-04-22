@@ -25,11 +25,12 @@
 
          <div class="" id="input-name-content" >
             <!-- <input class="h6" type="text" name="newName" id="edit-name" value="{{ $user->name }}"> -->
-         </div>
-
-          <a href="#" class="text-dark m-2"  onclick="editName()" >
-            <i class="fas fa-pencil-alt "></i>
+        </div>
+        <div>
+          <a id="name-icon-container" href="#" class="text-dark m-2"   >
+              <i class="fas fa-pencil-alt  " onclick="editName()"></i>
           </a> 
+        </div>
        </div>
 
       </div>
@@ -66,8 +67,8 @@
          <div id="input-phone-content">
            <!-- <input value="{{ $user->phone }}" type="number" name="newPhone" id="edit-phone"> -->
          </div>
-          <a href="#" class="text-dark" onclick="editPhone()">
-            <i class="fas fa-pencil-alt "></i>
+          <a id="phone-icon-container" href="#" class="text-dark" >
+            <i id="phone-pencil" class="fas fa-pencil-alt " onclick="editPhone()"></i>
           </a>
 
         </div>
