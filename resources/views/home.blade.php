@@ -122,7 +122,7 @@
 
 
                                 <form class="text-center" method="POST" action="{{ route('filterByRange') }}">
-                                    <input class="form-control mb-2" name="dateDayFilterIni" type="date" placeholder="filtar por día">
+                                    <input class="form-control mb-2" name="dateDayFilterIni" type="date" placeholder="filtar por día" >
                                     <input class="form-control bt-2" name="dateDayFilterEnd" type="date" placeholder="filtar por día">
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                     <div>

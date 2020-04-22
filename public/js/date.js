@@ -4,7 +4,7 @@
 3. procesar las respuesta para saber si la cita se asigno 
 4. mostrar el mensaje 
 */
-console.log("script linked2");
+// console.log("script linked2");
 
 
 
@@ -100,6 +100,21 @@ function showDates(){
 }
 
 
+// funcion para obtener la hora
+function getCurrentDate (){
+   
+    let datePickerId = document.getElementById("date-day")
+    datePickerId.min = new Date().toISOString().split("T")[0];
+    console.log(datePickerId.min);
+
+   
+    let f = new Date();
+    maxDay=(f.getFullYear() + "-" + "0"+ (f.getMonth() +1) + "-" + (f.getDate()+7));
+    console.log(maxDay);
+    datePickerId.max =maxDay
+   
+}
+getCurrentDate()
 
 
 var modal = document.getElementById('modal-response')

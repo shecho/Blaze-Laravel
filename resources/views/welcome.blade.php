@@ -148,7 +148,7 @@
                     </div>
                     <div class="form-group">
                       {{-- <label for="message-text" class="col-form-label text-dark">Day</label> --}}
-                      <input min="2020-04-10" max="2020-04-30" type="date"  class="form-control" id="date-day">
+                      <input min="2020-04-17" max="2020-04-29" type="date"  class="form-control" id="date-day">
                     </div>
                       {{-- <label for="message-text" class="col-form-label text-dark">Time</label> --}}
                       <div class="form-group">
@@ -169,8 +169,8 @@
                       <div class="form-group">
                         <select class="form-control" name="time" id="barber">
                           <option value="1">Barbero 1</option>
-                          <option value="2">Barbero 2</option>
-                          <option value="3">Barbero 3</option>
+                          <!-- <option value="2">Barbero 2</option>
+                          <option value="3">Barbero 3</option> -->
                         </select>
                         {{-- <label for="message-text" class="col-form-label text-dark">Barber</label> --}}
                         {{-- <input placeholder="Barber" type="text"  class="form-control" id="message-text"> --}}
