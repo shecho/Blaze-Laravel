@@ -81,6 +81,24 @@ function modalResponse(state) {
     }
 }
 
+function showDates(){
+  
+    let showTable = document.getElementById("table-body-id")
+    showTable.classList.toggle("d-none")
+    let showButton = document.getElementById("show-dates-id")
+    let hasAclass = showTable.classList.contains("d-none")
+    // console.log(hasAclass);
+    if(hasAclass){
+       showButton.innerText =`Consultar todas las citas`;
+        
+    }
+    else{
+        showButton.innerText =`Acultar todas las citas`;
+    }
+   
+
+}
+
 
 
 
@@ -89,6 +107,9 @@ document.getElementById('confirm-date').addEventListener('click', sendForm)
 
 
 
-// borrar citas de la base de datos
+// borrar citas de la base de datos 
 // editar el perfil del usuario
 // crear un reporte de usuarios
+
+
+

@@ -108,6 +108,8 @@
                 <div class="containner reports">
                     <div class="container">
                         <div class="card-header bg-dark">Reports</div>
+                       
+
                         <div class="m-4">
                             <div class="row justify-content-around">
                                 <form class="text-center" method="POST" action="{{ route('filterByDay') }}">
@@ -133,9 +135,12 @@
                     </div>
                     <br>
                     <div class="col-lg-12 grid-margin stretch-card overflow-auto">
+                        <div class="card-header">
+                            <button id="show-dates-id" onclick="showDates()" type="submit" class="btn     btn-outline-dark mt-2 text-center" id="filterByDay">Consultar Todas las citas</button>
+                        </div>
                         <div class="card table table-dark text-center overflow-auto">
                             <table class="table table-dark text-center" border="1">
-
+                                
                                 <thead>
                                     <tr>
                                         <th>Admin</th>
@@ -147,7 +152,7 @@
                                         <th>Barber</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id="table-body-id" class="d-none">
                                 @foreach($citas as $cita)
                                
                                     <tr id="table-row-id">
