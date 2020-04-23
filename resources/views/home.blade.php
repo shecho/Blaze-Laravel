@@ -109,9 +109,9 @@
                         <div class="card-header bg-dark">Reports</div>
                        
                         <div class="card-header">
-                            <button id="show-dates-id" onclick="showDates()" type="submit" class="btn btn-outline-dark mt-2 btn-sm" id="filterByDay">Check all Dates</button>
+                            <button id="show-dates-id" onclick="showDates()" type="submit" class="btn btn-outline-dark btn-sm" >Check all Dates</button>
                             
-                            <button id="show-filters-id" onclick="showFilter()" type="submit" class="btn btn-outline-dark btn-sm mt-2">Show Filters</button>
+                            <button id="show-filters-id" onclick="showFilter()" type="submit" class="btn btn-outline-dark btn-sm">Show Filters</button>
                             
                         </div>
                        

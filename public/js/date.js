@@ -89,7 +89,7 @@ function showDates(){
     let hasAclass = showTable.classList.contains("d-none")
     // console.log(hasAclass);
     if(hasAclass){
-       showButton.innerText =`Check all Dates`;
+        showButton.innerText =`Check all Dates`;
         
     }
     else{
@@ -105,9 +105,10 @@ function showFilter(){
     let filterContainer= document.getElementById("filter-container-id")
     filterContainer.classList.toggle("d-none")
     let showFilterButton = document.getElementById("show-filters-id")
-    let hasAclass = showTable.classList.contains("d-none")
+
+    let hasAclass = filterContainer.classList.contains("d-none")
     if(hasAclass){
-        showFilterButton.innerText =`Check Filter`;
+        showFilterButton.innerText =`Show Filter`;
          
      }
      else{
