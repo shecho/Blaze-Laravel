@@ -111,6 +111,7 @@
     <script src="/../js/admin.js"></script>
      <!-- Bootstrap core JavaScript -->
         
+    <!-- no needed since they are in the temlate layout -->
 
     <!-- Plugin JavaScript -->
     <!-- <script src="/../jquery-easing/jquery.easing.min.js"></script> -->
