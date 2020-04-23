@@ -23,6 +23,7 @@ Route::post('/createNewDate','CreateDateController@CreateDate');
 Route::post('/filterByDay','HomeController@filterByDay')->name('filterByDay');
 Route::post('/filterByRange','HomeController@filterByRange')->name('filterByRange');
 Route::get('/profile', 'UserController@index')->name('profile');
+Route::get('/deleteDate/{iddate}', 'CreateDateController@deleteDate')->name('deleteDate');
 
 
 /* crear el profile

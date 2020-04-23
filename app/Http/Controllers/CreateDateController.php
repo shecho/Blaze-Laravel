@@ -37,4 +37,15 @@ class createDateController extends Controller
         //capturar datos: se realiza al definir como parametro de la función un objeto de tipo Request      
     }
 
+    public function DeleteDate($iddate)
+    {
+        //dd($iddate);
+        $response = CreateDate::destroy($iddate);
+        //1: borrado; 0 no borrado.
+        $citas = CreateDate::all();
+        //dd($citas);
+        return view('home', compact('citas'));
+        //return $response;
+    }
+
 }

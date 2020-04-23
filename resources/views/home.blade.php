@@ -160,9 +160,9 @@
                                
                                     <tr id="table-row-id">
                                         <td>
-                                        <button id="delete-date-btn" onclick="deleteDate()" >
+                                        <a href="/deleteDate/{{ $cita->id }}">
                                             <i class="fas fa-trash" id="trashIcon"></i>
-                                        </button>   
+                                        </a>   
                                         </td>
                                         <td>{{ $cita->id }}</td>
                                         <td>{{ $cita->userName }}</td>
