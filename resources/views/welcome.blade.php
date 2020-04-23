@@ -746,7 +746,7 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-md-4">
-            <span class="copyright">Copyright &copy; CABAC Creations.Co 2020</span>
+            <span class="copyright">Copyright &copy; COBAC Creations.Co 2020</span>
           </div>
           <div class="col-md-4">
             <ul class="list-inline social-buttons">
@@ -820,9 +820,9 @@
                     maiores repudiandae, nostrum, reiciendis facere nemo!
                   </p>
                   <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Threads</li>
-                    <li>Category: Illustration</li>
+                    <li>Date: Abril 2020</li>
+                    <li>Client: Andres</li>
+                    <li>Category: Design</li>
                   </ul>
                   <button
                     class="btn btn-primary"
@@ -877,9 +877,9 @@
                     maiores repudiandae, nostrum, reiciendis facere nemo!
                   </p>
                   <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Explore</li>
-                    <li>Category: Graphic Design</li>
+                  <li>Date: Abril 2020</li>
+                    <li>Client: Andres</li>
+                    <li>Category: Design</li>
                   </ul>
                   <button
                     class="btn btn-primary"
@@ -934,9 +934,9 @@
                     maiores repudiandae, nostrum, reiciendis facere nemo!
                   </p>
                   <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Finish</li>
-                    <li>Category: Identity</li>
+                    <li>Date: Abril 2020</li>
+                    <li>Client: Andres</li>
+                    <li>Category: Design</li>
                   </ul>
                   <button
                     class="btn btn-primary"
@@ -991,9 +991,9 @@
                     maiores repudiandae, nostrum, reiciendis facere nemo!
                   </p>
                   <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Lines</li>
-                    <li>Category: Branding</li>
+                  <li>Date: Abril 2020</li>
+                    <li>Client: Andres</li>
+                    <li>Category:  Design</li>
                   </ul>
                   <button
                     class="btn btn-primary"
@@ -1048,8 +1048,8 @@
                     maiores repudiandae, nostrum, reiciendis facere nemo!
                   </p>
                   <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Southwest</li>
+                    <li>Date: Abril 2020</li>
+                    <li>Client: Andres</li>
                     <li>Category: Website Design</li>
                   </ul>
                   <button
