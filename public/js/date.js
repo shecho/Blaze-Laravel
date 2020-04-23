@@ -1,8 +1,8 @@
 /* 
-1 capturar datos del form
-2 enviar los datos mediantes metodo POST al backend /date para pedir la cita
-3. procesar las respuesta para saber si la cita se asigno 
-4. mostrar el mensaje 
+1 capture data from intupt from 
+2 send data bya post method
+3. prosses the andwerds
+4. show andwers 
 */
 // console.log("script linked2");
 
@@ -58,6 +58,7 @@ function modalValidate(fullName, phone, day, time) {
     }
 }
 
+//modal response processes
 function modalResponse(state) {
     // console.log("inside modal response");
     var modal = document.getElementById('modal-response')
@@ -81,6 +82,7 @@ function modalResponse(state) {
     }
 }
 
+//showd dates
 function showDates(){
   
     let showTable = document.getElementById("table-body-id")
@@ -99,7 +101,7 @@ function showDates(){
 
 }
 
-
+//whoe filters
 function showFilter(){
  
     let filterContainer= document.getElementById("filter-container-id")
@@ -117,7 +119,7 @@ function showFilter(){
     
 }
 
-// funcion para obtener la hora
+//get the currint time
 function getCurrentDate (){
    
     let datePickerId = document.getElementById("date-day")

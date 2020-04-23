@@ -112,6 +112,7 @@ const editPhone = () => {
     }
     else{
      // enviar datos al backend
+     //enviad datos al backgroundBlendMode: 
 
     }
 
@@ -130,6 +131,7 @@ const editPhone = () => {
 
  }
 // --------------------------------------------------------------------------
+//scrip on testing
 // const sendNewUserData = () => {
 //     console.log("sending data to backend")
 //     let newName = document.getElementById('edit-name').value
