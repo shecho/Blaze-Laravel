@@ -109,6 +109,7 @@
                         <div class="card-header bg-dark">Reports</div>
                        
                         <div class="card-header">
+                            <a href="/exportAllDates" id="show-dates-id" class="btn btn-outline-dark btn-sm" >Export</a>
                             <button id="show-dates-id" onclick="showDates()" type="submit" class="btn btn-outline-dark btn-sm" >Check all Dates</button>
                             
                             <button id="show-filters-id" onclick="showFilter()" type="submit" class="btn btn-outline-dark btn-sm">Show Filters</button>

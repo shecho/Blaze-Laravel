@@ -26,6 +26,7 @@ Route::get('/profile', 'UserController@index')->name('profile');
 Route::get('/updateProfileName/{iduser}/{nameUser}', 'UserController@updateName')->name('updateProfileName');
 Route::get('/updateProfilePhone/{iduser}/{phoneUser}', 'UserController@updatePhone')->name('updateProfilePhone');
 Route::get('/deleteDate/{iddate}', 'CreateDateController@deleteDate')->name('deleteDate');
+Route::get('/exportAllDates', 'HomeController@export')->name('exportAllDates');
 
 
 /* crear el profile

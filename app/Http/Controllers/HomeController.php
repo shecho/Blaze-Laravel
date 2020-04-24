@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\CreateDate;
+use Excel;
 
 class HomeController extends Controller
 {
@@ -41,6 +42,18 @@ class HomeController extends Controller
         //dd($citas);
         return view('home', compact('citas'));
     }
+
+    public function export()
+    {
+      $dates = CreateDate::select('id', 'userName', 'userPhone', 'day', 'time', 'barber')->get();
+      return Excel::create('reportDates', function($excel) use ($dates){
+        $excel->sheet('mysheet', function($sheet) use ($dates){
+          $sheet->fromArray($dates);
+        });
+      })->download('xls');
+    }
+
+    
 
     ///fase1
     ///definir el usuario admin como
