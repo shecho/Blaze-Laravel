@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\CreateDate;
 
 use App\Exports\CreateDatesExport;
+use App\Exports\UsersExport;
 use Maatwebsite\Excel\Facades\Excel;
 
 class HomeController extends Controller
@@ -45,7 +46,7 @@ class HomeController extends Controller
         return view('home', compact('citas'));
     }
 
-    public function export()
+    public function exportDates()
     {
       //$dates = CreateDate::select('id', 'userName', 'userPhone', 'day', 'time', 'barber')->get();
       // return Excel::create('reportDates', function($excel) use ($dates){
@@ -54,6 +55,17 @@ class HomeController extends Controller
       //   });
       // })->download('xls');
       return Excel::download(new CreateDatesExport, 'dates.xlsx');
+
+    }
+    public function exportUsers()
+    {
+      //$dates = CreateDate::select('id', 'userName', 'userPhone', 'day', 'time', 'barber')->get();
+      // return Excel::create('reportDates', function($excel) use ($dates){
+      //   $excel->sheet('mysheet', function($sheet) use ($dates){
+      //     $sheet->fromArray($dates);
+      //   });
+      // })->download('xls');
+      return Excel::download(new UsersExport, 'users.xlsx');
 
     }
 
