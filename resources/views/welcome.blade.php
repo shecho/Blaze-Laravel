@@ -803,7 +803,7 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
+                  <h2 class="text-uppercase">Pomades</h2>
                   <p class="item-intro text-muted">
                     Lorem ipsum dolor sit amet consectetur.
                   </p>
@@ -830,7 +830,7 @@
                     type="button"
                   >
                     <i class="fas fa-times"></i>
-                    Close Project
+                    Close Product
                   </button>
                 </div>
               </div>
@@ -860,7 +860,7 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
+                  <h2 class="text-uppercase">Beard</h2>
                   <p class="item-intro text-muted">
                     Lorem ipsum dolor sit amet consectetur.
                   </p>
@@ -887,7 +887,7 @@
                     type="button"
                   >
                     <i class="fas fa-times"></i>
-                    Close Project
+                    Close Product
                   </button>
                 </div>
               </div>
@@ -917,7 +917,7 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
+                  <h2 class="text-uppercase">Dyeing</h2>
                   <p class="item-intro text-muted">
                     Lorem ipsum dolor sit amet consectetur.
                   </p>
@@ -944,7 +944,7 @@
                     type="button"
                   >
                     <i class="fas fa-times"></i>
-                    Close Project
+                    Close Product
                   </button>
                 </div>
               </div>
@@ -974,7 +974,7 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
+                  <h2 class="text-uppercase">Tools</h2>
                   <p class="item-intro text-muted">
                     Lorem ipsum dolor sit amet consectetur.
                   </p>
@@ -1001,7 +1001,7 @@
                     type="button"
                   >
                     <i class="fas fa-times"></i>
-                    Close Project
+                    Close Product
                   </button>
                 </div>
               </div>
@@ -1031,7 +1031,7 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
+                  <h2 class="text-uppercase">Vaporizers</h2>
                   <p class="item-intro text-muted">
                     Lorem ipsum dolor sit amet consectetur.
                   </p>
@@ -1058,7 +1058,7 @@
                     type="button"
                   >
                     <i class="fas fa-times"></i>
-                    Close Project
+                    Close Product
                   </button>
                 </div>
               </div>
@@ -1088,7 +1088,7 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
+                  <h2 class="text-uppercase">Suplies</h2>
                   <p class="item-intro text-muted">
                     Lorem ipsum dolor sit amet consectetur.
                   </p>
@@ -1111,7 +1111,7 @@
                     type="button"
                   >
                     <i class="fas fa-times"></i>
-                    Close Project
+                    Close Product
                   </button>
                 </div>
               </div>
