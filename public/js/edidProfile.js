@@ -3,6 +3,7 @@
 const editName = () => {
    console.log("aditar");
     let userName = document.getElementById('user-name-id')
+
     userName.style.display = "none"
 
     // let nameInput = document.getElementById('edit-name')
@@ -26,6 +27,8 @@ const SaveNewName = () => {
 
 
    let inputValue = document.getElementById("edit-name").value
+   let userID = document.getElementById('user-id').value
+
    console.log(inputValue);
     // aqui debe hacer el  envio al backend
 
@@ -37,11 +40,11 @@ const SaveNewName = () => {
     //enviar datos al backend
         // let data = {
         //     "userName": inputValue,
-        //     // "_token": token
+        //     "_token": token
         // };
         // console.log(data);
 
-        // let ulr = "profile/";
+        window.location = "/updateProfileName/"+ userID +"/"+inputValue+"/";
 
         // fetch(ulr, {
         //     method: 'POST', // or 'PUT'
@@ -53,8 +56,6 @@ const SaveNewName = () => {
         // .then(data => data)
         // //1 cuando ya esxiste una cita, 0 cuando se creo correctamente
         // console.log(data);
-
-
 
    }
 
@@ -106,11 +107,14 @@ const editPhone = () => {
  
     let inputValue = document.getElementById("edit-phone").value
     console.log(inputValue);
+    let userID = document.getElementById('user-id').value
+
 
     if(inputValue == "" || inputValue == " "){
         console.log("error")
     }
     else{
+        window.location = "/updateProfilePhone/"+ userID +"/"+inputValue+"/";
      // enviar datos al backend
      //enviad datos al backgroundBlendMode: 
 

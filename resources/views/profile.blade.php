@@ -21,6 +21,7 @@
           <i class="fas fa-user-circle profile-photo "></i>
         </div>
        <div class="d-flex justify-content-center">
+          <input type="hidden" id="user-id" value="{{ $user->id }}">
           <h5 class="card-title h2" id="user-name-id">{{ $user->name }}</h5>
 
          <div class="" id="input-name-content" >
