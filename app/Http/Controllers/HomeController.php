@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\CreateDate;
-use Excel;
+
+use App\Exports\CreateDatesExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class HomeController extends Controller
 {
@@ -45,12 +47,14 @@ class HomeController extends Controller
 
     public function export()
     {
-      $dates = CreateDate::select('id', 'userName', 'userPhone', 'day', 'time', 'barber')->get();
-      return Excel::create('reportDates', function($excel) use ($dates){
-        $excel->sheet('mysheet', function($sheet) use ($dates){
-          $sheet->fromArray($dates);
-        });
-      })->download('xls');
+      //$dates = CreateDate::select('id', 'userName', 'userPhone', 'day', 'time', 'barber')->get();
+      // return Excel::create('reportDates', function($excel) use ($dates){
+      //   $excel->sheet('mysheet', function($sheet) use ($dates){
+      //     $sheet->fromArray($dates);
+      //   });
+      // })->download('xls');
+      return Excel::download(new CreateDatesExport, 'dates.xlsx');
+
     }
 
     
