@@ -45,26 +45,17 @@ class HomeController extends Controller
         //dd($citas);
         return view('home', compact('citas'));
     }
-
+    
+// excell exoprtation
     public function exportDates()
     {
-      //$dates = CreateDate::select('id', 'userName', 'userPhone', 'day', 'time', 'barber')->get();
-      // return Excel::create('reportDates', function($excel) use ($dates){
-      //   $excel->sheet('mysheet', function($sheet) use ($dates){
-      //     $sheet->fromArray($dates);
-      //   });
-      // })->download('xls');
+      
       return Excel::download(new CreateDatesExport, 'dates.xlsx');
 
     }
     public function exportUsers()
     {
-      //$dates = CreateDate::select('id', 'userName', 'userPhone', 'day', 'time', 'barber')->get();
-      // return Excel::create('reportDates', function($excel) use ($dates){
-      //   $excel->sheet('mysheet', function($sheet) use ($dates){
-      //     $sheet->fromArray($dates);
-      //   });
-      // })->download('xls');
+     
       return Excel::download(new UsersExport, 'users.xlsx');
 
     }
