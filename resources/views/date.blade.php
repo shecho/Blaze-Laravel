@@ -48,19 +48,19 @@
        
         <li><strong>Phone Number</strong> 3194865030</li>
         <div class="border"></div>
-        <li><strong>Service Date</strong> 01/12/19</li>
+        <li><strong>Fecha</strong> 01/12/19</li>
 
-        <li><strong>Service Time</strong> 5:30</li>
+        <li><strong>Hora</strong> 5:30</li>
 
-        <li><strong>Service quantitty</strong> xxx</li>
+        <li><strong>Cantidad</strong> xxx</li>
 
 
         <div class="border"></div>
-        <li><strong>Barber</strong> Andres  </li>
+        <li><strong>Barbgero</strong> Andres  </li>
         <div class="border"></div>
       
       </ul>
-      <a href="#">Cancel Date</a>
+      <a href="#">Cancelar Cita</a>
 
     </div>
 

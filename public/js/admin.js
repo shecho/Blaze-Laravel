@@ -1,8 +1,8 @@
 
-// this is a test code for creating a filter
+// Esta funcion esta implementada en otro archuvi de momento se deja aqui por escalabilidad
 
 
-// console.log("test x")
+
 
 // const filterByDay = () => 
 // {

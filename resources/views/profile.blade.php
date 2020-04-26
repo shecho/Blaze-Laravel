@@ -9,7 +9,7 @@
 <!--  -->
 
 <div class="col-md-6 container text-center">
-<div class="card-header bg-dark">Profile</div>
+<div class="card-header bg-dark">Perfil</div>
   <div class="row text-center border ">
     
     <div class="card-body lightOverlay text-dark">
@@ -75,7 +75,7 @@
         </div>
         <div class="border"></div>
       </div>
-      <button type="button" class="btn btn-dark   js-scroll-trigger" data-toggle="modal" data-target="#create-date" data-whatever="@mdo">Create Date</button>
+      <button type="button" class="btn btn-dark   js-scroll-trigger" data-toggle="modal" data-target="#create-date" data-whatever="@mdo">Agendar Cita</button>
       <a target="blank" href="https://api.whatsapp.com/send?phone=5703194853019&text=Hola%20quisiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x">
         <i class="fab 	fa-whatsapp fa-stack-1xa text-success"> </i>
       </a>
@@ -91,7 +91,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header bg-dark text-light">
-        <h5 class="modal-title " id="ModalLabel">Create new Date</h5>
+        <h5 class="modal-title " id="ModalLabel">Agendar Cita</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -102,12 +102,13 @@
           <input type="hidden" value="{{ csrf_token() }}" id="token" />
           <div class="form-group">
             {{-- <label for="recipient-name" class="col-form-label text-dark" place>Full name</label> --}}
-            <input autofocus="autofocus" placeholder="Full name" type="text" class="form-control" id="recipient-name">
+            <input autofocus="autofocus" placeholder="
+            Nombre Completo" type="text" class="form-control" id="recipient-name">
           </div>
           <div class="form-group">
             {{-- <label  for="message-text" class="col-form-label text-dark">Telefono</label> --}}
             <div class="form-group">
-              <input placeholder="Phone" type="number" class="form-control" id="message-text">
+              <input placeholder="Teléfono" type="number" class="form-control" id="message-text">
             </div>
             <div class="form-group">
               {{-- <label for="message-text" class="col-form-label text-dark">Day</label> --}}
@@ -149,13 +150,13 @@
       <a target="blank" href="https://api.whatsapp.com/send?phone=5703194853019&text=Hola%20quisiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x">
         <i class="fab 	fa-whatsapp fa-stack-1xa text-success"> </i>
       </a>
-        <button type="button" class="btn btn-dark" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-dark" data-dismiss="modal">Cancelar</button>
         <button 
           id="confirm-date"
           type="button"
           class="btn btn-dark"
           onclick="sendForm()"
-          > Confirm</button>
+          > Confirmar</button>
       </div>
     </div>
   </div>

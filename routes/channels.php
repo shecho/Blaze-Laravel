@@ -1,6 +1,7 @@
 <?php
 
 /*
+Este es el segmento de canelaes si no sabve de laravel no lo tique
 |--------------------------------------------------------------------------
 | Broadcast Channels
 |--------------------------------------------------------------------------

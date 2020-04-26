@@ -1,3 +1,7 @@
+<!-- Esta vista contiene el panle de controly reportes del administrador
+PERmite ver topdos los reportes
+ -->
+
 @extends('layouts.app')
 
 @section('content')
@@ -5,7 +9,7 @@
     <div class="row justify-content-center">
         <div class="col-md-10">
             <div class="card lightOverlay">
-                <div class="card-header bg-dark">Control Panel</div>
+                <div class="card-header bg-dark">Panel de Control</div>
 
 
                 <div class="card-body">
@@ -16,10 +20,10 @@
                     @endif
                     
                     <a name="" id="" class="btn btn-dark" href="/profile" role="button">
-                        Profile
+                        Perfil
                     </a>
                     <!-- butoon -->
-                    <button type="button" class="btn btn-dark js-scroll-trigger" data-toggle="modal" data-target="#create-date" data-whatever="@mdo">Create Date</button>
+                    <button type="button" class="btn btn-dark js-scroll-trigger" data-toggle="modal" data-target="#create-date" data-whatever="@mdo">Agendar Cita</button>
 
                     <a target="blank" href="https://api.whatsapp.com/send?phone=5703194853019&text=Hola%20quisiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x">
                     
@@ -33,7 +37,7 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header bg-dark text-lght">
-                                    <h5 class="modal-title " id="ModalLabel">Create new Date</h5>
+                                    <h5 class="modal-title " id="ModalLabel">Agendar Cita</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -43,19 +47,19 @@
                                         @csrf
                                         <input type="hidden" value="{{ csrf_token() }}" id="token" />
                                         <div class="form-group">
-                                            {{-- <label for="recipient-name" class="col-form-label text-dark" place>Full name</label> --}}
-                                            <input autofocus="autofocus" placeholder="Full name" type="text" class="form-control" id="recipient-name">
+                                            {{-- <label for="recipient-name" class="col-form-label text-dark" place>Nombre Completo</label> --}}
+                                            <input autofocus="autofocus" placeholder="Nombre Completo" type="text" class="form-control" id="recipient-name">
                                         </div>
                                         <div class="form-group">
                                             {{-- <label  for="message-text" class="col-form-label text-dark">Telefono</label> --}}
                                             <div class="form-group">
-                                                <input placeholder="Phone" type="number" class="form-control" id="message-text">
+                                                <input placeholder="Teléfono" type="number" class="form-control" id="message-text">
                                             </div>
                                             <div class="form-group">
                                                 {{-- <label for="message-text" class="col-form-label text-dark">Day</label> --}}
                                                 <input min="2020-04-10" max="2020-04-30" type="date" class="form-control" id="date-day">
                                             </div>
-                                            {{-- <label for="message-text" class="col-form-label text-dark">Time</label> --}}
+                                            {{-- <label for="message-text" class="col-form-label text-dark">Hora</label> --}}
                                             <div class="form-group">
                                                 <select class="form-control" name="time" id="date-time">
                                                     <option value="9">9 am</option>
@@ -91,8 +95,8 @@
                                 <a target="blank" href="https://api.whatsapp.com/send?phone=5703194853019&text=Hola%20quisiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x">
                                     <i class="fab 	fa-whatsapp fa-stack-1xa text-success"> </i>
                                 </a>
-                                    <button type="button" class="btn btn-dark" data-dismiss="modal">Cancel</button>
-                                    <button id="confirm-date" type="button" class="btn btn-dark" onclick="sendForm()"> Confirm</button>
+                                    <button type="button" class="btn btn-dark" data-dismiss="modal">Cancelar</button>
+                                    <button id="confirm-date" type="button" class="btn btn-dark" onclick="sendForm()"> Confirmar</button>
                                 </div>
                             </div>
                         </div>
@@ -106,14 +110,14 @@
                 @if(Auth::user()->id == 1)
                 <div class="containner reports">
                     <div class="container">
-                        <div class="card-header bg-dark">Reports</div>
+                        <div class="card-header bg-dark">Reportes</div>
                        
                         <div class="card-header">
-                            <a href="/exportAllDates" id="show-dates-id" class="btn btn-outline-dark btn-sm" >Export Dates</a>
-                            <a href="/exportAllusers" id="show-dates-id" class="btn btn-outline-dark btn-sm" >Export Users</a>
-                            <button id="show-dates-id" onclick="showDates()" type="submit" class="btn btn-outline-dark btn-sm" >Check all Dates</button>
+                            <a href="/exportAllDates" id="show-dates-id" class="btn btn-outline-dark btn-sm" >Exportas Citas</a>
+                            <a href="/exportAllusers" id="show-dates-id" class="btn btn-outline-dark btn-sm" >Exportar Usurios</a>
+                            <button id="show-dates-id" onclick="showDates()" type="submit" class="btn btn-outline-dark btn-sm" >Ver todas las Citas</button>
                             
-                            <button id="show-filters-id" onclick="showFilter()" type="submit" class="btn btn-outline-dark btn-sm">Show Filters</button>
+                            <button id="show-filters-id" onclick="showFilter()" type="submit" class="btn btn-outline-dark btn-sm">Ver  Filtros</button>
                             
                         </div>
                        
@@ -123,7 +127,7 @@
                                     <input class="form-control" name="dateDayFilter" type="date" placeholder="filtar por día">
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                     <div>
-                                        <button type="submit" class="btn btn-outline-dark mt-2 text-center" id="filterByDay">Filter by Day</button>
+                                        <button type="submit" class="btn btn-outline-dark mt-2 text-center" id="filterByDay">Filtrar por Día</button>
                                     </div>
                                 </form>
 
@@ -133,7 +137,7 @@
                                     <input class="form-control bt-2" name="dateDayFilterEnd" type="date" placeholder="filtar por día">
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                     <div>
-                                        <button type="submit" class="btn btn-outline-dark mt-2" id="filterByDay">Filter by Range</button>
+                                        <button type="submit" class="btn btn-outline-dark mt-2" id="filterByDay">Filtrar por rango de Días</button>
                                     </div>
 
                                 </form>
@@ -148,13 +152,13 @@
                                 
                                 <thead>
                                     <tr>
-                                        <th>Admin</th>
+                                        <th>Administrar</th>
                                         <th>id</th>
-                                        <th>User</th>
-                                        <th>Phone</th>
-                                        <th>Day</th>
-                                        <th>Hour</th>
-                                        <th>Barber</th>
+                                        <th>Nombre</th>
+                                        <th>Teléfono</th>
+                                        <th>Día</th>
+                                        <th>Hora</th>
+                                        <th>Barbero</th>
                                     </tr>
                                 </thead>
                                 <tbody id="table-body-id" class="d-none">

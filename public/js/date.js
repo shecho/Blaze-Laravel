@@ -1,8 +1,10 @@
 /* 
-1 capture data from intupt from 
-2 send data bya post method
-3. prosses the andwerds
-4. show andwers 
+    0. Campura los eventos del formaario
+    1  Enviar el formulario de la cita
+    2  Validar la informacion de l formulario de las citas 
+    3. Envia las respuestas en case de errores
+    4. Hace la petition al backenbn 
+    5. Procesa la respuesta del backend
 */
 // console.log("script linked2");
 
@@ -139,10 +141,5 @@ getCurrentDate()
 var modal = document.getElementById('modal-response')
 document.getElementById('confirm-date').addEventListener('click', sendForm)
 
-
-
-// borrar citas de la base de datos 
-// editar el perfil del usuario
-// crear un reporte de usuariosaaa
 
 

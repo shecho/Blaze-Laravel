@@ -1,4 +1,9 @@
-// console.log("delete date working");
+/*
+    1.Elimina las ciras de los reportes
+    2. Camputas los eventos
+    3. Esconde el rgesgtri al que se le da click
+
+*/
 
 const deleteDate = () => {
     console.log("inside delete date");

@@ -1,3 +1,9 @@
+// Esta funcion la usa boostrap paras suavizar el scroll con q juqrryas
+
+
+
+
+
 (function($) {
   "use strict"; // Start of use strict
 

@@ -1,4 +1,12 @@
+/*  
+    Permite editar los datos del cliente
 
+    1. Editar el nombre
+    2. Guarda el nuevo nmombre 
+    3. Captura los eventos
+    4. Edita el telefono
+    5. Guarda el nuevo telefono
+*/ 
 
 const editName = () => {
    console.log("aditar");

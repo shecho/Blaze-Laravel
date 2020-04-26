@@ -1,3 +1,7 @@
+/* Esta funcion captura los eventos y lainformacion del formulario de la seccion de contactanos */
+// Si no sbae j querry no lo toque
+
+
 $(function() {
 
   $("#contactForm input,#contactForm textarea").jqBootstrapValidation({

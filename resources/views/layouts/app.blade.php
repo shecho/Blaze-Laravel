@@ -1,3 +1,5 @@
+<!-- Esta es la vista principal pádre de todas las vitas y de las que todas heredan -->
+
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>

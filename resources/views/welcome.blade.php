@@ -1,3 +1,11 @@
+<!-- Nos disculpamos por los comentarios inncesarios en este proyecto. 
+Sabemos e antemano que son malas practicas pero los hemos agregado por motivos academicos pues parece que las bunas practicas internacilales de codigo no le interesan a los evaluadores de este proyecto
+
+-->
+
+
+<!-- Esta el la vista de inio de la aplicacion aqui estan todas las seciones y la barra de navegacion -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -70,33 +78,33 @@
           <ul class="navbar-nav text-uppercase ml-auto">
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#services"
-                >Services</a
+                >Servicios</a
               >
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#portfolio"
-                >Products</a
+                >Productos</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+              <a class="nav-link js-scroll-trigger" href="#about">Acerca de</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#team">Team</a>
+              <a class="nav-link js-scroll-trigger" href="#team">Equipo</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+              <a class="nav-link js-scroll-trigger" href="#contact">Contactanos</a>
             </li>
             <div class="login-button">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}" >Control Panel</a>
+                        <a href="{{ url('/home') }}" >Panel de Control </a>
                     @else
                         <a href="{{ route('login') }}"class="btn btn-primary">Login</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}"class="btn btn-primary">Register</a>
+                            <a href="{{ route('register') }}"class="btn btn-primary">Registrarse</a>
                         @endif
                     @endauth
                 </div>
@@ -114,10 +122,10 @@
       <div class="container">
         <div class="intro-text">
 
-          <div class="intro-lead-in">Welcome to Big Boy Blaze!</div>
-          <div class="intro-heading text-uppercase">It's Nice To Meet You</div>
+          <div class="intro-lead-in">Bienvenido a Big Boy Blaze!</div>
+          <div class="intro-heading text-uppercase">Aghenda aqui una cita</div>
 
-          <button  type="button" class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" data-toggle="modal" data-target="#create-date" data-whatever="@mdo">Create Date /</button> 
+          <button  type="button" class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" data-toggle="modal" data-target="#create-date" data-whatever="@mdo">Agendar Cita</button> 
 
         
 
@@ -127,7 +135,7 @@
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title text-dark" id="ModalLabel">Create new Date</h5>
+              <h5 class="modal-title text-dark" id="ModalLabel">Agendar Cita</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -137,13 +145,13 @@
                   @csrf
                     <input type="hidden" value="{{ csrf_token() }}" id="token"/>
                     <div class="form-group">
-                      {{-- <label for="recipient-name" class="col-form-label text-dark" place>Full name</label> --}}
-                      <input placeholder="Full name" type="text" class="form-control" id="recipient-name">
+                      {{-- <label for="recipient-name" class="col-form-label text-dark" place>Nombre Completo</label> --}}
+                      <input placeholder="Nombre Completo" type="text" class="form-control" id="recipient-name">
                     </div>
                     <div class="form-group">
                       {{-- <label  for="message-text" class="col-form-label text-dark">Telefono</label> --}}
                       <div class="form-group">
-                      <input placeholder="Phone" type="number"  class="form-control" id="message-text">
+                      <input placeholder="Telefono" type="number"  class="form-control" id="message-text">
                     </div>
                     <div class="form-group">
                       {{-- <label for="message-text" class="col-form-label text-dark">Day</label> --}}
@@ -183,8 +191,8 @@
                 <div class="modal-footer">
 
                 
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                  <button id="confirm-date" type="button" class="btn btn-primary"> Confirm</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                  <button id="confirm-date" type="button" class="btn btn-primary"> Confirmar</button>
 
                   <div class="">
                   <a target="blank" href="https://api.whatsapp.com/send?phone=5703194853019&text=Hola%20quisiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x">
@@ -218,7 +226,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Services</h2>
+            <h2 class="section-heading text-uppercase">Servicios</h2>
             <h3 class="section-subheading text-muted">
               Lorem ipsum dolor sit amet consectetur.
             </h3>
@@ -230,7 +238,7 @@
                   <i class="fas fa-circle fa-stack-2x text-secundary"></i>
               <i class="fas fa-cut fa-stack-1x fa-inverse"></i>
             </span>
-            <h4 class="service-heading">HairCuts</h4>
+            <h4 class="service-heading">Cortes</h4>
             <p class="text-muted">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
               maxime quam architecto quo inventore harum ex magni, dicta
@@ -242,7 +250,7 @@
               <i class="fas fa-circle fa-stack-2x text-secundary"></i>
               <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
             </span>
-            <h4 class="service-heading">Beuty and Care Products</h4>
+            <h4 class="service-heading">Productos de belleza y cuidado</h4>
             <p class="text-muted">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
               maxime quam architecto quo inventore harum ex magni, dicta
@@ -254,7 +262,7 @@
               <i class="fas fa-circle fa-stack-2x text-secundary"></i>
               <i class="fas fa-gamepad fa-stack-1x fa-inverse"></i>
             </span>
-            <h4 class="service-heading">And more</h4>
+            <h4 class="service-heading">Entretenimiento y mas</h4>
             <p class="text-muted">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
               maxime quam architecto quo inventore harum ex magni, dicta
@@ -270,9 +278,9 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Procducts</h2>
+            <h2 class="section-heading text-uppercase">Productos</h2>
             <h3 class="section-subheading text-muted">
-              Beuty a care products
+              Belleza y cuidado
             </h3>
           </div>
         </div>
@@ -295,8 +303,8 @@
               />
             </a>
             <div class="portfolio-caption">
-              <h4>Pomades</h4>
-              <p class="text-muted">Illustration</p>
+              <h4>Pomadas</h4>
+              <p class="text-muted">A base de agua </p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -317,8 +325,8 @@
               />
             </a>
             <div class="portfolio-caption">
-              <h4>Beard traetments</h4>
-              <p class="text-muted">Design</p>
+              <h4>Tratamientos para la barba</h4>
+              <p class="text-muted">Desarrollo y crecimiento</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -339,8 +347,8 @@
               />
             </a>
             <div class="portfolio-caption">
-              <h4>Dyeing</h4>
-              <p class="text-muted">Identity</p>
+              <h4>Tinturas</h4>
+              <p class="text-muted">Gran gama de colores</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -361,8 +369,8 @@
               />
             </a>
             <div class="portfolio-caption">
-              <h4>Tools</h4>
-              <p class="text-muted">Branding</p>
+              <h4>Herrammientas profesionales</h4>
+              <p class="text-muted">Ecuantra aqui lo que necesitas para tu barberia</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -383,8 +391,8 @@
               />
             </a>
             <div class="portfolio-caption">
-              <h4>Vaporizers</h4>
-              <p class="text-muted">Website Design</p>
+              <h4>Vaporizadores</h4>
+              <p class="text-muted">Difectes marcaas, tipos y propositos</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -405,8 +413,8 @@
               />
             </a>
             <div class="portfolio-caption">
-              <h4>Suplies</h4>
-              <p class="text-muted">MAny suplies for you</p>
+              <h4>Puplementos</h4>
+              <p class="text-muted">Ganancia muscular</p>
             </div>
           </div>
         </div>
@@ -418,7 +426,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">About</h2>
+            <h2 class="section-heading text-uppercase">Acerca de</h2>
             <h3 class="section-subheading text-muted">
               Lorem ipsum dolor sit amet consectetur.
             </h3>
@@ -438,7 +446,7 @@
                 <div class="timeline-panel">
                   <div class="timeline-heading">
                     <h4>2009-2011</h4>
-                    <h4 class="subheading">Our Humble Beginnings</h4>
+                    <h4 class="subheading">Nuentros inicios</h4>
                   </div>
                   <div class="timeline-body">
                     <p class="text-muted">
@@ -460,8 +468,8 @@
                 </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
-                    <h4>March 2011</h4>
-                    <h4 class="subheading">An Agency is Born</h4>
+                    <h4>Marzo 2011</h4>
+                    <h4 class="subheading">Nuentra Creacion</h4>
                   </div>
                   <div class="timeline-body">
                     <p class="text-muted">
@@ -483,8 +491,8 @@
                 </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
-                    <h4>December 2012</h4>
-                    <h4 class="subheading">Transition to Full Service</h4>
+                    <h4>Diciembre 2012</h4>
+                <h4 class="subheading">Nueva sede</h4>
                   </div>
                   <div class="timeline-body">
                     <p class="text-muted">
@@ -507,7 +515,7 @@
                 <div class="timeline-panel">
                   <div class="timeline-heading">
                     <h4>July 2014</h4>
-                    <h4 class="subheading">Phase Two Expansion</h4>
+                    <h4 class="subheading">Expansion</h4>
                   </div>
                   <div class="timeline-body">
                     <p class="text-muted">
@@ -521,7 +529,7 @@
               </li>
               <li class="timeline-inverted">
                 <div class="timeline-image">
-                  <h4>Be Part <br />Of Our <br />Story!</h4>
+                  <h4>Se parte <br />de nuestra <br />Historia!</h4>
                 </div>
               </li>
             </ul>
@@ -535,9 +543,9 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
+            <h2 class="section-heading text-uppercase">Nuestro genial equipo</h2>
             <h3 class="section-subheading text-muted">
-              Lorem ipsum dolor sit amet consectetur.
+             Profesionales destacados.
             </h3>
           </div>
         </div>
@@ -545,8 +553,8 @@
           <div class="col-sm-4">
             <div class="team-member">
               <img class="mx-auto rounded-circle" src="img/barbers/barber2.jpg" alt="" />
-              <h4>Kay Garland</h4>
-              <p class="text-muted">Barber and Styler</p>
+              <h4>Alejandro</h4>
+              <p class="text-muted">Barba y estilos</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
                   <a href="#">
@@ -570,7 +578,7 @@
             <div class="team-member">
               <img class="mx-auto rounded-circle" src="img/barbers/barber1.jpg" alt="barber1 img" />
               <h4>Andres</h4>
-              <p class="text-muted">Owner manager and Old School Barber</p>
+              <p class="text-muted">Administrador y fundador</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
                   <a href="#">
@@ -593,8 +601,8 @@
           <div class="col-sm-4">
             <div class="team-member">
           <img class="mx-auto rounded-circle" src="img/barbers/barber2.jpg" alt="" />
-              <h4>Pertersen</h4>
-              <p class="text-muted">Barber and ...</p>
+              <h4>Damian</h4>
+              <p class="text-muted">Barbas y tintes</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
                   <a href="#">
@@ -618,9 +626,7 @@
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
             <p class="large text-muted">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
-              eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam
-              corporis ea, alias ut unde.
+              Este es solo un texto de ejemplo para los profresores que no saben ingles
             </p>
           </div>
         </div>
@@ -661,9 +667,9 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Contact Us</h2>
+            <h2 class="section-heading text-uppercase">Contactanos</h2>
             <h3 class="section-subheading text-muted">
-              Let us know what you think.
+              Dejanos saber que piensas
             </h3>
           </div>
         </div>
@@ -677,7 +683,7 @@
                         class="form-control"
                         id="name"
                         type="text"
-                        placeholder="Your Name *"
+                        placeholder="Nombre Completo *"
                         required="required"
                         data-validation-required-message="Please enter your name."
                     />
@@ -688,7 +694,7 @@
                       class="form-control"
                       id="email"
                       type="email"
-                      placeholder="Your Email *"
+                      placeholder="E-mail *"
                       required="required"
                       data-validation-required-message="Please enter your email address."
                     />
@@ -699,7 +705,7 @@
                       class="form-control"
                       id="phone"
                       type="number"
-                      placeholder="Your Phone *"
+                      placeholder="Telefono *"
                       required="required"
                       data-validation-required-message="Please enter your phone number."
                     />
@@ -711,7 +717,7 @@
                     <textarea
                       class="form-control"
                       id="message"
-                      placeholder="Your Message *"
+                      placeholder="Mensaje *"
                       required="required"
                       data-validation-required-message="Please enter a message."
                     ></textarea>
@@ -726,7 +732,7 @@
                     class="btn btn-primary btn-xl text-uppercase"
                     type="submit"
                   >
-                    Send Message
+                    Enviar Mensaje
                   </button>
                   <a target="blank" href="https://api.whatsapp.com/send?phone=5703194853019&text=Hola%20Quiesiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x">
              

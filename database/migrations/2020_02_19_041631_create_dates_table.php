@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Schema;
 class CreateDatesTable extends Migration
 {
     /**
-     * Run the migrations.
+     * Migrcaciones de creacion de citas
      *
      * @return void
      */

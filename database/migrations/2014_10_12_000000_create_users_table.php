@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Schema;
 class CreateUsersTable extends Migration
 {
     /**
-     * Run the migrations.
+     * .Migraciones de usurios
      *
      * @return void
      */
@@ -27,7 +27,7 @@ class CreateUsersTable extends Migration
     }
 
     /**
-     * Reverse the migrations.
+     * Reversar megraciones
      *
      * @return void
      */
