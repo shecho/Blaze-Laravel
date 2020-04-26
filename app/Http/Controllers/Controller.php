@@ -1,5 +1,6 @@
 <?php
 
+// Este controlador es el encatfado de manejar todos los controladores
 namespace App\Http\Controllers;
 
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;

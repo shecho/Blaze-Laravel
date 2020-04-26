@@ -9,7 +9,7 @@ class CreateDate extends Model
     // use Notifiable;
 
     /**
-     * The attributes that are mass assignable.
+     *Este archivo contiene el modelo de la clases citas
      *
      * @var array
      */

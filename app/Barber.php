@@ -1,7 +1,7 @@
 <?php
 
 namespace App;
-
+// Este arcchivo contiene la clase barveroemempleado
 use Illuminate\Database\Eloquent\Model;
 
 class Barber extends Model

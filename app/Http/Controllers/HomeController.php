@@ -1,4 +1,5 @@
 <?php
+/*Este controaldor es responsavle de  manejar el panel de control y de administracion de los usurtios y  del administrador  */
 
 namespace App\Http\Controllers;
 
@@ -12,7 +13,7 @@ use Maatwebsite\Excel\Facades\Excel;
 class HomeController extends Controller
 {
     /**
-     * Create a new controller instance.
+     * Crea una nueva instrancia del controlador
      *
      * @return void
      */
@@ -22,7 +23,7 @@ class HomeController extends Controller
     }
 
     /**
-     * Show the application dashboard.
+     * Muestra el panel de administracxion
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
@@ -46,7 +47,7 @@ class HomeController extends Controller
         return view('home', compact('citas'));
     }
     
-// excell exoprtation
+// Hace las exportaciones de los archivos d eexcell
     public function exportDates()
     {
       

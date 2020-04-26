@@ -1,5 +1,7 @@
 <?php
-
+/* 
+Este conrtolador es responsavle de manejar el modelo de usuario
+*/
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;

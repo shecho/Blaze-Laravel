@@ -1,5 +1,8 @@
 <?php
+/* 
+    Este controlador es el responsable de crear las citas
 
+*/
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
