@@ -44,7 +44,7 @@ function sendForm() {
 }
 
 function modalValidate(fullName, phone, day, time) {
-    console.log("function modal validate");
+    // console.log("function modal validate");
     var modal = document.getElementById('modal-response')
     if (!fullName || !phone || !day || !time) {
         // console.log("inside if modal validate")

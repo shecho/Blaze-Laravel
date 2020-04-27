@@ -126,7 +126,18 @@ PERmite ver topdos los reportes
                             <button id="show-dates-id" onclick="showDates()" type="submit" class="btn btn-outline-dark btn-sm" >Ver todas las Citas</button>
                             
                             <button id="show-filters-id" onclick="showFilter()" type="submit" class="btn btn-outline-dark btn-sm">Ver  Filtros</button>
-                            <button id="show-filters-id" onclick="showFilter()" type="submit" class="btn btn-outline-dark btn-sm">Crear Servicio </button>
+                            <button 
+                                id="service-id"
+                                onclick=""
+                                type="submit"
+                                class="btn btn-outline-dark btn-sm"
+                                data-target="#create-service"
+                                data-toggle="modal"
+                                data-whatever="@mdo">
+                                    Gestionar Servicio
+                                 
+                            </button>
+                            
                             
                         </div>
                        
@@ -246,6 +257,57 @@ PERmite ver topdos los reportes
 
                 </div>
                 {{-- modal --}}
+
+
+
+
+
+
+                {{--Crear Servicio   --}}
+
+<div class="modal fade" id="create-service" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-dark text-lght">
+                <h5 class="text-light modal-title " id="ModalLabel">Gestionar servicio</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    @csrf
+                 
+                    <div class="form-group">
+                      {{-- <label for="recipient-name" class="col-form-label text-dark" place>Nombre del Servicio</label> --}}
+                      <input placeholder="Nombre del Servicio" type="text" class="form-control" id="service-name-id">
+                    </div>
+                    <div class="form-group">
+                      {{-- <label for="recipient-name" class="col-form-label text-dark" place>Precio</label> --}}
+                      <input placeholder="$" type="number" class="w-25 form-control" id="service-price-id">
+                    </div>
+                   
+                    <div class="form-group" id="create-service-mesage-validate">
+                      
+                    </div>
+                   
+                </form>
+            </div>
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-dark" data-dismiss="modal">Cancelar</button>
+                <button id="confirm-date" type="button" class="btn btn-dark" onclick="handleService()"> 
+               Crear
+                </button>
+                 
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+{{-- modal --}}
 
 
 @endsection
