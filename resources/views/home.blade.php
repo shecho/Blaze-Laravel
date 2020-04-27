@@ -191,7 +191,7 @@ PERmite ver topdos los reportes
                                             <i class="fas fa-trash" id="trashIcon"></i>
                                         </a>   
                                         </button>
-                                        <a class="d-none" href="/deleteDate/{{ $cita->id }}">
+                                        <a class="text-light btn btn-dark  " href="/deleteDate/{{ $cita->id }}">
                                             <i class="fas fa-trash" id="trashIcon"></i>
                                         </a>   
                                         </td>
@@ -243,10 +243,13 @@ PERmite ver topdos los reportes
                                 <div class="modal-footer">
 
                                     <button type="button" class="btn btn-dark" data-dismiss="modal">Cancelar</button>
-                                    <button id="confirm-date" type="button" class="btn btn-dark" onclick="sendForm()"> 
-                                    <a class="text-decoration-none text-light" href="/deleteDate/{{ $cita->id }}">
+                                    <button id="confirm-date" type="button" class="btn btn-dark" onclick="()"> 
+
+                                    <a class="text-decoration-none text-light" href="/deleteDate/{{ $cita->id }}"> 
                                         Confirmar
-                                        </a>  
+                                        </a> 
+                                                                     
+
                                     </button>
                                      
                                 </div>
