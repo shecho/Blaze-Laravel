@@ -1,5 +1,5 @@
 /*  
-    Permite editar los datos del cliente
+    Este archivo Permite editar los datos del cliente
 
     1. Editar el nombre
     2. Guarda el nuevo nmombre 

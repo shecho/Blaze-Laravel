@@ -1,4 +1,5 @@
 /* 
+Este archivo hace los siguiente: 
     0. Campura los eventos del formaario
     1  Enviar el formulario de la cita
     2  Validar la informacion de l formulario de las citas 

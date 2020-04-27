@@ -13,14 +13,14 @@ class ConfirmPasswordController extends Controller
     | Confirm Password Controller
     |--------------------------------------------------------------------------
     |
-    | Thite controlador se envcarga de manejar las confirmaciones de la conrteaseña
+    | Este controlador se envcarga de manejar las confirmaciones de la conrteaseña
     |
     */
 
     use ConfirmsPasswords;
 
     /**
-     * Encxuanto loga lo redirecciona al paneld eocntrol.
+     * Cuando loga lo redirecciona al panel de administracion
      *
      * @var string
      */

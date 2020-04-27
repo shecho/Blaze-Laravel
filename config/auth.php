@@ -4,10 +4,10 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Authentication Defaults
+    | Authentication 
     |--------------------------------------------------------------------------
     |
-    | Este archivo contiene los cirerios de autenticacion de usirios y toda la logica deñl framework detras de el
+    | Este archivo contiene los cirerios de autenticacion de usirios y toda la logica del framework detras de el
     |
     */
 

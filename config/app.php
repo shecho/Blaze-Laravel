@@ -4,7 +4,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Application Name
+    | Applicacion
     |--------------------------------------------------------------------------
     |
     |.Este archivo guarfda todas la configuraciones del la aplcaicien entetra y creado por laravel
