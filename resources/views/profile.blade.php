@@ -139,6 +139,13 @@
               {{-- <label for="message-text" class="col-form-label text-dark">Barber</label> --}}
               {{-- <input placeholder="Barber" type="text"  class="form-control" id="message-text"> --}}
             </div>
+            <div class="form-group">
+              <select class="form-control" name="time" id="product">
+                <option value="1">Corte</option>
+                <option value="2">Barba</option>
+                <option value="3">Corte y Barba</option>
+              </select>
+            </div>
             <div class="form-group" id="modal-response">
 
             </div>

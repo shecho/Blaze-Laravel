@@ -51,7 +51,7 @@ function modalValidate(fullName, phone, day, time) {
 
         modal.innerHTML = `
         <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            Please fill all the data"
+           Por favor llena todos los campos"
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
             </button>
@@ -69,7 +69,7 @@ function modalResponse(state) {
         console.log("inside If  true modal response");
         modal.innerHTML = `
         <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            This our has been already taken, choose another"
+            Este cita ha sido agendada a alguien mas"
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
@@ -78,7 +78,7 @@ function modalResponse(state) {
         console.log("inside If Negative modal response");
         modal.innerHTML = `
         <div class="alert alert-success alert-dismissible fade show" role="alert">
-        your date has been scheduled
+        Tu cita a sido agendada
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
         </button>`
@@ -94,11 +94,11 @@ function showDates(){
     let hasAclass = showTable.classList.contains("d-none")
     // console.log(hasAclass);
     if(hasAclass){
-        showButton.innerText =`Check all Dates`;
+        showButton.innerText =`Ver todas las Citas`;
         
     }
     else{
-        showButton.innerText =`Collapse all Dates`;
+        showButton.innerText =`Acultar citas`;
     }
    
 
@@ -113,11 +113,11 @@ function showFilter(){
 
     let hasAclass = filterContainer.classList.contains("d-none")
     if(hasAclass){
-        showFilterButton.innerText =`Show Filter`;
+        showFilterButton.innerText =`Ver Filtros`;
          
      }
      else{
-        showFilterButton.innerText =`Collapse Filters`;
+        showFilterButton.innerText =`Ocultar Filtros`;
      }
     
 }

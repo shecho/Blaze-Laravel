@@ -84,6 +84,14 @@ PERmite ver topdos los reportes
                                                 {{-- <label for="message-text" class="col-form-label text-dark">Barber</label> --}}
                                                 {{-- <input placeholder="Barber" type="text"  class="form-control" id="message-text"> --}}
                                             </div>
+                                            <div class="form-group">
+                                                <select class="form-control" name="time" id="product">
+                                                <option value="1">Corte</option>
+                                                <option value="2">Barba</option>
+                                                <option value="3">Corte y Barba</option>
+                                                </select>
+                                            
+                                            </div>
                                             <div class="form-group" id="modal-response">
 
                                             </div>
@@ -118,6 +126,7 @@ PERmite ver topdos los reportes
                             <button id="show-dates-id" onclick="showDates()" type="submit" class="btn btn-outline-dark btn-sm" >Ver todas las Citas</button>
                             
                             <button id="show-filters-id" onclick="showFilter()" type="submit" class="btn btn-outline-dark btn-sm">Ver  Filtros</button>
+                            <button id="show-filters-id" onclick="showFilter()" type="submit" class="btn btn-outline-dark btn-sm">Crear Servicio </button>
                             
                         </div>
                        
@@ -166,7 +175,12 @@ PERmite ver topdos los reportes
                                
                                     <tr id="table-row-id">
                                         <td>
-                                        <a href="/deleteDate/{{ $cita->id }}">
+                                        <button type="button" class="btn btn-dark js-scroll-trigger" data-toggle="modal" data-target="#delete-date" data-whatever="@mdo">
+                                        <a class="" >
+                                            <i class="fas fa-trash" id="trashIcon"></i>
+                                        </a>   
+                                        </button>
+                                        <a class="d-none" href="/deleteDate/{{ $cita->id }}">
                                             <i class="fas fa-trash" id="trashIcon"></i>
                                         </a>   
                                         </td>
@@ -192,5 +206,46 @@ PERmite ver topdos los reportes
         </div>
     </div>
 </div>
+
+{{--Eliminar cita  --}}
+
+                    <div class="modal fade" id="delete-date" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header bg-dark text-lght">
+                                    <h5 class="modal-title " id="ModalLabel">Eliminar Cita</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        @csrf
+                                       
+                                        <div class="form-group">
+                                           <label for="recipient-name" class="col-form-label text-dark" place>Seguro deseas eliminar esta cita?</label>
+                                         
+                                        </div>
+                                       
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+
+                                    <button type="button" class="btn btn-dark" data-dismiss="modal">Cancelar</button>
+                                    <button id="confirm-date" type="button" class="btn btn-dark" onclick="sendForm()"> 
+                                    <a class="text-decoration-none text-light" href="/deleteDate/{{ $cita->id }}">
+                                        Confirmar
+                                        </a>  
+                                    </button>
+                                     
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                {{-- modal --}}
+
 
 @endsection

@@ -8,9 +8,9 @@ Este Archivo permite eliminar las citas desde la vista
 
 const deleteDate = () => {
     console.log("inside delete date");
-   
-    let deleteRow  = document.querySelector('#table-row-id')
-    deleteRow.style.display = "none"
+   alert("Eliminar cita")
+    // let deleteRow  = document.querySelector('#table-row-id')
+    // deleteRow.style.display = "none"
     
    
   
