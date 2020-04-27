@@ -123,7 +123,7 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
         <div class="intro-text">
 
           <div class="intro-lead-in">Bienvenido a Big Boy Blaze!</div>
-          <div class="intro-heading text-uppercase">Aghenda aqui una cita</div>
+          <div class="intro-heading text-uppercase">Agenda tu cita</div>
 
           <button  type="button" class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" data-toggle="modal" data-target="#create-date" data-whatever="@mdo">Agendar Cita</button> 
 
