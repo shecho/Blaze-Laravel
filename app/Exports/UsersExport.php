@@ -1,5 +1,5 @@
 <?php
-
+//Este archivo permite exportar el reporte de usuarios 
 namespace App\Exports;
 
 use App\User;

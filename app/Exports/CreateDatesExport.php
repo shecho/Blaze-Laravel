@@ -1,5 +1,5 @@
 <?php
-
+// Esta earchivo permite exportar el reporte de citas
 namespace App\Exports;
 
 use App\CreateDate;

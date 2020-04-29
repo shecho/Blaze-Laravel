@@ -13,7 +13,7 @@ class LoginController extends Controller
     | Login Controller
     |--------------------------------------------------------------------------
     |Este controlador manjea el logueo de la aplicacion 
-    Una vez logado y validado el usrio es redirgigido
+    Una vez logado y validado el usuario es redirgigido
     
     |
     */
