@@ -23,7 +23,7 @@ class HomeController extends Controller
     }
 
     /**
-     * Muestra el panel de administracxion
+     * Muestra el panel de administracion 
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
