@@ -46,6 +46,7 @@ const valitadeService = (serviceName,servicePrice) => {
 
 }
 const handleResponse = (state) => {
+    console.log(state);
     // Maneja es estado de la peticion 
     // si se dejo gfuardar en todo bien sino ya existe ese ser
 }
@@ -54,4 +55,15 @@ const showServices = () => {
     // Muestra el reporte de sercicios que esta oculto
     let showServicesContainer= document.getElementById('services-container-id')
     showServicesContainer.classList.toggle("d-none")
+    let showServicesButton= document.getElementById('show-services-id')
+    
+    let hasAclass = showServicesContainer.classList.contains("d-none")
+    if(hasAclass){
+        showServicesButton.innerText =`Ver todos los Servicios`;
+         
+     }
+     else{
+        showServicesButton.innerText =`Ocultar todos los Servicios`;
+     }
+
 }

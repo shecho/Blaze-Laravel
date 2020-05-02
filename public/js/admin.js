@@ -1,6 +1,6 @@
 
-// Esta funcion esta implementada en otro archuvi de momento se deja aqui por escalabilidad
-
+// Esta funcion esta implementada en otro archuvo de momento se deja aqui por escalabilidad. 
+// 
 
 
 

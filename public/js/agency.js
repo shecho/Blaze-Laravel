@@ -1,4 +1,4 @@
-// Esta funcion la usa boostrap paras suavizar el scroll con q juqrryas
+// Esta funcion la usa boostrap paras suavizar el scroll con  juqrryas
 
 
 

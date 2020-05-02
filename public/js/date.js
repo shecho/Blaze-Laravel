@@ -10,7 +10,7 @@ Este archivo hace los siguiente:
 // console.log("script linked2");
 
 
-
+// Envia el formulario
 function sendForm() {
     console.log('Inside function send form');
     let fullName = document.getElementById("recipient-name").value
@@ -43,6 +43,7 @@ function sendForm() {
     console.log(data);
 }
 
+// Valida el modal
 function modalValidate(fullName, phone, day, time) {
     // console.log("function modal validate");
     var modal = document.getElementById('modal-response')
@@ -61,7 +62,7 @@ function modalValidate(fullName, phone, day, time) {
     }
 }
 
-//modal response processes
+//modal response processes procesa la respuesta
 function modalResponse(state) {
     // console.log("inside modal response");
     var modal = document.getElementById('modal-response')
@@ -85,7 +86,7 @@ function modalResponse(state) {
     }
 }
 
-//showd dates
+//showd dates muestra las citas
 function showDates(){
     let showDatesTitle = document.getElementById('dates-title')
     showDatesTitle.classList.toggle("d-none")
@@ -93,21 +94,22 @@ function showDates(){
     showHeadres.classList.toggle("d-none")
     let showTable = document.getElementById("table-body-id")
     showTable.classList.toggle("d-none")
+
     let showButton = document.getElementById("show-dates-id")
     let hasAclass = showTable.classList.contains("d-none")
-    // console.log(hasAclass);
+  
     if(hasAclass){
         showButton.innerText =`Ver todas las Citas`;
         
     }
     else{
-        showButton.innerText =`Acultar citas`;
+        showButton.innerText =`Ocultar citas`;
     }
    
 
 }
 
-//whoe filters
+//whoe filters muestra los filtros
 function showFilter(){
  
     let filterContainer= document.getElementById("filter-container-id")
@@ -125,7 +127,7 @@ function showFilter(){
     
 }
 
-//get the currint time
+//get the currint time Ontiene la fecha de este nomento
 function getCurrentDate (){
    
     let datePickerId = document.getElementById("date-day")

@@ -9,6 +9,7 @@
 */ 
 
 const editName = () => {
+    // edita en nombre
    console.log("aditar");
     let userName = document.getElementById('user-name-id')
 
@@ -28,7 +29,7 @@ const editName = () => {
 }
 
 const SaveNewName = () => {
-    
+     // guarda el  nombre
     let saveNewName= document.getElementById("save-new-name")
     saveNewName.style.visibility= "hidden"
     console.log("saving")
@@ -84,7 +85,7 @@ const SaveNewName = () => {
 
 
 const editPhone = () => {
-    
+      // Edita el telefono
     let userPhone = document.getElementById('user-phone-id')
     userPhone.style.display = "none"
 
@@ -109,6 +110,7 @@ const editPhone = () => {
  
 
  const SaveNewPhone = () => {
+       // guarda el  telefono
      let saveNewPhone= document.getElementById("save-new-phone")
      saveNewPhone.style.visibility= "hidden"
      console.log("saving")
@@ -142,8 +144,9 @@ const editPhone = () => {
 
 
  }
-// --------------------------------------------------------------------------
+// ----------------------------------------------------------------------
 //scrip on testing
+// prueba unitaria de claja negra
 // const sendNewUserData = () => {
 //     console.log("sending data to backend")
 //     let newName = document.getElementById('edit-name').value

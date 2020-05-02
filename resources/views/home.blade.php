@@ -124,8 +124,8 @@ Permite ver todos los reportes al administrador
                 <div class="card-header bg-dark">Reportes</div>
                     <div class="container ">
                         <div class="card-header">
-                            <a href="/exportAllDates" id="show-dates-id" class="btn btn-outline-dark btn-sm" >Exportas Citas</a>
-                            <a href="/exportAllusers" id="show-dates-id" class="btn btn-outline-dark btn-sm" >Exportar Usurios</a>
+                            <a href="/exportAllDates" id="export-dates-id" class="btn btn-outline-dark btn-sm" >Exportas Citas</a>
+                            <a href="/exportAllusers" id="export-users-id" class="btn btn-outline-dark btn-sm" >Exportar Usurios</a>
                             <button id="show-dates-id" onclick="showDates()" type="submit" class="btn btn-outline-dark btn-sm" >Ver todas las Citas</button>
                             
                             <button id="show-filters-id" onclick="showFilter()" type="submit" class="btn btn-outline-dark btn-sm">Ver  Filtros de Citas</button>
@@ -140,7 +140,7 @@ Permite ver todos los reportes al administrador
                                     Crear Servicio
                                  
                             </button>
-                            <button id="show-dates-id" onclick="showServices()" type="submit" class="btn btn-outline-dark btn-sm" >Ver todos los Servicios</button>
+                            <button id="show-services-id" onclick="showServices()" type="submit" class="btn btn-outline-dark btn-sm" >Ver todos los Servicios</button>
                             
                         </div>
                        
@@ -171,10 +171,10 @@ Permite ver todos los reportes al administrador
                     <div class="col-lg-12 grid-margin stretch-card ">
                     <div class="card-header bg-dark d-none" id="dates-title">Citas</div>
                         <div class="card table table-dark text-center ">
-                            <table class="table table-dark table-hover text-center" >
+                        <table class="table table-dark table-hover text-center" >
                                 
                                 <thead id="table-headers-dates" class="d-none">
-                                    <tr>
+                                    <tr class="">
                                         <th>Administrar</th>
                                         <th>id</th>
                                         <th>Nombre</th>
@@ -216,16 +216,16 @@ Permite ver todos los reportes al administrador
 
                     @endif
                 </div>
-                <div class="d-none text-center containner reports mt-4 lightOverlay col-md-12 " id="services-container-id" >
+                <div class="d-none text-center containner reports m-0 lightOverlay col-md-12 " id="services-container-id" >
                
                 
                     <div class="container ">
                         
-                        <div class="col-lg-12 grid-margin stretch-card ">
+                        <!-- <div class=""> -->
                         <div class="card-header font-weight-bold bg-dark">Servicios</div>
-                            <div class="card table table-dark text-center ">
+                            <div class="card   text-center ">
                             
-                                <table class="table table-dark text-center" >
+                                <table class="table table-responsive-sm table-secondary text-center table-hover table" >
                                 
                                     <thead id="table-headers-services" class="">
                                         <tr>
@@ -291,9 +291,9 @@ Permite ver todos los reportes al administrador
                                     </tbody>
                                 </table>
                             </div>
-                        </div>
+                        <!-- </div> -->
                     </div>
-            <!-- </div> -->
+                  </div>
         <!-- </div> -->
     <!-- </div> -->
 <!-- </div> -->
