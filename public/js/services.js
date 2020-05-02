@@ -1,7 +1,7 @@
 
-
+// Este archivo permite gestionar los servicios desde las vistas y manipular el DOM
 const handleService = () => {
-   
+//   permite campturar los datos del formnulario de sercicios
     let serviceName= document.getElementById("service-name-id").value
     console.log(serviceName);
     let servicePrice= document.getElementById('service-price-id').value
@@ -16,7 +16,9 @@ const handleService = () => {
 
 
 }
+
 const valitadeService = (serviceName,servicePrice) => {
+    //  permite validar el formulario y enviar alertas
     let verificationResponse = document.getElementById("create-service-mesage-validate")
     if (!serviceName || !servicePrice ) {
         // console.log("inside if modal validate")
@@ -44,5 +46,12 @@ const valitadeService = (serviceName,servicePrice) => {
 
 }
 const handleResponse = (state) => {
+    // Maneja es estado de la peticion 
     // si se dejo gfuardar en todo bien sino ya existe ese ser
+}
+
+const showServices = () => {
+    // Muestra el reporte de sercicios que esta oculto
+    let showServicesContainer= document.getElementById('services-container-id')
+    showServicesContainer.classList.toggle("d-none")
 }

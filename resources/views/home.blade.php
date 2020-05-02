@@ -1,5 +1,5 @@
 <!-- Esta vista contiene el panle de controly reportes del administrador
-PERmite ver topdos los reportes
+Permite ver todos los reportes al administrador
  -->
 
 @extends('layouts.app')
@@ -120,7 +120,7 @@ PERmite ver topdos los reportes
 
                 @if(Auth::user()->id == 1)
 
-            <div class="text-center containner reports mt-2 lightOverlay col-md-12" >
+            <div class="text-center containner reports mt-4 lightOverlay col-md-12" >
                 <div class="card-header bg-dark">Reportes</div>
                     <div class="container ">
                         <div class="card-header">
@@ -140,7 +140,7 @@ PERmite ver topdos los reportes
                                     Crear Servicio
                                  
                             </button>
-                            <button id="show-dates-id" onclick="showDates()" type="submit" class="btn btn-outline-dark btn-sm" >Ver todas los Servicios</button>
+                            <button id="show-dates-id" onclick="showServices()" type="submit" class="btn btn-outline-dark btn-sm" >Ver todos los Servicios</button>
                             
                         </div>
                        
@@ -169,9 +169,9 @@ PERmite ver topdos los reportes
                     </div>
                     <br>
                     <div class="col-lg-12 grid-margin stretch-card ">
-                        
+                    <div class="card-header bg-dark d-none" id="dates-title">Citas</div>
                         <div class="card table table-dark text-center ">
-                            <table class="table table-dark text-center" border="1">
+                            <table class="table table-dark table-hover text-center" >
                                 
                                 <thead id="table-headers-dates" class="d-none">
                                     <tr>
@@ -216,6 +216,83 @@ PERmite ver topdos los reportes
 
                     @endif
                 </div>
+                <div class="d-none text-center containner reports mt-4 lightOverlay col-md-12 " id="services-container-id" >
+               
+                
+                    <div class="container ">
+                        
+                        <div class="col-lg-12 grid-margin stretch-card ">
+                        <div class="card-header font-weight-bold bg-dark">Servicios</div>
+                            <div class="card table table-dark text-center ">
+                            
+                                <table class="table table-dark text-center" >
+                                
+                                    <thead id="table-headers-services" class="">
+                                        <tr>
+                                            <th>Administrar</th>
+                                            <th>id</th>
+                                            <th>Nombre</th>
+                                            <th>precio</th>
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody id="table-body-id-services" class="">
+                                
+                                
+                                        <tr id="table-row-id-services ">
+                                            <td>
+                                            <button type="button" class="btn btn-dark js-scroll-trigger" data-toggle="modal" data-target="#delete-date" data-whatever="@mdo">
+                                            <a class="" >
+                                                <i class="fas fa-trash" id="trashIcon"></i>
+                                            </a>   
+                                            </button>
+                                            <a class="text-light btn btn-dark  " href="/deleteDate/{{ $cita->id }}">
+                                                <i class="fas fa-trash" id="trashIcon"></i>
+                                            </a>   
+                                            </td>
+                                            <td>1</td>
+                                            <td>Corte</td>
+                                            <td>$12.000</td>
+                                        
+                                        </tr>
+                                        <tr id="table-row-id-services ">
+                                            <td>
+                                            <button type="button" class="btn btn-dark js-scroll-trigger" data-toggle="modal" data-target="#delete-date" data-whatever="@mdo">
+                                            <a class="" >
+                                                <i class="fas fa-trash" id="trashIcon"></i>
+                                            </a>   
+                                            </button>
+                                            <a class="text-light btn btn-dark  " href="/deleteDate/{{ $cita->id }}">
+                                                <i class="fas fa-trash" id="trashIcon"></i>
+                                            </a>   
+                                            </td>
+                                            <td>2</td>
+                                            <td>Barba</td>
+                                            <td>$8.000</td>
+                                        
+                                        </tr>
+                                        <tr id="table-row-id-services ">
+                                            <td>
+                                            <button type="button" class="btn btn-dark js-scroll-trigger" data-toggle="modal" data-target="#delete-date" data-whatever="@mdo">
+                                            <a class="" >
+                                                <i class="fas fa-trash" id="trashIcon"></i>
+                                            </a>   
+                                            </button>
+                                            <a class="text-light btn btn-dark  " href="/deleteDate/{{ $cita->id }}">
+                                                <i class="fas fa-trash" id="trashIcon"></i>
+                                            </a>   
+                                            </td>
+                                            <td>3</td>
+                                            <td>Corte y Barba</td>
+                                            <td>$16.000</td>
+                                        
+                                        </tr>
+                                
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
             <!-- </div> -->
         <!-- </div> -->
     <!-- </div> -->
@@ -223,46 +300,46 @@ PERmite ver topdos los reportes
 
 {{--Eliminar cita  --}}
 
-                    <div class="modal fade" id="delete-date" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header bg-dark text-lght">
-                                    <h5 class="modal-title " id="ModalLabel">Eliminar Cita</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <form>
-                                        @csrf
-                                       
-                                        <div class="form-group">
-                                           <label for="recipient-name" class="col-form-label text-dark" place>Seguro deseas eliminar esta cita?</label>
-                                         
-                                        </div>
-                                       
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-
-                                    <button type="button" class="btn btn-dark" data-dismiss="modal">Cancelar</button>
-                                    <button id="confirm-date" type="button" class="btn btn-dark" onclick="()"> 
-
-                                    <a class="text-decoration-none text-light" href="/deleteDate/{{ $cita->id }}"> 
-                                        Confirmar
-                                        </a> 
-                                                                     
-
-                                    </button>
-                                     
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
+    <div class="modal fade" id="delete-date" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-light">
+                    <h5 class="modal-title " id="ModalLabel">Eliminar Cita</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-                {{-- modal --}}
+                <div class="modal-body">
+                    <form>
+                        @csrf
+                        
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label text-dark" place>Seguro deseas eliminar esta cita?</label>
+                            
+                        </div>
+                        
+                    </form>
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Cancelar</button>
+                    <button id="confirm-date" type="button" class="btn btn-dark" onclick="()"> 
+
+                    <a class="text-decoration-none text-light" href="/deleteDate/{{ $cita->id }}"> 
+                        Confirmar
+                        </a> 
+                                                        
+
+                    </button>
+                        
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+{{-- modal --}}
 
 
 
@@ -274,7 +351,7 @@ PERmite ver topdos los reportes
 <div class="modal fade" id="create-service" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-header bg-dark text-lght">
+            <div class="modal-header bg-dark text-light">
                 <h5 class="text-light modal-title " id="ModalLabel">Gestionar servicio</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -312,7 +389,6 @@ PERmite ver topdos los reportes
 </div>
 
 
-</div>
 {{-- modal --}}
 
 

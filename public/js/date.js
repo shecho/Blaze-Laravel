@@ -87,7 +87,8 @@ function modalResponse(state) {
 
 //showd dates
 function showDates(){
-    
+    let showDatesTitle = document.getElementById('dates-title')
+    showDatesTitle.classList.toggle("d-none")
     let showHeadres = document.getElementById("table-headers-dates")
     showHeadres.classList.toggle("d-none")
     let showTable = document.getElementById("table-body-id")
