@@ -1,5 +1,5 @@
 <?php
-/*Este controaldor es responsavle de  manejar el panel de control y de administracion de los usurtios y  del administrador  */
+/*Este controaldor es el responsable de  manejar el panel de control y de administracion de los usurtios y  del administrador  */
 
 namespace App\Http\Controllers;
 

@@ -113,19 +113,22 @@ PERmite ver topdos los reportes
 
                 </div>
                 {{-- modal --}}
-
+                </div>
+            </div>
+        </div>
+    </div>
 
                 @if(Auth::user()->id == 1)
-                <div class="containner reports">
-                    <div class="container">
-                        <div class="card-header bg-dark">Reportes</div>
-                       
+
+            <div class="text-center containner reports mt-2 lightOverlay col-md-12" >
+                <div class="card-header bg-dark">Reportes</div>
+                    <div class="container ">
                         <div class="card-header">
                             <a href="/exportAllDates" id="show-dates-id" class="btn btn-outline-dark btn-sm" >Exportas Citas</a>
                             <a href="/exportAllusers" id="show-dates-id" class="btn btn-outline-dark btn-sm" >Exportar Usurios</a>
                             <button id="show-dates-id" onclick="showDates()" type="submit" class="btn btn-outline-dark btn-sm" >Ver todas las Citas</button>
                             
-                            <button id="show-filters-id" onclick="showFilter()" type="submit" class="btn btn-outline-dark btn-sm">Ver  Filtros</button>
+                            <button id="show-filters-id" onclick="showFilter()" type="submit" class="btn btn-outline-dark btn-sm">Ver  Filtros de Citas</button>
                             <button 
                                 id="service-id"
                                 onclick=""
@@ -134,10 +137,10 @@ PERmite ver topdos los reportes
                                 data-target="#create-service"
                                 data-toggle="modal"
                                 data-whatever="@mdo">
-                                    Gestionar Servicio
+                                    Crear Servicio
                                  
                             </button>
-                            
+                            <button id="show-dates-id" onclick="showDates()" type="submit" class="btn btn-outline-dark btn-sm" >Ver todas los Servicios</button>
                             
                         </div>
                        
@@ -165,12 +168,12 @@ PERmite ver topdos los reportes
                         </div>
                     </div>
                     <br>
-                    <div class="col-lg-12 grid-margin stretch-card overflow-auto">
+                    <div class="col-lg-12 grid-margin stretch-card ">
                         
-                        <div class="card table table-dark text-center overflow-auto">
+                        <div class="card table table-dark text-center ">
                             <table class="table table-dark text-center" border="1">
                                 
-                                <thead>
+                                <thead id="table-headers-dates" class="d-none">
                                     <tr>
                                         <th>Administrar</th>
                                         <th>id</th>
@@ -184,7 +187,7 @@ PERmite ver topdos los reportes
                                 <tbody id="table-body-id" class="d-none">
                                 @foreach($citas as $cita)
                                
-                                    <tr id="table-row-id">
+                                    <tr id="table-row-id ">
                                         <td>
                                         <button type="button" class="btn btn-dark js-scroll-trigger" data-toggle="modal" data-target="#delete-date" data-whatever="@mdo">
                                         <a class="" >
@@ -213,10 +216,10 @@ PERmite ver topdos los reportes
 
                     @endif
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
+            <!-- </div> -->
+        <!-- </div> -->
+    <!-- </div> -->
+<!-- </div> -->
 
 {{--Eliminar cita  --}}
 

@@ -87,7 +87,9 @@ function modalResponse(state) {
 
 //showd dates
 function showDates(){
-  
+    
+    let showHeadres = document.getElementById("table-headers-dates")
+    showHeadres.classList.toggle("d-none")
     let showTable = document.getElementById("table-body-id")
     showTable.classList.toggle("d-none")
     let showButton = document.getElementById("show-dates-id")
@@ -113,7 +115,7 @@ function showFilter(){
 
     let hasAclass = filterContainer.classList.contains("d-none")
     if(hasAclass){
-        showFilterButton.innerText =`Ver Filtros`;
+        showFilterButton.innerText =`Ver Filtros de Citas-`;
          
      }
      else{
