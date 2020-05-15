@@ -2,6 +2,13 @@
 Permite ver todos los reportes al administrador
  -->
 
+
+<!-- funtion (){
+    window.open('reporte.php','blank');
+   
+} -->
+
+
 @extends('layouts.app')
 
 @section('content')
@@ -124,6 +131,20 @@ Permite ver todos los reportes al administrador
                 <div class="card-header bg-dark">Reportes</div>
                     <div class="container ">
                         <div class="card-header">
+                            <a 
+                                onclick="showReporte1()"
+                                href="/reporte1"
+                                id="" 
+                                class="btn btn-outline-dark btn-sm" >Reporte1 Citas
+                        
+                            </a>
+                            <a 
+                                onclick="showReporte1()"
+                                href="/reporte2"
+                                id="" 
+                                class="btn btn-outline-dark btn-sm" >Reporte2 Clientes
+                        
+                            </a>
                             <a href="/exportAllDates" id="export-dates-id" class="btn btn-outline-dark btn-sm" >Exportas Citas</a>
                             <a href="/exportAllusers" id="export-users-id" class="btn btn-outline-dark btn-sm" >Exportar Usurios</a>
                             <button id="show-dates-id" onclick="showDates()" type="submit" class="btn btn-outline-dark btn-sm" >Ver todas las Citas</button>

@@ -86,6 +86,12 @@ function modalResponse(state) {
     }
 }
 
+function showReporte1 (){
+    // window.open('/app/Exports/reporte1.php')
+}
+    
+
+
 //showd dates muestra las citas
 function showDates(){
     let showDatesTitle = document.getElementById('dates-title')

@@ -250,7 +250,7 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
             <p class="text-muted">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
               maxime quam architecto quo inventore harum ex magni, dicta
-              impedit.
+              impedit
             </p>
           </div>
           <div class="col-md-4">

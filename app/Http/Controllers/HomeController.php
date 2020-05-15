@@ -60,6 +60,18 @@ class HomeController extends Controller
       return Excel::download(new UsersExport, 'users.xlsx');
 
     }
+    public function reporte1()
+    {
+        $reporte1 = "";
+        return view('reporte1', compact('reporte1'));
+
+    }
+    public function reporte2()
+    {
+        $reporte2 = "";
+        return view('reporte2', compact('reporte2'));
+
+    }
 
     
 
