@@ -45,7 +45,7 @@ Route::get('/exportAllusers', 'HomeController@exportUsers')->name('exportAlluser
 Route::get('/reporte1', 'HomeController@reporte1')->name('reporte1');
 
 // Ruta Reporte PDF de usuarios
-Route::get('/reporte2', 'HomeController@reporte2')->name('reporte1');
+Route::get('/reporte2', 'HomeController@reporte99')->name('reporte1');
 
 
 

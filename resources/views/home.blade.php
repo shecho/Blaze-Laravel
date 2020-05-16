@@ -142,7 +142,7 @@ Permite ver todos los reportes al administrador
                                 onclick="showReporte1()"
                                 href="/reporte2"
                                 id="" 
-                                class="btn btn-outline-dark btn-sm" >Reporte2 Clientes
+                                class="btn btn-outline-dark btn-sm" >Reporte2 Cientes
                         
                             </a>
                             <a href="/exportAllDates" id="export-dates-id" class="btn btn-outline-dark btn-sm" >Exportas Citas</a>
