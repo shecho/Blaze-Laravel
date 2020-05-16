@@ -14,8 +14,7 @@ use App\Exports\UsersExport;
 use Maatwebsite\Excel\Facades\Excel;
 use Mpdf\Mpdf;
 use App\Exports\reporte99;
-$html = "hola
- ";
+
 class HomeController extends Controller
 {
     /**
@@ -82,25 +81,51 @@ class HomeController extends Controller
 
     public function reporte99()
     {
-        $html = '
-        <div  class=" table table-dark text-center">
-            <table table border="1" class="bg-dark" >
-                <thead >
-                    <tr >
-                        <th>Administrar</th>
-                        <th>id</th>
-                        <th>Nombre</th>
-                        <th>Teléfono</th>
-                        <th>Día</th>
-                        <th>Hora</th>
-                        <th>Barbero</th>
-                        
+        $citas = CreateDate::all();
+        $usuario = 'Sergio Valencia Aguirre';    
+        date_default_timezone_set('america/bogota');
+	    $fecha_hora = date("Y").'/'.date("m").'/'.date("d").' '.date("H").':'.date("i").':'.date("s");
+        $html = "
+        <!DOCTYPE html>
+	    <html>
+		<head>
+			<style>
+			    @page {
+			        size: auto;
+			        odd-header-name: encabezado;
+			        odd-footer-name: pie;
+			    }
+			</style>
+        </head>
+        <body>
+        <br>
+            <div  >
+                <table table border='1'  >
+                    <thead >
+                        <tr >
+                            <th>Administrar</th>
+                            <th>id</th>
+                            <th>Nombre</th>
+                            <th>Teléfono</th>
+                            <th>Día</th>
+                            <th>Hora</th>
+                            <th>Barbero</th>
+                            
 
-                    </tr>
-                </thead>
-        
-            </table>
-         </div>';
+                        </tr>
+                    </thead>
+            
+                </table>
+            </div>
+         
+            <pageheader name='encabezado' content-center='Reporte de PANTALLAS'
+	        header-style='font-weight: bold; color: #DF2A2A; font-size: 14pt;' line='off;' />
+
+	        <pagefooter name='pie' content-left='Elaborado por: $usuario'
+	        content-right='$fecha_hora' footer-style='font-size: 8pt;' />
+        </body>";
+
+
          //Importante: Sin vista y sin tamplate
         // View::select(null, null);
         //Crea una instancia de la clase y le pasa el directorio default/app/temp/
@@ -110,25 +135,5 @@ class HomeController extends Controller
     }
 
 
-// Require composer autoload
-
-/**
- * Controller por defecto si no se usa el routes
- *
- */
-
-   
-
-
-    
-    ///definir el usuario admin como
-    ///crear una constante con el id del usuario admin
-    /// se define que siempre el usuario con id = 1 es el administrador del sistema
-   
-    /// si el usuario es administrador se presentan los registros de todas las citas
-    /// adicionalmente las opciones de realizar reportes.
-    /// Si el usuario no es admin se muestra el boton de perfil y el de crear cita
-
-    
     
 }
