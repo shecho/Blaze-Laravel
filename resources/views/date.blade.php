@@ -1,4 +1,6 @@
-{{-- esta  vista muestra la ciata agendada por el usuario o el cliete
+<!-- 
+
+    Esta  vista  aun no esta implemntaada mostrara la ciata agendada por el usuario o el cliete
     id Consecutivo del la cita
     Nombre del usuario/cliente 
     Telefono de contacto
@@ -8,7 +10,9 @@
     Nombre del barbero
     
     Boton de cancelacion
-    --}}
+ -->
+
+  
 
 
 

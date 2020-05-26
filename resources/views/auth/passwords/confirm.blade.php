@@ -1,3 +1,4 @@
+<!-- Vista de confirmacion -->
 @extends('layouts.app')
 
 @section('content')

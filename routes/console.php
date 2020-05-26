@@ -3,7 +3,7 @@
 use Illuminate\Foundation\Inspiring;
 
 /*
- Esta archivo lo agrega laravel si no conoce de laravel no lo toque 
+ Esta archivo lo agrega laravel por defecto
 |--------------------------------------------------------------------------
 | Console Routes
 |--------------------------------------------------------------------------

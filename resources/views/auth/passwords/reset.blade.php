@@ -1,3 +1,4 @@
+<!-- Vista para resetear la contrasena -->
 @extends('layouts.app')
 
 @section('content')

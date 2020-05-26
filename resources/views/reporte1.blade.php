@@ -1,3 +1,5 @@
+<!-- Esta vista solo es para hacer peuras de como se veran los reportes en PDF -->
+
 @extends('layouts.reportesTemplate')
 
 @section('content')

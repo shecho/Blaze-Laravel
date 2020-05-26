@@ -1,7 +1,7 @@
 <?php
 
 /*
-Este es el segmento de canelaes si no sabve de laravel no lo tique
+Este archivo manea el bradcastong genral para mas informacion ir a la ppagina oficial
 |--------------------------------------------------------------------------
 | Broadcast Channels
 |--------------------------------------------------------------------------

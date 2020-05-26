@@ -1,5 +1,5 @@
 <!-- Nos disculpamos por los comentarios inncesarios en este proyecto. 
-Sabemos e antemano que son malas practicas pero los hemos agregado por motivos academicos pues parece que las bunas practicas internacilales de codigo no le interesan a los evaluadores de este proyecto
+Sabemos e antemano que son malas practicas pero los hemos agregado por motivos academicos y porque nos lo han solicitado nuestros evaluadores
 
 -->
 
@@ -20,10 +20,10 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
 
 
     <title>Blaze Barber Landing Page</title>
-
+    <!-- boostrap -->
     <!-- Bootstrap core CSS -->
     <link href="/../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-
+    <!-- fuentes -->
     <!-- Custom fonts for this template -->
     <link
       href="/../fontawesome-free/css/all.min.css"
@@ -50,7 +50,7 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
       rel="stylesheet"
       type="text/css"
     />
-
+    <!-- css personalizados -->
     <!-- Custom styles for this template -->
     <link href="/../css/agency.css" rel="stylesheet" />
   </head>
@@ -130,6 +130,7 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
         
 
           {{--Modal create date  --}}
+          <!-- Modal para crear una cita -->
           
           <div class="modal fade" id="create-date" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -218,17 +219,18 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
         </div>
 
 
-{{-- modal --}}
+        {{-- modal --}}
+        <!-- fin del modal -->
 
 
 
 
-
-
+        <!-- Derechos de uso de la imagen -->
         <div clas="">Photo by Nick Demou from Pexels</div>
       </div>
     </header>
 
+    <!-- Servicios  -->
     <!-- Services -->
     <section class="page-section" id="services">
       <div class="container">
@@ -281,7 +283,7 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
       </div>
     </section>
 
-    <!-- Portfolio Grid -->
+    <!-- Grid de lportafoilio-->
     <section class="bg-light page-section" id="portfolio">
       <div class="container">
         <div class="row">
@@ -429,7 +431,7 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
       </div>
     </section>
 
-    <!-- About -->
+    <!-- Acerca de  -->
     <section class="page-section" id="about">
       <div class="container">
         <div class="row">
@@ -546,7 +548,7 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
       </div>
     </section>
 
-    <!-- Team -->
+    <!-- Equipo de trabajo -->
     <section class="bg-light page-section" id="team">
       <div class="container">
         <div class="row">
@@ -641,7 +643,7 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
       </div>
     </section>
 
-    <!-- Clients -->
+    <!-- Cleintes no se implemnta por el momento, pues no hay testitoniales -->
     <!-- 
     <section class="py-5">
       <div class="container">
@@ -670,7 +672,7 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
       </div>
     </section> -->
 
-    <!-- Contact -->
+    <!-- Contactanos Se agrega  aunque esta fuera de la solcitud inical -->
     <section class="page-section" id="contact">
       <div class="container">
         <div class="row">
@@ -794,6 +796,7 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
       </div>
     </footer>
 
+    <!-- Modal del portafolio de servicios  -->
     <!-- Portfolio Modals -->
 
     <!-- Modal 1 -->
@@ -816,7 +819,7 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Pomades</h2>
+                  <h2 class="text-uppercase">Pomadas</h2>
                   <p class="item-intro text-muted">
                     Lorem ipsum dolor sit amet consectetur.
                   </p>
@@ -826,16 +829,16 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
                     alt=""
                   />
                   <p>
-                    Use this area to describe your project. Lorem ipsum dolor
+                    Descripción del Poductoa Lorem ipsum dolor
                     sit amet, consectetur adipisicing elit. Est blanditiis
                     dolorem culpa incidunt minus dignissimos deserunt repellat
                     aperiam quasi sunt officia expedita beatae cupiditate,
                     maiores repudiandae, nostrum, reiciendis facere nemo!
                   </p>
                   <ul class="list-inline">
-                    <li>Date: Abril 2020</li>
-                    <li>Client: Andres</li>
-                    <li>Category: Design</li>
+                    <li>Fecha: Abril 2020</li>
+                    <li>Cleinte: Andres</li>
+                    <li>Categoria: diseno</li>
                   </ul>
                   <button
                     class="btn btn-primary"
@@ -873,7 +876,7 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Beard</h2>
+                  <h2 class="text-uppercase">Barba</h2>
                   <p class="item-intro text-muted">
                     Lorem ipsum dolor sit amet consectetur.
                   </p>
@@ -883,24 +886,23 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
                     alt=""
                   />
                   <p>
-                    Use this area to describe your project. Lorem ipsum dolor
+                    Lorem ipsum dolor
                     sit amet, consectetur adipisicing elit. Est blanditiis
                     dolorem culpa incidunt minus dignissimos deserunt repellat
                     aperiam quasi sunt officia expedita beatae cupiditate,
                     maiores repudiandae, nostrum, reiciendis facere nemo!
                   </p>
                   <ul class="list-inline">
-                  <li>Date: Abril 2020</li>
-                    <li>Client: Andres</li>
-                    <li>Category: Design</li>
+                  <li>Fehca: Abril 2020</li>
+                    <li>Cliente: Andres</li>
+                    <li>Categoria: Design</li>
                   </ul>
                   <button
                     class="btn btn-primary"
                     data-dismiss="modal"
-                    type="button"
-                  >
+                    type="button">
                     <i class="fas fa-times"></i>
-                    Close Product
+                    Cerrar
                   </button>
                 </div>
               </div>
@@ -930,7 +932,7 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Dyeing</h2>
+                  <h2 class="text-uppercase">Tinturas</h2>
                   <p class="item-intro text-muted">
                     Lorem ipsum dolor sit amet consectetur.
                   </p>
@@ -940,24 +942,23 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
                     alt=""
                   />
                   <p>
-                    Use this area to describe your project. Lorem ipsum dolor
+                    Descripción del Poducto: Lorem ipsum dolor
                     sit amet, consectetur adipisicing elit. Est blanditiis
                     dolorem culpa incidunt minus dignissimos deserunt repellat
                     aperiam quasi sunt officia expedita beatae cupiditate,
                     maiores repudiandae, nostrum, reiciendis facere nemo!
                   </p>
                   <ul class="list-inline">
-                    <li>Date: Abril 2020</li>
-                    <li>Client: Andres</li>
-                    <li>Category: Design</li>
+                    <li>Fehca: Abril 2020</li>
+                    <li>Cliente: Andres</li>
+                    <li>Categoria: Design</li>
                   </ul>
                   <button
                     class="btn btn-primary"
                     data-dismiss="modal"
-                    type="button"
-                  >
+                    type="button">
                     <i class="fas fa-times"></i>
-                    Close Product
+                    Cerrar
                   </button>
                 </div>
               </div>
@@ -987,7 +988,7 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Tools</h2>
+                  <h2 class="text-uppercase">Herramientas</h2>
                   <p class="item-intro text-muted">
                     Lorem ipsum dolor sit amet consectetur.
                   </p>
@@ -997,24 +998,23 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
                     alt=""
                   />
                   <p>
-                    Use this area to describe your project. Lorem ipsum dolor
+                    Descripción del Poducto: Lorem ipsum dolor
                     sit amet, consectetur adipisicing elit. Est blanditiis
                     dolorem culpa incidunt minus dignissimos deserunt repellat
                     aperiam quasi sunt officia expedita beatae cupiditate,
                     maiores repudiandae, nostrum, reiciendis facere nemo!
                   </p>
                   <ul class="list-inline">
-                  <li>Date: Abril 2020</li>
-                    <li>Client: Andres</li>
-                    <li>Category:  Design</li>
+                  <li>Fehca: Abril 2020</li>
+                    <li>Cliente: Andres</li>
+                    <li>Categoria:  Design</li>
                   </ul>
                   <button
                     class="btn btn-primary"
                     data-dismiss="modal"
-                    type="button"
-                  >
+                    type="button">
                     <i class="fas fa-times"></i>
-                    Close Product
+                    Cerrar
                   </button>
                 </div>
               </div>
@@ -1044,7 +1044,7 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Vaporizers</h2>
+                  <h2 class="text-uppercase">Vaporizadores</h2>
                   <p class="item-intro text-muted">
                     Lorem ipsum dolor sit amet consectetur.
                   </p>
@@ -1054,24 +1054,23 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
                     alt=""
                   />
                   <p>
-                    Use this area to describe your project. Lorem ipsum dolor
+                    Descripción del Poducto: Lorem ipsum dolor
                     sit amet, consectetur adipisicing elit. Est blanditiis
                     dolorem culpa incidunt minus dignissimos deserunt repellat
                     aperiam quasi sunt officia expedita beatae cupiditate,
                     maiores repudiandae, nostrum, reiciendis facere nemo!
                   </p>
                   <ul class="list-inline">
-                    <li>Date: Abril 2020</li>
-                    <li>Client: Andres</li>
-                    <li>Category: Website Design</li>
+                    <li>Fecha: Abril 2020</li>
+                    <li>Cliente: Andres</li>
+                    <li>Categoria: Website Design</li>
                   </ul>
                   <button
                     class="btn btn-primary"
                     data-dismiss="modal"
-                    type="button"
-                  >
-                    <i class="fas fa-times"></i>
-                    Close Product
+                    type="button">
+                  <i class="fas fa-times"></i>
+                     Cerrar
                   </button>
                 </div>
               </div>
@@ -1101,7 +1100,7 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Suplies</h2>
+                  <h2 class="text-uppercase">Suplementos</h2>
                   <p class="item-intro text-muted">
                     Lorem ipsum dolor sit amet consectetur.
                   </p>
@@ -1114,17 +1113,16 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
                     This proyects is been created for barber shop Blaze
                   </p>
                   <ul class="list-inline">
-                    <li>Date: April 2020</li>
-                    <li>Client: Andres</li>
-                    <li>Category: Barbershop</li>
+                    <li>Fehca: April 2020</li>
+                    <li>Cliente: Andres</li>
+                    <li>Categoria: Barbershop</li>
                   </ul>
                   <button
                     class="btn btn-primary"
                     data-dismiss="modal"
-                    type="button"
-                  >
+                    type="button">
                     <i class="fas fa-times"></i>
-                    Close Product
+                    Cerrar
                   </button>
                 </div>
               </div>
@@ -1141,11 +1139,12 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
     <!-- Plugin JavaScript -->
     <script src="/../jquery-easing/jquery.easing.min.js"></script>
 
+    <!-- Evetos de la plantilla -->
     <!-- Contact form JavaScript -->
     <script src="/../js/jqBootstrapValidation.js"></script>
     <script src="/../js/contact_me.js"></script>
 
-    
+    <!-- Scrips de la plantilla -->
     <!-- Custom scripts for this template -->
     <script src="/../js/agency.min.js"></script>
     <script src="/../js/date.js"></script>

@@ -1,5 +1,5 @@
 <?php
-
+// Este archivo contiene todos las rutas de la aplciacion
 /*
 |Este archivo lo agrega laravel si no conoce de laravel no lo  toque--------------------------------------------------------------------------
 | Aqui se crean todas las rutas que la aplicacion estas rutas son cargadas por un proveider que agrega Laravel en que se una un midleware de llamado web y permite crear apis faiclmente

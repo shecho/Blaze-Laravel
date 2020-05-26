@@ -1,12 +1,12 @@
-{{-- datos de usuario
-  
-  --}}
+<!-- 
+  Esta vista muetra los datos de cliente registrado. 
 
+ -->
 
 @extends('layouts.app')
 
 @section('content')
-<!--  -->
+
 
 <div class="col-md-6 container text-center">
 <div class="card-header bg-dark">Perfil</div>

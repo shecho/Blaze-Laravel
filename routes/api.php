@@ -1,5 +1,5 @@
 <?php
-
+// Este archivo contiene las rutas generals de la api 
 use Illuminate\Http\Request;
 
 /*
@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 |--------------------------------------------------------------------------
 |
 | Esta es la ruta principal de app
-    Aaqui puedes crear todas la rutas que quieras
+  
 */
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {

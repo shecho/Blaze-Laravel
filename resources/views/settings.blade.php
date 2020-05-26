@@ -1,4 +1,4 @@
-<!-- esta ruta contiene las configuraciones del usuario x -->
+<!-- Esta vista aun no esta  okplementada porque se usa la vista de home pero contandra las configuraciones del usuario x -->
 
 <div class="container">
 <div class="container">
