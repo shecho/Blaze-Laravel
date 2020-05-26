@@ -8,12 +8,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\CreateDate;
-
+use App\Exports\reporte00;
 use App\Exports\CreateDatesExport;
 use App\Exports\UsersExport;
 use Maatwebsite\Excel\Facades\Excel;
 use Mpdf\Mpdf;
-use App\Exports\reporte99;
+
+// use App\Exports\reporte99;
 
 class HomeController extends Controller
 {
@@ -93,13 +94,22 @@ class HomeController extends Controller
 			    @page {
 			        size: auto;
 			        odd-header-name: encabezado;
+			      
 			        odd-footer-name: pie;
 			    }
 			</style>
         </head>
         <body>
+        <img src='img/cobac.png' width='50' height='50' style=' ' >
         <br>
-            <div  >
+            <div>
+                <section>
+                   
+                    <article>
+                        <p> dolor sit amet, consectetur adipisicing elit. Eligendi doloremque cum libero voluptatem incidunt dicta aperiam odio quis nemo totam possimus ad magni voluptatum, perferendis minus veniam sed porro eaque.</p>
+                    </article>
+                </section>
+            
                 <table table border='1'  >
                     <thead >
                         <tr >
@@ -118,19 +128,41 @@ class HomeController extends Controller
                 </table>
             </div>
          
-            <pageheader name='encabezado' content-center='Reporte de PANTALLAS'
-	        header-style='font-weight: bold; color: #DF2A2A; font-size: 14pt;' line='off;' />
+            <pageheader name='encabezado'
+                content-center='Reporte de Citas PDF '
+                header-style='font-weight: bold; color: ; font-size: 14pt;' line='off;'
+             />
+          
+            <pageheader name='encabezado2'
+             content-center='Reporte de Citas '
+            header-style='font-weight: bold; color: ; font-size: 14pt;' line='off;' />
+          
+            
 
 	        <pagefooter name='pie' content-left='Elaborado por: $usuario'
-	        content-right='$fecha_hora' footer-style='font-size: 8pt;' />
+	        content-right='$fecha_hora' footer-style='font-family: serif; font-size: 8pt;
+            font-weight: bold; font-style: italic; color: #000000;' />
         </body>";
 
 
-         //Importante: Sin vista y sin tamplate
-        // View::select(null, null);
+      
         //Crea una instancia de la clase y le pasa el directorio default/app/temp/
-        $mpdf = new Mpdf();
-        $mpdf->WriteHTML($html);
+
+
+          
+        $mpdf = new \Mpdf\Mpdf();
+        // echo $html;
+        $mpdf->SetHTMLHeader("
+            <table width='100%'>
+                <tr>
+                    <td width='33%'>
+                    <img src='img/cobac.png' width='50' height='50' ></td>
+                    <td width='33%' style='text-align:center ;'>Prueba</td>
+                    <td width='33%' align='right'>{PAGENO}/{nbpg}</td>
+                </tr>
+            </table>");
+        // $mpdf = new Mpdf();
+        $mpdf->WriteHTML( $html);
         $mpdf->Output();
     }
 
