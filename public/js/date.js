@@ -159,19 +159,23 @@ document.getElementById('confirm-date').addEventListener('click', sendForm)
 
 
 // Cheakc my Dates 
-//Permite a un cliente consultar las citas
+
+
+//Permite a un cliente consultar sus citas 
 
 function  CheckMyDates(){
+  
     let tableMyDates= document.getElementById('table-row-my-dates')
     let CheackMyDatesBtn= document.getElementById('CheackMyDates')
-    // console.log("estas son mis citas");
     CheackMyDatesBtn.classList.toggle("d-none")
+
    
-    // console.log(tableMyDates)
-    if (tableMyDates.lastElementChild.innerHTML ) {
+    let prueba =tableMyDates
+    // console.log(prueba);
+    if (prueba) {
         
-       
-        console.log("si");
+       console.log("si hay datos    ");
+        // console.log(tableMyDates.lastElementChild.innerHTML);
     }else{
         console.log("no");
         CheackMyDatesBtn.innerHTML =`
