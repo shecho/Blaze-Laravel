@@ -134,19 +134,19 @@ Permite ver todos los reportes al administrador
                 onclick="showReporte1()"
                 href="/reporteClientes"
                 id=""
-                class="btn btn-outline-dark btn-sm" >Reporte1 Clientes PDF
+                class="btn btn-outline-dark btn-sm" >Ver Clientes PDF
 
             </a>
             <a
                 onclick="showReporte1()"
                 href="/reporteCitas"
                 id=""
-                class="btn btn-outline-dark btn-sm" >Reporte2 Citas DPF
+                class="btn btn-outline-dark btn-sm" >Ver Citas DPF
 
             </a>
-            <a href="/exportAllDates" id="export-dates-id" class="btn btn-outline-dark btn-sm" >Exportar Citas</a>
-            <a href="/exportAllusers" id="export-users-id" class="btn btn-outline-dark btn-sm" >Exportar Usurios</a>
-            <button id="show-users-id" onclick="showUsers()" type="submit" class="btn btn-outline-dark btn-sm" >Ver todos los Usarios</button>
+            <a href="/exportAllDates" id="export-dates-id" class="btn btn-outline-dark btn-sm" >Exportar Citas Excel</a>
+            <a href="/exportAllusers" id="export-users-id" class="btn btn-outline-dark btn-sm" >Exportar Clientes Excel</a>
+            <button id="show-users-id" onclick="showUsers()" type="submit" class="btn btn-outline-dark btn-sm" >Ver todos los Clientes</button>
             <button id="show-dates-id" onclick="showDates()" type="submit" class="btn btn-outline-dark btn-sm" >Ver todas las Citas</button>
 
 
