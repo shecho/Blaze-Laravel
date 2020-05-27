@@ -109,6 +109,9 @@
                   </thead>
                   <tbody id="table-body-id" class="">
                 
+                   
+                      @foreach($citas as $cita)
+                      @if ($user->phone == $cita->userPhone)
                       <tr id="table-row-my-dates">
                           <td>
                           <button type="button" class="btn btn-dark js-scroll-trigger" data-toggle="modal" data-target="#delete-date" data-whatever="@mdo">
@@ -116,19 +119,21 @@
                               <i class="fas fa-trash" id="trashIcon"></i>
                           </a>
                           </button>
-                          <a class="text-light btn btn-dark  " href="">
+                          <a class="text-light btn btn-dark  " href="/deleteDate/{{ $cita->id }}">
                               <i class="fas fa-trash" id="trashIcon"></i>
                           </a>
                           </td>
-                          <td>vacio</td>
-                          <td>2</td>
-                          <td>3</td>
-                          <td>4</td>
-                          <td>5</td>
-                          <td></td>
+                          <td>{{ $cita->id }}</td>
+                          <td>{{ $cita->userName }}</td>
+                          <td>{{ $cita->userPhone }}</td>
+                          <td>{{ $cita->day }}</td>
+                          <td>{{ $cita->time }}</td>
+                          <td>{{ $cita->barber }}</td>
 
                       </tr>
 
+                      @endif
+                      @endforeach
 
                 
                     </tbody>

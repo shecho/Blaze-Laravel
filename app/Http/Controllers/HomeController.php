@@ -39,17 +39,20 @@ class HomeController extends Controller
         return view('home', compact('citas','users'));
     }
     public function filterByDay(Request $request)
-    {
+
+    {   
+        $users = DB::table('users')->select('id','name', 'phone', 'email')->get();
         $citas = CreateDate::where('day', $request->dateDayFilter)->get();
         //dd($citas);
-        return view('home', compact('citas'));
+        return view('home', compact('citas','users'));
     }
 
     public function filterByRange(Request $request)
     {
+        $users = DB::table('users')->select('id','name', 'phone', 'email')->get();
         $citas = CreateDate::where('day', ">=", $request->dateDayFilterIni)->where('day', "<=", $request->dateDayFilterEnd)->get();
         //dd($citas);
-        return view('home', compact('citas'));
+        return view('home', compact('citas','users'));
     }
 
 // Hace las exportaciones de los archivos d eexcell

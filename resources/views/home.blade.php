@@ -186,6 +186,12 @@ Permite ver todos los reportes al administrador
                     </div>
 
                 </form>
+                <div>
+                    <a href="/home"  class="btn btn-outline-dark mt-2">
+                        <i class=" fas fa-eraser"></i>
+                        Remover filtros 
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -276,8 +282,8 @@ Permite ver todos los reportes al administrador
                         <td>$12.000</td>
 
                     </tr>
-                      
-                   
+
+
 
                 </tbody>
             </table>
@@ -351,7 +357,7 @@ Permite ver todos los reportes al administrador
 
                 @endforeach
                 </tbody>
-                  
+
 
                 </tbody>
             </table>

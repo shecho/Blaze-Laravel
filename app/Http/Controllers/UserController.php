@@ -7,16 +7,18 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use App\User;
+use App\CreateDate;
 
 class UserController extends Controller
 {
     //
     public function index()
     {
+        $citas = CreateDate::all();
         $user = Auth::user();
         //dd($user);
         //die("test user profile");
-        return view('profile', compact('user'));
+        return view('profile', compact('user','citas'));
     }
 
     public function updateName($iduser, $nameUser)
@@ -66,5 +68,6 @@ class UserController extends Controller
         //die("test user profile");
         return view('profile', compact('user'));
     }
+
 
 }
