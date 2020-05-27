@@ -23,6 +23,7 @@ class UserController extends Controller
 
     public function updateName($iduser, $nameUser)
     {
+        $citas = CreateDate::all();
         //dd($iduser, $nameUser);
         //buscar usuarios
         $user = User::findOrFail($iduser);
@@ -42,11 +43,12 @@ class UserController extends Controller
         $user = Auth::user();
         //dd($user);
         //die("test user profile");
-        return view('profile', compact('user'));
+        return view('profile', compact('user','citas'));
     }
 
     public function updatePhone($iduser, $phone)
     {
+        $citas = CreateDate::all();
         //dd($iduser, $nameUser);
         //buscar usuarios
         $user = User::findOrFail($iduser);
@@ -66,7 +68,7 @@ class UserController extends Controller
         $user = Auth::user();
         //dd($user);
         //die("test user profile");
-        return view('profile', compact('user'));
+        return view('profile', compact('user','citas'));
     }
 
 

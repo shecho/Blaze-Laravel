@@ -111,28 +111,24 @@
                 
                    
                       @foreach($citas as $cita)
-                      @if ($user->phone == $cita->userPhone)
-                      <tr id="table-row-my-dates">
-                          <td>
-                          <button type="button" class="btn btn-dark js-scroll-trigger" data-toggle="modal" data-target="#delete-date" data-whatever="@mdo">
-                          <a class="" >
-                              <i class="fas fa-trash" id="trashIcon"></i>
-                          </a>
-                          </button>
-                          <a class="text-light btn btn-dark  " href="/deleteDate/{{ $cita->id }}">
-                              <i class="fas fa-trash" id="trashIcon"></i>
-                          </a>
-                          </td>
-                          <td>{{ $cita->id }}</td>
-                          <td>{{ $cita->userName }}</td>
-                          <td>{{ $cita->userPhone }}</td>
-                          <td>{{ $cita->day }}</td>
-                          <td>{{ $cita->time }}</td>
-                          <td>{{ $cita->barber }}</td>
+                        @if ($user->phone == $cita->userPhone)
+                          <tr id="table-row-my-dates">
+                            <td>
+                             
+                              <a class="text-light btn btn-dark  " href="https://api.whatsapp.com/send?phone=5703194853019&text=Hola%20quisiera%20Canelar%20mi%20cita%20para%20las%20">
+                                  <i class="fas fa-trash" id="trashIcon"></i>
+                              </a>
+                            </td>
+                            <td>{{ $cita->id }}</td>
+                            <td>{{ $cita->userName }}</td>
+                            <td>{{ $cita->userPhone }}</td>
+                            <td>{{ $cita->day }}</td>
+                            <td>{{ $cita->time }}</td>
+                            <td>{{ $cita->barber }}</td>
 
-                      </tr>
+                          </tr>
 
-                      @endif
+                        @endif
                       @endforeach
 
                 
