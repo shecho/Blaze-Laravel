@@ -1,5 +1,5 @@
 <?php
-// Esta earchivo permite exportar el reporte de citas
+// Esta earchivo permite exportar el reporte de citas en excel
 namespace App\Exports;
 
 use App\CreateDate;

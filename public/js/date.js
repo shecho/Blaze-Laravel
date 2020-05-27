@@ -71,10 +71,10 @@ function modalResponse(state) {
         modal.innerHTML = `
         <div class="alert alert-danger alert-dismissible fade show" role="alert">
             Este cita ha sido agendada a alguien mas"
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-    </button>
-    </div>`
+            <button   button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>`
     } else {
         console.log("inside If Negative modal response");
         modal.innerHTML = `
@@ -155,3 +155,28 @@ document.getElementById('confirm-date').addEventListener('click', sendForm)
 
 
 
+// Cheakc my Dates 
+//Permite a un cliente consultar las citas
+
+function  CheckMyDates(){
+    let tableMyDates= document.getElementById('table-row-my-dates')
+    let CheackMyDatesBtn= document.getElementById('CheackMyDates')
+    // console.log("estas son mis citas");
+    CheackMyDatesBtn.classList.toggle("d-none")
+   
+    // console.log(tableMyDates)
+    if (tableMyDates.lastElementChild.innerHTML ) {
+        
+       
+        console.log("si");
+    }else{
+        console.log("no");
+        CheackMyDatesBtn.innerHTML =`
+         <div class="alert alert-danger alert-dismissible fade show" role="alert"> No tienes citas asignadas"
+            <button   button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true"></span>
+            </button>
+         </div>`
+    }
+}
+let CheackMyDatesBtn= document.getElementById('CheackMyDates')

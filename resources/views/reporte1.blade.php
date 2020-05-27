@@ -1,8 +1,12 @@
 <!-- Esta vista solo es para hacer peuras de como se veran los reportes en PDF -->
+<h1>Esta es la ruta del reporte de Usuarios en PDF</h1>
 
-@extends('layouts.reportesTemplate')
+<br>
+<?php 
+$usersUsersPDF ='
+@extends("layouts.reportesTemplate")
 
-@section('content')
+@section("content")
 
 
 <!-- @if(Auth::user()->id == 1) -->
@@ -50,5 +54,4 @@
     </div>
 
 
-@endsection 
-
+@endsection ';

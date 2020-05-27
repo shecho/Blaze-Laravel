@@ -1,4 +1,5 @@
 
+ <!-- Este archivo contiene un ejejmplo de como hacer reportes en pdf usando la libreria mpdf -->
  <?php
 require_once __DIR__ . '/vendor/autoload';
 

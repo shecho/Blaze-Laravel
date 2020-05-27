@@ -42,10 +42,10 @@ Route::get('/exportAllusers', 'HomeController@exportUsers')->name('exportAlluser
 
 
 //  Ruta rerpote PDF de citas
-Route::get('/reporte1', 'HomeController@reporte1')->name('reporte1');
+Route::get('/reporteClientes', 'HomeController@reporteClientes')->name('reporteClientes');
 
 // Ruta Reporte PDF de usuarios
-Route::get('/reporte2', 'HomeController@reporte99')->name('reporte1');
+Route::get('/reporteCitas', 'HomeController@reporteCitas')->name('reporteCitas');
 
 
 

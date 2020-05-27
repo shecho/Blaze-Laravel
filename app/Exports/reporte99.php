@@ -1,3 +1,4 @@
+<!-- Esta arhcivo contiene un ejemplo de como exportar un arhicvo en  pdf  retornando una vista con mensajes y sin html -->
 <?php
 // Require composer autoload
 require_once APP_PATH . '../../vendor/autoload.php';
