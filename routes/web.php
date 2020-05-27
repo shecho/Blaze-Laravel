@@ -17,25 +17,33 @@ Route::get('/', function () {
 // ruta de autenticar
 Auth::routes();
 
-// tura de home
+// tura de home de panel de control 
 Route::get('/home', 'HomeController@index')->name('home');
 
 // ruta crear Citas
 Route::post('/createNewDate','CreateDateController@CreateDate');
-// ruta del filtro por dya
+
+// ruta del filtro por dia
 Route::post('/filterByDay','HomeController@filterByDay')->name('filterByDay');
+
 // ruta de filtro por rango de dias
 Route::post('/filterByRange','HomeController@filterByRange')->name('filterByRange');
+
 // Ruta perfil
 Route::get('/profile', 'UserController@index')->name('profile');
+
 // ruta para actualizar nombre de perfil
 Route::get('/updateProfileName/{iduser}/{nameUser}', 'UserController@updateName')->name('updateProfileName');
+
 // ruta para actualizar  telefono
 Route::get('/updateProfilePhone/{iduser}/{phoneUser}', 'UserController@updatePhone')->name('updateProfilePhone');
+
 // ruta para borrar una cita
 Route::get('/deleteDate/{iddate}', 'CreateDateController@deleteDate')->name('deleteDate');
+
 // Ruta para exportar citas 
 Route::get('/exportAllDates', 'HomeController@exportDates')->name('exportAllDates');
+
 // ruta para ecportax ecell de ussuarios
 Route::get('/exportAllusers', 'HomeController@exportUsers')->name('exportAllusers');
 

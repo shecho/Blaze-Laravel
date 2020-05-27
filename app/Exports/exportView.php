@@ -1,4 +1,6 @@
 <?php
+
+// <!-- es un ejejmplo de uso de la libreria Matatwebsite . Este usa una vista como rfrencia,  para exportar el reporte -->
 namespace App\Exports;
 
 use App\Invoice;
@@ -15,3 +17,4 @@ class InvoicesExport implements FromView
         ]);
     }
 }
+
