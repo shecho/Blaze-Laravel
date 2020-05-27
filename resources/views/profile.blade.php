@@ -9,7 +9,13 @@
 
 
 <div class="col-md-6 container text-center">
-<div class="card-header bg-dark">Perfil</div>
+<div class="card-header bg-dark ">
+  <a href="/home" class="text-light float-left">
+    <i class="h4 fas fa-undo-alt"></i>
+  </a>
+  <h3 class="">Perfil</h3>
+
+</div>
   <div class="row text-center border ">
     
     <div class="card-body lightOverlay text-dark">
