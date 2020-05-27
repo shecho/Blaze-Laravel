@@ -31,10 +31,12 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
+
     {
+        $users = DB::table('users')->select('id','name', 'phone', 'email')->get();
         $citas = CreateDate::all();
         //dd($citas);
-        return view('home', compact('citas'));
+        return view('home', compact('citas','users'));
     }
     public function filterByDay(Request $request)
     {
@@ -45,7 +47,7 @@ class HomeController extends Controller
 
     public function filterByRange(Request $request)
     {
-        $citas = CreateDate::where('day', ">", $request->dateDayFilterIni)->where('day', "<", $request->dateDayFilterEnd)->get();
+        $citas = CreateDate::where('day', ">=", $request->dateDayFilterIni)->where('day', "<=", $request->dateDayFilterEnd)->get();
         //dd($citas);
         return view('home', compact('citas'));
     }
@@ -54,13 +56,13 @@ class HomeController extends Controller
     public function exportDates()
     {
 
-        return Excel::download(new CreateDatesExport, 'dates.xlsx');
+        return Excel::download(new CreateDatesExport, 'citas.xlsx');
 
     }
     public function exportUsers()
     {
 
-        return Excel::download(new UsersExport, 'users.xlsx');
+        return Excel::download(new UsersExport, 'usuarios.xlsx');
 
     }
     public function reporte2()

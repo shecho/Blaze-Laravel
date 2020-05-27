@@ -127,204 +127,246 @@ Permite ver todos los reportes al administrador
 @if(Auth::user()->id == 1)
 
 <div class="text-center containner reports mt-4 lightOverlay col-md-12" >
-<div class="card-header bg-dark">Reportes</div>
-<div class="container ">
-    <div class="card-header">
-        <a
-            onclick="showReporte1()"
-            href="/reporteClientes"
-            id=""
-            class="btn btn-outline-dark btn-sm" >Reporte1 Clientes PDF
+    <div class="card-header bg-dark">Reportes</div>
+    <div class="container ">
+        <div class="card-header ">
+            <a
+                onclick="showReporte1()"
+                href="/reporteClientes"
+                id=""
+                class="btn btn-outline-dark btn-sm" >Reporte1 Clientes PDF
 
-        </a>
-        <a
-            onclick="showReporte1()"
-            href="/reporteCitas"
-            id=""
-            class="btn btn-outline-dark btn-sm" >Reporte2 Citas DPF
+            </a>
+            <a
+                onclick="showReporte1()"
+                href="/reporteCitas"
+                id=""
+                class="btn btn-outline-dark btn-sm" >Reporte2 Citas DPF
 
-        </a>
-        <a href="/exportAllDates" id="export-dates-id" class="btn btn-outline-dark btn-sm" >Exportas Citas</a>
-        <a href="/exportAllusers" id="export-users-id" class="btn btn-outline-dark btn-sm" >Exportar Usurios</a>
-        <button id="show-dates-id" onclick="showDates()" type="submit" class="btn btn-outline-dark btn-sm" >Ver todas las Citas</button>
-
-        <button id="show-filters-id" onclick="showFilter()" type="submit" class="btn btn-outline-dark btn-sm">Ver  Filtros de Citas</button>
-        <button
-            id="service-id"
-            onclick=""
-            type="submit"
-            class="btn btn-outline-dark btn-sm"
-            data-target="#create-service"
-            data-toggle="modal"
-            data-whatever="@mdo">
-                Crear Servicio
-
-        </button>
-        <button id="show-services-id" onclick="showServices()" type="submit" class="btn btn-outline-dark btn-sm" >Ver todos los Servicios</button>
-
-    </div>
-
-    <div class="m-2">
-        <div id="filter-container-id" class="row justify-content-around d-none">
-            <form class="text-center" method="POST" action="{{ route('filterByDay') }}">
-                <input class="form-control" name="dateDayFilter" type="date" placeholder="filtar por día">
-                <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                <div>
-                    <button type="submit" class="btn btn-outline-dark mt-2 text-center" id="filterByDay">Filtrar por Día</button>
-                </div>
-            </form>
+            </a>
+            <a href="/exportAllDates" id="export-dates-id" class="btn btn-outline-dark btn-sm" >Exportar Citas</a>
+            <a href="/exportAllusers" id="export-users-id" class="btn btn-outline-dark btn-sm" >Exportar Usurios</a>
+            <button id="show-users-id" onclick="showUsers()" type="submit" class="btn btn-outline-dark btn-sm" >Ver todos los Usarios</button>
+            <button id="show-dates-id" onclick="showDates()" type="submit" class="btn btn-outline-dark btn-sm" >Ver todas las Citas</button>
 
 
-            <form class="text-center" method="POST" action="{{ route('filterByRange') }}">
-                <input class="form-control mb-2" name="dateDayFilterIni" type="date" placeholder="filtar por día" >
-                <input class="form-control bt-2" name="dateDayFilterEnd" type="date" placeholder="filtar por día">
-                <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                <div>
-                    <button type="submit" class="btn btn-outline-dark mt-2" id="filterByDay">Filtrar por rango de Días</button>
-                </div>
+            <button id="show-filters-id" onclick="showFilter()" type="submit" class="btn btn-outline-dark btn-sm">Ver  Filtros de Citas</button>
+            <button
+                id="service-id"
+                onclick=""
+                type="submit"
+                class="btn btn-outline-dark btn-sm"
+                data-target="#create-service"
+                data-toggle="modal"
+                data-whatever="@mdo">
+                    Crear Servicio
 
-            </form>
+            </button>
+            <button id="show-services-id" onclick="showServices()" type="submit" class="btn btn-outline-dark btn-sm" >Ver todos los Servicios</button>
+
+        </div>
+
+        <div class="m-2">
+            <div id="filter-container-id" class="row justify-content-around d-none">
+                <form class="text-center" method="POST" action="{{ route('filterByDay') }}">
+                    <input class="form-control" name="dateDayFilter" type="date" placeholder="filtar por día">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <div>
+                        <button type="submit" class="btn btn-outline-dark mt-2 text-center" id="filterByDay">Filtrar por Día</button>
+                    </div>
+                </form>
+
+
+                <form class="text-center" method="POST" action="{{ route('filterByRange') }}">
+                    <input class="form-control mb-2" name="dateDayFilterIni" type="date" placeholder="filtar por día" >
+                    <input class="form-control bt-2" name="dateDayFilterEnd" type="date" placeholder="filtar por día">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <div>
+                        <button type="submit" class="btn btn-outline-dark mt-2" id="filterByDay">Filtrar por rango de Días</button>
+                    </div>
+
+                </form>
+            </div>
         </div>
     </div>
-</div>
-<br>
-<div class="col-lg-12 grid-margin stretch-card ">
-<div class="card-header bg-dark d-none" id="dates-title">Citas</div>
-    <div class="card table table-dark text-center ">
-    <table class="table table-dark table-hover text-center" >
+    <br>
+    <!-- ver citas -->
+    <div class="col-lg-12 grid-margin stretch-card ">
+    <div class="card-header bg-dark d-none" id="dates-title">Citas</div>
+        <div class="card table table-dark text-center ">
+        <table class="table table-dark table-hover text-center" >
 
-            <thead id="table-headers-dates" class="d-none">
-                <tr class="">
+                <thead id="table-headers-dates" class="d-none">
+                    <tr class="">
+                        <th>Administrar</th>
+                        <th>id</th>
+                        <th>Nombre</th>
+                        <th>Teléfono</th>
+                        <th>Día</th>
+                        <th>Hora</th>
+                        <th>Barbero</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body-id" class="d-none">
+                @foreach($citas as $cita)
+
+                    <tr id="table-row-id ">
+                        <td>
+                        <button type="button" class="btn btn-dark js-scroll-trigger" data-toggle="modal" data-target="#delete-date" data-whatever="@mdo">
+                        <a class="" >
+                            <i class="fas fa-trash" id="trashIcon"></i>
+                        </a>
+                        </button>
+                        <a class="text-light btn btn-dark  " href="/deleteDate/{{ $cita->id }}">
+                            <i class="fas fa-trash" id="trashIcon"></i>
+                        </a>
+                        </td>
+                        <td>{{ $cita->id }}</td>
+                        <td>{{ $cita->userName }}</td>
+                        <td>{{ $cita->userPhone }}</td>
+                        <td>{{ $cita->day }}</td>
+                        <td>{{ $cita->time }}</td>
+                        <td>{{ $cita->barber }}</td>
+
+                    </tr>
+
+
+                @endforeach
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <!-- vista de SAervicios  -->
+
+    <div class="d-none text-center containner reports m-0 lightOverlay col-md-12 " id="services-container-id" >
+        <div class="container ">
+
+        <!-- <div class=""> -->
+        <div class="card-header font-weight-bold bg-dark">Servicios</div>
+        <div class="card   text-center ">
+
+            <table class="table table-responsive-sm table-secondary text-center table-hover table" >
+
+                <thead id="table-headers-services" class="">
+                    <tr>
                     <th>Administrar</th>
                     <th>id</th>
                     <th>Nombre</th>
-                    <th>Teléfono</th>
-                    <th>Día</th>
-                    <th>Hora</th>
-                    <th>Barbero</th>
-                </tr>
-            </thead>
-            <tbody id="table-body-id" class="d-none">
-            @foreach($citas as $cita)
-
-                <tr id="table-row-id ">
-                    <td>
-                    <button type="button" class="btn btn-dark js-scroll-trigger" data-toggle="modal" data-target="#delete-date" data-whatever="@mdo">
-                    <a class="" >
-                        <i class="fas fa-trash" id="trashIcon"></i>
-                    </a>
-                    </button>
-                    <a class="text-light btn btn-dark  " href="/deleteDate/{{ $cita->id }}">
-                        <i class="fas fa-trash" id="trashIcon"></i>
-                    </a>
-                    </td>
-                    <td>{{ $cita->id }}</td>
-                    <td>{{ $cita->userName }}</td>
-                    <td>{{ $cita->userPhone }}</td>
-                    <td>{{ $cita->day }}</td>
-                    <td>{{ $cita->time }}</td>
-                    <td>{{ $cita->barber }}</td>
-
-                </tr>
+                    <th>precio</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body-id-services" class="">
 
 
-            @endforeach
-            </tbody>
-        </table>
+                    <tr id="table-row-id-services ">
+                        <td>
+                            <button type="button" class="btn btn-dark js-scroll-trigger" data-toggle="modal" data-target="#delete-date" data-whatever="@mdo">
+                            <a class="" >
+                                <i class="fas fa-trash" id="trashIcon"></i>
+                            </a>
+                            </button>
+                            <a class="text-light btn btn-dark  " href="/deleteDate/{{ $cita->id }}">
+                                <i class="fas fa-trash" id="trashIcon"></i>
+                            </a>
+                        </td>
+                        <td>1</td>
+                        <td>Corte</td>
+                        <td>$12.000</td>
+
+                    </tr>
+                      
+                   
+
+                </tbody>
+            </table>
+            </div>
+        <!-- </div> -->
+        </div>
     </div>
-</div>
-
-        <!-- citas  -->
 
 
+    <!-- vista de CLientes  -->
+
+    <div class="d-none text-center containner reports m-0 lightOverlay col-md-12 " id="users-container-id" >
+        <div class="container ">
+
+        <!-- <div class=""> -->
+        <div class="card-header font-weight-bold bg-dark">Clientes </div>
+        <div class="card   text-center ">
+
+            <table class="table table-responsive-sm table-secondary text-center table-hover table" >
+
+                <thead id="table-headers-users" class="">
+                    <tr>
+                        <th>Administrar</th>
+                        <th>id</th>
+                        <th>Nombre</th>
+                        <th>Telefono</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body-id-users" class="">
 
 
+                    <!-- <tr id="table-row-id-users ">
+                        <td>
+                            <button type="button" class="btn btn-dark js-scroll-trigger" data-toggle="modal" data-target="#delete-date" data-whatever="@mdo">
+                            <a class="" >
+                                <i class="fas fa-trash" id="trashIcon"></i>
+                            </a>
+                            </button>
+                            <a class="text-light btn btn-dark  " href="/deleteDate/{{ $cita->id }}">
+                                <i class="fas fa-trash" id="trashIcon"></i>
+                            </a>
+                        </td>
+                        <td>1</td>
+                        <td>Julian</td>
+                        <td>3113631338</td>
+                        <td>a@b.com</td>
+
+                    </tr> -->
+                    <!-- <tbody id="table-body-id" class="d-none"> -->
+                @foreach($users as $user)
+
+                    <tr id="table-row-users ">
+                        <td>
+                        <button type="button" class="btn btn-dark js-scroll-trigger" data-toggle="modal" data-target="#delete-date" data-whatever="@mdo">
+                        <a class="" >
+                            <i class="fas fa-trash" id="trashIcon"></i>
+                        </a>
+                        </button>
+                        <a class="text-light btn btn-dark  " href="/deleteDate/{{ $cita->id }}">
+                            <i class="fas fa-trash" id="trashIcon"></i>
+                        </a>
+                        </td>
+                        <td>{{ $user->id }}</td>
+                        <td>{{ $user->name }}</td>
+                        <td>{{ $user->phone }}</td>
+                        <td>{{ $user->email }}</td>
+
+                    </tr>
 
 
-<div class="d-none text-center containner reports m-0 lightOverlay col-md-12 " id="services-container-id" >
+                @endforeach
+                </tbody>
+                  
 
-
-                    <div class="container ">
-
-                        <!-- <div class=""> -->
-                        <div class="card-header font-weight-bold bg-dark">Servicios</div>
-                            <div class="card   text-center ">
-
-                                <table class="table table-responsive-sm table-secondary text-center table-hover table" >
-
-                                    <thead id="table-headers-services" class="">
-                                        <tr>
-                                            <th>Administrar</th>
-                                            <th>id</th>
-                                            <th>Nombre</th>
-                                            <th>precio</th>
-
-                                        </tr>
-                                    </thead>
-                                    <tbody id="table-body-id-services" class="">
-
-
-                                        <tr id="table-row-id-services ">
-                                            <td>
-                                            <button type="button" class="btn btn-dark js-scroll-trigger" data-toggle="modal" data-target="#delete-date" data-whatever="@mdo">
-                                            <a class="" >
-                                                <i class="fas fa-trash" id="trashIcon"></i>
-                                            </a>
-                                            </button>
-                                            <a class="text-light btn btn-dark  " href="/deleteDate/{{ $cita->id }}">
-                                                <i class="fas fa-trash" id="trashIcon"></i>
-                                            </a>
-                                            </td>
-                                            <td>1</td>
-                                            <td>Corte</td>
-                                            <td>$12.000</td>
-
-                                        </tr>
-                                        <tr id="table-row-id-services ">
-                                            <td>
-                                            <button type="button" class="btn btn-dark js-scroll-trigger" data-toggle="modal" data-target="#delete-date" data-whatever="@mdo">
-                                            <a class="" >
-                                                <i class="fas fa-trash" id="trashIcon"></i>
-                                            </a>
-                                            </button>
-                                            <a class="text-light btn btn-dark  " href="/deleteDate/{{ $cita->id }}">
-                                                <i class="fas fa-trash" id="trashIcon"></i>
-                                            </a>
-                                            </td>
-                                            <td>2</td>
-                                            <td>Barba</td>
-                                            <td>$8.000</td>
-
-                                        </tr>
-                                        <tr id="table-row-id-services ">
-                                            <td>
-                                            <button type="button" class="btn btn-dark js-scroll-trigger" data-toggle="modal" data-target="#delete-date" data-whatever="@mdo">
-                                            <a class="" >
-                                                <i class="fas fa-trash" id="trashIcon"></i>
-                                            </a>
-                                            </button>
-                                            <a class="text-light btn btn-dark  " href="/deleteDate/{{ $cita->id }}">
-                                                <i class="fas fa-trash" id="trashIcon"></i>
-                                            </a>
-                                            </td>
-                                            <td>3</td>
-                                            <td>Corte y Barba</td>
-                                            <td>$16.000</td>
-
-                                        </tr>
-
-                                    </tbody>
-                                </table>
-                            </div>
-                        <!-- </div> -->
-                    </div>
-                  </div>
+                </tbody>
+            </table>
+            </div>
+        <!-- </div> -->
+        </div>
+    </div>
 
 
 
-<!-- citas -->
 
-<!-- servicios  -->
+
+
+
+<!-- modal de eliminar citas -->
 
 {{--Eliminar cita  --}}
 
@@ -373,8 +415,8 @@ Permite ver todos los reportes al administrador
 
 <!--  -->
 
-<!-- Crear servicios -->
 
+<!--Modal de Creacion servicios -->
 
 
 {{--Crear Servicio   --}}
@@ -420,16 +462,9 @@ Permite ver todos los reportes al administrador
 </div>
 
 
-{{-- modal --}}
-
-<!-- cierra crear servisios -->
 
 
 
-
-
-    @endif
+@endif
 </div>
-
-
 @endsection

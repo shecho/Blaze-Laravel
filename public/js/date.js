@@ -114,8 +114,11 @@ function showDates(){
    
 
 }
+// muestra todols los usarios
 
-//whoe filters muestra los filtros
+    
+    
+ //whoe filters muestra los filtros
 function showFilter(){
  
     let filterContainer= document.getElementById("filter-container-id")
