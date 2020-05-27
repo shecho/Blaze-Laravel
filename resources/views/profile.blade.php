@@ -115,7 +115,7 @@
                           <tr id="table-row-my-dates">
                             <td>
                              
-                              <a class="text-light btn btn-dark  " href="https://api.whatsapp.com/send?phone=5703194853019&text=Hola%20quisiera%20Canelar%20mi%20cita%20para%20las%20">
+                              <a target="_blank" class="text-light btn btn-dark  " href="https://api.whatsapp.com/send?phone=5703194853019&text=Hola%20quisiera%20Cancelar%20mi%20cita%20para%20el%20%20{{$cita->day}}%20a%20las%20{{$cita->time}}">
                                   <i class="fas fa-trash" id="trashIcon"></i>
                               </a>
                             </td>
