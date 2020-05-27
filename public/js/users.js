@@ -8,10 +8,10 @@ const showUsers = () => {
     
     let hasAclass = showUsersContainer.classList.contains("d-none")
     if(hasAclass){
-        showUsersButton.innerText =`Ver todos los Usuarios`;
+        showUsersButton.innerText =`Ver todos los Clientes`;
          
      }
      else{
-        showUsersButton.innerText =`Ocultar todos los Usuarios`;
+        showUsersButton.innerText =`Ocultar todos los Clientes`;
      }
 }
