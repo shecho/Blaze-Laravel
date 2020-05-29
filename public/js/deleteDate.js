@@ -6,6 +6,7 @@ Este Archivo permite eliminar las citas desde la vista
 
 */
 
+// Rectifica la eliminacion de citas y genera una alerta en el sistema
 const deleteDate = () => {
     console.log("inside delete date");
    alert("Eliminar cita")

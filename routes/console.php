@@ -1,5 +1,6 @@
 <?php
-
+// Archivo que agrega la ravel por defecto
+// PAra mas informacion ir a la documentacion ofical de Laravel https://laravel.com/
 use Illuminate\Foundation\Inspiring;
 
 /*

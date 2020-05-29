@@ -1,5 +1,5 @@
 <?php
-
+// Este archvi olo crea la libreria de MArrwebsite y contiene la cofnfigfucaion del la libreria misma. Para mas informacion ir a la pagina principal de la libreria  https://laravel-excel.com/
 use Maatwebsite\Excel\Excel;
 
 return [

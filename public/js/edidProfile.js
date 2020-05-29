@@ -8,7 +8,7 @@
     5. Guarda el nuevo telefono
 */ 
 
-// edita en nombre
+// edita en nombre del cliente en la vista profile
 const editName = () => {
    console.log("aditar");
     let userName = document.getElementById('user-name-id')
@@ -28,7 +28,7 @@ const editName = () => {
 
 }
 
-// guarda el  nombre
+// guarda el  nombre del cliente en la vista profile
 const SaveNewName = () => {
     let saveNewName= document.getElementById("save-new-name")
     saveNewName.style.visibility= "hidden"
@@ -84,7 +84,7 @@ const SaveNewName = () => {
 
 
 
-// Edita el telefono
+// Edita el telefono en la vista profile
 const editPhone = () => {
     let userPhone = document.getElementById('user-phone-id')
     userPhone.style.display = "none"
@@ -109,7 +109,7 @@ const editPhone = () => {
 
  
 
- // guarda el  telefono
+ // guarda el  telefono en la vista profile
  const SaveNewPhone = () => {
      let saveNewPhone= document.getElementById("save-new-phone")
      saveNewPhone.style.visibility= "hidden"
@@ -144,6 +144,7 @@ const editPhone = () => {
 
 
  }
+ 
 // ----------------------------------------------------------------------
 //scrip on testing
 // prueba unitaria de claja negra

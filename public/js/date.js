@@ -1,16 +1,16 @@
 /* 
-Este archivo hace los siguiente: 0. Campura los eventos del formulario
-    1  Enviar el formulario de la cita
-    2  Validar la informacion del formulario de las citas 
-    3. Envia las respuestas en caso de errores
-    4. Hace la petition al backenbn 
-    5. Procesa la respuesta del backend
+Este archivo hace los siguiente: 
+    Campura los eventos del formulario de citas
+    Enviar el formulario de la cita
+    Validar la informacion del formulario de las citas 
+    Envia las respuestas en caso de errores
+    Hace la petition al backenbn 
+    Procesa la respuesta del backend
 */
 // console.log("script linked2");
 
-// Envia el formulario
 
- 
+// Envia el formulario de citas
 function sendForm() {
     console.log('Inside function send form');
     let fullName = document.getElementById("recipient-name").value
@@ -43,7 +43,7 @@ function sendForm() {
     console.log(data);
 }
 
-// Valida el modal
+// Valida el modal de citas
 function modalValidate(fullName, phone, day, time) {
     // console.log("function modal validate");
     var modal = document.getElementById('modal-response')
@@ -92,7 +92,7 @@ function showReporte1 (){
     
 
 
-//showd dates muestra las citas
+// Muestra las citas en la vista de panel de control
 function showDates(){
     let showDatesTitle = document.getElementById('dates-title')
     showDatesTitle.classList.toggle("d-none")
@@ -118,7 +118,7 @@ function showDates(){
 
     
     
- //whoe filters muestra los filtros
+ // muestra los filtros de la vista e panel de control
 function showFilter(){
  
     let filterContainer= document.getElementById("filter-container-id")
@@ -136,7 +136,7 @@ function showFilter(){
     
 }
 
-//get the currint time . Ontiene la fecha de este vigente del sistema
+// Ontiene la fecha vigente del sistema
 function getCurrentDate (){
    
     let datePickerId = document.getElementById("date-day")
@@ -153,7 +153,8 @@ function getCurrentDate (){
 getCurrentDate()
 
 
-// captura el eid del modal
+
+// Crea un evento de que permite enviar el formulario de citas
 var modal = document.getElementById('modal-response')
 document.getElementById('confirm-date').addEventListener('click', sendForm)
 
@@ -162,7 +163,7 @@ document.getElementById('confirm-date').addEventListener('click', sendForm)
 
 
 
-//Permite a un cliente consultar sus citas desde su perfil  la base datos
+//Permite a un cliente consultar sus citas desde su perfil 
 function  CheckMyDates(){
   
     let tableMyDates= document.getElementById('table-row-my-dates')
@@ -186,4 +187,5 @@ function  CheckMyDates(){
          </div>`
     }
 }
+// Captura el boton de las consultar citas
 let CheackMyDatesBtn= document.getElementById('CheackMyDates')

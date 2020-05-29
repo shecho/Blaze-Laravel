@@ -1,5 +1,5 @@
 <?php
-
+// Este archivo contoene el modelo de la clase usuario
 namespace App;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -7,15 +7,13 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Model;
 
-
+// Crea la clase Usuario
 class User extends Authenticatable
 {
     use Notifiable;
 
     /**
-     *
-     * 
-     *
+     * Datos de llenado
      * @var array
      */
     protected $fillable = [
@@ -23,8 +21,8 @@ class User extends Authenticatable
     ];
 
     /**
-     *  Este archivo Contiene el modelo de usuarios 
-     *
+     *  
+     * Datos ocultos
      * @var array
      */
     protected $hidden = [
@@ -32,8 +30,7 @@ class User extends Authenticatable
     ];
 
     /**
-     * 
-     *
+     * Datos de casteo
      * @var array
      */
     protected $casts = [

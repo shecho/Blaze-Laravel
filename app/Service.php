@@ -1,9 +1,10 @@
 <?php
-//Este archivo contiene el modelo servicios
+//Este archivo contiene el modelo de la clase servicios
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+// Crea la clase servicio
 class Service extends Model
 {
      // use Notifiable;

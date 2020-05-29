@@ -1,5 +1,6 @@
 <?php
-
+// Archivo que agrega la ravel por defecto para las contrsenas
+// PAra mas informacion ir a la documentacion ofical de Laravel https://laravel.com/
 return [
 
     /*
@@ -13,10 +14,10 @@ return [
     |
     */
 
-    'reset' => 'Your password has been reset!',
-    'sent' => 'We have e-mailed your password reset link!',
-    'throttled' => 'Please wait before retrying.',
-    'token' => 'This password reset token is invalid.',
-    'user' => "We can't find a user with that e-mail address.",
+    'reset' => 'El pasword se a reseteado',
+    'sent' => 'Te hemos enviado un correo con contrasena',
+    'throttled' => 'Por favor espere antes de intentar de nuevo',
+    'token' => 'El token para resetear la contrasena es invalido',
+    'user' => "No hay Usuario con ese email",
 
 ];

@@ -1,5 +1,5 @@
 <?php
-
+// Este archivo de lo genera laravel por defecto y contiene la confiracion de lmodulo de encriptacion para mas informacion ir a la documentacion oficial de laravel. https://laravel.com/
 return [
 
     /*

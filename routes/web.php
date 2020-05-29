@@ -1,4 +1,5 @@
 <?php
+
 // Este archivo contiene todos las rutas de la aplciacion
 /*
 |Este archivo lo agrega laravel si no conoce de laravel no lo  toque--------------------------------------------------------------------------

@@ -1,3 +1,5 @@
+// archivo de inico de VUE que agrega la ravel por defecto
+// PAra mas informacion ir a la documentacion ofical de Laravel https://laravel.com/
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when

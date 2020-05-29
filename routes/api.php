@@ -1,5 +1,7 @@
 <?php
 // Este archivo contiene las rutas generals de la api 
+// // Archivo que agrega laravel por defecto
+// Para mas informacion ir a la documentacion ofical de Laravel https://laravel.com/
 use Illuminate\Http\Request;
 
 /*

@@ -1,5 +1,5 @@
 <?php
-
+// Este archivo de lo genera laravel por defecto para mas informacion ir a la documentacion oficial de laravel. https://laravel.com/
 use Monolog\Handler\NullHandler;
 use Monolog\Handler\StreamHandler;
 use Monolog\Handler\SyslogUdpHandler;

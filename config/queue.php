@@ -1,5 +1,6 @@
 <?php
-
+// Este archivo de lo genera laravel por defecto para mas informacion ir a la documentacion oficial de laravel. https://laravel.com/
+// Este archivo amajena las colas de ejecucion
 return [
 
     /*

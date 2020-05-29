@@ -1,5 +1,5 @@
 <?php
-
+// Este archivo de lo genera laravel por defecto para mas informacion ir a la documentacion oficial de laravel. https://laravel.com/
 return [
 
     /*
@@ -7,7 +7,7 @@ return [
     | Third Party Services
     |--------------------------------------------------------------------------
     |
-     este archivo maneja a los sergvicios de ternros
+     este archivo maneja a los sergvicios de 
     */
 
     'mailgun' => [

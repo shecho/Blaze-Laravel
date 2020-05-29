@@ -1,4 +1,4 @@
-<!-- Es ovio que esta el la vista de registro que muestra elfomrulario de gegistro -->
+<!-- Esta es la vista de registro que muestra elfomrulario de gegistro -->
 
 @extends('layouts.app')
 
