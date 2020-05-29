@@ -1,5 +1,5 @@
 <?php
-
+// Este archivo es parte d la configracion de Laravel y maneja los errores y excepciones
 namespace App\Exceptions;
 
 use Exception;

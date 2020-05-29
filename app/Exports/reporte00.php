@@ -3,16 +3,20 @@
  <?php
 require_once __DIR__ . '/vendor/autoload';
 
+
 // $mpdf = new \Mpdf\Mpdf();
 
 // $mpdf->WriteHTML('hellow word');
 
 // $mpdf->Output();
 
+// Importes
 use Mpdf\Mpdf;
+
+// Esta clase crea el reporte
 class ExportsReporte00 extends Controller{
 
-
+    // Esta funcoion crea todo el reporte
     public function reporte00()
     {
         $citas = CreateDate::all();

@@ -1,16 +1,16 @@
 /* 
-Este archivo hace los siguiente: 
-    0. Campura los eventos del formulario
+Este archivo hace los siguiente: 0. Campura los eventos del formulario
     1  Enviar el formulario de la cita
-    2  Validar la informacion de l formulario de las citas 
-    3. Envia las respuestas en case de errores
+    2  Validar la informacion del formulario de las citas 
+    3. Envia las respuestas en caso de errores
     4. Hace la petition al backenbn 
     5. Procesa la respuesta del backend
 */
 // console.log("script linked2");
 
-
 // Envia el formulario
+
+ 
 function sendForm() {
     console.log('Inside function send form');
     let fullName = document.getElementById("recipient-name").value
@@ -114,7 +114,7 @@ function showDates(){
    
 
 }
-// muestra todols los usarios
+
 
     
     
@@ -136,7 +136,7 @@ function showFilter(){
     
 }
 
-//get the currint time Ontiene la fecha de este nomento
+//get the currint time . Ontiene la fecha de este vigente del sistema
 function getCurrentDate (){
    
     let datePickerId = document.getElementById("date-day")
@@ -153,16 +153,16 @@ function getCurrentDate (){
 getCurrentDate()
 
 
+// captura el eid del modal
 var modal = document.getElementById('modal-response')
 document.getElementById('confirm-date').addEventListener('click', sendForm)
 
 
 
-// Cheakc my Dates 
 
 
-//Permite a un cliente consultar sus citas 
 
+//Permite a un cliente consultar sus citas desde su perfil  la base datos
 function  CheckMyDates(){
   
     let tableMyDates= document.getElementById('table-row-my-dates')

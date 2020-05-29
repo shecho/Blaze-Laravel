@@ -1,6 +1,8 @@
+
 <h1>Esta es la ruta del reporte de Citas en PDF</h1>
 
 <?php 
+// Este archivo contiuene una plantilla de ejeplo de cracion de reportes en pdf
 $html = "
         <!DOCTYPE html>
 	    <html>

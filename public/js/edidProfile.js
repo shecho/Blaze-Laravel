@@ -8,8 +8,8 @@
     5. Guarda el nuevo telefono
 */ 
 
+// edita en nombre
 const editName = () => {
-    // edita en nombre
    console.log("aditar");
     let userName = document.getElementById('user-name-id')
 
@@ -28,8 +28,8 @@ const editName = () => {
 
 }
 
+// guarda el  nombre
 const SaveNewName = () => {
-     // guarda el  nombre
     let saveNewName= document.getElementById("save-new-name")
     saveNewName.style.visibility= "hidden"
     console.log("saving")
@@ -84,8 +84,8 @@ const SaveNewName = () => {
 
 
 
+// Edita el telefono
 const editPhone = () => {
-      // Edita el telefono
     let userPhone = document.getElementById('user-phone-id')
     userPhone.style.display = "none"
 
@@ -109,8 +109,8 @@ const editPhone = () => {
 
  
 
+ // guarda el  telefono
  const SaveNewPhone = () => {
-       // guarda el  telefono
      let saveNewPhone= document.getElementById("save-new-phone")
      saveNewPhone.style.visibility= "hidden"
      console.log("saving")

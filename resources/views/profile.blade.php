@@ -1,5 +1,5 @@
-<!-- 
-  Esta vista muetra los datos de cliente registrado. 
+<!--
+  Esta vista muetra los datos de cliente registrado.
 
  -->
 
@@ -7,21 +7,20 @@
 
 @section('content')
 
-
 <div class="col-md-6 container text-center">
-<div class="card-header bg-dark ">
+ <div class="card-header bg-dark ">
   <a href="/home" class="text-light float-left">
     <i class="h4 fas fa-undo-alt"></i>
   </a>
   <h3 class="">Perfil</h3>
 
-</div>
+ </div>
   <div class="row text-center border ">
-    
+
     <div class="card-body lightOverlay text-dark">
-      
+
       <div class="pricing-header">
-        
+
 
         <div class="price profile-photo-container h1">
           <i class="fas fa-user-circle profile-photo "></i>
@@ -36,14 +35,14 @@
         <div>
           <a id="name-icon-container" href="#" class="text-dark m-2"   >
               <i class="fas fa-pencil-alt  " onclick="editName()"></i>
-          </a> 
+          </a>
         </div>
        </div>
 
       </div>
       <div class="pricing-list">
 
-  
+
 
         <div class="d-flex justify-content-center m-2 align-items-center">
           <a class="m-2">
@@ -88,6 +87,8 @@
       <a target="blank" href="https://api.whatsapp.com/send?phone=5703194853019&text=Hola%20quisiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x">
         <i class="fab 	fa-whatsapp fa-stack-1xa text-success"> </i>
       </a>
+
+
   <!-- ver mis citas
    -->
       <div class="CheackMyDates d-none" id="CheackMyDates">
@@ -95,7 +96,7 @@
           <div class="card-header bg-dark text-light " id="dates-title">Mis Citas</div>
           <div class="card table table-dark text-center ">
           <table class="table table-dark table-hover text-center" >
-        
+
                   <thead id="table-headers-dates" class="">
                       <tr class="">
                           <th>Administrar</th>
@@ -108,13 +109,13 @@
                       </tr>
                   </thead>
                   <tbody id="table-body-id" class="">
-                
-                   
-                      @foreach($citas as $cita)
+
+                      <!-- muestra las citas del cliente y valida que sean de el -->
+                    @foreach($citas as $cita)
                         @if ($user->phone == $cita->userPhone)
                           <tr id="table-row-my-dates">
                             <td>
-                             
+
                               <a target="_blank" class="text-light btn btn-dark  " href="https://api.whatsapp.com/send?phone=5703194853019&text=Hola%20quisiera%20Cancelar%20mi%20cita%20para%20el%20%20{{$cita->day}}%20a%20las%20{{$cita->time}}">
                                   <i class="fas fa-trash" id="trashIcon"></i>
                               </a>
@@ -131,13 +132,11 @@
                         @endif
                       @endforeach
 
-                
+
                     </tbody>
               </table>
             </div>
         </div>
-
-
       </div>
     </div>
   </div>
@@ -149,7 +148,7 @@
 
 
 {{--Modal create date  --}}
-
+<!-- modal de cracion de citas -->
 <div class="modal fade" id="create-date" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -215,13 +214,13 @@
           </div>
         </form>
       </div>
-      
+
       <div class="modal-footer">
-      <a target="blank" href="https://api.whatsapp.com/send?phone=5703194853019&text=Hola%20quisiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x">
-        <i class="fab 	fa-whatsapp fa-stack-1xa text-success"> </i>
+      <a  target="_blank" href="https://api.whatsapp.com/send?phone=5703194853019&text=Hola%20quisiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x">
+        <i class="fab fa-whatsapp fa-stack-1xa text-success"> </i>
       </a>
         <button type="button" class="btn btn-dark" data-dismiss="modal">Cancelar</button>
-        <button 
+        <button
           id="confirm-date"
           type="button"
           class="btn btn-dark"

@@ -220,7 +220,7 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
 
 
         {{-- modal --}}
-        <!-- fin del modal -->
+       
 
 
 
@@ -231,7 +231,6 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
     </header>
 
     <!-- Servicios  -->
-    <!-- Services -->
     <section class="page-section" id="services">
       <div class="container">
         <div class="row">
@@ -431,7 +430,7 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
       </div>
     </section>
 
-    <!-- Acerca de  -->
+    <!-- Grid Acerca de  -->
     <section class="page-section" id="about">
       <div class="container">
         <div class="row">

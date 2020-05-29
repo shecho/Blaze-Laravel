@@ -3,10 +3,7 @@ Permite ver todos los reportes al administrador
  -->
 
 
-<!-- funtion (){
-    window.open('reporte.php','blank');
 
-} -->
 
 
 @extends('layouts.app')
@@ -29,17 +26,15 @@ Permite ver todos los reportes al administrador
                 <a name="" id="" class="btn btn-dark" href="/profile" role="button">
                     Perfil
                 </a>
-                <!-- butoon -->
                 <button type="button" class="btn btn-dark js-scroll-trigger" data-toggle="modal" data-target="#create-date" data-whatever="@mdo">Agendar Cita</button>
 
                 <a target="blank" href="https://api.whatsapp.com/send?phone=5703194853019&text=Hola%20quisiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x">
 
                         <i class="fab 	fa-whatsapp fa-stack-1xa text-success"></i>
                 </a>
-                        <!--  -->
 
                 {{--Modal create date  --}}
-
+                <!-- modal de cracionde citas -->
                 <div class="modal fade" id="create-date" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -124,6 +119,7 @@ Permite ver todos los reportes al administrador
     </div>
 </div>
 
+
 @if(Auth::user()->id == 1)
 
 <div class="text-center containner reports mt-4 lightOverlay col-md-12" >
@@ -196,11 +192,12 @@ Permite ver todos los reportes al administrador
         </div>
     </div>
     <br>
+
     <!-- ver citas -->
     <div class="col-lg-12 grid-margin stretch-card ">
-    <div class="card-header bg-dark d-none" id="dates-title">Citas</div>
+     <div class="card-header bg-dark d-none" id="dates-title">Citas</div>
         <div class="card table table-dark text-center ">
-        <table class="table table-dark table-hover text-center" >
+            <table class="table table-dark table-hover text-center" >
 
                 <thead id="table-headers-dates" class="d-none">
                     <tr class="">
@@ -214,6 +211,7 @@ Permite ver todos los reportes al administrador
                     </tr>
                 </thead>
                 <tbody id="table-body-id" class="d-none">
+                <!-- Ciclo que muestra todas las citas de la base de datos -->
                 @foreach($citas as $cita)
 
                     <tr id="table-row-id ">
@@ -372,10 +370,10 @@ Permite ver todos los reportes al administrador
 
 
 
-<!-- modal de eliminar citas -->
 
-{{--Eliminar cita  --}}
 
+    {{--Eliminar cita  --}}
+    <!-- modal de eliminar citas -->
     <div class="modal fade" id="delete-date" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -418,18 +416,14 @@ Permite ver todos los reportes al administrador
 
 
 
-
-<!--  -->
-
-
 <!--Modal de Creacion servicios -->
 
 
 {{--Crear Servicio   --}}
 
-<div class="modal fade" id="create-service" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
+    <div class="modal fade" id="create-service" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+         <div class="modal-content">
             <div class="modal-header bg-dark text-light">
                 <h5 class="text-light modal-title " id="ModalLabel">Gestionar servicio</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -463,9 +457,9 @@ Permite ver todos los reportes al administrador
                 </button>
 
             </div>
+          </div>
         </div>
     </div>
-</div>
 
 
 

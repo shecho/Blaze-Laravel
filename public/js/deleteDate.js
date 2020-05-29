@@ -11,14 +11,8 @@ const deleteDate = () => {
    alert("Eliminar cita")
     // let deleteRow  = document.querySelector('#table-row-id')
     // deleteRow.style.display = "none"
-    
-   
   
 }
-
-
-
-
 
 let deleteButton = document.getElementById("delete-date-btn")
 
