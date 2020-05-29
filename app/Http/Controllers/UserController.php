@@ -1,6 +1,6 @@
 <?php
 /* 
-Este conrtolador es responsavle de manejar el modelo de usuario
+Este conrtolador es responsavle de manejar los datos de los cluentes
 */
 namespace App\Http\Controllers;
 
@@ -9,9 +9,10 @@ use Auth;
 use App\User;
 use App\CreateDate;
 
+// Esta clase es el controlador de que maneja los cluentes
 class UserController extends Controller
 {
-    //
+    //Esta funcion consulta los daros de los citas y usarios en la base de datos
     public function index()
     {
         $citas = CreateDate::all();
@@ -21,6 +22,7 @@ class UserController extends Controller
         return view('profile', compact('user','citas'));
     }
 
+    // Esta funcion actualiza el nombre del usario
     public function updateName($iduser, $nameUser)
     {
         $citas = CreateDate::all();
@@ -45,7 +47,7 @@ class UserController extends Controller
         //die("test user profile");
         return view('profile', compact('user','citas'));
     }
-
+    // Esta funcion actualiza el telefono de usario
     public function updatePhone($iduser, $phone)
     {
         $citas = CreateDate::all();

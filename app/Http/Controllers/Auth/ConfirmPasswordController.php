@@ -1,5 +1,5 @@
 <?php
-
+// Este controlador se encarga de las confimaciones de contrasena 
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
@@ -13,7 +13,7 @@ class ConfirmPasswordController extends Controller
     | Confirm Password Controller
     |--------------------------------------------------------------------------
     |
-    | Este controlador se envcarga de manejar las confirmaciones de la conrteaseña
+    | Este controlador se envcarga de manejar las confirmaciones de la conrteaseña 
     |
     */
 

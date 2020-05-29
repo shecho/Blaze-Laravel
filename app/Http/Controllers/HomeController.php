@@ -11,8 +11,7 @@ use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 use Mpdf\Mpdf;
 
-// use App\Exports\reporte99;
-
+// Esta clase es el controlador 
 class HomeController extends Controller
 {
     /**
@@ -20,6 +19,7 @@ class HomeController extends Controller
      *
      * @return void
      */
+    // Estw contructor llama el midleware Auth
     public function __construct()
     {
         $this->middleware('auth');
@@ -30,6 +30,7 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+    // Esta es la funcioon principal que consulra la informacion del usario y de citas en la base de datos
     public function index()
 
     {
@@ -38,6 +39,7 @@ class HomeController extends Controller
         //dd($citas);
         return view('home', compact('citas','users'));
     }
+    // Esta funcion filtra las citas por dias
     public function filterByDay(Request $request)
 
     {   
@@ -46,7 +48,7 @@ class HomeController extends Controller
         //dd($citas);
         return view('home', compact('citas','users'));
     }
-
+    // Esta funcion filtra por rango didas
     public function filterByRange(Request $request)
     {
         $users = DB::table('users')->select('id','name', 'phone', 'email')->get();
@@ -55,25 +57,29 @@ class HomeController extends Controller
         return view('home', compact('citas','users'));
     }
 
-// Hace las exportaciones de los archivos d eexcell
+    // Esta funcion Hace las exportaciones de las citas dn excel
     public function exportDates()
     {
 
         return Excel::download(new CreateDatesExport, 'citas.xlsx');
 
     }
+    // Esta funcion hace la exportacion de usarios en excel
     public function exportUsers()
     {
 
         return Excel::download(new UsersExport, 'usuarios.xlsx');
 
     }
+    // Esta funcion crea un reporte d prueba en PDF
     public function reporte2()
     {
         $reporte2 = "";
         return view('reporte2', compact('reporte2'));
 
     }
+
+    // Esta funcion crea el reporte de clientes en PDF
     public function reporteClientes()
     {
         $users = DB::table('users')->select('name', 'phone', 'email')->get();
@@ -166,6 +172,7 @@ class HomeController extends Controller
         $mpdf->Output();
     }
 
+    // Esta funcion crea el reporte de Citas en PDF
     public function reporteCitas()
     {
         $citas = DB::table('create_dates')->select('id', 'userName', 'userPhone', 'day', 'time', 'barber','created_at')->get();

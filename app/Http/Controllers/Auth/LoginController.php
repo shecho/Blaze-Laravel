@@ -1,5 +1,5 @@
 <?php
-
+// Este controladoro se encarga de autenticar al usuario
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
@@ -13,7 +13,7 @@ class LoginController extends Controller
     | Login Controller
     |--------------------------------------------------------------------------
     |Este controlador manjea el logueo de la aplicacion 
-    Una vez logado y validado el usuario es redirgigido
+    | Una vez logado y validado el usuario es redirgigido
     
     |
     */

@@ -1,5 +1,5 @@
 <?php
-
+// Este controlador se encarga de reenviar el correo para reenviaar la contrasena
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;

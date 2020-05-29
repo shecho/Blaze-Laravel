@@ -1,5 +1,5 @@
 <?php
-
+// Este controlador se encarga de resetear las contrasena
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
@@ -12,7 +12,7 @@ class ResetPasswordController extends Controller
     |--------------------------------------------------------------------------
     | Password Reset Controller
     |--------------------------------------------------------------------------
-    |Este controladofr es el rsponsable de majerar el reteseo del pasowrd 
+    |Este controladofr es el rsponsable de majerar el reteseo de la contrasena 
     
     */
 

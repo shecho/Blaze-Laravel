@@ -1,5 +1,5 @@
 <?php
-
+// Este controlador es el encatgado de hacer las verificacion
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
@@ -27,10 +27,11 @@ class VerificationController extends Controller
     protected $redirectTo = RouteServiceProvider::HOME;
 
     /**
-     *Crea una  nueva  instancia del controlador
+     *Crea una  nueva  instancia 
      *
      * @return void
      */
+    // Usa el constructor de midlewares
     public function __construct()
     {
         $this->middleware('auth');

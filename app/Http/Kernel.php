@@ -1,5 +1,5 @@
 <?php
-
+// Este archivo lo agregfa laravel por defecto y son funcionalidades propias del framework para mas informacion ir a doculemntacion oficila www.laravel.com
 namespace App\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
@@ -7,10 +7,12 @@ use Illuminate\Foundation\Http\Kernel as HttpKernel;
 class Kernel extends HttpKernel
 {
     /**
+     * 
      * The application's global HTTP middleware stack.
-     *
+     * Estos son los midlewares globales del HTTP 
+     * 
      * These middleware are run during every request to your application.
-     *
+     *  Corren cada vez que hay usa solicitud en la aplciacion
      * @var array
      */
     protected $middleware = [
@@ -23,7 +25,7 @@ class Kernel extends HttpKernel
 
     /**
      * The application's route middleware groups.
-     *
+     *  Midlaware de rutas
      * @var array
      */
     protected $middlewareGroups = [
@@ -45,9 +47,9 @@ class Kernel extends HttpKernel
 
     /**
      * The application's route middleware.
-     *
+     * Midleware de las rutas de la aplicacion
      * These middleware may be assigned to groups or used individually.
-     *
+     * Se asingnan para su uso individual
      * @var array
      */
     protected $routeMiddleware = [
@@ -65,9 +67,9 @@ class Kernel extends HttpKernel
 
     /**
      * The priority-sorted list of middleware.
-     *
+     * Midleware de colas
      * This forces non-global middleware to always be in the given order.
-     *
+     * ASigan los turnos de la ejecucion
      * @var array
      */
     protected $middlewarePriority = [
