@@ -3,9 +3,6 @@ Permite ver todos los reportes al administrador
  -->
 
 
-
-
-
 @extends('layouts.app')
 
 @section('content')
@@ -13,7 +10,13 @@ Permite ver todos los reportes al administrador
     <div class="row justify-content-center">
     <div class="col-md-10">
         <div class="card lightOverlay">
-            <div class="card-header bg-dark">Panel de Control</div>
+        
+            <div class="card-header bg-dark">
+            <a href="/" class="text-light float-left">
+                <i class="h4 fas fa-undo-alt"></i>
+            </a>
+                <h4>Panel de Control    </h4>
+            </div>
 
 
             <div class="card-body">
@@ -156,6 +159,17 @@ Permite ver todos los reportes al administrador
                 data-toggle="modal"
                 data-whatever="@mdo">
                     Crear Servicio
+
+            </button>
+            <button
+                id="service-id"
+                onclick=""
+                type="submit"
+                class="btn btn-outline-dark btn-sm"
+                data-target="#create-barber"
+                data-toggle="modal"
+                data-whatever="@mdo">
+                    Crear Barbero
 
             </button>
             <button id="show-services-id" onclick="showServices()" type="submit" class="btn btn-outline-dark btn-sm" >Ver todos los Servicios</button>
@@ -366,8 +380,79 @@ Permite ver todos los reportes al administrador
 
 
 
+    <!-- vista de CLientes  -->
+
+    <div class="d-none text-center containner reports m-0 lightOverlay col-md-12 " id="users-container-id" >
+        <div class="container ">
+
+        <!-- <div class=""> -->
+        <div class="card-header font-weight-bold bg-dark">Empleados </div>
+        <div class="card  text-center ">
+
+            <table class="table table-responsive-sm table-secondary text-center table-hover table" >
+
+                <thead id="table-headers-users" class="">
+                    <tr>
+                        <th>Administrar</th>
+                        <th>id</th>
+                        <th>Nombre</th>
+                        <th>Documento</th>
+                        <th>Telefono</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body-id-users" class="">
 
 
+                    <!-- <tr id="table-row-id-users ">
+                        <td>
+                            <button type="button" class="btn btn-dark js-scroll-trigger" data-toggle="modal" data-target="#delete-date" data-whatever="@mdo">
+                            <a class="" >
+                                <i class="fas fa-trash" id="trashIcon"></i>
+                            </a>
+                            </button>
+                            <a class="text-light btn btn-dark  " href="/deleteDate/{{ $cita->id }}">
+                                <i class="fas fa-trash" id="trashIcon"></i>
+                            </a>
+                        </td>
+                        <td>1</td>
+                        <td>Julian</td>
+                        <td>3113631338</td>
+                        <td>a@b.com</td>
+
+                    </tr> -->
+                    <!-- <tbody id="table-body-id" class="d-none"> -->
+                @foreach($users as $user)
+
+                    <tr id="table-row-users ">
+                        <td>
+                        <button type="button" class="btn btn-dark js-scroll-trigger" data-toggle="modal" data-target="#delete-date" data-whatever="@mdo">
+                        <a class="" >
+                            <i class="fas fa-trash" id="trashIcon"></i>
+                        </a>
+                        </button>
+                        <a class="text-light btn btn-dark  " href="/deleteDate/{{ $cita->id }}">
+                            <i class="fas fa-trash" id="trashIcon"></i>
+                        </a>
+                        </td>
+                        <td>{{ $user->id }}</td>
+                        <td>{{ $user->name }}</td>
+                        <td>{{ $user->phone }}</td>
+                        <td>{{ $user->email }}</td>
+
+                    </tr>
+
+
+                @endforeach
+                </tbody>
+
+
+                </tbody>
+            </table>
+            </div>
+        <!-- </div> -->
+        </div>
+    </div>
 
 
 
@@ -454,6 +539,58 @@ Permite ver todos los reportes al administrador
                 <button type="button" class="btn btn-dark" data-dismiss="modal">Cancelar</button>
                 <button id="confirm-date" type="button" class="btn btn-dark" onclick="handleService()">
                Crear
+                </button>
+
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+{{--Crear Barbero   --}}
+
+    <div class="modal fade" id="create-barber" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header bg-dark text-light">
+                <h5 class="text-light modal-title " id="ModalLabel">Gestionar Empleados</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    @csrf
+
+                    <div class="form-group">
+                      {{-- <label for="recipient-name" class="col-form-label text-dark" place>Nombre Empleado</label> --}}
+                      <input placeholder="Nombre completo del Empleado" type="text" class="form-control" id="barber-name-id">
+                    </div>
+                    <div class="form-group">
+                      {{-- <label for="recipient-name" class="col-form-label text-dark" place>Documento</label> --}}
+                      <input placeholder="Documento" type="number" class="form-control" id="barber-document-id">
+                    </div>
+                   
+                    <div class="form-group">
+                      {{-- <label for="recipient-name" class="col-form-label text-dark" place>Telefono</label> --}}
+                      <input placeholder="Telefono" type="number" class="form-control" id="barber-phone-id">
+                    </div>
+                    <div class="form-group">
+                      {{-- <label for="recipient-name" class="col-form-label text-dark" place>email</label> --}}
+                      <input placeholder="Email" type="email" class="form-control" id="service-email-id" pattern=".+@globex.com" >
+                    </div>
+                  
+                    <div class="form-group" id="create-barber-mesage-validate">
+
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-dark" data-dismiss="modal">Cancelar</button>
+                <button id="confirm-barber" type="button" class="btn btn-dark" onclick="handleBarber()">
+                Crear
                 </button>
 
             </div>

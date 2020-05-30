@@ -131,6 +131,7 @@
      <script src="/../js/edidProfile.js"></script>
      <script src="/../js/services.js"></script>
      <script src="/../js/users.js"></script>
+     <script src="/../js/baber.js"></script>
 
 </body>
 </html>
