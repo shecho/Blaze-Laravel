@@ -230,7 +230,7 @@ Permite ver todos los reportes al administrador
 
                     <tr id="table-row-id ">
                         <td>
-                        <button type="button" class="btn btn-dark js-scroll-trigger" data-toggle="modal" data-target="#delete-date" data-whatever="@mdo">
+                        <button type="button" class="btn btn-danger js-scroll-trigger" data-toggle="modal" data-target="#delete-date" data-whatever="@mdo">
                         <a class="" >
                             <i class="fas fa-trash" id="trashIcon"></i>
                         </a>
