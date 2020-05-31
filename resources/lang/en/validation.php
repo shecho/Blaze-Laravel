@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'accepted' => 'El :attribute dee sr aceprtado.',
+    'accepted' => 'El :attribute debe sr aceprtado.',
     'active_url' => 'The :attribute no es una URL valida.',
     'after' => 'The :attribute debe ser una defha posterior :date.',
     'after_or_equal' => 'The :attribute debe ser despues o igual :date.',
@@ -39,7 +39,7 @@ return [
     'digits_between' => 'The :attribute must be between :min and :max digits.',
     'dimensions' => 'The :attribute has invalid image dimensions.',
     'distinct' => 'The :attribute field has a duplicate value.',
-    'email' => 'The :attribute must be a valid email address.',
+    'email' => 'El :attribute debe ser una direccion de email valida.',
     'ends_with' => 'The :attribute must end with one of the following: :values.',
     'exists' => 'The selected :attribute is invalid.',
     'file' => 'The :attribute must be a file.',

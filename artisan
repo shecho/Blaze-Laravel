@@ -1,6 +1,8 @@
 #!/usr/bin/env php
 <?php
 
+// Este archivo contriene el manejador de paquetes de LAravel junto con coposer,
+// Para mas informacion ir a la documentacion oficial de  LAravel https://laravel.com/
 define('LARAVEL_START', microtime(true));
 
 /*
