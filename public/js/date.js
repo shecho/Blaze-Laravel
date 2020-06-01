@@ -196,9 +196,16 @@ let CheackMyDatesBtn= document.getElementById('CheackMyDates')
 
 const confirmDeleteDateButon = () => {
     
-console.log("hola");
-    // let getRow= document.getElementById('table-row-id')
-    // console.log(getRow.children[1]);
+console.log("borrando");
+
+    // let getTable= document.getElementById('table-body-id')
+    // console.log(getTable);
+    // let getRow= document.getElementById('table-row-id').children[1]
+    // console.log(getRow);
+    // let getDateid = document.getElementById('116')
+
+    // console.log(getDateid);
+    // console.log(getRow);
     
     // let dateId= document.querySelectorAll('.idDate').forEach(id => {
     //     console.log(id);

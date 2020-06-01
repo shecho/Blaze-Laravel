@@ -238,12 +238,13 @@ Permite ver todos los reportes al administrador
                             <i class="fas fa-trash" id="trashIcon"></i>
                         </a>
                         </button>
-                        <a class="text-light btn btn-dark  " href="/deleteDate/{{ $cita->id }}">
+                       
+                        <a class="text-light btn btn-dark " href="/deleteDate/{{ $cita->id }}">
                             <i class="fas fa-trash" id="trashIcon"></i>
                         </a>
 
                         </td>
-                        <td class="idDate">{{ $cita->id }}</td>
+                        <td id="{{$cita->id}}">{{ $cita->id }}</td>
                         <td>{{ $cita->userName }}</td>
                         <td>{{ $cita->userPhone }}</td>
                         <td>{{ $cita->day }}</td>
@@ -289,7 +290,7 @@ Permite ver todos los reportes al administrador
                                 <i class="fas fa-trash" id="trashIcon"></i>
                             </a>
                             </button>
-                            <a class="text-light btn btn-dark  " href="/deleteDate/{{ $cita->id }}">
+                            <a class="text-light btn btn-dark  " href="">
                                 <i class="fas fa-trash" id="trashIcon"></i>
                             </a>
                         </td>
@@ -359,7 +360,7 @@ Permite ver todos los reportes al administrador
                             <i class="fas fa-trash" id="trashIcon"></i>
                         </a>
                         </button>
-                        <a class="text-light btn btn-dark  " href="/deleteDate/{{ $cita->id }}">
+                        <a class="text-light btn btn-dark  " href="">
                             <i class="fas fa-trash" id="trashIcon"></i>
                         </a>
                         </td>
@@ -435,7 +436,8 @@ Permite ver todos los reportes al administrador
                             <i class="fas fa-trash" id="trashIcon"></i>
                         </a>
                         </button>
-                        <a class="text-light btn btn-dark  " href="/deleteDate/{{ $cita->id }}">
+                      
+                        <a class="text-light btn btn-dark  " href="">
                             <i class="fas fa-trash" id="trashIcon"></i>
                         </a>
                         </td>
@@ -486,13 +488,17 @@ Permite ver todos los reportes al administrador
                 <div class="modal-footer">
 
                     <button type="button" class="btn btn-dark" data-dismiss="modal">Cancelar</button>
-                    <button id="confirm-delete-date" type="button" class="btn btn-danger" onclick="confirmDeleteDateButon()">
-
-                        <a class="text-decoration-none text-light" href="/deleteDate/{{ $cita->id }}">
+                    <button id="confirm-delete-date" type="button" class="btn btn-danger" onclick="confirmDeleteDateButon()" >
+                    
+                          <!-- <a class="text-decoration-none text-light" href='{{ url("/deleteDate/{$cita->id}") }}'>
                             Confirmar
-                            </a>
+                            </a> -->
 
-                        confirmar
+                        <a onclick="confirmDeleteDateButon()" class="text-decoration-none text-light" href="/deleteDate/{{ $cita->id }}">
+                            Confirmar
+                        </a>
+
+                        
                     </button>
 
                 </div>
