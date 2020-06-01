@@ -1,6 +1,6 @@
 <?php
 /* 
-    Este controlador es el responsable de crear las citas
+    Este controlador es el responsable manejar las citas
 
 */
 namespace App\Http\Controllers;

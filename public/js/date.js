@@ -85,7 +85,7 @@ function modalResponse(state) {
         </button>`
     }
 }
-
+// funcion en deshuso
 function showReporte1 (){
     // window.open('/app/Exports/reporte1.php')
 }
@@ -143,7 +143,6 @@ function getCurrentDate (){
     datePickerId.min = new Date().toISOString().split("T")[0];
     console.log(datePickerId.min);
 
-   
     let f = new Date();
     maxDay=(f.getFullYear() + "-" + "0"+ (f.getMonth() +1) + "-" + (f.getDate()+7));
     console.log(maxDay);

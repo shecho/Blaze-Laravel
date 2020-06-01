@@ -45,7 +45,7 @@ const handleBarber = () => {
     // valitadeService(serviceName,servicePrice)
 
 }
-// email regural expresion validation
+// Expresion regular para validar el email
 function emailIsValid (email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
   }

@@ -1,4 +1,4 @@
-// Esta funcion la usa boostrap paras suavizar el scroll con  juqrryas hace parte de la libreria no tocar
+// Esta funcion la usa boostrap paras suavizar el scroll con  jquerry hace parte de la libreria no tocar
 
 (function($) {
   "use strict"; // Start of use strict
