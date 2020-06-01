@@ -8,7 +8,7 @@
     5. Guarda el nuevo telefono
 */ 
 
-// edita en nombre del cliente en la vista profile
+// edita en nombre del cliente en la vista profile perfil de cliente
 const editName = () => {
    console.log("aditar");
     let userName = document.getElementById('user-name-id')
@@ -27,7 +27,7 @@ const editName = () => {
 
 
 }
-
+ 
 // guarda el  nombre del cliente en la vista profile
 const SaveNewName = () => {
     let saveNewName= document.getElementById("save-new-name")
