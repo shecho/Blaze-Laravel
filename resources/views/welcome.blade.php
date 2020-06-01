@@ -21,10 +21,12 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
 
     <title>Blaze Barber Landing Page</title>
     <!-- boostrap -->
-    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap core de CSS -->
     <link href="/../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <!-- fuentes -->
-    <!-- Custom fonts for this template -->
+
+
+    <!-- Fuentes de google -->
     <link
       href="/../fontawesome-free/css/all.min.css"
       rel="stylesheet"
@@ -50,8 +52,8 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
       rel="stylesheet"
       type="text/css"
     />
+
     <!-- css personalizados -->
-    <!-- Custom styles for this template -->
     <link href="/../css/agency.css" rel="stylesheet" />
   </head>
 
