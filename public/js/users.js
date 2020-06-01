@@ -3,7 +3,7 @@
 // Muestra el reporte de usuarios
 const showUsers = () => {
     // mustra y oculta  el preporte de clientes
-    console.log("clickeShowUSers");
+   //  console.log("clickeShowUSers");
     let showUsersContainer= document.getElementById('users-container-id')
     showUsersContainer.classList.toggle("d-none")
     let showUsersButton= document.getElementById('show-users-id')

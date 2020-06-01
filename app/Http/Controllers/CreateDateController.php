@@ -51,6 +51,7 @@ class createDateController extends Controller
         $citas = CreateDate::all();
         //dd($citas);
         return view('home', compact('citas','users'));
+        // return redirect()->route('home', [$citas],[$users]);
         //return $response;
     }
 

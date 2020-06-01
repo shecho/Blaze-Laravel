@@ -189,3 +189,25 @@ function  CheckMyDates(){
 }
 // Captura el boton de las consultar citas
 let CheackMyDatesBtn= document.getElementById('CheackMyDates')
+
+
+// confirmacion de eliminacion de citas 
+
+
+const confirmDeleteDateButon = () => {
+    
+console.log("hola");
+    // let getRow= document.getElementById('table-row-id')
+    // console.log(getRow.children[1]);
+    
+    // let dateId= document.querySelectorAll('.idDate').forEach(id => {
+    //     console.log(id);
+    // })
+    // console.log(dateId);
+
+    // window.location.href = `/home`;
+
+}
+const confirmDeleteDate = () => {
+    console.log(dateId);
+}

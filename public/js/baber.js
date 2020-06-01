@@ -1,5 +1,22 @@
 // Este archivo permite gestionar el Dom relacionado con  Empleados y sus validaciones en la vista
 
+// Esta funcion permite ocultar y mostrar el reporte de Empleados
+const showBarber = () => {
+
+       let showBarberContainer= document.getElementById('barber-container-id')
+       showBarberContainer.classList.toggle("d-none")
+       let showBarberButton= document.getElementById('show-barber-id')
+       
+       let hasAclass = showBarberContainer.classList.contains("d-none")
+       if(hasAclass){
+           showBarberButton.innerText =`Ver todos los Empleados`;
+            
+        }
+        else{
+           showBarberButton.innerText =`Ocultar todos los Empleados`;
+        }
+}
+
 
 // esta fucion maneja el modal de cracion de empleados (Barbero)
 const handleBarber = () => {

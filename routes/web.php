@@ -42,6 +42,7 @@ Route::get('/updateProfilePhone/{iduser}/{phoneUser}', 'UserController@updatePho
 // ruta para borrar una cita
 Route::get('/deleteDate/{iddate}', 'CreateDateController@deleteDate')->name('deleteDate');
 
+
 // Ruta para exportar citas 
 Route::get('/exportAllDates', 'HomeController@exportDates')->name('exportAllDates');
 
@@ -58,6 +59,8 @@ Route::get('/reporteCitas', 'HomeController@reporteCitas')->name('reporteCitas')
 
 
 
+// Emininar un usuario
+Route::get('/deleteUser/{idUser}', 'HomeController@deleteUser')->name('deleteUser');
 
 
 

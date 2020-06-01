@@ -172,6 +172,9 @@ Permite ver todos los reportes al administrador
                     Crear Barbero
 
             </button>
+            <button id="show-barber-id" onclick="showBarber()" type="submit" class="btn btn-outline-dark btn-sm" >Ver Barberos</button>
+
+
             <button id="show-services-id" onclick="showServices()" type="submit" class="btn btn-outline-dark btn-sm" >Ver todos los Servicios</button>
 
         </div>
@@ -228,9 +231,9 @@ Permite ver todos los reportes al administrador
                 <!-- Ciclo que muestra todas las citas de la base de datos -->
                 @foreach($citas as $cita)
 
-                    <tr id="table-row-id ">
+                    <tr id="table-row-id">
                         <td>
-                        <button type="button" class="btn btn-danger js-scroll-trigger" data-toggle="modal" data-target="#delete-date" data-whatever="@mdo">
+                        <button onclick="" id="delete-icon-id" type="button" class="btn btn-danger js-scroll-trigger" data-toggle="modal" data-target="#delete-date" data-whatever="@mdo">
                         <a class="" >
                             <i class="fas fa-trash" id="trashIcon"></i>
                         </a>
@@ -238,8 +241,9 @@ Permite ver todos los reportes al administrador
                         <a class="text-light btn btn-dark  " href="/deleteDate/{{ $cita->id }}">
                             <i class="fas fa-trash" id="trashIcon"></i>
                         </a>
+
                         </td>
-                        <td>{{ $cita->id }}</td>
+                        <td class="idDate">{{ $cita->id }}</td>
                         <td>{{ $cita->userName }}</td>
                         <td>{{ $cita->userPhone }}</td>
                         <td>{{ $cita->day }}</td>
@@ -280,7 +284,7 @@ Permite ver todos los reportes al administrador
 
                     <tr id="table-row-id-services ">
                         <td>
-                            <button type="button" class="btn btn-dark js-scroll-trigger" data-toggle="modal" data-target="#delete-date" data-whatever="@mdo">
+                            <button type="button" class="btn btn-danger js-scroll-trigger" data-toggle="modal" data-target="#delete-date" data-whatever="@mdo">
                             <a class="" >
                                 <i class="fas fa-trash" id="trashIcon"></i>
                             </a>
@@ -350,7 +354,7 @@ Permite ver todos los reportes al administrador
 
                     <tr id="table-row-users ">
                         <td>
-                        <button type="button" class="btn btn-dark js-scroll-trigger" data-toggle="modal" data-target="#delete-date" data-whatever="@mdo">
+                        <button type="button" class="btn btn-danger js-scroll-trigger" data-toggle="modal" data-target="#delete-date" data-whatever="@mdo">
                         <a class="" >
                             <i class="fas fa-trash" id="trashIcon"></i>
                         </a>
@@ -380,9 +384,9 @@ Permite ver todos los reportes al administrador
 
 
 
-    <!-- vista de CLientes  -->
+    <!-- vista de Empleados  -->
 
-    <div class="d-none text-center containner reports m-0 lightOverlay col-md-12 " id="users-container-id" >
+    <div class="d-none text-center containner reports m-0 lightOverlay col-md-12 " id="barber-container-id" >
         <div class="container ">
 
         <!-- <div class=""> -->
@@ -391,7 +395,7 @@ Permite ver todos los reportes al administrador
 
             <table class="table table-responsive-sm table-secondary text-center table-hover table" >
 
-                <thead id="table-headers-users" class="">
+                <thead id="table-headers-barber" class="">
                     <tr>
                         <th>Administrar</th>
                         <th>id</th>
@@ -401,7 +405,7 @@ Permite ver todos los reportes al administrador
                         <th>Email</th>
                     </tr>
                 </thead>
-                <tbody id="table-body-id-users" class="">
+                <tbody id="table-body-id-barber" class="">
 
 
                     <!-- <tr id="table-row-id-users ">
@@ -424,9 +428,9 @@ Permite ver todos los reportes al administrador
                     <!-- <tbody id="table-body-id" class="d-none"> -->
                 @foreach($users as $user)
 
-                    <tr id="table-row-users ">
+                    <tr id="table-row-barber ">
                         <td>
-                        <button type="button" class="btn btn-dark js-scroll-trigger" data-toggle="modal" data-target="#delete-date" data-whatever="@mdo">
+                        <button type="button" class="btn btn-danger js-scroll-trigger" data-toggle="modal" data-target="#delete-date" data-whatever="@mdo">
                         <a class="" >
                             <i class="fas fa-trash" id="trashIcon"></i>
                         </a>
@@ -482,13 +486,13 @@ Permite ver todos los reportes al administrador
                 <div class="modal-footer">
 
                     <button type="button" class="btn btn-dark" data-dismiss="modal">Cancelar</button>
-                    <button id="confirm-date" type="button" class="btn btn-dark" onclick="()">
+                    <button id="confirm-delete-date" type="button" class="btn btn-danger" onclick="confirmDeleteDateButon()">
 
-                    <a class="text-decoration-none text-light" href="/deleteDate/{{ $cita->id }}">
-                        Confirmar
-                        </a>
+                        <a class="text-decoration-none text-light" href="/deleteDate/{{ $cita->id }}">
+                            Confirmar
+                            </a>
 
-
+                        confirmar
                     </button>
 
                 </div>
