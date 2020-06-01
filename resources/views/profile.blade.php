@@ -42,14 +42,15 @@
       </div>
       <div class="pricing-list">
 
-
-
         <div class="d-flex justify-content-center m-2 align-items-center">
           <a class="m-2">
             <i class="far fa-envelope h2 bold"></i>
 
           </a>
           <p> {{ $user->email }}</p>
+          <a target="_blank" id="phone-icon-container" href="mailto:blazebarber@gmail.com" class="text-dark" >
+            <i id="phone-pencil" class="fas fa-pencil-alt " onclick=""></i>
+          </a>
         </div>
         <!-- try -->
         <!-- <div class="d-flex justify-content-center m-2 align-items-center text-center">
