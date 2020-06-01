@@ -533,9 +533,25 @@ Permite ver todos los reportes al administrador
                       {{-- <label for="recipient-name" class="col-form-label text-dark" place>Nombre del Servicio</label> --}}
                       <input placeholder="Nombre del Servicio" type="text" class="form-control" id="service-name-id">
                     </div>
+                    <!-- <div class="form-group">
+                      {{-- <label for="recipient-name" class="col-form-label text-dark" place>Nombre del Servicio</label> --}}
+                      <input placeholder="Descripcion Corta" type="text" class="form-control" id="service-description-id">
+                    </div> -->
+                    <div class="form-group">
+                    <textarea
+                      class="form-control"
+                      id="product-description-id"
+                      placeholder="Descripcion"
+                      required="required"
+                      data-validation-required-message="Please enter a message."
+                    ></textarea>
+                    <p class="help-block text-danger"></p>
+                  </div>
+
+                    
                     <div class="form-group">
                       {{-- <label for="recipient-name" class="col-form-label text-dark" place>Precio</label> --}}
-                      <input placeholder="$" type="number" class="w-25 form-control" id="service-price-id">
+                      <input placeholder="$ precio" type="number" class="w-25 form-control" id="service-price-id">
                     </div>
 
                     <div class="form-group" id="create-service-mesage-validate">

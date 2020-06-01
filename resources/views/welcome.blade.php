@@ -760,7 +760,7 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
       <div class="container">
         <div class="row align-items-center">
           <div class="col-md-4">
-            <span class="copyright">Copyright &copy; COBAC Creations.Co 2020</span>
+            <span class="copyright">Copyright &copy; COBAC CreationsCo 2020</span>
           </div>
           <div class="col-md-4">
             <ul class="list-inline social-buttons">
@@ -892,7 +892,7 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
                     maiores repudiandae, nostrum, reiciendis facere nemo!
                   </p>
                   <ul class="list-inline">
-                  <li>Fehca: Abril 2020</li>
+                  <li>Fecha: Abril 2020</li>
                     <li>Cliente: Andres</li>
                     <li>Categoria: Design</li>
                   </ul>
