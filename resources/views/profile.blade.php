@@ -48,7 +48,7 @@
 
           </a>
           <p> {{ $user->email }}</p>
-          <a target="_blank" id="phone-icon-container" href="mailto:blazebarber@gmail.com" class="text-dark" >
+          <a target="_blank" id="phone-icon-container" href="mailto:socitudesblaze@gmail.com" class="text-dark" >
             <i id="phone-pencil" class="fas fa-pencil-alt " onclick=""></i>
           </a>
         </div>
