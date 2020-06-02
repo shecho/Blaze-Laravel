@@ -367,7 +367,7 @@ Permite ver todos los reportes al administrador
                             <i class="fas fa-trash" id="trashIcon"></i>
                         </a>
                         </button>
-                        <a class="text-light btn btn-outline-danger  " href="/deleteUser/{{$user->id}}">
+                        <a class="text-light btn btn-dark  " href="/deleteUser/{{$user->id}}">
                             <i class="fas fa-trash" id="trashIcon"></i>
                         </a>
                         </td>
