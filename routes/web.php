@@ -55,11 +55,11 @@ Route::get('/reporteClientes', 'HomeController@reporteClientes')->name('reporteC
 Route::get('/reporteCitas', 'HomeController@reporteCitas')->name('reporteCitas');
 
 
-// ruta para borrar una cita
+//Ruta para borrar una cita
 Route::get('/deleteDate/{iddate}', 'CreateDateController@deleteDate')->name('deleteDate');
 
 
-// Emininar un usuario
+// Ruta par Emininar un usuario
 Route::get('/deleteUser/{idUser}', 'UserController@deleteUser')->name('deleteUser');
 
 
