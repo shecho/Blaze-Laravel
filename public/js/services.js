@@ -9,7 +9,9 @@ const handleService = () => {
     console.log(serviceName);
     let servicePrice= document.getElementById('service-price-id').value
     console.log(servicePrice);
-    valitadeService(serviceName,servicePrice)
+    let serviceDescription= document.getElementById('product-description-id').value
+    console.log(serviceDescription);
+    valitadeService(serviceName,servicePrice,serviceDescription)
     // let data = {
     //     "serviceName": serviceName,
     //     "servicePrice": servicePrice,
@@ -22,11 +24,11 @@ const handleService = () => {
 }
 
 // Valida el modal de servicios y retorna las alertas
-const valitadeService = (serviceName,servicePrice) => {
+const valitadeService = (serviceName,servicePrice,serviceDescription) => {
     //  permite validar el formulario y enviar alertas
 
     let verificationResponse = document.getElementById("create-service-mesage-validate")
-    if (!serviceName || !servicePrice ) {
+    if (!serviceName || !servicePrice ||!serviceDescription ) {
         // console.log("inside if modal validate")
 
         verificationResponse.innerHTML = `

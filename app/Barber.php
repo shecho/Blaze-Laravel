@@ -12,6 +12,6 @@ class Barber extends Model
      * @var array
      */
     protected $fillable = [
-        'barberName', 'barberDocument', 'barberPhone','barberEmail','barberFacebook','barberInstagram','barberImageUrl'
+        'barberName', 'barberDocument', 'barberPhone','barberEmail',
     ];
 }

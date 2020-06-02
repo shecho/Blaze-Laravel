@@ -1,6 +1,7 @@
 <!-- Esta vista contiene el panle de controly reportes del administrador
 Permite ver todos los reportes al administrador
  -->
+ 
 
 
 @extends('layouts.app')
