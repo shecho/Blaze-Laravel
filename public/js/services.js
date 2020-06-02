@@ -2,6 +2,11 @@
 // Este archivo permite gestionar los servicios desde las vistas y manipular el DOM
 
 
+
+
+
+
+
 // Esta funcion maneja el modal de servcios
 const handleService = () => {
 //   permite campturar los datos del formnulario de sercicios
@@ -12,14 +17,24 @@ const handleService = () => {
     let serviceDescription= document.getElementById('product-description-id').value
     console.log(serviceDescription);
     valitadeService(serviceName,servicePrice,serviceDescription)
-    // let data = {
-    //     "serviceName": serviceName,
-    //     "servicePrice": servicePrice,
+    let data = {
+        "serviceName": serviceName,
+        "serviceDescription": serviceDescription,
+        "servicePrice": servicePrice,
          
-    // };
-    // console.log(data);
-   
-
+    };
+    console.log(data);
+    // let url = '/createNewService';
+    // fetch(url, {
+    //     method: 'POST', // or 'PUT'
+    //     body: JSON.stringify(data), // data can be `string` or {object}!
+    //     headers: {
+    //         'Content-Type': 'application/json',
+    //     }
+    // }).then(response => response.json())
+    //     .then(data => console.log(data)  )
+     //1 cuando ya esxiste una cita, 0 cuando se creo correctamente
+     // console.log(data);
 
 }
 

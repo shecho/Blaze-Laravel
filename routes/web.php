@@ -18,17 +18,27 @@ Route::get('/', function () {
 // ruta de autenticar
 Auth::routes();
 
+
 // tura de home de panel de control 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
+
 // ruta crear Citas
 Route::post('/createNewDate','CreateDateController@CreateDate');
+
+// ruta crear Servicios
+Route::post('/createNewService','ServiceController@CreateService');
+
+
 
 // ruta del filtro por dia
 Route::post('/filterByDay','HomeController@filterByDay')->name('filterByDay');
 
 // ruta de filtro por rango de dias
 Route::post('/filterByRange','HomeController@filterByRange')->name('filterByRange');
+
+
 
 // Ruta perfil
 Route::get('/profile', 'UserController@index')->name('profile');
@@ -38,6 +48,8 @@ Route::get('/updateProfileName/{iduser}/{nameUser}', 'UserController@updateName'
 
 // ruta para actualizar  telefono
 Route::get('/updateProfilePhone/{iduser}/{phoneUser}', 'UserController@updatePhone')->name('updateProfilePhone');
+
+
 
 
 // Ruta para exportar citas 
@@ -55,11 +67,12 @@ Route::get('/reporteClientes', 'HomeController@reporteClientes')->name('reporteC
 Route::get('/reporteCitas', 'HomeController@reporteCitas')->name('reporteCitas');
 
 
-//Ruta para borrar una cita
+
+//Ruta para Borrar una cita
 Route::get('/deleteDate/{iddate}', 'CreateDateController@deleteDate')->name('deleteDate');
 
 
-// Ruta par Emininar un usuario
+// Ruta par Borrar un usuario
 Route::get('/deleteUser/{idUser}', 'UserController@deleteUser')->name('deleteUser');
 
 

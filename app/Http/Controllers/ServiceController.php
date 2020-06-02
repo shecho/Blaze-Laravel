@@ -22,9 +22,17 @@ class ServiceController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function CreateService(Request $request)
     {
         //
+        $newService = new Service();    
+        $newService->serviceName = $request->serviceName;
+        $newService->serviceDescription = $request->serviceDescription;
+        $newService->servicePrice = $request->servicePrice;
+        $newService->save();
+        $response = $newService;
+
+        return $response;
     }
 
     /**
