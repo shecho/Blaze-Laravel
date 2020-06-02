@@ -127,7 +127,13 @@ Permite ver todos los reportes al administrador
 @if(Auth::user()->id == 1)
 
 <div class="text-center containner reports mt-4 lightOverlay col-md-12" >
-    <div class="card-header bg-dark">Reportes</div>
+    <div class="card-header bg-dark">
+        <a href="/home" class="text-light float-right">
+            <i class="h4 fas fa-redo"></i>
+        </a>
+        <h4>Panel de Control    </h4>
+    </div>
+
     <div class="container ">
         <div class="card-header ">
             <a
@@ -286,7 +292,7 @@ Permite ver todos los reportes al administrador
 
                     <tr id="table-row-id-services ">
                         <td>
-                            <button type="button" class="btn btn-danger js-scroll-trigger" data-toggle="modal" data-target="#delete-date" data-whatever="@mdo">
+                            <button type="button" class="btn btn-danger js-scroll-trigger" data-toggle="modal" data-target="#delete-service" data-whatever="@mdo">
                             <a class="" >
                                 <i class="fas fa-trash" id="trashIcon"></i>
                             </a>
@@ -356,16 +362,16 @@ Permite ver todos los reportes al administrador
 
                     <tr id="table-row-users ">
                         <td>
-                        <button type="button" class="btn btn-danger js-scroll-trigger" data-toggle="modal" data-target="#delete-date" data-whatever="@mdo">
+                        <button type="button" class="btn btn-danger js-scroll-trigger" data-toggle="modal" data-target="#delete-user" data-whatever="@mdo">
                         <a class="" >
                             <i class="fas fa-trash" id="trashIcon"></i>
                         </a>
                         </button>
-                        <a class="text-light btn btn-dark  " href="">
+                        <a class="text-light btn btn-outline-danger  " href="/deleteUser/{{$user->id}}">
                             <i class="fas fa-trash" id="trashIcon"></i>
                         </a>
                         </td>
-                        <td>{{ $user->id }}</td>
+                        <td>{{ $user->id}}</td>
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->phone }}</td>
                         <td>{{ $user->email }}</td>
@@ -432,7 +438,7 @@ Permite ver todos los reportes al administrador
 
                     <tr id="table-row-barber ">
                         <td>
-                        <button type="button" class="btn btn-danger js-scroll-trigger" data-toggle="modal" data-target="#delete-date" data-whatever="@mdo">
+                        <button type="button" class="btn btn-danger js-scroll-trigger" data-toggle="modal" data-target="#delete-barber" data-whatever="@mdo">
                         <a class="" >
                             <i class="fas fa-trash" id="trashIcon"></i>
                         </a>
@@ -480,7 +486,7 @@ Permite ver todos los reportes al administrador
                         @csrf
 
                         <div class="form-group">
-                            <label for="recipient-name" class="col-form-label text-dark" place>Seguro deseas eliminar esta cita?</label>
+                            <label for="recipient-name" class="col-form-label text-dark" place>¿Seguro deseas eliminar esta cita?</label>
 
                         </div>
 
@@ -496,6 +502,51 @@ Permite ver todos los reportes al administrador
                             </a> -->
 
                         <a onclick="confirmDeleteDateButon()" class="text-decoration-none text-light" href="/deleteDate/{{ $cita->id }}">
+                            Confirmar
+                        </a>
+
+                        
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+    {{--Eliminar usuarios --}}
+    <!-- modal de eliminar citas -->
+    <div class="modal fade" id="delete-user" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-light">
+                    <h5 class="modal-title " id="ModalLabel">Eliminar Usuario</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        @csrf
+
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label text-dark" place>¿Seguro deseas eliminar este cliente?</label>
+
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Cancelar</button>
+                    <button id="confirm-delete-date" type="button" class="btn btn-danger" onclick="" >
+                    
+                          <!-- <a class="text-decoration-none text-light" href='{{ url("/deleteDate/{$cita->id}") }}'>
+                            Confirmar
+                            </a> -->
+
+                        <a onclick="" class="text-decoration-none text-light" href="/deleteUser/{{ $user->id }}">
                             Confirmar
                         </a>
 

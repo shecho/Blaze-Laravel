@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Auth;
 use App\User;
 use App\CreateDate;
+use DB;
 
 // Esta clase es el controlador de que maneja los cluentes
 class UserController extends Controller
@@ -21,6 +22,19 @@ class UserController extends Controller
         //die("test user profile");
         return view('profile', compact('user','citas'));
     }
+
+    public function deleteUser($idUser)
+    {
+        $users = DB::table('users')->select('id','name', 'phone', 'email')->get();
+        $response = User::destroy($idUser);
+        //1: borrado; 0 no borrado.
+        $citas = CreateDate::all();
+        //dd($citas);
+        return view('home', compact('citas','users'));
+        // return redirect()->route('home', [$citas],[$users]);
+        //return $response;
+    }    
+
 
     // Esta funcion actualiza el nombre del usario
     public function updateName($iduser, $nameUser)

@@ -80,24 +80,6 @@ class HomeController extends Controller
     }
 
 
-    
-    // Esta funcion permite eliminar usuarios que hayan hecho una solicitud por correo
-    public function deleteUser($idUser)
-    {
-        $users = DB::table('users')->select('id','name', 'phone', 'email')->get();
-        //dd($iddate);
-        // $response = CreateDate::destroy($iddate);
-        //1: borrado; 0 no borrado.
-        $citas = CreateDate::all();
-        //dd($citas);
-        return view('home', compact('citas','users'));
-        // return redirect()->route('home', [$citas],[$users]);
-        //return $response;
-    }
-
-
-
-
     // Esta funcion crea el reporte de clientes en PDF
     public function reporteClientes()
     {
