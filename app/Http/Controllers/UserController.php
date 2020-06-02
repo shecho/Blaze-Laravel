@@ -18,7 +18,7 @@ class UserController extends Controller
     {
         $citas = CreateDate::all();
         $user = Auth::user();
-        //dd($user);
+        //dd($user);    
         //die("test user profile");
         return view('profile', compact('user','citas'));
     }
