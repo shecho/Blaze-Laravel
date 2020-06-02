@@ -37,7 +37,7 @@ Permite ver todos los reportes al administrador
                         <i class="fab 	fa-whatsapp fa-stack-1xa text-success"></i>
                 </a>
 
-                {{--Modal create date  --}}
+                {{--Modal crear cita  --}}
                 <!-- modal de cracionde citas -->
                 <div class="modal fade" id="create-date" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
@@ -168,6 +168,7 @@ Permite ver todos los reportes al administrador
                     Crear Servicio
 
             </button>
+            <button id="show-services-id" onclick="showServices()" type="submit" class="btn btn-outline-dark btn-sm" >Ver todos los Servicios</button>
             <button
                 id="service-id"
                 onclick=""
@@ -182,7 +183,6 @@ Permite ver todos los reportes al administrador
             <button id="show-barber-id" onclick="showBarber()" type="submit" class="btn btn-outline-dark btn-sm" >Ver Barberos</button>
 
 
-            <button id="show-services-id" onclick="showServices()" type="submit" class="btn btn-outline-dark btn-sm" >Ver todos los Servicios</button>
 
         </div>
 
@@ -580,7 +580,7 @@ Permite ver todos los reportes al administrador
             <div class="modal-body">
                 <form>
                     @csrf
-
+                    <input type="hidden" value="{{ csrf_token() }}" id="token-services"/>
                     <div class="form-group">
                       {{-- <label for="recipient-name" class="col-form-label text-dark" place>Nombre del Servicio</label> --}}
                       <input placeholder="Nombre del Servicio" type="text" class="form-control" id="service-name-id">

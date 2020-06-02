@@ -1,40 +1,37 @@
 
-// Este archivo permite gestionar los servicios desde las vistas y manipular el DOM
+// Este archivo permite gestionar los servicios desde las vista de panel de control y manipular el DOM
 
 
-
-
-
-
-
-// Esta funcion maneja el modal de servcios
+// Esta funcion maneja el modal de servcios captura los datos y hace una peticion por ajax al servidor para guardar los datos
 const handleService = () => {
 //   permite campturar los datos del formnulario de sercicios
     let serviceName= document.getElementById("service-name-id").value
-    console.log(serviceName);
+    // console.log(serviceName);
     let servicePrice= document.getElementById('service-price-id').value
-    console.log(servicePrice);
+    // console.log(servicePrice);
     let serviceDescription= document.getElementById('product-description-id').value
-    console.log(serviceDescription);
+    // console.log(serviceDescription);
+    let token = document.getElementById("token-services").value
     valitadeService(serviceName,servicePrice,serviceDescription)
     let data = {
         "serviceName": serviceName,
         "serviceDescription": serviceDescription,
         "servicePrice": servicePrice,
-         
+        "_token": token
     };
-    console.log(data);
-    // let url = '/createNewService';
-    // fetch(url, {
-    //     method: 'POST', // or 'PUT'
-    //     body: JSON.stringify(data), // data can be `string` or {object}!
-    //     headers: {
-    //         'Content-Type': 'application/json',
-    //     }
-    // }).then(response => response.json())
-    //     .then(data => console.log(data)  )
-     //1 cuando ya esxiste una cita, 0 cuando se creo correctamente
-     // console.log(data);
+    // console.log(data);
+    let url = '/createNewService';
+    fetch(url, {
+        method: 'POST', // or 'PUT'
+        body: JSON.stringify(data), // data can be `string` or {object}!
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    }).then(response => response.json())
+      .then(data =>{   
+            console.log(data) })
+    //  1 cuando ya esxiste una cita, 0 cuando se creo correctamente
+    //  console.log(data);
 
 }
 
