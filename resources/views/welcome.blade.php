@@ -791,10 +791,10 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
           <div class="col-md-4">
             <ul class="list-inline quicklinks">
               <li class="list-inline-item">
-                <a href="#">Privacy Policy</a>
+                <a href="#">Politica de privacidad</a>
               </li>
               <li class="list-inline-item">
-                <a href="#">Terms of Use</a>
+                <a href="#">Terminos de uso</a>
               </li>
             </ul>
           </div>
