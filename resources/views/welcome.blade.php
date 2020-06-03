@@ -219,9 +219,8 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
           
 
         </div>
+        <!-- cierre del modal -->
 
-
-        {{-- modal --}}
        
 
 
@@ -231,6 +230,16 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
         <div clas="">Photo by Nick Demou from Pexels</div>
       </div>
     </header>
+
+
+
+
+
+    
+
+
+
+
 
     <!-- Servicios  -->
     <section class="page-section" id="services">
