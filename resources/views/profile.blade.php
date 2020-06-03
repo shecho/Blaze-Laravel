@@ -168,8 +168,7 @@
           <input type="hidden" value="{{ csrf_token() }}" id="token" />
           <div class="form-group">
             {{-- <label for="recipient-name" class="col-form-label text-dark" place>Full name</label> --}}
-            <input autofocus="autofocus" placeholder="
-            Nombre Completo" type="text" class="form-control" id="recipient-name">
+            <input autofocus="autofocus" placeholder="Nombre Completo" type="text" class="form-control" id="recipient-name">
           </div>
           <div class="form-group">
             {{-- <label  for="message-text" class="col-form-label text-dark">Telefono</label> --}}
@@ -193,23 +192,31 @@
                 <option value="4">4 pm</option>
                 <option value="5">5 pm</option>
               </select>
+
+
               {{-- <label for="message-text" class="col-form-label text-dark">Barber</label> --}}
               {{-- <input placeholder="Barber" type="text"  class="form-control" id="message-text"> --}}
             </div>
             <div class="form-group">
               <select class="form-control" name="time" id="barber">
-                <option value="1">Barbero 1</option>
+              @foreach($barberos as $barber)
+                <option value="{{ $barber->barberName }}">{{ $barber->barberName }}</option>
+              @endforeach  
+              <!-- <option value="1">Barbero 1</option>
                 <option value="2">Barbero 2</option>
-                <option value="3">Barbero 3</option>
+                <option value="3">Barbero 3</option> -->
               </select>
               {{-- <label for="message-text" class="col-form-label text-dark">Barber</label> --}}
               {{-- <input placeholder="Barber" type="text"  class="form-control" id="message-text"> --}}
             </div>
             <div class="form-group">
               <select class="form-control" name="time" id="product">
-                <option value="1">Corte</option>
+              @foreach($servicios as $servicio)
+               <option value="{{ $servicio->serviceName }}">{{ $servicio->serviceName }}</option>
+              @endforeach
+                <!-- <option value="1">Corte</option>
                 <option value="2">Barba</option>
-                <option value="3">Corte y Barba</option>
+                <option value="3">Corte y Barba</option> -->
               </select>
             </div>
             <div class="form-group" id="modal-response">

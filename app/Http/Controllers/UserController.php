@@ -18,11 +18,14 @@ class UserController extends Controller
     //Esta funcion consulta los daros de los citas y usarios en la base de datos
     public function index()
     {
-        $citas = CreateDate::all();
+       
         $user = Auth::user();
-        //dd($user);    
-        //die("test user profile");
-        return view('profile', compact('user','citas'));
+        $barberos = Barber::all();
+        $servicios = Service::all();
+        $users = DB::table('users')->select('id','name', 'phone', 'email')->get();
+        $citas = CreateDate::all();
+        //dd($citas);
+        return view('profile', compact('citas','users','user','servicios','barberos'));
     }
 
     public function deleteUser($idUser)
@@ -31,7 +34,6 @@ class UserController extends Controller
         $barberos = Barber::all();
         $users = DB::table('users')->select('id','name', 'phone', 'email')->get();
         $response = User::destroy($idUser);
-        //1: borrado; 0 no borrado.
         $citas = CreateDate::all();
         //dd($citas);
         return view('home', compact('citas','users','servicios','barberos'));

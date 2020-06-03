@@ -179,7 +179,7 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
                       <div class="form-group">
                         <select class="form-control" name="time" id="barber">
                         @foreach($barberos as $barber)
-                          <option value="1">{{ $barber->barberName }}</option>
+                          <option value="{{ $barber->barberName }}">{{ $barber->barberName }}</option>
                         @endforeach
               
                           <!-- <option value="1">Barbero 1</option>
