@@ -12,12 +12,16 @@
 |
 */
 // ruta inicial 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+// ruta inicial
+Route::get('/', 'WellcomeController@index')->name('welcome');
 // Route::get('/', 'WellcomeController@index')->name('/');
 // Instancia de Funcion de  autenticaciones
+
+
+
 Auth::routes();
 
 

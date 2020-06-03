@@ -38,7 +38,7 @@ class WellcomeController extends Controller
         $users = DB::table('users')->select('id','name', 'phone', 'email')->get();
         $citas = CreateDate::all();
         //dd($citas);
-        return view('/', compact('citas','users','servicios','barberos'));
+        return view('welcome', compact('citas','users','servicios','barberos'));
     }
     // Esta funcion filtra las citas por dias
    
