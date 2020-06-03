@@ -14,7 +14,7 @@ class CreateDatesTable extends Migration
     public function up()
     {
         Schema::create('create_dates', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('id')->unique();
             $table->string('userName');
             $table->string('userPhone');
             $table->string('day');

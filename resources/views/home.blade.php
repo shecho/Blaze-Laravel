@@ -445,7 +445,7 @@ Permite ver todos los reportes al administrador
                         </a>
                         </button>
                       
-                        <a class="text-light btn btn-dark  " href="">
+                        <a class="text-light btn btn-dark  " href="/deleteBarber/{{$barber->id}}">
                             <i class="fas fa-trash" id="trashIcon"></i>
                         </a>
                         </td>

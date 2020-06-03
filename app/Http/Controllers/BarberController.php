@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Barber;
+use App\Service;
+use DB;
+use App\CreateDate;
 use Illuminate\Http\Request;
 
 class BarberController extends Controller
@@ -31,6 +34,25 @@ class BarberController extends Controller
         return $response;
     }
   
+    public function deleteBarber($idBarber)
+    {
+        $barberos = Barber::all();
+        $servicios = Service::all();
+        $users = DB::table('users')->select('id','name', 'phone', 'email')->get();
+        $response = Barber::destroy($idBarber);
+        //1: borrado; 0 no borrado.
+        $citas = CreateDate::all();
+        //dd($citas);
+
+        return redirect()->route('home');
+        // return view('home', compact('citas','users','servicios','barberos'));
+        // return redirect()->route('home', [$citas],[$users]);
+        //return $response;
+    }    
+
+
+
+
 
     /**
      * Store a newly created resource in storage.

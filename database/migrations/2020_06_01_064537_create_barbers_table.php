@@ -16,7 +16,7 @@ class CreateBarbersTable extends Migration
         Schema::create('barbers', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('barberName');
-            $table->string('barberDocument');
+            $table->string('barberDocument')->unique();
             $table->string('barberPhone');
             $table->string('barberEmail')->unique();
             $table->timestamps();
