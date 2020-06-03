@@ -25,12 +25,13 @@ class UserController extends Controller
 
     public function deleteUser($idUser)
     {
+        $barberos = Barber::all();
         $users = DB::table('users')->select('id','name', 'phone', 'email')->get();
         $response = User::destroy($idUser);
         //1: borrado; 0 no borrado.
         $citas = CreateDate::all();
         //dd($citas);
-        return view('home', compact('citas','users'));
+        return view('home', compact('citas','users','barberos'));
         // return redirect()->route('home', [$citas],[$users]);
         //return $response;
     }    

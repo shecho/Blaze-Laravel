@@ -16,16 +16,21 @@ class BarberController extends Controller
     {
         //
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    //Esta funcion  crea un nuevo empleado en y guarda en la Base de datos
+    public function CreateBarber(Request $request)
     {
         //
+        $newBarber = new Barber();    
+        $newBarber->barberName = $request->barberName;
+        $newBarber->barberDocument = $request->barberDocument;
+        $newBarber->barberPhone = $request->barberPhone;
+        $newBarber->barberEmail = $request->barberEmail;
+        $newBarber->save();
+        $response = $newBarber;
+
+        return $response;
     }
+  
 
     /**
      * Store a newly created resource in storage.
@@ -33,10 +38,7 @@ class BarberController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
-    }
+   
 
     /**
      * Display the specified resource.

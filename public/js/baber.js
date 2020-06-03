@@ -1,4 +1,4 @@
-// Este archivo permite gestionar el Dom relacionado con  Empleados y sus validaciones en la vista
+// Este archivo permite gestionar el Dom relacionado con  Empleados(barberos) y sus validaciones en la vista
 
 // Esta funcion permite ocultar y mostrar el reporte de Empleados
 const showBarber = () => {
@@ -18,7 +18,8 @@ const showBarber = () => {
 }
 
 
-// esta fucion maneja el modal de cracion de empleados (Barbero)
+// esta fucion maneja el modal de cracion de empleados (Barbero) ty hace un  peticion ajax al asevidro para crear un barbero
+
 const handleBarber = () => {
     // console.log("hola desde la funcion");
     let barberName= document.getElementById("barber-name-id").value
@@ -28,8 +29,11 @@ const handleBarber = () => {
     let barberPhone= document.getElementById('barber-phone-id').value
     // console.log(barberPhone);
     let barberEmail= document.getElementById('service-email-id').value
+
+    let token= document.getElementById('token-barber').value
     // console.log(barberEmail);
-    let test = barberEmail
+
+    // let test = barberEmail
     // let isValidEmail = emailIsValid(test)
     // console.log(isValidEmail);
 
@@ -40,9 +44,21 @@ const handleBarber = () => {
         "barberDocument": barberDocument,
         "barberPhone": barberPhone,
         "barberEmail": barberEmail,
+        "_token": token
     };
-    // console.log(data);
-    // valitadeService(serviceName,servicePrice)
+   
+    let url = '/createNewBarber';
+    fetch(url, {
+        method: 'POST', // or 'PUT'
+        body: JSON.stringify(data), // data can be `string` or {object}!
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    }).then(response => response.json())
+      .then(data =>{   
+            console.log(data) })
+    //  1 cuando ya esxiste una cita, 0 cuando se creo correctamente
+    //  console.log(data);
 
 }
 // Expresion regular para validar el email

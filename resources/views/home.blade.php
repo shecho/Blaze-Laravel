@@ -131,7 +131,7 @@ Permite ver todos los reportes al administrador
         <a href="/home" class="text-light float-right">
             <i class="h4 fas fa-redo"></i>
         </a>
-        <h4>Panel de Control    </h4>
+        <h4>Reportes   </h4>
     </div>
 
     <div class="container ">
@@ -402,7 +402,7 @@ Permite ver todos los reportes al administrador
 
 
 
-    <!-- vista de Empleados  -->
+    <!-- vista de Empleados Barberos  -->
 
     <div class="d-none text-center containner reports m-0 lightOverlay col-md-12 " id="barber-container-id" >
         <div class="container ">
@@ -424,27 +424,8 @@ Permite ver todos los reportes al administrador
                     </tr>
                 </thead>
                 <tbody id="table-body-id-barber" class="">
-
-
-                    <!-- <tr id="table-row-id-users ">
-                        <td>
-                            <button type="button" class="btn btn-dark js-scroll-trigger" data-toggle="modal" data-target="#delete-date" data-whatever="@mdo">
-                            <a class="" >
-                                <i class="fas fa-trash" id="trashIcon"></i>
-                            </a>
-                            </button>
-                            <a class="text-light btn btn-dark  " href="/deleteDate/{{ $cita->id }}">
-                                <i class="fas fa-trash" id="trashIcon"></i>
-                            </a>
-                        </td>
-                        <td>1</td>
-                        <td>Julian</td>
-                        <td>3113631338</td>
-                        <td>a@b.com</td>
-
-                    </tr> -->
-                    <!-- <tbody id="table-body-id" class="d-none"> -->
-                @foreach($users as $user)
+                
+                @foreach($barberos as $barber)
 
                     <tr id="table-row-barber ">
                         <td>
@@ -458,10 +439,11 @@ Permite ver todos los reportes al administrador
                             <i class="fas fa-trash" id="trashIcon"></i>
                         </a>
                         </td>
-                        <td>{{ $user->id }}</td>
-                        <td>{{ $user->name }}</td>
-                        <td>{{ $user->phone }}</td>
-                        <td>{{ $user->email }}</td>
+                        <td>{{ $barber->id }}</td>
+                        <td>{{ $barber->barberName }}</td>
+                        <td>{{ $barber->barberDocument }}</td>
+                        <td>{{ $barber->barberPhone }}</td>
+                        <td>{{ $barber->barberEmail }}</td>
 
                     </tr>
 
@@ -699,7 +681,7 @@ Permite ver todos los reportes al administrador
             <div class="modal-body">
                 <form>
                     @csrf
-
+                    <input type="hidden" value="{{ csrf_token() }}" id="token-barber"/>
                     <div class="form-group">
                       {{-- <label for="recipient-name" class="col-form-label text-dark" place>Nombre Empleado</label> --}}
                       <input placeholder="Nombre completo del Empleado" type="text" class="form-control" id="barber-name-id">

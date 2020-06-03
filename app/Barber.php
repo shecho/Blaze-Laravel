@@ -1,5 +1,5 @@
 <?php
-
+// Este arvhico contirne el modelo de la clase de Barbero
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;

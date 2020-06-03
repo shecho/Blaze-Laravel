@@ -5,9 +5,10 @@ namespace App\Http\Controllers;
 
 use App\CreateDate;
 use App\Service;
+use App\Barber;
+use DB;
 use App\Exports\CreateDatesExport;
 use App\Exports\UsersExport;
-use DB;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 use Mpdf\Mpdf;
@@ -35,30 +36,33 @@ class HomeController extends Controller
     public function index()
 
     {
+        $barberos = Barber::all();
         $servicios = Service::all();
         $users = DB::table('users')->select('id','name', 'phone', 'email')->get();
         $citas = CreateDate::all();
         //dd($citas);
-        return view('home', compact('citas','users','servicios'));
+        return view('home', compact('citas','users','servicios','barberos'));
     }
     // Esta funcion filtra las citas por dias
     public function filterByDay(Request $request)
 
     {   
+        $barberos = Barber::all();
         $servicios = Service::all();
         $users = DB::table('users')->select('id','name', 'phone', 'email')->get();
         $citas = CreateDate::where('day', $request->dateDayFilter)->get();
         //dd($citas);
-        return view('home', compact('citas','users','servicios'));
+        return view('home', compact('citas','users','servicios','barberos'));
     }
     // Esta funcion filtra por rango didas
     public function filterByRange(Request $request)
     {
+        $barberos = Barber::all();
         $servicios = Service::all();
         $users = DB::table('users')->select('id','name', 'phone', 'email')->get();
         $citas = CreateDate::where('day', ">=", $request->dateDayFilterIni)->where('day', "<=", $request->dateDayFilterEnd)->get();
         //dd($citas);
-        return view('home', compact('citas','users','servicios'));
+        return view('home', compact('citas','users','servicios','barberos'));
     }
 
     // Esta funcion Hace las exportaciones de las citas dn excel

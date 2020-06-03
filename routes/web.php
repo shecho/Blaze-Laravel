@@ -15,7 +15,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-// ruta de autenticar
+// Instancia de Funcion de  autenticaciones
 Auth::routes();
 
 
@@ -24,19 +24,24 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 
+
 // ruta crear Citas
 Route::post('/createNewDate','CreateDateController@CreateDate');
-
 // ruta crear Servicios
 Route::post('/createNewService','ServiceController@CreateService');
+// ruta crear Empleados (Barberos)
+Route::post('/createNewBarber','BarberController@CreateBarber');
 
 
 
-// ruta del filtro por dia
+
+// ruta del filtro citas por dia
 Route::post('/filterByDay','HomeController@filterByDay')->name('filterByDay');
 
-// ruta de filtro por rango de dias
+// ruta de filtro citas por rango de dias
 Route::post('/filterByRange','HomeController@filterByRange')->name('filterByRange');
+
+
 
 
 
@@ -52,10 +57,10 @@ Route::get('/updateProfilePhone/{iduser}/{phoneUser}', 'UserController@updatePho
 
 
 
-// Ruta para exportar citas 
+// Ruta para exportar citas en  excel
 Route::get('/exportAllDates', 'HomeController@exportDates')->name('exportAllDates');
 
-// ruta para ecportax ecell de ussuarios
+// ruta para ecportax ussuarios excel
 Route::get('/exportAllusers', 'HomeController@exportUsers')->name('exportAllusers');
 
 
@@ -68,13 +73,11 @@ Route::get('/reporteCitas', 'HomeController@reporteCitas')->name('reporteCitas')
 
 
 
+
 //Ruta para Borrar una cita
 Route::get('/deleteDate/{iddate}', 'CreateDateController@deleteDate')->name('deleteDate');
-
-
 // Ruta par Borrar un usuario
 Route::get('/deleteUser/{idUser}', 'UserController@deleteUser')->name('deleteUser');
-
 // Ruta par Borrar un usuario
 Route::get('/deleteService/{idService}', 'ServiceController@deleteService')->name('deleteUser');
 

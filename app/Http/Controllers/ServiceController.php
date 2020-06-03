@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Service;
-use Illuminate\Http\Request;
+use App\Barber;
 use DB;
 use App\CreateDate;
+use Illuminate\Http\Request;
 
 class ServiceController extends Controller
 {
@@ -27,11 +28,11 @@ class ServiceController extends Controller
     public function CreateService(Request $request)
     {
         //
-        $newService = new Service();    
-        $newService->serviceName = $request->serviceName;
-        $newService->serviceDescription = $request->serviceDescription;
-        $newService->servicePrice = $request->servicePrice;
-        $newService->save();
+        $newervice = new Service();    
+        $newervice->serviceName = $request->serviceName;
+        $newervice->serviceDescription = $request->serviceDescription;
+        $newervice->servicePrice = $request->servicePrice;
+        $newervice->save();
         $response = $newService;
 
         return $response;
@@ -39,14 +40,14 @@ class ServiceController extends Controller
 
     public function deleteService($idService)
     {
-
+        $barberos = Barber::all();
         $servicios = Service::all();
         $users = DB::table('users')->select('id','name', 'phone', 'email')->get();
         $response = Service::destroy($idService);
         //1: borrado; 0 no borrado.
         $citas = CreateDate::all();
         //dd($citas);
-        return view('home', compact('citas','users','servicios'));
+        return view('home', compact('citas','users','servicios','barberos'));
         // return redirect()->route('home', [$citas],[$users]);
         //return $response;
     }    
