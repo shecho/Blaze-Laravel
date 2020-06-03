@@ -28,7 +28,7 @@ const handleBarber = () => {
     // console.log(barberDocument);
     let barberPhone= document.getElementById('barber-phone-id').value
     // console.log(barberPhone);
-    let barberEmail= document.getElementById('service-email-id').value
+    let barberEmail= document.getElementById('barber-email-id').value
 
     let token= document.getElementById('token-barber').value
     // console.log(barberEmail);

@@ -140,35 +140,42 @@ Permite ver todos los reportes al administrador
                 onclick="showReporte1()"
                 href="/reporteClientes"
                 id=""
-                class="btn btn-outline-dark btn-sm" >Ver Clientes PDF
+                class="btn btn-dark btn-sm" >Ver Clientes PDF
 
             </a>
             <a
                 onclick="showReporte1()"
                 href="/reporteCitas"
                 id=""
-                class="btn btn-outline-dark btn-sm" >Ver Citas DPF
+                class="btn btn-dark btn-sm" >Ver Citas DPF
 
             </a>
-            <a href="/exportAllDates" id="export-dates-id" class="btn btn-outline-dark btn-sm" >Exportar Citas Excel</a>
-            <a href="/exportAllusers" id="export-users-id" class="btn btn-outline-dark btn-sm" >Exportar Clientes Excel</a>
-            <button id="show-users-id" onclick="showUsers()" type="submit" class="btn btn-outline-dark btn-sm" >Ver todos los Clientes</button>
+
+            <a href="/exportAllDates" id="export-dates-id" class="btn btn-dark btn-sm" >Exportar Citas Excel</a>
+            <a href="/exportAllusers" id="export-users-id" class="btn btn-dark btn-sm" >Exportar Clientes Excel</a>
+            <button id="show-users-id" onclick="showUsers()" type="submit" class="btn btn-dark btn-sm" >Ver todos los Clientes</button>
+            <br>
+
             <button id="show-dates-id" onclick="showDates()" type="submit" class="btn btn-outline-dark btn-sm" >Ver todas las Citas</button>
-
-
             <button id="show-filters-id" onclick="showFilter()" type="submit" class="btn btn-outline-dark btn-sm">Ver  Filtros de Citas</button>
+            <br>
+
+
             <button
                 id="service-id"
                 onclick=""
                 type="submit"
-                class="btn btn-outline-dark btn-sm"
+                class="btn btn-dark btn-sm"
                 data-target="#create-service"
                 data-toggle="modal"
                 data-whatever="@mdo">
                     Crear Servicio
 
             </button>
-            <button id="show-services-id" onclick="showServices()" type="submit" class="btn btn-outline-dark btn-sm" >Ver todos los Servicios</button>
+            <button id="show-services-id" onclick="showServices()" type="submit" class="btn btn-dark btn-sm" >Ver todos los Servicios</button>
+            <br>
+
+
             <button
                 id="service-id"
                 onclick=""
@@ -177,10 +184,9 @@ Permite ver todos los reportes al administrador
                 data-target="#create-barber"
                 data-toggle="modal"
                 data-whatever="@mdo">
-                    Crear Barbero
-
+                Crear Empleado
             </button>
-            <button id="show-barber-id" onclick="showBarber()" type="submit" class="btn btn-outline-dark btn-sm" >Ver Barberos</button>
+            <button id="show-barber-id" onclick="showBarber()" type="submit" class="btn btn-outline-dark btn-sm" >Ver Empleados</button>
 
 
 
@@ -697,7 +703,7 @@ Permite ver todos los reportes al administrador
                     </div>
                     <div class="form-group">
                       {{-- <label for="recipient-name" class="col-form-label text-dark" place>email</label> --}}
-                      <input placeholder="Email" type="email" class="form-control" id="service-email-id" pattern=".+@globex.com" >
+                      <input placeholder="Email" type="email" class="form-control" id="barber-email-id" pattern=".+@globex.com" >
                     </div>
                   
                     <div class="form-group" id="create-barber-mesage-validate">

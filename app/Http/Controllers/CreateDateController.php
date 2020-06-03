@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 Use App\CreateDate;
 use DB;;
 use App\Service;
+use App\Barber;
 // Esta es la clase es el contralador de citas 
 class createDateController extends Controller
 {
@@ -44,6 +45,7 @@ class createDateController extends Controller
     // Esta funcion borra las citas
     public function DeleteDate($iddate)
     {
+        $barberos = Barber::all();
         $servicios = Service::all();
         $users = DB::table('users')->select('id','name', 'phone', 'email')->get();
         //dd($iddate);
@@ -51,7 +53,7 @@ class createDateController extends Controller
         //1: borrado; 0 no borrado.
         $citas = CreateDate::all();
         //dd($citas);
-        return view('home', compact('citas','users','servicios'));
+        return view('home', compact('citas','users','servicios','barberos'));
         // return redirect()->route('home', [$citas],[$users]);
         //return $response;
     }

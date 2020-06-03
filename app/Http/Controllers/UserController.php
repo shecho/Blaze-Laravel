@@ -9,6 +9,8 @@ use Auth;
 use App\User;
 use App\CreateDate;
 use DB;
+use App\Barber;
+use App\Service;
 
 // Esta clase es el controlador de que maneja los cluentes
 class UserController extends Controller
@@ -25,13 +27,14 @@ class UserController extends Controller
 
     public function deleteUser($idUser)
     {
+        $servicios = Service::all();
         $barberos = Barber::all();
         $users = DB::table('users')->select('id','name', 'phone', 'email')->get();
         $response = User::destroy($idUser);
         //1: borrado; 0 no borrado.
         $citas = CreateDate::all();
         //dd($citas);
-        return view('home', compact('citas','users','barberos'));
+        return view('home', compact('citas','users','servicios','barberos'));
         // return redirect()->route('home', [$citas],[$users]);
         //return $response;
     }    
