@@ -15,6 +15,8 @@
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+
+
 // ruta inicial
 Route::get('/', 'WellcomeController@index')->name('welcome');
 // Route::get('/', 'WellcomeController@index')->name('/');

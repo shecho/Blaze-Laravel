@@ -83,7 +83,10 @@ Permite ver todos los reportes al administrador
                                         </div>
                                         <div class="form-group">
                                             <select class="form-control" name="time" id="barber">
-                                                <option value="1">Barbero 1</option>
+                                            @foreach($barberos as $barber)
+                                              <option value="1">{{ $barber->barberName }}</option>
+                                            @endforeach
+                                                <!-- <option value="1">Barbero 1</option> -->
                                                 <!-- <option value="2">Barbero 2</option>
                                                 <option value="3">Barbero 3</option> -->
                                             </select>
@@ -92,9 +95,10 @@ Permite ver todos los reportes al administrador
                                         </div>
                                         <div class="form-group">
                                             <select class="form-control" name="time" id="product">
-                                            <option value="1">Corte</option>
-                                            <option value="2">Barba</option>
-                                            <option value="3">Corte y Barba</option>
+                                            @foreach($servicios as $servicio)
+                                              <option value="{{ $servicio->serviceName }}">{{ $servicio->serviceName }}</option>
+                                             @endforeach
+                                           
                                             </select>
 
                                         </div>

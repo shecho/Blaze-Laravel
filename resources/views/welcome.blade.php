@@ -131,7 +131,7 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
 
         
 
-          {{--Modal create date  --}}
+          {{--Modal crear cita  --}}
           <!-- Modal para crear una cita -->
           
           <div class="modal fade" id="create-date" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -178,8 +178,12 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
                       </div>
                       <div class="form-group">
                         <select class="form-control" name="time" id="barber">
-                          <option value="1">Barbero 1</option>
-                          <!-- <option value="2">Barbero 2</option>
+                        @foreach($barberos as $barber)
+                          <option value="1">{{ $barber->barberName }}</option>
+                        @endforeach
+              
+                          <!-- <option value="1">Barbero 1</option>
+                          <option value="2">Barbero 2</option>
                           <option value="3">Barbero 3</option> -->
                         </select>
                         {{-- <label for="message-text" class="col-form-label text-dark">Barber</label> --}}
@@ -187,9 +191,12 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
                       </div>
                       <div class="form-group">
                         <select class="form-control" name="time" id="product">
-                          <option value="1">Corte</option>
-                          <option value="2">Barba</option>
-                          <option value="3">Corte y Barba</option>
+                         @foreach($servicios as $servicio)
+                          <option value="{{ $servicio->serviceName }}">{{ $servicio->serviceName }}</option>
+                         @endforeach
+                            <!-- <option value="1">Corte</option>
+                                 <option value="2">Barba</option>
+                                <option value="3">Corte y Barba</option> -->
                         </select>
                      
                       </div>
@@ -230,17 +237,6 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
         <div clas="">Photo by Nick Demou from Pexels</div>
       </div>
     </header>
-
-
-
-
-
-    
-
-
-
-
-
     <!-- Servicios  -->
     <section class="page-section" id="services">
       <div class="container">

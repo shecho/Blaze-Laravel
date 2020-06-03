@@ -142,7 +142,7 @@ function getCurrentDate() {
     console.log(datePickerId.min);
 
     let f = new Date();
-    maxDay = (f.getFullYear() + "-" + "0" + (f.getMonth() + 1) + "-" + 0 + (f.getDate() + 7));
+    maxDay = (f.getFullYear() + "-" + "0" + (f.getMonth() + 1) + "-" + (f.getDate() + 7));
     console.log(maxDay);
     datePickerId.max = maxDay
 
