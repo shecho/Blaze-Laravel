@@ -292,14 +292,14 @@ Permite ver todos los reportes al administrador
 
                     <tr id="table-row-users ">
                         <td>
-                            <button type="button" class="btn btn-danger js-scroll-trigger" data-toggle="modal" data-target="" data-whatever="@mdo">
+                            <button type="button" class="btn btn-danger js-scroll-trigger" data-toggle="modal" data-target="#delete-service" data-whatever="@mdo">
                                 <a class="" >
                                     <i class="fas fa-trash" id="trashIcon"></i>
                                 </a>
                             </button>
-                        <a class="text-light btn btn-dark  " href="/deleteService/{{ $servicio->id }}">
-                            <i class="fas fa-trash" id="trashIcon"></i>
-                        </a>
+                            <a class="text-light btn btn-dark  " href="/deleteService/{{ $servicio->id }}">
+                                <i class="fas fa-trash" id="trashIcon"></i>
+                            </a>
                         </td>
                         <td>{{ $servicio->id}}</td>
                         <td>{{ $servicio->serviceName }}</td>
@@ -524,7 +524,7 @@ Permite ver todos los reportes al administrador
 
 </div>
     {{--Eliminar usuarios --}}
-    <!-- modal de eliminar citas -->
+    <!-- modal de usuario -->
     <div class="modal fade" id="delete-user" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -556,6 +556,53 @@ Permite ver todos los reportes al administrador
 
                         <a onclick="" class="text-decoration-none text-light" href="/deleteUser/{{ $user->id }}">
                             Confirmar
+                        </a>
+
+                        
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+    {{--Eliminar servicio --}}
+    <!-- modal de eliminar servicio -->
+    <div class="modal fade" id="delete-service" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-light">
+                    <h5 class="modal-title " id="ModalLabel">Eliminar Usuario</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        @csrf
+
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label text-dark" place>¿Seguro deseas eliminar este servicio?</label>
+
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Cancelar</button>
+                    <button id="confirm-delete-date" type="button" class="btn btn-danger" onclick="" >
+                    
+                          <!-- <a class="text-decoration-none text-light" href='{{ url("/deleteDate/21{$cita->id}") }}'>
+                            Confirmar
+                            </a> -->
+
+                        <a class="text-light btn btn-dark  " href="/deleteService/{{ $servicio->id }}">
+                            <i class="fas fa-trash" id="trashIcon"></i>
                         </a>
 
                         
@@ -634,6 +681,7 @@ Permite ver todos los reportes al administrador
 
 
 {{--Crear Barbero   --}}
+<!-- modal crear barbero -->
 
     <div class="modal fade" id="create-barber" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
