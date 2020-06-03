@@ -15,6 +15,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::get('/', 'WellcomeController@index')->name('/');
 // Instancia de Funcion de  autenticaciones
 Auth::routes();
 
