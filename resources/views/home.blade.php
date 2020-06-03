@@ -240,15 +240,17 @@ Permite ver todos los reportes al administrador
 
                     <tr id="table-row-id">
                         <td>
-                        <button onclick="" id="delete-icon-id" type="button" class="btn btn-danger js-scroll-trigger" data-toggle="modal" data-target="#delete-date" data-whatever="@mdo">
-                        <a class="" >
-                            <i class="fas fa-trash" id="trashIcon"></i>
-                        </a>
-                        </button>
-                       
-                        <a class="text-light btn btn-dark " href="/deleteDate/{{ $cita->id }}">
-                            <i class="fas fa-trash" id="trashIcon"></i>
-                        </a>
+                            <button onclick="" id="delete-icon-id" type="button" class="btn btn-danger js-scroll-trigger" data-toggle="modal" data-target="#delete-date" data-whatever="{{ $cita->id }}" data-cita ="{{ $cita->id }}" name="{{ $cita->id }}">
+
+                               
+                                <a class="" >
+                                    <i class="fas fa-trash" id="trashIcon"></i>
+                                </a>
+                            </button>
+                        
+                            <a class="text-light btn btn-dark " href="/deleteDate/{{ $cita->id }}">
+                                <i class="fas fa-trash" id="trashIcon"></i>
+                            </a>
 
                         </td>
                         <td id="{{$cita->id}}">{{ $cita->id }}</td>
@@ -595,6 +597,8 @@ Permite ver todos los reportes al administrador
                 <div class="modal-footer">
 
                     <button type="button" class="btn btn-dark" data-dismiss="modal">Cancelar</button>
+                    
+                    
                     <button id="confirm-delete-date" type="button" class="btn btn-danger" onclick="" >
                     
                           <!-- <a class="text-decoration-none text-light" href='{{ url("/deleteDate/21{$cita->id}") }}'>

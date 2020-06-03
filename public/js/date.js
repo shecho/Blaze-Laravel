@@ -86,14 +86,14 @@ function modalResponse(state) {
     }
 }
 // funcion en deshuso
-function showReporte1 (){
+function showReporte1() {
     // window.open('/app/Exports/reporte1.php')
 }
-    
+
 
 
 // Muestra las citas en la vista de panel de control
-function showDates(){
+function showDates() {
     let showDatesTitle = document.getElementById('dates-title')
     showDatesTitle.classList.toggle("d-none")
     let showHeadres = document.getElementById("table-headers-dates")
@@ -103,51 +103,49 @@ function showDates(){
 
     let showButton = document.getElementById("show-dates-id")
     let hasAclass = showTable.classList.contains("d-none")
-  
-    if(hasAclass){
-        showButton.innerText =`Ver todas las Citas`;
-        
+
+    if (hasAclass) {
+        showButton.innerText = `Ver todas las Citas`;
+
+    } else {
+        showButton.innerText = `Ocultar citas`;
     }
-    else{
-        showButton.innerText =`Ocultar citas`;
-    }
-   
+
 
 }
 
 
-    
-    
- // muestra los filtros de la vista e panel de control
-function showFilter(){
- 
-    let filterContainer= document.getElementById("filter-container-id")
+
+
+// muestra los filtros de la vista e panel de control
+function showFilter() {
+
+    let filterContainer = document.getElementById("filter-container-id")
     filterContainer.classList.toggle("d-none")
     let showFilterButton = document.getElementById("show-filters-id")
 
     let hasAclass = filterContainer.classList.contains("d-none")
-    if(hasAclass){
-        showFilterButton.innerText =`Ver Filtros de Citas-`;
-         
-     }
-     else{
-        showFilterButton.innerText =`Ocultar Filtros`;
-     }
-    
+    if (hasAclass) {
+        showFilterButton.innerText = `Ver Filtros de Citas-`;
+
+    } else {
+        showFilterButton.innerText = `Ocultar Filtros`;
+    }
+
 }
 
 // Ontiene la fecha vigente del sistema
-function getCurrentDate (){
-   
+function getCurrentDate() {
+
     let datePickerId = document.getElementById("date-day")
     datePickerId.min = new Date().toISOString().split("T")[0];
     console.log(datePickerId.min);
 
     let f = new Date();
-    maxDay=(f.getFullYear() + "-" + "0"+ (f.getMonth() +1) + "-" + 0 + (f.getDate()+7));
+    maxDay = (f.getFullYear() + "-" + "0" + (f.getMonth() + 1) + "-" + 0 + (f.getDate() + 7));
     console.log(maxDay);
-    datePickerId.max =maxDay
-   
+    datePickerId.max = maxDay
+
 }
 getCurrentDate()
 
@@ -163,22 +161,22 @@ document.getElementById('confirm-date').addEventListener('click', sendForm)
 
 
 //Permite a un cliente consultar sus citas desde su perfil 
-function  CheckMyDates(){
-  
-    let tableMyDates= document.getElementById('table-row-my-dates')
-    let CheackMyDatesBtn= document.getElementById('CheackMyDates')
+function CheckMyDates() {
+
+    let tableMyDates = document.getElementById('table-row-my-dates')
+    let CheackMyDatesBtn = document.getElementById('CheackMyDates')
     CheackMyDatesBtn.classList.toggle("d-none")
 
-   
-    let prueba =tableMyDates
+
+    let prueba = tableMyDates
     // console.log(prueba);
     if (prueba) {
-        
-       console.log("si hay datos    ");
+
+        console.log("si hay datos    ");
         // console.log(tableMyDates.lastElementChild.innerHTML);
-    }else{
+    } else {
         console.log("no");
-        CheackMyDatesBtn.innerHTML =`
+        CheackMyDatesBtn.innerHTML = `
          <div class="alert alert-danger alert-dismissible fade show" role="alert"> No tienes citas asignadas"
             <button   button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true"></span>
@@ -187,15 +185,34 @@ function  CheckMyDates(){
     }
 }
 // Captura el boton de las consultar citas
-let CheackMyDatesBtn= document.getElementById('CheackMyDates')
+let CheackMyDatesBtn = document.getElementById('CheackMyDates')
+
+
+
 
 
 // confirmacion de eliminacion de citas 
 
-
 const confirmDeleteDateButon = () => {
-    
-console.log("borrando");
+
+    console.log("borrando");
+
+    // let botonCita= document.getElementById('delete-icon-id')
+    // console.log(botonCita.name)
+    // botonCita.name
+    // let data 
+    // console.log(data)
+
+// $('#exampleModal').on('show.bs.modal', function (event) {
+//     var button = $(event.relatedTarget) // Button that triggered the modal
+//     var idcita = button.data('cita') // Extract info from data-* attributes
+//     var modal = $(this)
+//     modal.find('.modal-body input').val(idcita)
+//    })
+   
+    // console.log(dataCit.data('cita'))
+
+    // var subjId = button.data('whatever');
 
     // let getTable= document.getElementById('table-body-id')
     // console.log(getTable);
@@ -205,7 +222,7 @@ console.log("borrando");
 
     // console.log(getDateid);
     // console.log(getRow);
-    
+
     // let dateId= document.querySelectorAll('.idDate').forEach(id => {
     //     console.log(id);
     // })
