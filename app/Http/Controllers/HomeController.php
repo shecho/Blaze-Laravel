@@ -4,6 +4,7 @@
 namespace App\Http\Controllers;
 
 use App\CreateDate;
+use App\Service;
 use App\Exports\CreateDatesExport;
 use App\Exports\UsersExport;
 use DB;
@@ -34,27 +35,30 @@ class HomeController extends Controller
     public function index()
 
     {
+        $servicios = Service::all();
         $users = DB::table('users')->select('id','name', 'phone', 'email')->get();
         $citas = CreateDate::all();
         //dd($citas);
-        return view('home', compact('citas','users'));
+        return view('home', compact('citas','users','servicios'));
     }
     // Esta funcion filtra las citas por dias
     public function filterByDay(Request $request)
 
     {   
+        $servicios = Service::all();
         $users = DB::table('users')->select('id','name', 'phone', 'email')->get();
         $citas = CreateDate::where('day', $request->dateDayFilter)->get();
         //dd($citas);
-        return view('home', compact('citas','users'));
+        return view('home', compact('citas','users','servicios'));
     }
     // Esta funcion filtra por rango didas
     public function filterByRange(Request $request)
     {
+        $servicios = Service::all();
         $users = DB::table('users')->select('id','name', 'phone', 'email')->get();
         $citas = CreateDate::where('day', ">=", $request->dateDayFilterIni)->where('day', "<=", $request->dateDayFilterEnd)->get();
         //dd($citas);
-        return view('home', compact('citas','users'));
+        return view('home', compact('citas','users','servicios'));
     }
 
     // Esta funcion Hace las exportaciones de las citas dn excel

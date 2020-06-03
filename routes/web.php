@@ -75,6 +75,9 @@ Route::get('/deleteDate/{iddate}', 'CreateDateController@deleteDate')->name('del
 // Ruta par Borrar un usuario
 Route::get('/deleteUser/{idUser}', 'UserController@deleteUser')->name('deleteUser');
 
+// Ruta par Borrar un usuario
+Route::get('/deleteService/{idService}', 'ServiceController@deleteService')->name('deleteUser');
+
 
 
 

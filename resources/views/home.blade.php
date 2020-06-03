@@ -124,7 +124,7 @@ Permite ver todos los reportes al administrador
 </div>
 
 
-@if(Auth::user()->id == 1)
+@if(Auth::user()->email == "admin@admin.com")
 
 <div class="text-center containner reports mt-4 lightOverlay col-md-12" >
     <div class="card-header bg-dark">
@@ -288,22 +288,30 @@ Permite ver todos los reportes al administrador
                     </tr>
                 </thead>
                 <tbody id="table-body-id-services" class="">
+                @foreach($servicios as $servicio)
 
-
-                    <tr id="table-row-id-services ">
+                    <tr id="table-row-users ">
                         <td>
-                            <button type="button" class="btn btn-danger js-scroll-trigger" data-toggle="modal" data-target="#delete-service" data-whatever="@mdo">
-                            <a class="" >
-                                <i class="fas fa-trash" id="trashIcon"></i>
-                            </a>
+                            <button type="button" class="btn btn-danger js-scroll-trigger" data-toggle="modal" data-target="" data-whatever="@mdo">
+                                <a class="" >
+                                    <i class="fas fa-trash" id="trashIcon"></i>
+                                </a>
                             </button>
-                            <a class="text-light btn btn-dark  " href="">
-                                <i class="fas fa-trash" id="trashIcon"></i>
-                            </a>
+                        <a class="text-light btn btn-dark  " href="/deleteService/{{ $servicio->id }}">
+                            <i class="fas fa-trash" id="trashIcon"></i>
+                        </a>
                         </td>
-                        <td>1</td>
-                        <td>Corte</td>
-                        <td>$12.000</td>
+                        <td>{{ $servicio->id}}</td>
+                        <td>{{ $servicio->serviceName }}</td>
+                        <td>{{ $servicio->serviceDescription }}</td>
+                        <td>{{ $servicio->servicePrice }}</td>
+
+                    </tr>
+
+
+                @endforeach
+                </tbody>
+
 
                     </tr>
 

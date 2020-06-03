@@ -35,6 +35,21 @@ class ServiceController extends Controller
         return $response;
     }
 
+    public function deleteService($idService)
+    {
+
+        $servicios = Service::all();
+        $users = DB::table('users')->select('id','name', 'phone', 'email')->get();
+        $response = Service::destroy($idService);
+        //1: borrado; 0 no borrado.
+        $citas = CreateDate::all();
+        //dd($citas);
+        return view('home', compact('citas','users','servicios'));
+        // return redirect()->route('home', [$citas],[$users]);
+        //return $response;
+    }    
+
+
     /**
      * Store a newly created resource in storage.
      *
