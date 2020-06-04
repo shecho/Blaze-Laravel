@@ -56,7 +56,8 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
     />
 
     <!-- css personalizados -->
-    <link href="/../css/agency.css" rel="stylesheet" />
+    <!-- <link href="/../css/agency.css" rel="stylesheet" /> -->
+    <link href="{{asset('/css/agency.css')}}" rel="stylesheet" />
   </head>
 
   <body id="page-top">
@@ -1142,21 +1143,29 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
 
     <!-- Bootstrap core JavaScript -->
     <script src="/../jquery/jquery.min.js"></script>
-    <script src="/../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{asset('/jquery/jquery.min.js')}}"></script>
+
+    <!-- <script src="/../bootstrap/js/bootstrap.bundle.min.js"></script> -->
+    <script src="{{asset('/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
     <!-- Plugin JavaScript -->
     <script src="/../jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Evetos de la plantilla -->
     <!-- Contact form JavaScript -->
-    <script src="/../js/jqBootstrapValidation.js"></script>
-    <script src="/../js/contact_me.js"></script>
+
+    <!-- <script src="/../js/jqBootstrapValidation.js"></script> -->
+    <script src="{{asset('js/jqBootstrapValidation.js')}}"></script>
+
+    <script src="{{asset('/js/contact_me.js')}}"></script>
+
+    <!-- <script src="/../js/contact_me.js"></script> -->
     <!-- <script src="{{asset('/agency.min.js')}}"></script> -->
     <!-- Scrips de la plantilla -->
     <!-- Custom scripts for this template -->
     <!-- <script src="/../js/date.js"></script> -->
-    <script src="/../js/agency.min.js"></script>
-    <!-- <script src="{{asset('/agency.min.js')}}"></script> -->
+    <!-- <script src="/../js/agency.min.js"></script> -->
+    <script src="{{asset('/agency.min.js')}}"></script>
     <script src="{{asset('/js/date.js')}}"></script>
   </body>
 </html>
