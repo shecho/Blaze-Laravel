@@ -11,7 +11,7 @@
 
     
 
-    <title>{{ config('app.name', 'Blaze') }}</title>
+    <title>Reportes</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>

@@ -90,7 +90,8 @@ class UserController extends Controller
         $user = Auth::user();
         //dd($user);
         //die("test user profile");
-        return view('profile', compact('user','citas'));
+        return redirect()->route('home');
+        // return view('profile', compact('user','citas'));
     }
 
 

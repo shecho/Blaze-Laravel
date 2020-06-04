@@ -159,9 +159,9 @@ Permite ver todos los reportes al administrador
             <a href="/exportAllusers" id="export-users-id" class="btn btn-dark btn-sm" >Exportar Clientes Excel</a>
             <button id="show-users-id" onclick="showUsers()" type="submit" class="btn btn-dark btn-sm" >Ver todos los Clientes</button>
             <br>
-
-            <button id="show-dates-id" onclick="showDates()" type="submit" class="btn btn-outline-dark btn-sm" >Ver todas las Citas</button>
+            
             <button id="show-filters-id" onclick="showFilter()" type="submit" class="btn btn-outline-dark btn-sm">Ver  Filtros de Citas</button>
+            <button id="show-dates-id" onclick="showDates()" type="submit" class="btn btn-outline-dark btn-sm" >Ver todas las Citas</button>
             <br>
 
 
