@@ -484,9 +484,6 @@ Permite ver todos los reportes al administrador
                     <button type="button" class="btn btn-dark" data-dismiss="modal">Cancelar</button>
                     <button id="confirm-delete-date" type="button" class="btn btn-danger" onclick="confirmDeleteDateButon()" >
                     
-                          <!-- <a class="text-decoration-none text-light" href='{{ url("/deleteDate/{$cita->id}") }}'>
-                            Confirmar
-                            </a> -->
 
                         <a onclick="confirmDeleteDateButon()" class="text-decoration-none text-light" href="/deleteDate/{{ $cita->id }}">
                             Confirmar
@@ -529,9 +526,7 @@ Permite ver todos los reportes al administrador
                     <button type="button" class="btn btn-dark" data-dismiss="modal">Cancelar</button>
                     <button id="confirm-delete-date" type="button" class="btn btn-danger" onclick="" >
                     
-                          <!-- <a class="text-decoration-none text-light" href='{{ url("/deleteDate/{$cita->id}") }}'>
-                            Confirmar
-                            </a> -->
+                       
 
                         <a onclick="" class="text-decoration-none text-light" href="/deleteUser/{{ $user->id }}">
                             Confirmar
@@ -578,9 +573,7 @@ Permite ver todos los reportes al administrador
                     
                     <button id="confirm-delete-date" type="button" class="btn btn-danger" onclick="" >
                     
-                          <!-- <a class="text-decoration-none text-light" href='{{ url("/deleteDate/21{$cita->id}") }}'>
-                            Confirmar
-                            </a> -->
+                   
 
                         <a class="text-light btn btn-dark  " href="/deleteService/{{ $servicio->id }}">
                             <i class="fas fa-trash" id="trashIcon"></i>
@@ -621,10 +614,7 @@ Permite ver todos los reportes al administrador
                       {{-- <label for="recipient-name" class="col-form-label text-dark" place>Nombre del Servicio</label> --}}
                       <input placeholder="Nombre del Servicio" type="text" class="form-control" id="service-name-id">
                     </div>
-                    <!-- <div class="form-group">
-                      {{-- <label for="recipient-name" class="col-form-label text-dark" place>Nombre del Servicio</label> --}}
-                      <input placeholder="Descripcion Corta" type="text" class="form-control" id="service-description-id">
-                    </div> -->
+               
                     <div class="form-group">
                     <textarea
                       class="form-control"
