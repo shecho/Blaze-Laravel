@@ -487,16 +487,16 @@ Permite ver todos los reportes al administrador
                     <button type="button" class="btn btn-dark" data-dismiss="modal">Cancelar</button>
                     <button id="confirm-delete-date" type="button" class="btn btn-danger" onclick="confirmDeleteDateButon()" >
                     
-                    @if($citas != undefined)
+                  
                         <a onclick="confirmDeleteDateButon()" class="text-decoration-none text-light" href="/deleteDate/{{ $cita->id }}">
                             Confirmar
                         </a>
-                    @else 
+             
                     <a onclick="confirmDeleteDateButon()" class="text-decoration-none text-light" href="/deleteDate/">
                             Confirmar
                         </a>
 
-                    @endif   
+                    
                     </button>
 
                 </div>

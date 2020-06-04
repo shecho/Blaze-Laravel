@@ -40,6 +40,7 @@ class HomeController extends Controller
         $servicios = Service::all();
         $users = DB::table('users')->select('id','name', 'phone', 'email')->get();
         $citas = CreateDate::all();
+        dd( $citas );
         //dd($citas);
         return view('home', compact('citas','users','servicios','barberos'));
     }
