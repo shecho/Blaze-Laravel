@@ -275,7 +275,7 @@ Permite ver todos los reportes al administrador
 
 
                 @endforeach
-                @endif
+              
 
                 </tbody>
             </table>
@@ -487,7 +487,7 @@ Permite ver todos los reportes al administrador
                     <button type="button" class="btn btn-dark" data-dismiss="modal">Cancelar</button>
                     <button id="confirm-delete-date" type="button" class="btn btn-danger" onclick="confirmDeleteDateButon()" >
                     
-
+                    
                         <a onclick="confirmDeleteDateButon()" class="text-decoration-none text-light" href="/deleteDate/{{ $cita->id }}">
                             Confirmar
                         </a>
@@ -709,7 +709,7 @@ Permite ver todos los reportes al administrador
 
 
 
-
+    @endif
 @endif
 </div>
 @endsection
