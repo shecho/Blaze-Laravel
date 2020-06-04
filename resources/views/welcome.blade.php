@@ -1153,8 +1153,8 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
     <!-- Scrips de la plantilla -->
     <!-- Custom scripts for this template -->
     <!-- <script src="/../js/date.js"></script> -->
-    <!-- <script src="/../js/agency.min.js"></script> -->
-    <script src="{{asset('/agency.min.js')}}"></script>
+    <script src="/../js/agency.min.js"></script>
+    <!-- <script src="{{asset('/agency.min.js')}}"></script> -->
     <script src="{{asset('/js/date.js')}}"></script>
   </body>
 </html>
