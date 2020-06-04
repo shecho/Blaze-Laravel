@@ -138,7 +138,7 @@ function showFilter() {
 function getCurrentDate() {
 
     let datePickerId = document.getElementById("date-day")
-    // datePickerId.min = new Date().toISOString().split("T")[0];
+    datePickerId.min = new Date().toISOString().split("T")[0];
     console.log(datePickerId.min);
 
     let f = new Date();
