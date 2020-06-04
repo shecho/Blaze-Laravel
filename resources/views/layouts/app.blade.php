@@ -110,7 +110,8 @@
             @yield('content')
         </main>
     </div>
-    <script src="/../js/admin.js"></script>
+    <!-- <script src="/../js/admin.js"></script> -->
+    <script src="{{ asset('/js/admin.js')}}"></script>
      <!-- Bootstrap core JavaScript -->
         
     <!-- no needed since they are in the temlate layout -->
@@ -126,12 +127,13 @@
     <!-- Custom scripts for this template
     <script src="/../js/agency.min.js"></script>
      -->
-     <script src="/../js/date.js"></script>
-     <script src="/../js/deleteDate.js"></script>
-     <script src="/../js/edidProfile.js"></script>
-     <script src="/../js/services.js"></script>
-     <script src="/../js/users.js"></script>
-     <script src="/../js/baber.js"></script>
-
+     <script src="{{ asset('/js/date.js')}}"></script>
+     <script src="{{ asset('/js/deleteDate.js')}}"></script>
+     <script src="{{ asset('/js/edidProfile.js')}}"></script>
+     <script src="{{asset('js/services.js')}}"></script>
+     <script src="{{asset('js/users.js')}}"></script>
+     <script src="{{asset('js/baber.js')}}"></script>
+     <!-- <script src="/../js/baber.js"></script>
+     <script src="/../js/users.js"></script> -->
 </body>
 </html>
