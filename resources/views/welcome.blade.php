@@ -1149,11 +1149,12 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
     <!-- Contact form JavaScript -->
     <script src="/../js/jqBootstrapValidation.js"></script>
     <script src="/../js/contact_me.js"></script>
-
+    <!-- <script src="{{asset('/agency.min.js')}}"></script> -->
     <!-- Scrips de la plantilla -->
     <!-- Custom scripts for this template -->
-    <script src="/../js/agency.min.js"></script>
-    <script src="/../js/date.js"></script>
-
+    <!-- <script src="/../js/date.js"></script> -->
+    <!-- <script src="/../js/agency.min.js"></script> -->
+    <script src="{{asset('/agency.min.js')}}"></script>
+    <script src="{{asset('/js/date.js')}}"></script>
   </body>
 </html>
