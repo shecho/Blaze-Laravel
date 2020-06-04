@@ -7,6 +7,19 @@ Permite ver todos los reportes al administrador
 @extends('layouts.app')
 
 @section('content')
+
+
+@if($citas != [])
+@if($barberos != [])
+@if($servicios != [])
+@if($users != [])
+    
+
+
+
+
+
+
 <div class="container ">
     <div class="row justify-content-center">
     <div class="col-md-10">
@@ -17,6 +30,7 @@ Permite ver todos los reportes al administrador
                 <i class="h4 fas fa-undo-alt"></i>
             </a>
                 <h4>Panel de Control    </h4>
+               
             </div>
 
 
@@ -487,15 +501,15 @@ Permite ver todos los reportes al administrador
                     <button type="button" class="btn btn-dark" data-dismiss="modal">Cancelar</button>
                     <button id="confirm-delete-date" type="button" class="btn btn-danger" onclick="confirmDeleteDateButon()" >
                     
-                  @if($citas != [])
+               
                         <a onclick="confirmDeleteDateButon()" class="text-decoration-none text-light" href="/deleteDate/{{ $cita->id }}">
                             Confirmar
                         </a>
-                    @else
+                  
                     <a onclick="confirmDeleteDateButon()" class="text-decoration-none text-light" href="/deleteDate/">
                             Confirmar
                         </a>
-                    @endif
+               
                     
                     </button>
 
@@ -580,7 +594,7 @@ Permite ver todos los reportes al administrador
                     
                     <button id="confirm-delete-date" type="button" class="btn btn-danger" onclick="" >
                     
-                   
+
 
                         <a class="text-light btn btn-dark  " href="/deleteService/{{ $servicio->id }}">
                             <i class="fas fa-trash" id="trashIcon"></i>
@@ -712,8 +726,10 @@ Permite ver todos los reportes al administrador
 
 
 
-
-   
+    @endif
+    @endif
+    @endif
+    @endif
 @endif
 </div>
 @endsection
