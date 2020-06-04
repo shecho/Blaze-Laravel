@@ -246,7 +246,7 @@ Permite ver todos los reportes al administrador
                 </thead>
                 <tbody id="table-body-id" class="d-none">
                 <!-- Ciclo que muestra todas las citas de la base de datos -->
-                @if($citas != "")
+               
                 @foreach($citas as $cita)
 
                     <tr id="table-row-id">
@@ -487,12 +487,16 @@ Permite ver todos los reportes al administrador
                     <button type="button" class="btn btn-dark" data-dismiss="modal">Cancelar</button>
                     <button id="confirm-delete-date" type="button" class="btn btn-danger" onclick="confirmDeleteDateButon()" >
                     
-                    
+                    @if($citas != "")
                         <a onclick="confirmDeleteDateButon()" class="text-decoration-none text-light" href="/deleteDate/{{ $cita->id }}">
                             Confirmar
                         </a>
+                    @else 
+                    <a onclick="confirmDeleteDateButon()" class="text-decoration-none text-light" href="/deleteDate/">
+                            Confirmar
+                        </a>
 
-                        
+                    @endif   
                     </button>
 
                 </div>
@@ -709,7 +713,7 @@ Permite ver todos los reportes al administrador
 
 
 
-    @endif
+   
 @endif
 </div>
 @endsection
