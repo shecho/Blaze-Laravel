@@ -22,7 +22,9 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
     <title>Blaze Barber Landing Page</title>
     <!-- boostrap -->
     <!-- Bootstrap core de CSS -->
-    <link href="/../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- <link href="/../bootstrap/css/bootstrap.min.css" rel="stylesheet" /> -->
+    <link href="{{asset('/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" />
+
     <!-- fuentes -->
 
 
