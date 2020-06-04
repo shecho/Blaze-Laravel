@@ -360,24 +360,9 @@ Permite ver todos los reportes al administrador
                 <tbody id="table-body-id-users" class="">
 
 
-                    <!-- <tr id="table-row-id-users ">
-                        <td>
-                            <button type="button" class="btn btn-dark js-scroll-trigger" data-toggle="modal" data-target="#delete-date" data-whatever="@mdo">
-                            <a class="" >
-                                <i class="fas fa-trash" id="trashIcon"></i>
-                            </a>
-                            </button>
-                            <a class="text-light btn btn-dark  " href="/deleteDate/{{ $cita->id }}">
-                                <i class="fas fa-trash" id="trashIcon"></i>
-                            </a>
-                        </td>
-                        <td>1</td>
-                        <td>Julian</td>
-                        <td>3113631338</td>
-                        <td>a@b.com</td>
+ 
 
                     </tr> -->
-                    <!-- <tbody id="table-body-id" class="d-none"> -->
                 @foreach($users as $user)
 
                     <tr id="table-row-users ">

@@ -44,6 +44,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <!-- Bootstrap core CSS -->
     <link href="/../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- <link href="/../bootstrap/css/bootstrap.min.css" rel="stylesheet" /> -->
    
    <!-- font awesome -->
     <script src="https://kit.fontawesome.com/d4bbca006e.js" crossorigin="anonymous"></script>
