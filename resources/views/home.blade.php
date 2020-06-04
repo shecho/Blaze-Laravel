@@ -246,7 +246,7 @@ Permite ver todos los reportes al administrador
                 </thead>
                 <tbody id="table-body-id" class="d-none">
                 <!-- Ciclo que muestra todas las citas de la base de datos -->
-                @if($citas)
+                @if($citas != "")
                 @foreach($citas as $cita)
 
                     <tr id="table-row-id">
