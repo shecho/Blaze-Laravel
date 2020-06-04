@@ -126,10 +126,15 @@
     <!-- Custom scripts for this template
     <script src="/../js/agency.min.js"></script>
      -->
-     <script src="/../js/date.js"></script>
+     <!-- <script src="/../js/date.js"></script>
      <script src="/../js/deleteDate.js"></script>
      <script src="/../js/edidProfile.js"></script>
-     <script src="/../js/services.js"></script>
-
+     <script src="/../js/services.js"></script> -->
+     <script src="{{asset('/js/date.js')}}"></script>
+     <script src="{{asset('/js/deleteDate.js')}}"></script>
+     <script src="{{asset('/js/edidProfile.js')}}"></script>
+     <script src="{{asset('js/services.js')}}"></script>
+     <script src="{{asset('js/users.js')}}"></script>
+     <script src="{{asset('js/baber.js')}}"></script>
 </body>
 </html>

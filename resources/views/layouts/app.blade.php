@@ -47,6 +47,7 @@
    
    <!-- font awesome -->
     <script src="https://kit.fontawesome.com/d4bbca006e.js" crossorigin="anonymous"></script>
+    
 
     <link href="{{ asset('css/profilestyle.css') }}" rel="stylesheet">
     <!-- <link href="/../css/profilestyle.css" rel="stylesheet" /> -->

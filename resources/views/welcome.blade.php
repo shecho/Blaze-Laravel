@@ -27,10 +27,10 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
 
     <!-- fuentes -->
 
-
+    <!-- href="/../fontawesome-free/css/all.min.css" -->
     <!-- Fuentes de google -->
     <link
-      href="/../fontawesome-free/css/all.min.css"
+      href="{{asset('fontawesome-free/css/all.min.css')}}"
       rel="stylesheet"
       type="text/css"
     />
@@ -1142,15 +1142,15 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
     </div>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="/../jquery/jquery.min.js"></script>
+    <!-- <script src="/../jquery/jquery.min.js"></script> -->
     <script src="{{asset('/jquery/jquery.min.js')}}"></script>
 
     <!-- <script src="/../bootstrap/js/bootstrap.bundle.min.js"></script> -->
     <script src="{{asset('/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="/../jquery-easing/jquery.easing.min.js"></script>
-
+    <!-- <script src="/../jquery-easing/jquery.easing.min.js"></script> -->
+    <script src="{{asset('/jquery-easing/jquery.easing.min.js')}}"></script>
     <!-- Evetos de la plantilla -->
     <!-- Contact form JavaScript -->
 
@@ -1165,7 +1165,8 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
     <!-- Custom scripts for this template -->
     <!-- <script src="/../js/date.js"></script> -->
     <!-- <script src="/../js/agency.min.js"></script> -->
-    <script src="{{asset('/agency.min.js')}}"></script>
+    <script src="{{asset('/js/agency.min.js')}}"></script>
+
     <script src="{{asset('/js/date.js')}}"></script>
   </body>
 </html>
