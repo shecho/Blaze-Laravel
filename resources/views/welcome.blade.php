@@ -181,23 +181,23 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
                       </div>
                       <div class="form-group">
                         <select class="form-control" name="time" id="barber">
+                          <option value="1">Cualquiera</option>
                         @foreach($barberos as $barber)
                           <option value="{{ $barber->barberName }}">{{ $barber->barberName }}</option>
                         @endforeach
               
                           <!-- <!-- <option value="1">Barbero 1</option> -->
                         
-                          <option value="3">Barbero de Prueba</option>
                         </select>
                         {{-- <label for="message-text" class="col-form-label text-dark">Barber</label> --}}
                         {{-- <input placeholder="Barber" type="text"  class="form-control" id="message-text"> --}}
                       </div>
                       <div class="form-group">
                         <select class="form-control" name="time" id="product">
+                          <option value="1">Asesoramiento</option>
                          @foreach($servicios as $servicio)
                           <option value="{{ $servicio->serviceName }}">{{ $servicio->serviceName }}</option>
                          @endforeach
-                            <option value="1">Servicio de Prueba</option>
                                 
                         </select>
                      
