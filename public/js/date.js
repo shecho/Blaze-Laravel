@@ -18,6 +18,7 @@ function sendForm() {
     let day = document.getElementById("date-day").value
     let time = document.getElementById("date-time").value
     let barber = document.getElementById("barber").value
+    let service = document.getElementById("services-date-id").value
     let token = document.getElementById("token").value
 
     let data = {
@@ -26,6 +27,7 @@ function sendForm() {
         "day": day,
         "time": time,
         "barber": barber,
+        "service": service,
         "_token": token
     };
     modalValidate(fullName, phone, day, time,barber)
@@ -37,10 +39,12 @@ function sendForm() {
             headers: {
                 'Content-Type': 'application/json',
             }
-        }).then(response => response.json())
+        }).then(response => {
+          
+            response.json()})
         .then(data => data == 1 ? modalResponse(1) : modalResponse(0))
     //1 cuando ya esxiste una cita, 0 cuando se creo correctamente
-    console.log(data);
+    // console.log(data);
 }
 
 // Valida el modal de citas

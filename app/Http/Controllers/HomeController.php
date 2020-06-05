@@ -189,7 +189,7 @@ class HomeController extends Controller
     // Esta funcion crea el reporte de Citas en PDF
     public function reporteCitas()
     {
-        $citas = DB::table('create_dates')->select('id', 'userName', 'userPhone', 'day', 'time', 'barber','created_at')->get();
+        $citas = DB::table('create_dates')->select('id', 'userName', 'userPhone', 'day', 'time', 'barber','service','created_at')->get();
         $citas2 = CreateDate::all();
 
         $usuario = 'Sergio Valencia Aguirre';
@@ -206,6 +206,7 @@ class HomeController extends Controller
                         <td>" . $cita->day."</td>
                         <td>" . $cita->time."</td>
                         <td>" . $cita->barber."</td>
+                        <td>" . $cita->service."</td>
                         <td>" . $cita->created_at."</td>
                     </tr>
             ";
@@ -245,6 +246,7 @@ class HomeController extends Controller
                             <th>Día</th>
                             <th>Hora</th>
                             <th>Barbero</th>
+                            <th>Servicio</th>
                             <th>Fecha Creación</th>
                         </tr>
 

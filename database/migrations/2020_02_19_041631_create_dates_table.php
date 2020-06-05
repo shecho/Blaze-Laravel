@@ -20,6 +20,7 @@ class CreateDatesTable extends Migration
             $table->string('day');
             $table->integer('time');
             $table->string('barber');
+            $table->string('service');
             $table->timestamps();
             
 

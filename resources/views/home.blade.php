@@ -9,12 +9,6 @@ Permite ver todos los reportes al administrador
 @section('content')
 
 
-@if($citas != [])
-@if($barberos != [])
-@if($servicios != [])
-@if($users != [])
-    
-
 
 
 
@@ -108,7 +102,7 @@ Permite ver todos los reportes al administrador
                                             {{-- <input placeholder="Barber" type="text"  class="form-control" id="message-text"> --}}
                                         </div>
                                         <div class="form-group">
-                                            <select class="form-control" name="time" id="product">
+                                            <select class="form-control" name="time" id="services-date-id">
                                             @foreach($servicios as $servicio)
                                               <option value="{{ $servicio->serviceName }}">{{ $servicio->serviceName }}</option>
                                              @endforeach
@@ -140,6 +134,7 @@ Permite ver todos los reportes al administrador
         </div>
     </div>
 </div>
+
 
 
 @if(Auth::user()->email == "admin@admin.com")
@@ -256,9 +251,11 @@ Permite ver todos los reportes al administrador
                         <th>Día</th>
                         <th>Hora</th>
                         <th>Barbero</th>
+                        <th>Servicio</th>
                     </tr>
                 </thead>
                 <tbody id="table-body-id" class="d-none">
+
                 <!-- Ciclo que muestra todas las citas de la base de datos -->
                
                 @foreach($citas as $cita)
@@ -284,6 +281,7 @@ Permite ver todos los reportes al administrador
                         <td>{{ $cita->day }}</td>
                         <td>{{ $cita->time }}</td>
                         <td>{{ $cita->barber }}</td>
+                        <td>{{ $cita->service }}</td>
 
                     </tr>
 
@@ -499,15 +497,15 @@ Permite ver todos los reportes al administrador
                     <button type="button" class="btn btn-dark" data-dismiss="modal">Cancelar</button>
                     <button id="confirm-delete-date" type="button" class="btn btn-danger" onclick="confirmDeleteDateButon()" >
                     
-               
-                        <a onclick="confirmDeleteDateButon()" class="text-decoration-none text-light" href="/deleteDate/{{ $cita->id }}">
+
+                        <a onclick="confirmDeleteDateButon()" class="text-decoration-none text-light" href="">
                             Confirmar
                         </a>
                   
-                    <a onclick="confirmDeleteDateButon()" class="text-decoration-none text-light" href="/deleteDate/{{ $cita->id }}">
+                    <a onclick="confirmDeleteDateButon()" class="text-decoration-none text-light" href="">
                             Confirmar
                         </a>
-               
+                    
                     
                     </button>
 
@@ -594,7 +592,7 @@ Permite ver todos los reportes al administrador
                     
 
 
-                        <a class="text-light btn btn-dark  " href="/deleteService/{{ $servicio->id }}">
+                        <a class="text-light btn btn-dark  " href="">
                             <i class="fas fa-trash" id="trashIcon"></i>
                         </a>
 
@@ -723,13 +721,8 @@ Permite ver todos los reportes al administrador
     </div>
 
 
-
-    @endif
-    @endif
-    @endif
-    @else
-        <div>no hay datos</div>
-    @endif
+  
+ 
 
 @endif
 </div>

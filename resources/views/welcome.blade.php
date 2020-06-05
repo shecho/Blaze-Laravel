@@ -193,7 +193,7 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
                         {{-- <input placeholder="Barber" type="text"  class="form-control" id="message-text"> --}}
                       </div>
                       <div class="form-group">
-                        <select class="form-control" name="time" id="product">
+                        <select class="form-control" name="time" id="services-date-id">
                           <option value="1">Asesoramiento</option>
                          @foreach($servicios as $servicio)
                           <option value="{{ $servicio->serviceName }}">{{ $servicio->serviceName }}</option>

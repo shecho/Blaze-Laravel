@@ -7,7 +7,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 Use App\CreateDate;
-use DB;;
+use DB;
 use App\Service;
 use App\Barber;
 
@@ -36,6 +36,7 @@ class createDateController extends Controller
             $newDate->day = $request->day;
             $newDate->time = $request->time;
             $newDate->barber = $request->barber;
+            $newDate->service = $request->service;
             $newDate->save();
             $response = $newDate;
             //retornar respuesta            
