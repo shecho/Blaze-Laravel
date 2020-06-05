@@ -15,7 +15,21 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{asset('js/services.js')}}"></script>
+    <script src="{{ asset('js/admin.js')}}"></script>
+   
+   <script src="{{asset('js/baber.js')}}"></script>
 
+   <script src="{{asset('js/users.js')}}"></script>
+
+
+   <script src="{{asset('js/date.js')}}"></script>
+
+   <script src="{{asset('js/deleteDate.js')}}"></script>
+
+   <script src="{{asset('js/edidProfile.js')}}"></script>
+
+   
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -115,19 +129,8 @@
         </main>
     </div>
    
-    <script src="{{ asset('js/admin.js')}}"></script>
-   
-     <script src="{{asset('js/baber.js')}}"></script>
-
-     <script src="{{asset('js/users.js')}}"></script>
-
-     <script src="{{asset('js/services.js')}}"></script>
-
-     <script src="{{asset('js/date.js')}}"></script>
-
-     <script src="{{asset('js/deleteDate.js')}}"></script>
-
-     <script src="{{asset('js/edidProfile.js')}}"></script>
+    
+    
 
 
 
