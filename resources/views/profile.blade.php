@@ -210,7 +210,7 @@
               {{-- <input placeholder="Barber" type="text"  class="form-control" id="message-text"> --}}
             </div>
             <div class="form-group">
-              <select class="form-control" name="time" id="product">
+              <select class="form-control" name="time" id="services-date-id">
               @foreach($servicios as $servicio)
                <option value="{{ $servicio->serviceName }}">{{ $servicio->serviceName }}</option>
               @endforeach
