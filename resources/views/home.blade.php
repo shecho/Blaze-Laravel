@@ -547,7 +547,7 @@ Permite ver todos los reportes al administrador
                     
                        
                                  
-                        <a onclick="" class="text-decoration-none text-light" href="    ">
+                        <a onclick="" class="text-decoration-none text-light" href="">
                             Confirmar
                         </a>
 
