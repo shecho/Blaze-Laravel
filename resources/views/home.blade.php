@@ -270,7 +270,7 @@ Permite ver todos los reportes al administrador
                                 </a>
                             </button>
                         
-                            <a class="text-light btn btn-dark " href="{{ route('deleteDate/{{ $cita->id }}') }}">
+                            <a class="text-light btn btn-dark " href="{{ route('deleteDate/ $cita->id') }}">
                                 <i class="fas fa-trash" id="trashIcon"></i>
                             </a>
 
@@ -325,7 +325,7 @@ Permite ver todos los reportes al administrador
                                 </a>
                             </button>
                             
-                            <a class="text-light btn btn-dark  " href="{{ route('deleteDate/{{ $cita->id }}') }}">
+                            <a class="text-light btn btn-dark  " href="{{ route('deleteDate/ $cita->id') }}">
                                 <i class="fas fa-trash" id="trashIcon"></i>
                             </a>
                         </td>
@@ -387,7 +387,7 @@ Permite ver todos los reportes al administrador
                         </a>
                         </button>
                        
-                        <a class="text-light btn btn-dark  " href= "{{ route('deleteUser/{{ $user->id }}') }}">
+                        <a class="text-light btn btn-dark  " href= "{{ route('deleteUser/ $user->id ') }}">
                             <i class="fas fa-trash" id="trashIcon"></i>
                         </a>
                         </td>
@@ -445,7 +445,7 @@ Permite ver todos los reportes al administrador
                         </a>
                         </button>
                        
-                        <a class="text-light btn btn-dark  " href= "{{ route('deleteBarber/{{$barber->id}}') }}">
+                        <a class="text-light btn btn-dark  " href= "{{ route('deleteBarber/$barber->id') }}">
                             <i class="fas fa-trash" id="trashIcon"></i>
                         </a>
                         </td>
@@ -547,7 +547,7 @@ Permite ver todos los reportes al administrador
                     
                        
                                  
-                        <a onclick="" class="text-decoration-none text-light" href="{{ route('deleteUser/{{$user->id}}') }}">
+                        <a onclick="" class="text-decoration-none text-light" href="{{ route('deleteUser/$user->id') }}">
                             Confirmar
                         </a>
 
