@@ -32,6 +32,7 @@ function sendForm() {
     };
     modalValidate(fullName, phone, day, time,barber,service)
     let ulrProduction ='http://54.226.97.124/Blaze-Laravel/public/createNewDate'
+    
     let url = '/createNewDate';
     fetch(ulrProduction, {
             method: 'POST', // or 'PUT'

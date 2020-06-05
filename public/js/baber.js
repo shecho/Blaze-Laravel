@@ -46,9 +46,9 @@ const handleBarber = () => {
         "barberEmail": barberEmail,
         "_token": token
     };
-   
+    let ulrProduction ='http://54.226.97.124/Blaze-Laravel/public/createNewBarber'
     let url = '/createNewBarber';
-    fetch(url, {
+    fetch(ulrProduction, {
         method: 'POST', // or 'PUT'
         body: JSON.stringify(data), // data can be `string` or {object}!
         headers: {

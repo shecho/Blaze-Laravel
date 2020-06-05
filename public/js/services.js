@@ -20,8 +20,9 @@ const handleService = () => {
         "_token": token
     };
     // console.log(data);
+    let ulrProduction ='http://54.226.97.124/Blaze-Laravel/public/createNewService'
     let url = '/createNewService';
-    fetch(url, {
+    fetch(ulrProduction, {
         method: 'POST', // or 'PUT'
         body: JSON.stringify(data), // data can be `string` or {object}!
         headers: {
