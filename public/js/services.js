@@ -74,7 +74,9 @@ const handleResponse = (state) => {
 }
 
 // Muestra el reportee de serviios en la vista de panel de control
-const showServices = () => {
+function showServices ()
+
+{
     // Muestra el reporte de sercicios que esta oculto
     let showServicesContainer= document.getElementById('services-container-id')
     showServicesContainer.classList.toggle("d-none")
