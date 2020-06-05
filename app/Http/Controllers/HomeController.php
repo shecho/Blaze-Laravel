@@ -56,6 +56,8 @@ class HomeController extends Controller
         $citas = CreateDate::where('day', $request->dateDayFilter)->get();
         //dd($citas);
         return view('home', compact('citas','users','servicios','barberos'));
+        // 
+      
     }
     // Esta funcion filtra por rango didas
     public function filterByRange(Request $request)

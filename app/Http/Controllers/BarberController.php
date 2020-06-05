@@ -1,5 +1,5 @@
 <?php
-
+// Este archivi es el controlador de las clase Barbero
 namespace App\Http\Controllers;
 
 use App\Barber;
@@ -8,6 +8,7 @@ use DB;
 use App\CreateDate;
 use Illuminate\Http\Request;
 
+// Crea una clase controlador de Barbero
 class BarberController extends Controller
 {
     /**
@@ -19,7 +20,7 @@ class BarberController extends Controller
     {
         //
     }
-    //Esta funcion  crea un nuevo empleado en y guarda en la Base de datos
+    //Esta funcion  crea un nuevo empleador (Barbero) en y guarda en la Base de datos
     public function CreateBarber(Request $request)
     {
         //
@@ -33,7 +34,8 @@ class BarberController extends Controller
 
         return $response;
     }
-  
+    
+    // Esta funcion elimina un baqbhero
     public function deleteBarber($idBarber)
     {
         $barberos = Barber::all();

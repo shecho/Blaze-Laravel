@@ -28,7 +28,7 @@ function sendForm() {
         "barber": barber,
         "_token": token
     };
-    modalValidate(fullName, phone, day, time)
+    modalValidate(fullName, phone, day, time,barber)
 
     let url = 'createNewDate/';
     fetch(url, {
@@ -44,10 +44,10 @@ function sendForm() {
 }
 
 // Valida el modal de citas
-function modalValidate(fullName, phone, day, time) {
+function modalValidate(fullName, phone, day, time,barber) {
     // console.log("function modal validate");
     var modal = document.getElementById('modal-response')
-    if (!fullName || !phone || !day || !time) {
+    if (!fullName || !phone || !day || !time || !barber) {
         // console.log("inside if modal validate")
 
         modal.innerHTML = `
