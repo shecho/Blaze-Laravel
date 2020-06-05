@@ -115,7 +115,7 @@
         </main>
     </div>
    
-    <script src="{{ asset('/js/admin.js')}}"></script>
+    <script src="{{ asset('js/admin.js')}}"></script>
    
      <script src="{{asset('js/baber.js')}}"></script>
 
