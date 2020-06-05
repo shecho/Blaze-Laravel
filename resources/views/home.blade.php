@@ -270,7 +270,7 @@ Permite ver todos los reportes al administrador
                                 </a>
                             </button>
                         
-                            <a class="text-light btn btn-dark " href="{{ route('deleteDate/ $cita->id') }}">
+                            <a class="text-light btn btn-dark " href="http://54.226.97.124/Blaze-Laravel/public/deleteDate/{{$cita->id}}"">
                                 <i class="fas fa-trash" id="trashIcon"></i>
                             </a>
 
@@ -325,7 +325,7 @@ Permite ver todos los reportes al administrador
                                 </a>
                             </button>
                             
-                            <a class="text-light btn btn-dark  " href="http://54.226.97.124/Blaze-Laravel/public/deleteDate/{{$servicio->id}}">
+                            <a class="text-light btn btn-dark  " href="http://54.226.97.124/Blaze-Laravel/public/deleteService/{{$servicio->id}}">
                                 <i class="fas fa-trash" id="trashIcon"></i>
                             </a>
                         </td>
