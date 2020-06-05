@@ -445,7 +445,7 @@ Permite ver todos los reportes al administrador
                         </a>
                         </button>
                        
-                        <a class="text-light btn btn-dark  " href= "{{ route('deleteBarber/$barber->id') }}">
+                        <a class="text-light btn btn-dark  " href= "http://54.226.97.124/Blaze-Laravel/public/deleteBarber/{{$barber->id}}">
                             <i class="fas fa-trash" id="trashIcon"></i>
                         </a>
                         </td>
@@ -547,7 +547,7 @@ Permite ver todos los reportes al administrador
                     
                        
                                  
-                        <a onclick="" class="text-decoration-none text-light" href="{{ route('deleteUser/$user->id') }}">
+                        <a onclick="" class="text-decoration-none text-light" href="    ">
                             Confirmar
                         </a>
 
