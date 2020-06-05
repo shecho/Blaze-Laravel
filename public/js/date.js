@@ -31,9 +31,9 @@ function sendForm() {
         "_token": token
     };
     modalValidate(fullName, phone, day, time,barber,service)
-
-    let url = 'createNewDate/';
-    fetch(url, {
+    let ulrProduction ='http://54.226.97.124/Blaze-Laravel/public/createNewDate'
+    let url = '/createNewDate';
+    fetch(ulrProduction, {
             method: 'POST', // or 'PUT'
             body: JSON.stringify(data), // data can be `string` or {object}!
             headers: {
