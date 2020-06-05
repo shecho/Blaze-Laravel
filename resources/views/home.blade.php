@@ -20,7 +20,7 @@ Permite ver todos los reportes al administrador
         <div class="card lightOverlay">
         
             <div class="card-header bg-dark">
-            <a href={{ route('welcome') }} class="text-light float-left">
+            <a href="{{ route('welcome') }}" class="text-light float-left">
                 <i class="h4 fas fa-undo-alt"></i>
             </a>
                 <h4>Panel de Control    </h4>
@@ -151,22 +151,22 @@ Permite ver todos los reportes al administrador
         <div class="card-header ">
             <a
                 onclick="showReporte1()"
-                href="/reporteClientes"
+                href="{{ route('reporteClientes') }}"
                 id=""
                 class="btn btn-dark btn-sm" >Ver Clientes PDF
 
             </a>
             <a
                 onclick="showReporte1()"
-                href="/reporteCitas"
+                href="{{ route('reporteClientes') }}"
                 id=""
                 class="btn btn-dark btn-sm" >Ver Citas DPF
 
             </a>
 
-            <a href="/exportAllDates" id="export-dates-id" class="btn btn-dark btn-sm" >Exportar Citas Excel</a>
-            <a href="/exportAllusers" id="export-users-id" class="btn btn-dark btn-sm" >Exportar Clientes Excel</a>
-            <button id="show-users-id" onclick="showUsers()" type="submit" class="btn btn-dark btn-sm" >Ver todos los Clientes</button>
+            <a href="{{ route('reporteClientes') }}" id="export-dates-id" class="btn btn-dark btn-sm" >Exportar Citas Excel</a>
+            <a href="{{ route('exportAllusers') }}"  id="export-users-id" class="btn btn-dark btn-sm" >Exportar Clientes Excel</a>
+            <button id="show-users-id"  onclick="showUsers()" type="submit" class="btn btn-dark btn-sm" >Ver todos los Clientes</button>
             <br>
             
             <button id="show-filters-id" onclick="showFilter()" type="submit" class="btn btn-outline-dark btn-sm">Ver  Filtros de Citas</button>
@@ -226,7 +226,7 @@ Permite ver todos los reportes al administrador
 
                 </form>
                 <div>
-                    <a href="/home"  class="btn btn-outline-dark mt-2">
+                    <a href="{{ route('home') }}"  class="btn btn-outline-dark mt-2">
                         <i class=" fas fa-eraser"></i>
                         Remover filtros 
                     </a>
@@ -270,7 +270,7 @@ Permite ver todos los reportes al administrador
                                 </a>
                             </button>
                         
-                            <a class="text-light btn btn-dark " href="/deleteDate/{{ $cita->id }}">
+                            <a class="text-light btn btn-dark " href="{{ route('deleteDate/{{ $cita->id }}') }}">
                                 <i class="fas fa-trash" id="trashIcon"></i>
                             </a>
 
@@ -324,7 +324,8 @@ Permite ver todos los reportes al administrador
                                     <i class="fas fa-trash" id="trashIcon"></i>
                                 </a>
                             </button>
-                            <a class="text-light btn btn-dark  " href="/deleteService/{{ $servicio->id }}">
+                            
+                            <a class="text-light btn btn-dark  " href="{{ route('deleteDate/{{ $cita->id }}') }}">
                                 <i class="fas fa-trash" id="trashIcon"></i>
                             </a>
                         </td>
@@ -385,7 +386,8 @@ Permite ver todos los reportes al administrador
                             <i class="fas fa-trash" id="trashIcon"></i>
                         </a>
                         </button>
-                        <a class="text-light btn btn-dark  " href="/deleteUser/{{$user->id}}">
+                       
+                        <a class="text-light btn btn-dark  " href= "{{ route('deleteUser/{{ $user->id }}') }}">
                             <i class="fas fa-trash" id="trashIcon"></i>
                         </a>
                         </td>
@@ -442,8 +444,8 @@ Permite ver todos los reportes al administrador
                             <i class="fas fa-trash" id="trashIcon"></i>
                         </a>
                         </button>
-                      
-                        <a class="text-light btn btn-dark  " href="/deleteBarber/{{$barber->id}}">
+                       
+                        <a class="text-light btn btn-dark  " href= "{{ route('deleteBarber/{{$barber->id}}') }}">
                             <i class="fas fa-trash" id="trashIcon"></i>
                         </a>
                         </td>
@@ -544,8 +546,8 @@ Permite ver todos los reportes al administrador
                     <button id="confirm-delete-date" type="button" class="btn btn-danger" onclick="" >
                     
                        
-
-                        <a onclick="" class="text-decoration-none text-light" href="/deleteUser/{{ $user->id }}">
+                                 
+                        <a onclick="" class="text-decoration-none text-light" href="{{ route('deleteUser/{{$user->id}}') }}">
                             Confirmar
                         </a>
 
