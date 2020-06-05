@@ -20,7 +20,7 @@ Permite ver todos los reportes al administrador
         <div class="card lightOverlay">
         
             <div class="card-header bg-dark">
-            <a href="/" class="text-light float-left">
+            <a href={{ route('welcome') }} class="text-light float-left">
                 <i class="h4 fas fa-undo-alt"></i>
             </a>
                 <h4>Panel de Control    </h4>
@@ -35,7 +35,7 @@ Permite ver todos los reportes al administrador
                 </div>
                 @endif
 
-                <a name="" id="" class="btn btn-dark" href="/profile" role="button">
+                <a name="" id="" class="btn btn-dark" href="{{ route('profile') }}" role="button">
                     Perfil
                 </a>
                 <button type="button" class="btn btn-dark js-scroll-trigger" data-toggle="modal" data-target="#create-date" data-whatever="@mdo">Agendar Cita</button>
@@ -141,7 +141,7 @@ Permite ver todos los reportes al administrador
 
 <div class="text-center containner reports mt-4 lightOverlay col-md-12" >
     <div class="card-header bg-dark">
-        <a href="/home" class="text-light float-right">
+        <a href="{{ route('home') }}" class="text-light float-right">
             <i class="h4 fas fa-redo"></i>
         </a>
         <h4>Reportes   </h4>

@@ -9,10 +9,10 @@
 
 <div class="col-md-6 container text-center">
  <div class="card-header bg-dark ">
-  <a href="/home" class="text-light float-left">
+  <a href="{{ route('home') }}" class="text-light float-left">
     <i class="h4 fas fa-undo-alt"></i>
   </a>
-  <a href="/profile" class="text-light float-right">
+  <a href="{{ route('profile') }}" class="text-light float-right">
             <i class="h4 fas fa-redo"></i>
         </a>
   <h3 class="">Perfil</h3>
