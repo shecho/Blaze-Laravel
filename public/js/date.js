@@ -30,7 +30,7 @@ function sendForm() {
         "service": service,
         "_token": token
     };
-    modalValidate(fullName, phone, day, time,barber)
+    modalValidate(fullName, phone, day, time,barber,service)
 
     let url = 'createNewDate/';
     fetch(url, {
@@ -39,19 +39,17 @@ function sendForm() {
             headers: {
                 'Content-Type': 'application/json',
             }
-        }).then(response => {
-          
-            response.json()})
+        }).then(response => response.json())
         .then(data => data == 1 ? modalResponse(1) : modalResponse(0))
     //1 cuando ya esxiste una cita, 0 cuando se creo correctamente
     // console.log(data);
 }
 
 // Valida el modal de citas
-function modalValidate(fullName, phone, day, time,barber) {
+function modalValidate(fullName, phone, day, time,barber,service) {
     // console.log("function modal validate");
     var modal = document.getElementById('modal-response')
-    if (!fullName || !phone || !day || !time || !barber) {
+    if (!fullName || !phone || !day || !time || !barber || !service  ) {
         // console.log("inside if modal validate")
 
         modal.innerHTML = `
