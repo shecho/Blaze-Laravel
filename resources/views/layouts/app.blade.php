@@ -15,6 +15,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+   <script src="{{asset('js/date.js')}}"></script>
     <script src="{{asset('js/services.js')}}"></script>
     <script src="{{ asset('js/admin.js')}}"></script>
    
@@ -23,7 +24,6 @@
    <script src="{{asset('js/users.js')}}"></script>
 
 
-   <script src="{{asset('js/date.js')}}"></script>
 
    <script src="{{asset('js/deleteDate.js')}}"></script>
 

@@ -158,13 +158,13 @@ Permite ver todos los reportes al administrador
             </a>
             <a
                 onclick="showReporte1()"
-                href="{{ route('reporteClientes') }}"
+                href="{{ route('reporteCitas') }}"
                 id=""
                 class="btn btn-dark btn-sm" >Ver Citas DPF
 
             </a>
 
-            <a href="{{ route('reporteClientes') }}" id="export-dates-id" class="btn btn-dark btn-sm" >Exportar Citas Excel</a>
+            <a href="{{ route('exportAllDates') }}" id="export-dates-id" class="btn btn-dark btn-sm" >Exportar Citas Excel</a>
             <a href="{{ route('exportAllusers') }}"  id="export-users-id" class="btn btn-dark btn-sm" >Exportar Clientes Excel</a>
             <button id="show-users-id"  onclick="showUsers()" type="submit" class="btn btn-dark btn-sm" >Ver todos los Clientes</button>
             <br>
