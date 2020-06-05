@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+// Se crea la clase de Modelo Barbero
 class Barber extends Model
 {
      /**

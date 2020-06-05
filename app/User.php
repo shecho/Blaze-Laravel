@@ -32,7 +32,7 @@ class User extends Authenticatable
     ];
 
     /**
-     * Datos de casteo
+     * Datos de casteo de fecha
      * @var array
      */
     protected $casts = [

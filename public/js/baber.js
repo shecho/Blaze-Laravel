@@ -66,6 +66,8 @@ function emailIsValid (email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
   }
 
+
+  
 // Esta funcion valida los datos del modal de Empleado y muestra los menjaes en pantalla
 const valitadeBarber = (barberName,barberDocument,barberPhone,barberEmail) => {
     //  permite validar el formulario y enviar alertas
