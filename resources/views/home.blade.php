@@ -376,10 +376,8 @@ Permite ver todos los reportes al administrador
                 </thead>
                 <tbody id="table-body-id-users" class="">
 
-
  
-
-                    </tr> -->
+                </tr> -->
                 @foreach($users as $user)
 
                     <tr id="table-row-users ">
@@ -506,7 +504,7 @@ Permite ver todos los reportes al administrador
                             Confirmar
                         </a>
                   
-                    <a onclick="confirmDeleteDateButon()" class="text-decoration-none text-light" href="/deleteDate/">
+                    <a onclick="confirmDeleteDateButon()" class="text-decoration-none text-light" href="/deleteDate/{{ $cita->id }}">
                             Confirmar
                         </a>
                
@@ -729,7 +727,10 @@ Permite ver todos los reportes al administrador
     @endif
     @endif
     @endif
+    @else
+        <div>no hay datos</div>
     @endif
+
 @endif
 </div>
 @endsection
