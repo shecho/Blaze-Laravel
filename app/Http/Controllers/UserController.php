@@ -65,7 +65,8 @@ class UserController extends Controller
         $user = Auth::user();
         //dd($user);
         //die("test user profile");
-        return view('profile', compact('user','citas'));
+        return redirect()->route('profile');
+        // return view('profile', compact('user','citas'));
     }
     // Esta funcion actualiza el telefono de usario
     public function updatePhone($iduser, $phone)
@@ -90,7 +91,7 @@ class UserController extends Controller
         $user = Auth::user();
         //dd($user);
         //die("test user profile");
-        return redirect()->route('home');
+        return redirect()->route('profile');
         // return view('profile', compact('user','citas'));
     }
 
