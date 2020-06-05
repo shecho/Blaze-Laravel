@@ -18,7 +18,7 @@ class createDateController extends Controller
     public function CreateDate(Request $request)
     {
         //validar en bd si existe cita en la fecha y hora seleccionada
-        $dateToSearch =  CreateDate::where('day',$request->day)->where('time', $request->time)->first();
+        $dateToSearch =  CreateDate::where('day',$request->day)->where('time', $request->time)->where('barber',$request->barber) ->first();
         if($dateToSearch != null || $dateToSearch != "")
         {
             //para procesar la respuesta en el cliente
