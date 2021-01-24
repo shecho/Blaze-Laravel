@@ -1,7 +1,9 @@
+// Esta funcion la usa boostrap paras suavizar el scroll con  jquerry hace parte de la libreria no tocar
+
 (function($) {
   "use strict"; // Start of use strict
 
-  // Smooth scrolling using jQuery easing
+  // Smooth scrolling using jQuery easing 
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var target = $(this.hash);
@@ -40,3 +42,5 @@
   $(window).scroll(navbarCollapse);
 
 })(jQuery); // End of use strict
+
+//this file add some js intectaion to the wellcome  landing page for easyly use bootstrap

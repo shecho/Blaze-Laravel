@@ -7,19 +7,20 @@ use Illuminate\Support\Facades\Schema;
 class CreateDatesTable extends Migration
 {
     /**
-     * Run the migrations.
+     * Migrcaciones de creacion de citas
      *
      * @return void
      */
     public function up()
     {
         Schema::create('create_dates', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('id')->unique();
             $table->string('userName');
             $table->string('userPhone');
             $table->string('day');
             $table->integer('time');
             $table->string('barber');
+            $table->string('service');
             $table->timestamps();
             
 

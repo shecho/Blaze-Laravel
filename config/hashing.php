@@ -1,5 +1,5 @@
 <?php
-
+// Este archivo de lo genera laravel por defecto y contiene la confiracion de lmodulo de encriptacion para mas informacion ir a la documentacion oficial de laravel. https://laravel.com/
 return [
 
     /*
@@ -7,12 +7,8 @@ return [
     | Default Hash Driver
     |--------------------------------------------------------------------------
     |
-    | This option controls the default hash driver that will be used to hash
-    | passwords for your application. By default, the bcrypt algorithm is
-    | used; however, you remain free to modify this option if you wish.
-    |
-    | Supported: "bcrypt", "argon", "argon2id"
-    |
+    | 
+    te archivo lleva el encriptado de las conraseññas
     */
 
     'driver' => 'bcrypt',

@@ -1,29 +1,27 @@
 <?php
-
+// Este archivo contiene la instacion de aplicacion de laravel con las caracteristas de una aplicacion de laravel. Para mas informacion ir a la docuemntacion oficial de laravel https://laravel.com/
 return [
 
     /*
     |--------------------------------------------------------------------------
-    | Application Name
+    | Applicacion
     |--------------------------------------------------------------------------
     |
-    | This value is the name of your application. This value is used when the
-    | framework needs to place the application's name in a notification or
-    | any other location as required by the application or its packages.
+    |.Este archivo guarfda todas la configuraciones del la aplcaicien entetra y creado por laravel
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Blaze'),
 
     /*
     |--------------------------------------------------------------------------
     | Application Environment
     |--------------------------------------------------------------------------
-    |
+    | 
     | This value determines the "environment" your application is currently
     | running in. This may determine how you prefer to configure various
     | services the application utilizes. Set this in your ".env" file.
-    |
+    | Revisa en que anbiente de sarrollo esta trjando
     */
 
     'env' => env('APP_ENV', 'production'),
@@ -36,7 +34,7 @@ return [
     | When your application is in debug mode, detailed error messages with
     | stack traces will be shown on every error that occurs within your
     | application. If disabled, a simple generic error page is shown.
-    |
+    | Declara el modo debug para econtrar rrores
     */
 
     'debug' => env('APP_DEBUG', false),
@@ -49,7 +47,7 @@ return [
     | This URL is used by the console to properly generate URLs when using
     | the Artisan command line tool. You should set this to the root of
     | your application so that it is used when running Artisan tasks.
-    |
+    | Declara la URL del localhost en
     */
 
     'url' => env('APP_URL', 'http://localhost'),
@@ -64,7 +62,7 @@ return [
     | Here you may specify the default timezone for your application, which
     | will be used by the PHP date and date-time functions. We have gone
     | ahead and set this to a sensible default for you out of the box.
-    |
+    | DEclara le tipo de uso horario com oun UTC
     */
 
     'timezone' => 'UTC',
@@ -77,7 +75,7 @@ return [
     | The application locale determines the default locale that will be used
     | by the translation service provider. You are free to set this value
     | to any of the locales which will be supported by the application.
-    |
+    | Configura el lenguaje general de la apliucaion 
     */
 
     'locale' => 'en',
@@ -90,7 +88,7 @@ return [
     | The fallback locale determines the locale to use when the current one
     | is not available. You may change the value to correspond to any of
     | the language folders that are provided through your application.
-    |
+    | Crea el fallbacl del lenguaje
     */
 
     'fallback_locale' => 'en',
@@ -103,7 +101,7 @@ return [
     | This locale will be used by the Faker PHP library when generating fake
     | data for your database seeds. For example, this will be used to get
     | localized telephone numbers, street address information and more.
-    |
+    | Configura el usao de faker para crear datos
     */
 
     'faker_locale' => 'en_US',
@@ -116,7 +114,7 @@ return [
     | This key is used by the Illuminate encrypter service and should be set
     | to a random, 32 character string, otherwise these encrypted strings
     | will not be safe. Please do this before deploying an application!
-    |
+    | Encripta la llave
     */
 
     'key' => env('APP_KEY'),
@@ -131,7 +129,7 @@ return [
     | The service providers listed here will be automatically loaded on the
     | request to your application. Feel free to add your own services to
     | this array to grant expanded functionality to your applications.
-    |
+    | Carga los providers
     */
 
     'providers' => [
@@ -164,16 +162,20 @@ return [
 
         /*
          * Package Service Providers...
+         * PAckete de servisios
          */
 
         /*
          * Application Service Providers...
+         * Providers de servidios
          */
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
+
 
     ],
 
@@ -185,7 +187,7 @@ return [
     | This array of class aliases will be registered when this application
     | is started. However, feel free to register as many as you wish as
     | the aliases are "lazy" loaded so they don't hinder performance.
-    |
+    | Configura eluspo de alias para las clases que se usan
     */
 
     'aliases' => [
@@ -225,6 +227,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
 
     ],
 

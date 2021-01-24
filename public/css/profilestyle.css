@@ -1,3 +1,5 @@
+/* Esta seccion contiene los estilos de la vista profile */
+
 .img-back-cont{
   
   background-image: url("../img/background/header.jpg");
@@ -18,4 +20,9 @@
 .main-container-total{
  
   height: 100vh;
+}
+
+
+.lightOverlay{
+  background-color: rgba(255, 255, 255,0.85);
 }

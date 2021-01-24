@@ -1,5 +1,5 @@
 <?php
-
+// Este archivo es parte d la configracion de Laravel
 namespace App\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
@@ -8,6 +8,7 @@ use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 class Kernel extends ConsoleKernel
 {
     /**
+     * Comandos de artisan que se entregan a la aplicaciona
      * The Artisan commands provided by your application.
      *
      * @var array
@@ -17,6 +18,7 @@ class Kernel extends ConsoleKernel
     ];
 
     /**
+     * Define a la agenda de comandos
      * Define the application's command schedule.
      *
      * @param  \Illuminate\Console\Scheduling\Schedule  $schedule

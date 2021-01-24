@@ -1,3 +1,5 @@
+<!-- Esta vista permite recuparar la contraseña en caso de que no funcione -->
+
 @extends('layouts.app')
 
 @section('content')

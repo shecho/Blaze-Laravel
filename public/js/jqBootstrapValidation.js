@@ -1,3 +1,4 @@
+// Este archivo lo agrega la libreria de boostrap
 /* jqBootstrapValidation
  * A plugin for automating validation on Twitter Bootstrap formatted forms.
  *

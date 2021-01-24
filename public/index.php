@@ -1,5 +1,7 @@
 <?php
 
+// Archivo princinal de arranqwue de laravel.
+// Este archivo es framawork es si mismo para mas informacion ir a la documentacion inical de laravel https://laravel.com/
 /**
  * Laravel - A PHP Framework For Web Artisans
  *

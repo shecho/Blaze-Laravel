@@ -1,3 +1,5 @@
+<!-- Esta es la vista principal pádre de todas las vitas y de las que todas heredan -->
+
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -9,11 +11,25 @@
 
     
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Blaze') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{asset('js/services.js')}}"></script>
+    <script src="{{ asset('js/admin.js')}}"></script>
+   
+   <script src="{{asset('js/baber.js')}}"></script>
 
+   <script src="{{asset('js/users.js')}}"></script>
+
+
+   <script src="{{asset('js/date.js')}}"></script>
+
+   <script src="{{asset('js/deleteDate.js')}}"></script>
+
+   <script src="{{asset('js/edidProfile.js')}}"></script>
+
+   
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -41,13 +57,17 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <!-- Bootstrap core CSS -->
-    <link href="/../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="{{ asset('/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" />
+    
+    
    
    <!-- font awesome -->
     <script src="https://kit.fontawesome.com/d4bbca006e.js" crossorigin="anonymous"></script>
+    
 
     <link href="{{ asset('css/profilestyle.css') }}" rel="stylesheet">
-    <!-- <link href="/../css/profilestyle.css" rel="stylesheet" /> -->
+   
 
 
 </head>
@@ -73,11 +93,11 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Logarse') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Registrarse') }}</a>
                                 </li>
                             @endif
                         @else
@@ -108,22 +128,12 @@
             @yield('content')
         </main>
     </div>
-    <script src="/../js/admin.js"></script>
-     <!-- Bootstrap core JavaScript -->
-        
-
-    <!-- Plugin JavaScript -->
-    <!-- <script src="/../jquery-easing/jquery.easing.min.js"></script> -->
-
-    <!-- Contact form JavaScript -->
-    <!-- <script src="/../js/jqBootstrapValidation.js"></script> -->
-    <!-- <script src="/../js/contact_me.js"></script> -->
-
+   
     
-    <!-- Custom scripts for this template
-    <script src="/../js/agency.min.js"></script>
-     -->
-     <script src="/../js/date.js"></script>
+    
+
+
+
 
 </body>
 </html>

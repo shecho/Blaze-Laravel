@@ -1,5 +1,5 @@
 <?php
-
+// Este archivo hace la conexion a la base de datos. Esta conexion es unica en toda la aplciaicon
 use Illuminate\Support\Str;
 
 return [
@@ -8,10 +8,7 @@ return [
     |--------------------------------------------------------------------------
     | Default Database Connection Name
     |--------------------------------------------------------------------------
-    |
-    | Here you may specify which of the database connections below you wish
-    | to use as your default connection for all database work. Of course
-    | you may use many connections at once using the Database library.
+    |Se define el motor de bases de datos que se va a usar
     |
     */
 
@@ -30,7 +27,7 @@ return [
     | All database work in Laravel is done through the PHP PDO facilities
     | so make sure you have the driver for your particular database of
     | choice installed on your machine before you begin development.
-    |
+    | Se realiza la conexion y se definen todos los parametros de ocniguracion de cada uno de los morores de basesa de datos con las que el fraamework es compatible
     */
 
     'connections' => [
@@ -101,7 +98,7 @@ return [
     | This table keeps track of all the migrations that have already run for
     | your application. Using this information, we can determine which of
     | the migrations on disk haven't actually been run in the database.
-    |
+    | Repositoria de migraciones
     */
 
     'migrations' => 'migrations',
@@ -114,7 +111,7 @@ return [
     | Redis is an open source, fast, and advanced key-value store that also
     | provides a richer body of commands than a typical key-value system
     | such as APC or Memcached. Laravel makes it easy to dig right in.
-    |
+    | Configuracion de redis
     */
 
     'redis' => [

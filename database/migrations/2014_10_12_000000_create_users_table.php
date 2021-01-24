@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Schema;
 class CreateUsersTable extends Migration
 {
     /**
-     * Run the migrations.
+     * .Migraciones de usurios
      *
      * @return void
      */
@@ -22,12 +22,13 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
+            $table->softDeletes();
             $table->timestamps();
         });
     }
 
     /**
-     * Reverse the migrations.
+     * Reversar megraciones
      *
      * @return void
      */

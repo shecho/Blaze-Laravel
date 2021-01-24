@@ -1,4 +1,8 @@
-// console.log("test x")
+
+// Esta funcion esta implementada en otro archuvo de momento se deja aqui por escalabilidad. 
+// 
+
+
 
 // const filterByDay = () => 
 // {

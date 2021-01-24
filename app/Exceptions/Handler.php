@@ -1,5 +1,5 @@
 <?php
-
+// Este archivo es parte d la configracion de Laravel y maneja los errores y excepciones
 namespace App\Exceptions;
 
 use Exception;
@@ -8,8 +8,8 @@ use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 class Handler extends ExceptionHandler
 {
     /**
-     * A list of the exception types that are not reported.
      *
+     * Es una lesta de tipos de excepciones que no seran reportadas
      * @var array
      */
     protected $dontReport = [
@@ -17,8 +17,7 @@ class Handler extends ExceptionHandler
     ];
 
     /**
-     * A list of the inputs that are never flashed for validation exceptions.
-     *
+     * Es una lesta de inputs de excepciones que no seran reportadas
      * @var array
      */
     protected $dontFlash = [
@@ -27,7 +26,7 @@ class Handler extends ExceptionHandler
     ];
 
     /**
-     * Report or log an exception.
+     *Reportes de logueo
      *
      * @param  \Exception  $exception
      * @return void
@@ -40,6 +39,7 @@ class Handler extends ExceptionHandler
     }
 
     /**
+     * Renderriza la excepcion en un HTML
      * Render an exception into an HTTP response.
      *
      * @param  \Illuminate\Http\Request  $request

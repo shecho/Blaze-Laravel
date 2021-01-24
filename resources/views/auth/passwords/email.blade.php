@@ -1,3 +1,5 @@
+
+<!-- Vista de email -->
 @extends('layouts.app')
 
 @section('content')

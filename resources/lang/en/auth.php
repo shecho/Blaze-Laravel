@@ -1,5 +1,6 @@
 <?php
-
+// Archivo que agrega la ravel por defecto
+// PAra mas informacion ir a la documentacion ofical de Laravel https://laravel.com/
 return [
 
     /*
@@ -13,7 +14,7 @@ return [
     |
     */
 
-    'failed' => 'These credentials do not match our records.',
-    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
+    'failed' => 'Estas credencias de acceso no coinciden en nuestros registros.',
+    'throttle' => 'Demasiados intentos fallidos. Intente de nuevo en :seconds segundos.',
 
 ];

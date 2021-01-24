@@ -1,5 +1,5 @@
 <?php
-
+// Este controlador se encarfa de Registrar los usuarios
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
@@ -15,24 +15,22 @@ class RegisterController extends Controller
     |--------------------------------------------------------------------------
     | Register Controller
     |--------------------------------------------------------------------------
-    |
-    | This controller handles the registration of new users as well as their
-    | validation and creation. By default this controller uses a trait to
-    | provide this functionality without requiring any additional code.
+    |Este controlador manjea el registro de nuevos usuarios 
+     y hace las solicitudes de creacion a la base de datros
     |
     */
 
     use RegistersUsers;
 
     /**
-     * Where to redirect users after registration.
+     * Redicccion
      *
      * @var string
      */
     protected $redirectTo = RouteServiceProvider::HOME;
 
     /**
-     * Create a new controller instance.
+     * Crea una nueva instancia
      *
      * @return void
      */
@@ -42,7 +40,7 @@ class RegisterController extends Controller
     }
 
     /**
-     * Get a validator for an incoming registration request.
+     * Obtiene un validador para la peticion de registro
      *
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
@@ -57,7 +55,7 @@ class RegisterController extends Controller
     }
 
     /**
-     * Create a new user instance after a valid registration.
+     * Crea un nuevo usiario con los datos enviados desde el front
      *
      * @param  array  $data
      * @return \App\User

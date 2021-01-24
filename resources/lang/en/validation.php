@@ -1,5 +1,5 @@
 <?php
-
+// Validadciones
 return [
 
     /*
@@ -13,16 +13,16 @@ return [
     |
     */
 
-    'accepted' => 'The :attribute must be accepted.',
-    'active_url' => 'The :attribute is not a valid URL.',
-    'after' => 'The :attribute must be a date after :date.',
-    'after_or_equal' => 'The :attribute must be a date after or equal to :date.',
-    'alpha' => 'The :attribute may only contain letters.',
-    'alpha_dash' => 'The :attribute may only contain letters, numbers, dashes and underscores.',
-    'alpha_num' => 'The :attribute may only contain letters and numbers.',
-    'array' => 'The :attribute must be an array.',
-    'before' => 'The :attribute must be a date before :date.',
-    'before_or_equal' => 'The :attribute must be a date before or equal to :date.',
+    'accepted' => 'El :attribute debe sr aceprtado.',
+    'active_url' => 'The :attribute no es una URL valida.',
+    'after' => 'The :attribute debe ser una defha posterior :date.',
+    'after_or_equal' => 'The :attribute debe ser despues o igual :date.',
+    'alpha' => 'The :attribute solo debe contener letras.',
+    'alpha_dash' => 'The :attribute debe contener letras, numeros y alfanumericos.',
+    'alpha_num' => 'The :attribute solo debe contener letras y numeros.',
+    'array' => 'The :attribute sebe ser un arreglo.',
+    'before' => 'The :attribute debe ser una fecha anterior :date.',
+    'before_or_equal' => 'The :attribute debe ser anteior o igual a :date.',
     'between' => [
         'numeric' => 'The :attribute must be between :min and :max.',
         'file' => 'The :attribute must be between :min and :max kilobytes.',
@@ -39,7 +39,7 @@ return [
     'digits_between' => 'The :attribute must be between :min and :max digits.',
     'dimensions' => 'The :attribute has invalid image dimensions.',
     'distinct' => 'The :attribute field has a duplicate value.',
-    'email' => 'The :attribute must be a valid email address.',
+    'email' => 'El :attribute debe ser una direccion de email valida.',
     'ends_with' => 'The :attribute must end with one of the following: :values.',
     'exists' => 'The selected :attribute is invalid.',
     'file' => 'The :attribute must be a file.',

@@ -1,15 +1,12 @@
 <?php
-
+// Este archivo de lo genera laravel por defecto para mas informacion ir a la documentacion oficial de laravel. https://laravel.com/
 return [
 
     /*
     |--------------------------------------------------------------------------
     | View Storage Paths
     |--------------------------------------------------------------------------
-    |
-    | Most templating systems load templates from disk. Here you may specify
-    | an array of paths that should be checked for your views. Of course
-    | the usual Laravel view path has already been registered for you.
+    |Este archivo maneja las vistas y sus creaciones
     |
     */
 

@@ -1,10 +1,17 @@
+<!-- Nos disculpamos por los comentarios inncesarios en este proyecto. 
+Sabemos e antemano que son malas practicas pero los hemos agregado por motivos academicos y porque nos lo han solicitado nuestros evaluadores
+
+-->
+
+
+<!-- Esta el la vista de inio de la aplicacion aqui estan todas las seciones y la barra de navegacion -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    <meta      name="viewport"
+      conet="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <meta name="description" content="" />
     <meta name="author" content="" />
@@ -13,13 +20,17 @@
 
 
     <title>Blaze Barber Landing Page</title>
+    <!-- boostrap -->
+    <!-- Bootstrap core de CSS -->
+    <!-- <link href="/../bootstrap/css/bootstrap.min.css" rel="stylesheet" /> -->
+    <link href="{{asset('/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" />
 
-    <!-- Bootstrap core CSS -->
-    <link href="/../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- fuentes -->
 
-    <!-- Custom fonts for this template -->
+    <!-- href="/../fontawesome-free/css/all.min.css" -->
+    <!-- Fuentes de google -->
     <link
-      href="/../fontawesome-free/css/all.min.css"
+      href="{{asset('fontawesome-free/css/all.min.css')}}"
       rel="stylesheet"
       type="text/css"
     />
@@ -44,8 +55,9 @@
       type="text/css"
     />
 
-    <!-- Custom styles for this template -->
-    <link href="/../css/agency.css" rel="stylesheet" />
+    <!-- css personalizados -->
+    <!-- <link href="/../css/agency.css" rel="stylesheet" /> -->
+    <link href="{{asset('/css/agency.css')}}" rel="stylesheet" />
   </head>
 
   <body id="page-top">
@@ -71,33 +83,33 @@
           <ul class="navbar-nav text-uppercase ml-auto">
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#services"
-                >Services</a
+                >Servicios</a
               >
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#portfolio"
-                >Products</a
+                >Productos</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+              <a class="nav-link js-scroll-trigger" href="#about">Acerca de</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#team">Team</a>
+              <a class="nav-link js-scroll-trigger" href="#team">Equipo</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+              <a class="nav-link js-scroll-trigger" href="#contact">Contactanos</a>
             </li>
             <div class="login-button">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}" >Home</a>
+                        <a href="{{ url('/home') }}" >Panel de Control </a>
                     @else
                         <a href="{{ route('login') }}"class="btn btn-primary">Login</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}"class="btn btn-primary">Register</a>
+                            <a href="{{ route('register') }}"class="btn btn-primary">Registrarse</a>
                         @endif
                     @endauth
                 </div>
@@ -115,20 +127,21 @@
       <div class="container">
         <div class="intro-text">
 
-          <div class="intro-lead-in">Welcome to Big Boy Blaze!</div>
-          <div class="intro-heading text-uppercase">It's Nice To Meet You</div>
+          <div class="intro-lead-in">Bienvenido a Big Boy Blaze!</div>
+          <div class="intro-heading text-uppercase">Agenda tu cita</div>
 
-          <button  type="button" class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" data-toggle="modal" data-target="#create-date" data-whatever="@mdo">Create Date</button>
+          <button  type="button" class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" data-toggle="modal" data-target="#create-date" data-whatever="@mdo">Agendar Cita</button> 
 
         
 
-          {{--Modal create date  --}}
+          {{--Modal crear cita  --}}
+          <!-- Modal para crear una cita -->
           
           <div class="modal fade" id="create-date" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title text-dark" id="ModalLabel">Create new Date</h5>
+              <h5 class="modal-title text-dark" id="ModalLabel">Agendar Cita</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -138,17 +151,17 @@
                   @csrf
                     <input type="hidden" value="{{ csrf_token() }}" id="token"/>
                     <div class="form-group">
-                      {{-- <label for="recipient-name" class="col-form-label text-dark" place>Full name</label> --}}
-                      <input placeholder="Full name" type="text" class="form-control" id="recipient-name">
+                      {{-- <label for="recipient-name" class="col-form-label text-dark" place>Nombre Completo</label> --}}
+                      <input placeholder="Nombre Completo" type="text" class="form-control" id="recipient-name">
                     </div>
                     <div class="form-group">
                       {{-- <label  for="message-text" class="col-form-label text-dark">Telefono</label> --}}
                       <div class="form-group">
-                      <input placeholder="Phone" type="number"  class="form-control" id="message-text">
+                      <input placeholder="Telefono" type="number"  class="form-control" id="message-text">
                     </div>
                     <div class="form-group">
                       {{-- <label for="message-text" class="col-form-label text-dark">Day</label> --}}
-                      <input min="2020-04-10" max="2020-04-30" type="date"  class="form-control" id="date-day">
+                      <input min="2020-04-17" max="2020-04-29" type="date"  class="form-control" id="date-day">
                     </div>
                       {{-- <label for="message-text" class="col-form-label text-dark">Time</label> --}}
                       <div class="form-group">
@@ -168,12 +181,26 @@
                       </div>
                       <div class="form-group">
                         <select class="form-control" name="time" id="barber">
-                          <option value="1">Barbero 1</option>
-                          <option value="2">Barbero 2</option>
-                          <option value="3">Barbero 3</option>
+                          <option value="1">Cualquiera</option>
+                        @foreach($barberos as $barber)
+                          <option value="{{ $barber->barberName }}">{{ $barber->barberName }}</option>
+                        @endforeach
+              
+                          <!-- <!-- <option value="1">Barbero 1</option> -->
+                        
                         </select>
                         {{-- <label for="message-text" class="col-form-label text-dark">Barber</label> --}}
                         {{-- <input placeholder="Barber" type="text"  class="form-control" id="message-text"> --}}
+                      </div>
+                      <div class="form-group">
+                        <select class="form-control" name="time" id="services-date-id">
+                          <option value="1">Asesoramiento</option>
+                         @foreach($servicios as $servicio)
+                          <option value="{{ $servicio->serviceName }}">{{ $servicio->serviceName }}</option>
+                         @endforeach
+                                
+                        </select>
+                     
                       </div>
                       <div class="form-group" id="modal-response">
 
@@ -182,8 +209,18 @@
                   </form>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                  <button id="confirm-date" type="button" class="btn btn-primary"> Confirm</button>
+
+                
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                  <button id="confirm-date" type="button" class="btn btn-primary"> Confirmar</button>
+
+                  <div class="">
+                  <a target="blank" href="https://api.whatsapp.com/send?phone=5703194853019&text=Hola%20quisiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x">
+              
+                    <i class="fab 	fa-whatsapp fa-stack-1xa text-success"></i>
+                  </a>
+                </div>
+                  
                 </div>
               </div>
             </div>
@@ -191,25 +228,23 @@
           
 
         </div>
+        <!-- cierre del modal -->
 
-
-{{-- modal --}}
-
-
+       
 
 
 
 
+        <!-- Derechos de uso de la imagen -->
         <div clas="">Photo by Nick Demou from Pexels</div>
       </div>
     </header>
-
-    <!-- Services -->
+    <!-- Servicios  -->
     <section class="page-section" id="services">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Services</h2>
+            <h2 class="section-heading text-uppercase">Servicios</h2>
             <h3 class="section-subheading text-muted">
               Lorem ipsum dolor sit amet consectetur.
             </h3>
@@ -221,11 +256,11 @@
                   <i class="fas fa-circle fa-stack-2x text-secundary"></i>
               <i class="fas fa-cut fa-stack-1x fa-inverse"></i>
             </span>
-            <h4 class="service-heading">HairCuts</h4>
+            <h4 class="service-heading">Cortes</h4>
             <p class="text-muted">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
               maxime quam architecto quo inventore harum ex magni, dicta
-              impedit.
+              impedit
             </p>
           </div>
           <div class="col-md-4">
@@ -233,7 +268,7 @@
               <i class="fas fa-circle fa-stack-2x text-secundary"></i>
               <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
             </span>
-            <h4 class="service-heading">Beuty and Care Products</h4>
+            <h4 class="service-heading">Productos de belleza y cuidado</h4>
             <p class="text-muted">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
               maxime quam architecto quo inventore harum ex magni, dicta
@@ -245,7 +280,7 @@
               <i class="fas fa-circle fa-stack-2x text-secundary"></i>
               <i class="fas fa-gamepad fa-stack-1x fa-inverse"></i>
             </span>
-            <h4 class="service-heading">And more</h4>
+            <h4 class="service-heading">Entretenimiento y mas</h4>
             <p class="text-muted">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
               maxime quam architecto quo inventore harum ex magni, dicta
@@ -256,14 +291,14 @@
       </div>
     </section>
 
-    <!-- Portfolio Grid -->
+    <!-- Grid de lportafoilio-->
     <section class="bg-light page-section" id="portfolio">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Procducts</h2>
+            <h2 class="section-heading text-uppercase">Productos</h2>
             <h3 class="section-subheading text-muted">
-              Lorem ipsum dolor sit amet consectetur.
+              Belleza y cuidado
             </h3>
           </div>
         </div>
@@ -286,8 +321,8 @@
               />
             </a>
             <div class="portfolio-caption">
-              <h4>Threads</h4>
-              <p class="text-muted">Illustration</p>
+              <h4>Pomadas</h4>
+              <p class="text-muted">A base de agua </p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -308,8 +343,8 @@
               />
             </a>
             <div class="portfolio-caption">
-              <h4>Explore</h4>
-              <p class="text-muted">Graphic Design</p>
+              <h4>Tratamientos para la barba</h4>
+              <p class="text-muted">Desarrollo y crecimiento</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -330,8 +365,8 @@
               />
             </a>
             <div class="portfolio-caption">
-              <h4>Finish</h4>
-              <p class="text-muted">Identity</p>
+              <h4>Tinturas</h4>
+              <p class="text-muted">Gran gama de colores</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -352,8 +387,8 @@
               />
             </a>
             <div class="portfolio-caption">
-              <h4>Lines</h4>
-              <p class="text-muted">Branding</p>
+              <h4>Herrammientas profesionales</h4>
+              <p class="text-muted">Ecuantra aqui lo que necesitas para tu barberia</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -374,8 +409,8 @@
               />
             </a>
             <div class="portfolio-caption">
-              <h4>Southwest</h4>
-              <p class="text-muted">Website Design</p>
+              <h4>Vaporizadores</h4>
+              <p class="text-muted">Difectes marcaas, tipos y propositos</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -396,20 +431,20 @@
               />
             </a>
             <div class="portfolio-caption">
-              <h4>Window</h4>
-              <p class="text-muted">Photography</p>
+              <h4>Puplementos</h4>
+              <p class="text-muted">Ganancia muscular</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- About -->
+    <!-- Grid Acerca de  -->
     <section class="page-section" id="about">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">About</h2>
+            <h2 class="section-heading text-uppercase">Acerca de</h2>
             <h3 class="section-subheading text-muted">
               Lorem ipsum dolor sit amet consectetur.
             </h3>
@@ -429,7 +464,7 @@
                 <div class="timeline-panel">
                   <div class="timeline-heading">
                     <h4>2009-2011</h4>
-                    <h4 class="subheading">Our Humble Beginnings</h4>
+                    <h4 class="subheading">Nuentros inicios</h4>
                   </div>
                   <div class="timeline-body">
                     <p class="text-muted">
@@ -451,8 +486,8 @@
                 </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
-                    <h4>March 2011</h4>
-                    <h4 class="subheading">An Agency is Born</h4>
+                    <h4>Marzo 2011</h4>
+                    <h4 class="subheading">Nuentra Creacion</h4>
                   </div>
                   <div class="timeline-body">
                     <p class="text-muted">
@@ -474,8 +509,8 @@
                 </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
-                    <h4>December 2012</h4>
-                    <h4 class="subheading">Transition to Full Service</h4>
+                    <h4>Diciembre 2012</h4>
+                <h4 class="subheading">Nueva sede</h4>
                   </div>
                   <div class="timeline-body">
                     <p class="text-muted">
@@ -498,7 +533,7 @@
                 <div class="timeline-panel">
                   <div class="timeline-heading">
                     <h4>July 2014</h4>
-                    <h4 class="subheading">Phase Two Expansion</h4>
+                    <h4 class="subheading">Expansion</h4>
                   </div>
                   <div class="timeline-body">
                     <p class="text-muted">
@@ -512,7 +547,7 @@
               </li>
               <li class="timeline-inverted">
                 <div class="timeline-image">
-                  <h4>Be Part <br />Of Our <br />Story!</h4>
+                  <h4>Se parte <br />de nuestra <br />Historia!</h4>
                 </div>
               </li>
             </ul>
@@ -521,23 +556,23 @@
       </div>
     </section>
 
-    <!-- Team -->
+    <!-- Equipo de trabajo -->
     <section class="bg-light page-section" id="team">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
+            <h2 class="section-heading text-uppercase">Nuestro genial equipo</h2>
             <h3 class="section-subheading text-muted">
-              Lorem ipsum dolor sit amet consectetur.
+             Profesionales destacados.
             </h3>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-4">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="#" alt="" />
-              <h4>Kay Garland</h4>
-              <p class="text-muted">Barber and Styler</p>
+              <img class="mx-auto rounded-circle" src="img/barbers/barber2.jpg" alt="" />
+              <h4>Alejandro</h4>
+              <p class="text-muted">Barba y estilos</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
                   <a href="#">
@@ -559,9 +594,9 @@
           </div>
           <div class="col-sm-4">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="#" alt="" />
+              <img class="mx-auto rounded-circle" src="img/barbers/barber1.jpg" alt="barber1 img" />
               <h4>Andres</h4>
-              <p class="text-muted">Owner manager and Old School Barber</p>
+              <p class="text-muted">Administrador y fundador</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
                   <a href="#">
@@ -583,9 +618,9 @@
           </div>
           <div class="col-sm-4">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="#" alt="" />
-              <h4>Pertersen</h4>
-              <p class="text-muted">Barber and ...</p>
+          <img class="mx-auto rounded-circle" src="img/barbers/barber2.jpg" alt="" />
+              <h4>Damian</h4>
+              <p class="text-muted">Barbas y tintes</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
                   <a href="#">
@@ -609,16 +644,14 @@
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
             <p class="large text-muted">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
-              eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam
-              corporis ea, alias ut unde.
+              Este es solo un texto de ejemplo para los profresores que no saben ingles
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Clients -->
+    <!-- Cleintes no se implemnta por el momento, pues no hay testitoniales -->
     <!-- 
     <section class="py-5">
       <div class="container">
@@ -647,14 +680,14 @@
       </div>
     </section> -->
 
-    <!-- Contact -->
+    <!-- Contactanos Se agrega  aunque esta fuera de la solcitud inical -->
     <section class="page-section" id="contact">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Contact Us</h2>
+            <h2 class="section-heading text-uppercase">Contactanos</h2>
             <h3 class="section-subheading text-muted">
-              Lorem ipsum dolor sit amet consectetur.
+              Dejanos saber que piensas
             </h3>
           </div>
         </div>
@@ -668,7 +701,7 @@
                         class="form-control"
                         id="name"
                         type="text"
-                        placeholder="Your Name *"
+                        placeholder="Nombre Completo *"
                         required="required"
                         data-validation-required-message="Please enter your name."
                     />
@@ -679,7 +712,7 @@
                       class="form-control"
                       id="email"
                       type="email"
-                      placeholder="Your Email *"
+                      placeholder="E-mail *"
                       required="required"
                       data-validation-required-message="Please enter your email address."
                     />
@@ -689,8 +722,8 @@
                     <input
                       class="form-control"
                       id="phone"
-                      type="tel"
-                      placeholder="Your Phone *"
+                      type="number"
+                      placeholder="Telefono *"
                       required="required"
                       data-validation-required-message="Please enter your phone number."
                     />
@@ -702,7 +735,7 @@
                     <textarea
                       class="form-control"
                       id="message"
-                      placeholder="Your Message *"
+                      placeholder="Mensaje *"
                       required="required"
                       data-validation-required-message="Please enter a message."
                     ></textarea>
@@ -717,8 +750,12 @@
                     class="btn btn-primary btn-xl text-uppercase"
                     type="submit"
                   >
-                    Send Message
+                    Enviar Mensaje
                   </button>
+                  <a target="blank" href="https://api.whatsapp.com/send?phone=5703194853019&text=Hola%20Quiesiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x">
+             
+                     <i class="fab 	fa-whatsapp fa-stack-1x fa-inverse"></i>
+                  </a>
                 </div>
               </div>
             </form>
@@ -732,22 +769,22 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-md-4">
-            <span class="copyright">Copyright &copy; Your Website 2019</span>
+            <span class="copyright">Copyright &copy; COBAC CreationsCo 2020</span>
           </div>
           <div class="col-md-4">
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
-                <a href="#">
+                <a  target="blank" href="https://twitter.com/explore">
                   <i class="fab fa-twitter"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
+                <a  target="blank" href="https://www.facebook.com/">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
               </li>
-              <li class="list-inline-item">
-                <a href="#">
+              <li  class="list-inline-item">
+                <a target="blank" href="https://www.linkedin.com/">
                   <i class="fab fa-linkedin-in"></i>
                 </a>
               </li>
@@ -756,10 +793,10 @@
           <div class="col-md-4">
             <ul class="list-inline quicklinks">
               <li class="list-inline-item">
-                <a href="#">Privacy Policy</a>
+                <a href="#">Politica de privacidad</a>
               </li>
               <li class="list-inline-item">
-                <a href="#">Terms of Use</a>
+                <a href="#">Terminos de uso</a>
               </li>
             </ul>
           </div>
@@ -767,6 +804,7 @@
       </div>
     </footer>
 
+    <!-- Modal del portafolio de servicios  -->
     <!-- Portfolio Modals -->
 
     <!-- Modal 1 -->
@@ -789,7 +827,7 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
+                  <h2 class="text-uppercase">Pomadas</h2>
                   <p class="item-intro text-muted">
                     Lorem ipsum dolor sit amet consectetur.
                   </p>
@@ -799,16 +837,16 @@
                     alt=""
                   />
                   <p>
-                    Use this area to describe your project. Lorem ipsum dolor
+                    Descripción del Poductoa Lorem ipsum dolor
                     sit amet, consectetur adipisicing elit. Est blanditiis
                     dolorem culpa incidunt minus dignissimos deserunt repellat
                     aperiam quasi sunt officia expedita beatae cupiditate,
                     maiores repudiandae, nostrum, reiciendis facere nemo!
                   </p>
                   <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Threads</li>
-                    <li>Category: Illustration</li>
+                    <li>Fecha: Abril 2020</li>
+                    <li>Cleinte: Andres</li>
+                    <li>Categoria: diseno</li>
                   </ul>
                   <button
                     class="btn btn-primary"
@@ -816,7 +854,7 @@
                     type="button"
                   >
                     <i class="fas fa-times"></i>
-                    Close Project
+                    Close Product
                   </button>
                 </div>
               </div>
@@ -846,7 +884,7 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
+                  <h2 class="text-uppercase">Barba</h2>
                   <p class="item-intro text-muted">
                     Lorem ipsum dolor sit amet consectetur.
                   </p>
@@ -856,24 +894,23 @@
                     alt=""
                   />
                   <p>
-                    Use this area to describe your project. Lorem ipsum dolor
+                    Lorem ipsum dolor
                     sit amet, consectetur adipisicing elit. Est blanditiis
                     dolorem culpa incidunt minus dignissimos deserunt repellat
                     aperiam quasi sunt officia expedita beatae cupiditate,
                     maiores repudiandae, nostrum, reiciendis facere nemo!
                   </p>
                   <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Explore</li>
-                    <li>Category: Graphic Design</li>
+                  <li>Fecha: Abril 2020</li>
+                    <li>Cliente: Andres</li>
+                    <li>Categoria: Design</li>
                   </ul>
                   <button
                     class="btn btn-primary"
                     data-dismiss="modal"
-                    type="button"
-                  >
+                    type="button">
                     <i class="fas fa-times"></i>
-                    Close Project
+                    Cerrar
                   </button>
                 </div>
               </div>
@@ -903,7 +940,7 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
+                  <h2 class="text-uppercase">Tinturas</h2>
                   <p class="item-intro text-muted">
                     Lorem ipsum dolor sit amet consectetur.
                   </p>
@@ -913,24 +950,23 @@
                     alt=""
                   />
                   <p>
-                    Use this area to describe your project. Lorem ipsum dolor
+                    Descripción del Poducto: Lorem ipsum dolor
                     sit amet, consectetur adipisicing elit. Est blanditiis
                     dolorem culpa incidunt minus dignissimos deserunt repellat
                     aperiam quasi sunt officia expedita beatae cupiditate,
                     maiores repudiandae, nostrum, reiciendis facere nemo!
                   </p>
                   <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Finish</li>
-                    <li>Category: Identity</li>
+                    <li>Fehca: Abril 2020</li>
+                    <li>Cliente: Andres</li>
+                    <li>Categoria: Design</li>
                   </ul>
                   <button
                     class="btn btn-primary"
                     data-dismiss="modal"
-                    type="button"
-                  >
+                    type="button">
                     <i class="fas fa-times"></i>
-                    Close Project
+                    Cerrar
                   </button>
                 </div>
               </div>
@@ -960,7 +996,7 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
+                  <h2 class="text-uppercase">Herramientas</h2>
                   <p class="item-intro text-muted">
                     Lorem ipsum dolor sit amet consectetur.
                   </p>
@@ -970,24 +1006,23 @@
                     alt=""
                   />
                   <p>
-                    Use this area to describe your project. Lorem ipsum dolor
+                    Descripción del Poducto: Lorem ipsum dolor
                     sit amet, consectetur adipisicing elit. Est blanditiis
                     dolorem culpa incidunt minus dignissimos deserunt repellat
                     aperiam quasi sunt officia expedita beatae cupiditate,
                     maiores repudiandae, nostrum, reiciendis facere nemo!
                   </p>
                   <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Lines</li>
-                    <li>Category: Branding</li>
+                  <li>Fehca: Abril 2020</li>
+                    <li>Cliente: Andres</li>
+                    <li>Categoria:  Design</li>
                   </ul>
                   <button
                     class="btn btn-primary"
                     data-dismiss="modal"
-                    type="button"
-                  >
+                    type="button">
                     <i class="fas fa-times"></i>
-                    Close Project
+                    Cerrar
                   </button>
                 </div>
               </div>
@@ -1017,7 +1052,7 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
+                  <h2 class="text-uppercase">Vaporizadores</h2>
                   <p class="item-intro text-muted">
                     Lorem ipsum dolor sit amet consectetur.
                   </p>
@@ -1027,24 +1062,23 @@
                     alt=""
                   />
                   <p>
-                    Use this area to describe your project. Lorem ipsum dolor
+                    Descripción del Poducto: Lorem ipsum dolor
                     sit amet, consectetur adipisicing elit. Est blanditiis
                     dolorem culpa incidunt minus dignissimos deserunt repellat
                     aperiam quasi sunt officia expedita beatae cupiditate,
                     maiores repudiandae, nostrum, reiciendis facere nemo!
                   </p>
                   <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Southwest</li>
-                    <li>Category: Website Design</li>
+                    <li>Fecha: Abril 2020</li>
+                    <li>Cliente: Andres</li>
+                    <li>Categoria: Website Design</li>
                   </ul>
                   <button
                     class="btn btn-primary"
                     data-dismiss="modal"
-                    type="button"
-                  >
-                    <i class="fas fa-times"></i>
-                    Close Project
+                    type="button">
+                  <i class="fas fa-times"></i>
+                     Cerrar
                   </button>
                 </div>
               </div>
@@ -1074,7 +1108,7 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
+                  <h2 class="text-uppercase">Suplementos</h2>
                   <p class="item-intro text-muted">
                     Lorem ipsum dolor sit amet consectetur.
                   </p>
@@ -1084,24 +1118,19 @@
                     alt=""
                   />
                   <p>
-                    Use this area to describe your project. Lorem ipsum dolor
-                    sit amet, consectetur adipisicing elit. Est blanditiis
-                    dolorem culpa incidunt minus dignissimos deserunt repellat
-                    aperiam quasi sunt officia expedita beatae cupiditate,
-                    maiores repudiandae, nostrum, reiciendis facere nemo!
+                    This proyects is been created for barber shop Blaze
                   </p>
                   <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Window</li>
-                    <li>Category: Photography</li>
+                    <li>Fehca: April 2020</li>
+                    <li>Cliente: Andres</li>
+                    <li>Categoria: Barbershop</li>
                   </ul>
                   <button
                     class="btn btn-primary"
                     data-dismiss="modal"
-                    type="button"
-                  >
+                    type="button">
                     <i class="fas fa-times"></i>
-                    Close Project
+                    Cerrar
                   </button>
                 </div>
               </div>
@@ -1112,20 +1141,31 @@
     </div>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="/../jquery/jquery.min.js"></script>
-    <script src="/../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="/../jquery/jquery.min.js"></script> -->
+    <script src="{{asset('/jquery/jquery.min.js')}}"></script>
+
+    <!-- <script src="/../bootstrap/js/bootstrap.bundle.min.js"></script> -->
+    <script src="{{asset('/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="/../jquery-easing/jquery.easing.min.js"></script>
-
+    <!-- <script src="/../jquery-easing/jquery.easing.min.js"></script> -->
+    <script src="{{asset('/jquery-easing/jquery.easing.min.js')}}"></script>
+    <!-- Evetos de la plantilla -->
     <!-- Contact form JavaScript -->
-    <script src="/../js/jqBootstrapValidation.js"></script>
-    <script src="/../js/contact_me.js"></script>
 
-    
+    <!-- <script src="/../js/jqBootstrapValidation.js"></script> -->
+    <script src="{{asset('js/jqBootstrapValidation.js')}}"></script>
+
+    <script src="{{asset('/js/contact_me.js')}}"></script>
+
+    <!-- <script src="/../js/contact_me.js"></script> -->
+    <!-- <script src="{{asset('/agency.min.js')}}"></script> -->
+    <!-- Scrips de la plantilla -->
     <!-- Custom scripts for this template -->
-    <script src="/../js/agency.min.js"></script>
-    <script src="/../js/date.js"></script>
+    <!-- <script src="/../js/date.js"></script> -->
+    <!-- <script src="/../js/agency.min.js"></script> -->
+    <script src="{{asset('/js/agency.min.js')}}"></script>
 
+    <script src="{{asset('/js/date.js')}}"></script>
   </body>
 </html>
