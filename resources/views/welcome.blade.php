@@ -1,10 +1,10 @@
 <!-- Nos disculpamos por los comentarios inncesarios en este proyecto. 
-Sabemos e antemano que son malas practicas pero los hemos agregado por motivos academicos y porque nos lo han solicitado nuestros evaluadores
+Sabemos de antemano que son malas practicas pero los hemos agregado por motivos academicos y porque nos lo han solicitado nuestros evaluadores
 
 -->
 
 
-<!-- Esta el la vista de inio de la aplicacion aqui estan todas las seciones y la barra de navegacion -->
+<!-- Esta el la vista de inicio de la aplicacion aqui estan todas las seciones y la barra de navegacion -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -258,9 +258,7 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
             </span>
             <h4 class="service-heading">Cortes</h4>
             <p class="text-muted">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
-              maxime quam architecto quo inventore harum ex magni, dicta
-              impedit
+              Los cortes que se realizan en la barberia son hechos con la mayor calidad posible
             </p>
           </div>
           <div class="col-md-4">
@@ -270,9 +268,7 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
             </span>
             <h4 class="service-heading">Productos de belleza y cuidado</h4>
             <p class="text-muted">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
-              maxime quam architecto quo inventore harum ex magni, dicta
-              impedit.
+              ESTO ES UNA PRUEBA
             </p>
           </div>
           <div class="col-md-4">
@@ -291,7 +287,7 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
       </div>
     </section>
 
-    <!-- Grid de lportafoilio-->
+    <!-- Grid de portafolio-->
     <section class="bg-light page-section" id="portfolio">
       <div class="container">
         <div class="row">
@@ -316,13 +312,13 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
               </div>
               <img
                 class="img-fluid"
-                src="img/portfolio/01-thumbnail.jpg"
+                src="img/portfolio/001-thumbnail.jpg"
                 alt=""
               />
             </a>
             <div class="portfolio-caption">
-              <h4>Pomadas</h4>
-              <p class="text-muted">A base de agua </p>
+              <h4>Ceras</h4>
+              <p class="text-muted">Para darle estilo a tu cabello</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -338,13 +334,13 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
               </div>
               <img
                 class="img-fluid"
-                src="img/portfolio/02-thumbnail.jpg"
+                src="img/portfolio/002-thumbnail.jpeg"
                 alt=""
               />
             </a>
             <div class="portfolio-caption">
-              <h4>Tratamientos para la barba</h4>
-              <p class="text-muted">Desarrollo y crecimiento</p>
+              <h4>Pomadas</h4>
+              <p class="text-muted">Para que crees tus propios estilos</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -365,8 +361,8 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
               />
             </a>
             <div class="portfolio-caption">
-              <h4>Tinturas</h4>
-              <p class="text-muted">Gran gama de colores</p>
+              <h4>Tratamientos para la barba</h4>
+              <p class="text-muted">Desarrollo y crecimiento</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -382,12 +378,12 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
               </div>
               <img
                 class="img-fluid"
-                src="img/portfolio/04-thumbnail.jpg"
+                src="img/portfolio/004-thumbnail.jpeg"
                 alt=""
               />
             </a>
             <div class="portfolio-caption">
-              <h4>Herrammientas profesionales</h4>
+              <h4>prueba</h4>
               <p class="text-muted">Ecuantra aqui lo que necesitas para tu barberia</p>
             </div>
           </div>
@@ -404,13 +400,13 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
               </div>
               <img
                 class="img-fluid"
-                src="img/portfolio/05-thumbnail.jpg"
+                src="img/portfolio/005-full.jpeg"
                 alt=""
               />
             </a>
             <div class="portfolio-caption">
-              <h4>Vaporizadores</h4>
-              <p class="text-muted">Difectes marcaas, tipos y propositos</p>
+              <h4>Shampoos</h4>
+              <p class="text-muted">Difectes marcas, tipos y propositos</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -446,7 +442,7 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">Acerca de</h2>
             <h3 class="section-subheading text-muted">
-              Lorem ipsum dolor sit amet consectetur.
+              Acá te contamos sobre como se ha convertido la barberia blaze en una familia
             </h3>
           </div>
         </div>
@@ -491,10 +487,7 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
                   </div>
                   <div class="timeline-body">
                     <p class="text-muted">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Sunt ut voluptatum eius sapiente, totam reiciendis
-                      temporibus qui quibusdam, recusandae sit vero unde, sed,
-                      incidunt et ea quo dolore laudantium consectetur!
+                      Nos vemos detro de las normas para laborar por nuestra tranparencia hacia nuestros clientes y comunidad con la responsabilidad de seguir las normas sanitarias y siempre ser el Nº1 en clientes satisfechos.
                     </p>
                   </div>
                 </div>
@@ -508,16 +501,12 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
                   />
                 </div>
                 <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>Diciembre 2012</h4>
-                <h4 class="subheading">Nueva sede</h4>
+                  <div class="timeline-heading">                    
+                    <h4 class="subheading">Misión</h4>
                   </div>
                   <div class="timeline-body">
                     <p class="text-muted">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Sunt ut voluptatum eius sapiente, totam reiciendis
-                      temporibus qui quibusdam, recusandae sit vero unde, sed,
-                      incidunt et ea quo dolore laudantium consectetur!
+                      Filosofía, razon de ser, objetivos, estrategias, principios o definición de la empresa, describa el propósito, clientes proyectos y mercados.
                     </p>
                   </div>
                 </div>
@@ -531,16 +520,12 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
                   />
                 </div>
                 <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>July 2014</h4>
-                    <h4 class="subheading">Expansion</h4>
+                  <div class="timeline-heading">                    
+                    <h4 class="subheading">Visión</h4>
                   </div>
                   <div class="timeline-body">
                     <p class="text-muted">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Sunt ut voluptatum eius sapiente, totam reiciendis
-                      temporibus qui quibusdam, recusandae sit vero unde, sed,
-                      incidunt et ea quo dolore laudantium consectetur!
+                      Meta donde queremos llevar la empresa medible, cedible y realizable
                     </p>
                   </div>
                 </div>
@@ -562,19 +547,20 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">Nuestro genial equipo</h2>
-            <h3 class="section-subheading text-muted">
+            <!-- <h3 class="section-subheading text-muted">
              Profesionales destacados.
-            </h3>
+            </h3>-->
+            
           </div>
         </div>
         <div class="row">
           <div class="col-sm-4">
             <div class="team-member">
               <img class="mx-auto rounded-circle" src="img/barbers/barber2.jpg" alt="" />
-              <h4>Alejandro</h4>
-              <p class="text-muted">Barba y estilos</p>
+              <h4>Anderson Granados</h4>
+               <p class="text-muted">Barbero</p>
               <ul class="list-inline social-buttons">
-                <li class="list-inline-item">
+                <!----><li class="list-inline-item">
                   <a href="#">
                     <i class="fab fa-twitter"></i>
                   </a>
@@ -595,7 +581,7 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
           <div class="col-sm-4">
             <div class="team-member">
               <img class="mx-auto rounded-circle" src="img/barbers/barber1.jpg" alt="barber1 img" />
-              <h4>Andres</h4>
+              <h4>Andres Ocampo</h4>
               <p class="text-muted">Administrador y fundador</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
@@ -618,9 +604,57 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
           </div>
           <div class="col-sm-4">
             <div class="team-member">
-          <img class="mx-auto rounded-circle" src="img/barbers/barber2.jpg" alt="" />
-              <h4>Damian</h4>
-              <p class="text-muted">Barbas y tintes</p>
+              <img class="mx-auto rounded-circle" src="img/barbers/barber2.jpg" alt="" />
+              <h4>Sebastian Parra</h4>
+              <p class="text-muted">Barbero</p>
+              <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/barbers/barber1.jpg" alt="barber1 img" />
+              <h4>Juan Pablo Estrada</h4>
+              <p class="text-muted">Barbero</p>
+              <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/barbers/barber1.jpg" alt="barber1 img" />
+              <h4>Cristian Arroyave</h4>
+              <p class="text-muted">Barbero</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
                   <a href="#">
@@ -641,13 +675,13 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
             </div>
           </div>
         </div>
-        <div class="row">
+        <!--<div class="row">
           <div class="col-lg-8 mx-auto text-center">
             <p class="large text-muted">
               Este es solo un texto de ejemplo para los profresores que no saben ingles
             </p>
           </div>
-        </div>
+        </div>-->
       </div>
     </section>
 
@@ -827,27 +861,23 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Pomadas</h2>
+                  <h2 class="text-uppercase">Cera</h2>
                   <p class="item-intro text-muted">
-                    Lorem ipsum dolor sit amet consectetur.
+                    Pacinos mate
                   </p>
                   <img
                     class="img-fluid d-block mx-auto"
-                    src="img/portfolio/01-full.jpg"
+                    src="img/portfolio/001-full.jpeg"
                     alt=""
                   />
                   <p>
-                    Descripción del Poductoa Lorem ipsum dolor
-                    sit amet, consectetur adipisicing elit. Est blanditiis
-                    dolorem culpa incidunt minus dignissimos deserunt repellat
-                    aperiam quasi sunt officia expedita beatae cupiditate,
-                    maiores repudiandae, nostrum, reiciendis facere nemo!
+                  Pacinos Mate es una Cera para el peinado del cabello de los hombres, con una fijación media y sin brillo, que proporcionan una definición duradera dejando el cabello natural.
                   </p>
-                  <ul class="list-inline">
+                  <!--<ul class="list-inline">
                     <li>Fecha: Abril 2020</li>
                     <li>Cleinte: Andres</li>
                     <li>Categoria: diseno</li>
-                  </ul>
+                  </ul>-->
                   <button
                     class="btn btn-primary"
                     data-dismiss="modal"
@@ -884,27 +914,23 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Barba</h2>
+                  <h2 class="text-uppercase">Pomadas</h2>
                   <p class="item-intro text-muted">
-                    Lorem ipsum dolor sit amet consectetur.
+                    Pomada para peinar
                   </p>
                   <img
                     class="img-fluid d-block mx-auto"
-                    src="img/portfolio/02-full.jpg"
+                    src="img/portfolio/002-full.jpeg"
                     alt=""
                   />
                   <p>
-                    Lorem ipsum dolor
-                    sit amet, consectetur adipisicing elit. Est blanditiis
-                    dolorem culpa incidunt minus dignissimos deserunt repellat
-                    aperiam quasi sunt officia expedita beatae cupiditate,
-                    maiores repudiandae, nostrum, reiciendis facere nemo!
+                  Es una Crema para peinar que ayuda a crear estilos propios con definición y textura. Proporciona peinados con control y duración, su novedosa formula aporta memoria de peinado a su cabello.                 
                   </p>
-                  <ul class="list-inline">
+                  <!--<ul class="list-inline">
                   <li>Fecha: Abril 2020</li>
                     <li>Cliente: Andres</li>
                     <li>Categoria: Design</li>
-                  </ul>
+                  </ul>-->
                   <button
                     class="btn btn-primary"
                     data-dismiss="modal"
@@ -940,27 +966,23 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Tinturas</h2>
+                  <h2 class="text-uppercase">Barbas</h2>
                   <p class="item-intro text-muted">
-                    Lorem ipsum dolor sit amet consectetur.
+                  Balsamo ossion para el cuidado de la barba
                   </p>
                   <img
                     class="img-fluid d-block mx-auto"
-                    src="img/portfolio/03-full.jpg"
+                    src="img/portfolio/003-full.jpeg"
                     alt=""
                   />
                   <p>
-                    Descripción del Poducto: Lorem ipsum dolor
-                    sit amet, consectetur adipisicing elit. Est blanditiis
-                    dolorem culpa incidunt minus dignissimos deserunt repellat
-                    aperiam quasi sunt officia expedita beatae cupiditate,
-                    maiores repudiandae, nostrum, reiciendis facere nemo!
+                  Ossion bálsamo de barba ha sido desarrollado para suavizar su barba, quitar el aspecto desordenado y aliviar su piel. Enriquecido con argán y aceite de almendra amargo, ayuda a suavizar tu barba. Evita el desgaste prematuro de la piel con sus antioxidantes. No contiene parabenos.
                   </p>
-                  <ul class="list-inline">
-                    <li>Fehca: Abril 2020</li>
+                  <!--<ul class="list-inline">
+                    <li>Fecha: Abril 2020</li>
                     <li>Cliente: Andres</li>
                     <li>Categoria: Design</li>
-                  </ul>
+                  </ul>-->
                   <button
                     class="btn btn-primary"
                     data-dismiss="modal"
@@ -996,27 +1018,23 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Herramientas</h2>
+                  <h2 class="text-uppercase">Balsamo</h2>
                   <p class="item-intro text-muted">
-                    Lorem ipsum dolor sit amet consectetur.
+                  Cera bálsamo para barba y bigote.                  
                   </p>
                   <img
                     class="img-fluid d-block mx-auto"
-                    src="img/portfolio/04-full.jpg"
+                    src="img/portfolio/004-full.jpeg"
                     alt=""
                   />
                   <p>
-                    Descripción del Poducto: Lorem ipsum dolor
-                    sit amet, consectetur adipisicing elit. Est blanditiis
-                    dolorem culpa incidunt minus dignissimos deserunt repellat
-                    aperiam quasi sunt officia expedita beatae cupiditate,
-                    maiores repudiandae, nostrum, reiciendis facere nemo!
+                  Ossion Beard Balm ha sido desarrollado para suavizar la barba, eliminar la apariencia desordenada y aliviar la piel. Enriquecido con Aceite de argán y de almendras amargas, para prevenir el desgaste prematuro de la piel con sus antioxidantes. No contiene parabenos.
                   </p>
-                  <ul class="list-inline">
-                  <li>Fehca: Abril 2020</li>
+                  <!--<ul class="list-inline">
+                  <li>Fecha: Abril 2020</li>
                     <li>Cliente: Andres</li>
                     <li>Categoria:  Design</li>
-                  </ul>
+                  </ul>-->
                   <button
                     class="btn btn-primary"
                     data-dismiss="modal"
@@ -1052,27 +1070,23 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Vaporizadores</h2>
+                  <h2 class="text-uppercase">Shampoos</h2>
                   <p class="item-intro text-muted">
-                    Lorem ipsum dolor sit amet consectetur.
+                    Gran variedad de shampoos
                   </p>
                   <img
                     class="img-fluid d-block mx-auto"
-                    src="img/portfolio/05-full.jpg"
+                    src="img/portfolio/005-thumbnail.jpeg"
                     alt=""
                   />
                   <p>
-                    Descripción del Poducto: Lorem ipsum dolor
-                    sit amet, consectetur adipisicing elit. Est blanditiis
-                    dolorem culpa incidunt minus dignissimos deserunt repellat
-                    aperiam quasi sunt officia expedita beatae cupiditate,
-                    maiores repudiandae, nostrum, reiciendis facere nemo!
+                  Fortalece tu cabello y barba, previniendo la caída y ayudando al crecimiento. Manteniéndolo limpio, brillante y libre de caspa.
                   </p>
-                  <ul class="list-inline">
+                  <!--<ul class="list-inline">
                     <li>Fecha: Abril 2020</li>
                     <li>Cliente: Andres</li>
                     <li>Categoria: Website Design</li>
-                  </ul>
+                  </ul>-->
                   <button
                     class="btn btn-primary"
                     data-dismiss="modal"
@@ -1114,17 +1128,17 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
                   </p>
                   <img
                     class="img-fluid d-block mx-auto"
-                    src="img/portfolio/06-full.jpg"
+                    src="img/portfolio/006-full.jpeg"
                     alt=""
                   />
                   <p>
                     This proyects is been created for barber shop Blaze
                   </p>
-                  <ul class="list-inline">
+                  <!--<ul class="list-inline">
                     <li>Fehca: April 2020</li>
                     <li>Cliente: Andres</li>
                     <li>Categoria: Barbershop</li>
-                  </ul>
+                  </ul>-->
                   <button
                     class="btn btn-primary"
                     data-dismiss="modal"
