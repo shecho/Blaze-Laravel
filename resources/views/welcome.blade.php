@@ -55,7 +55,7 @@
   </head>
 
   <body id="page-top">
-    <!-- Navigacion -->
+    <!-- Navegacion -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top"
@@ -180,7 +180,7 @@
                           <option value="{{ $barber->barberName }}">{{ $barber->barberName }}</option>
                         @endforeach
               
-                          <!-- <!-- <option value="1">Barbero 1</option> -->
+                          <!-- <option value="1">Barbero 1</option> -->
                         
                         </select>
                         {{-- <label for="message-text" class="col-form-label text-dark">Barber</label> --}}
@@ -191,10 +191,8 @@
                           <option value="1">Asesoramiento</option>
                          @foreach($servicios as $servicio)
                           <option value="{{ $servicio->serviceName }}">{{ $servicio->serviceName }}</option>
-                         @endforeach
-                                
-                        </select>
-                     
+                         @endforeach                               
+                        </select>                     
                       </div>
                       <div class="form-group" id="modal-response">
 
@@ -265,16 +263,6 @@
               Acá te ofrecemos productos para el cuidado de tu estética y así estés preparado para cualquier momento y ocasión. 
             </p>
           </div>
-         <!-- <div class="col-md-4">
-            <span class="fa-stack fa-4x">
-              <i class="fas fa-circle fa-stack-2x text-secundary"></i>
-              <i class="fas fa-gamepad fa-stack-1x fa-inverse"></i>
-            </span>
-            <h4 class="service-heading">Entretenimiento y mas</h4>
-            <p class="text-muted">
-              para que la espera no sea eterna tenemos "..."
-            </p>
-          </div>-->
         </div>
       </div>
     </section>
@@ -287,7 +275,7 @@
             <h2 class="section-heading text-uppercase">Productos</h2>
             <h3 class="section-subheading text-muted">
               Belleza y cuidado             
-              <p>Estos son algunos productos que puedes en contrar</p>            
+              <p>Estos son algunos productos que puedes encontrar en nnuestra barberia</p>            
             </h3>           
           </div>
         </div>
@@ -311,7 +299,7 @@
             </a>
             <div class="portfolio-caption">
               <h4>Ceras</h4>
-              <p class="text-muted">Para darle estilo a tu cabello</p>
+              <p class="text-muted">Crea un peinado en vivaz</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -333,7 +321,7 @@
             </a>
             <div class="portfolio-caption">
               <h4>Pomadas</h4>
-              <p class="text-muted">Para que crees tus propios estilos</p>
+              <p class="text-muted">Crea nuevos estilos en tu cabello</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -376,8 +364,8 @@
               />
             </a>
             <div class="portfolio-caption">
-              <h4>prueba</h4>
-              <p class="text-muted">Ecuantra aqui lo que necesitas para tu barberia</p>
+              <h4>Balsamo</h4>
+              <p class="text-muted">Para barba y bigote</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -393,7 +381,7 @@
               </div>
               <img
                 class="img-fluid"
-                src="img/portfolio/005-full.jpeg"
+                src="img/portfolio/005-thumbnail.jpeg"
                 alt=""
               />
             </a>
@@ -415,13 +403,13 @@
               </div>
               <img
                 class="img-fluid"
-                src="img/portfolio/06-thumbnail.jpg"
+                src="img/portfolio/006-thumbnail.jpeg"
                 alt=""
               />
             </a>
             <div class="portfolio-caption">
-              <h4>Accesorios</h4>
-              <p class="text-muted">Prueba</p>
+              <h4>Immortal Infuse</h4>
+              <p class="text-muted">Crea un aspecto pulido para cualquier estilo</p>
             </div>
           </div>
         </div>
@@ -452,12 +440,12 @@
                 </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
-                    <h4>2009-2011</h4>
+                    <h4>2011</h4>
                     <h4 class="subheading">Nuentros inicios</h4>
                   </div>
                   <div class="timeline-body">
                     <p class="text-muted">
-                      Somos un lugar que quiere que los papás y sus hijos salgan feliz, esta barberia fue fundada por mí Andres Ocampo
+                    Todo empezó con una gran inspiración, mi hijo. Decidí emprender y así funde Big Boy Blaze. Somos un lugar que quiere que los padres y sus hijos salgan felices y satisfechos con nuestros servicios siempre atendiendo con la mejor actitud.
 
                     </p>
                   </div>
@@ -473,12 +461,11 @@
                 </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
-                    <h4>Marzo 2011</h4>
-                    <h4 class="subheading">Nuentra Creacion</h4>
+                    <h4 class="subheading">Siempre comprometidos</h4>
                   </div>
                   <div class="timeline-body">
                     <p class="text-muted">
-                      Nos vemos detro de las normas para laborar por nuestra tranparencia hacia nuestros clientes y comunidad con la responsabilidad de seguir las normas sanitarias y siempre ser el Nº1 en clientes satisfechos.
+                    Nos vemos dentro de las normas para laborar por nuestra transparencia hacia nuestros clientes y comunidad, con la responsabilidad de seguir las normas sanitarias y siempre asegurarnos que los clientes se sientan cómodos y satisfechos.
                     </p>
                   </div>
                 </div>
@@ -497,7 +484,7 @@
                   </div>
                   <div class="timeline-body">
                     <p class="text-muted">
-                      Filosofía, razon de ser, objetivos, estrategias, principios o definición de la empresa, describa el propósito, clientes proyectos y mercados.
+                    Brindar un servicio de alta calidad que satisfaga las necesidades y exigencias de cada cliente.   Contar con un personal profesional, calificado y responsable para que nuestra clientela experimente la sensación de  estar en un ambiente familiar y desee regresar a nuestra barberia.
                     </p>
                   </div>
                 </div>
@@ -516,7 +503,7 @@
                   </div>
                   <div class="timeline-body">
                     <p class="text-muted">
-                      Meta donde queremos llevar la empresa medible, cedible y realizable
+                    Que Big Boy Blaze sea reconocida no solo por brindar un servicio de calidad, sino también por su ética, compromiso y trato profesional.
                     </p>
                   </div>
                 </div>
@@ -537,11 +524,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Nuestro genial equipo</h2>
-            <!-- <h3 class="section-subheading text-muted">
-             Profesionales destacados.
-            </h3>-->
-            
+            <h2 class="section-heading text-uppercase">Nuestro genial equipo</h2>           
           </div>
         </div>
         <div class="row">
@@ -555,17 +538,7 @@
                   <a target="blank" href="https://www.instagram.com/granados_31/">
                     <i class="fab fa-instagram"></i>
                   </a>
-                </li>
-                <!--<li class="list-inline-item">
-                  <a href="#">
-                    <i class="fab fa-facebook-f"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fab fa-linkedin-in"></i>
-                  </a>
-                </li>-->
+                </li>               
               </ul>
             </div>
           </div>
@@ -584,12 +557,7 @@
                   <a target="blank" href="https://www.facebook.com/Barberia.Blaze">
                     <i class="fab fa-facebook-f"></i>
                   </a>
-                </li>
-                <!--<li class="list-inline-item">
-                  <a href="#">
-                    <i class="fab fa-instagram"></i>
-                  </a>
-                </li>-->
+                </li>                
               </ul>
             </div>
           </div>
@@ -603,17 +571,7 @@
                   <a target="blank" href="https://www.instagram.com/2blerr_18/">
                     <i class="fab fa-instagram"></i>
                   </a>
-                </li>
-                <!--<li class="list-inline-item">
-                  <a href="#">
-                    <i class="fab fa-facebook-f"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fab fa-linkedin-in"></i>
-                  </a>
-                </li>-->
+                </li>                
               </ul>
             </div>
           </div>
@@ -627,17 +585,7 @@
                   <a target="blank" href="https://www.instagram.com/jp.estrada0/">
                     <i class="fab fa-instagram"></i>
                   </a>
-                </li>
-                <!--<li class="list-inline-item">
-                  <a href="#">
-                    <i class="fab fa-facebook-f"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fab fa-linkedin-in"></i>
-                  </a>
-                </li>-->
+                </li>               
               </ul>
             </div>
           </div>
@@ -651,17 +599,7 @@
                   <a target="blank" href="https://www.instagram.com/cristian_ac22/">
                     <i class="fab fa-instagram"></i>
                   </a>
-                </li>
-                <!--<li class="list-inline-item">
-                  <a href="#">
-                    <i class="fab fa-facebook-f"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fab fa-linkedin-in"></i>
-                  </a>
-                </li>-->
+                </li>              
               </ul>
             </div>
           </div>
@@ -675,28 +613,11 @@
                   <a target="blank" href="https://www.instagram.com/agustinerp/">
                     <i class="fab fa-instagram"></i>
                   </a>
-                </li>
-                <!--<li class="list-inline-item">
-                  <a href="#">
-                    <i class="fab fa-facebook-f"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fab fa-linkedin-in"></i>
-                  </a>
-                </li>-->
+                </li>               
               </ul>
             </div>
           </div>
-        </div>
-        <!--<div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <p class="large text-muted">
-              Este es solo un texto de ejemplo para los profresores que no saben ingles
-            </p>
-          </div>
-        </div>-->
+        </div>       
       </div>
     </section>
 
@@ -729,7 +650,7 @@
       </div>
     </section> -->
 
-    <!-- Contactanos Se agrega  aunque esta fuera de la solcitud inical -->
+    <!-- Contactanos se agrega  aunque esta fuera de la solcitud inical -->
     <section class="page-section" id="contact">
       <div class="container">
         <div class="row">
@@ -832,11 +753,6 @@
                       <i class="fab fa-facebook-f"></i>
                     </a>
               </li>
-              <!--<li  class="list-inline-item">
-                <a target="blank" href="https://www.linkedin.com/">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>-->
             </ul>
           </div>
           <div class="col-md-4">
@@ -854,7 +770,6 @@
     </footer>
 
     <!-- Modal del portafolio de servicios  -->
-    <!-- Portfolio Modals -->
 
     <!-- Modal 1 -->
     <div
@@ -875,7 +790,7 @@
             <div class="row">
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
-                  <!-- Project Details Go Here -->
+                  <!-- Detalles del producto-->
                   <h2 class="text-uppercase">Cera</h2>
                   <p class="item-intro text-muted">
                     Pacinos mate
@@ -888,11 +803,6 @@
                   <p>
                   Pacinos Mate es una Cera para el peinado del cabello de los hombres, con una fijación media y sin brillo, que proporcionan una definición duradera dejando el cabello natural.
                   </p>
-                  <!--<ul class="list-inline">
-                    <li>Fecha: Abril 2020</li>
-                    <li>Cleinte: Andres</li>
-                    <li>Categoria: diseno</li>
-                  </ul>-->
                   <button
                     class="btn btn-primary"
                     data-dismiss="modal"
@@ -928,7 +838,7 @@
             <div class="row">
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
-                  <!-- Project Details Go Here -->
+                  <!-- Detalles del producto -->
                   <h2 class="text-uppercase">Pomadas</h2>
                   <p class="item-intro text-muted">
                     Pomada para peinar
@@ -939,13 +849,8 @@
                     alt=""
                   />
                   <p>
-                  Es una Crema para peinar que ayuda a crear estilos propios con definición y textura. Proporciona peinados con control y duración, su novedosa formula aporta memoria de peinado a su cabello.                 
-                  </p>
-                  <!--<ul class="list-inline">
-                  <li>Fecha: Abril 2020</li>
-                    <li>Cliente: Andres</li>
-                    <li>Categoria: Design</li>
-                  </ul>-->
+                  Es una Crema para peinar que ayuda a crear estilos propios con definición y textura. Proporciona peinados con control y duración, su novedosa fórmula aporta memoria de peinado a su cabello.                 
+                  </p>                  
                   <button
                     class="btn btn-primary"
                     data-dismiss="modal"
@@ -980,7 +885,7 @@
             <div class="row">
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
-                  <!-- Project Details Go Here -->
+                  <!-- Detalles del producto -->
                   <h2 class="text-uppercase">Barbas</h2>
                   <p class="item-intro text-muted">
                   Balsamo ossion para el cuidado de la barba
@@ -993,11 +898,6 @@
                   <p>
                   Ossion bálsamo de barba ha sido desarrollado para suavizar su barba, quitar el aspecto desordenado y aliviar su piel. Enriquecido con argán y aceite de almendra amargo, ayuda a suavizar tu barba. Evita el desgaste prematuro de la piel con sus antioxidantes. No contiene parabenos.
                   </p>
-                  <!--<ul class="list-inline">
-                    <li>Fecha: Abril 2020</li>
-                    <li>Cliente: Andres</li>
-                    <li>Categoria: Design</li>
-                  </ul>-->
                   <button
                     class="btn btn-primary"
                     data-dismiss="modal"
@@ -1032,7 +932,7 @@
             <div class="row">
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
-                  <!-- Project Details Go Here -->
+                  <!-- Detalles del producto -->
                   <h2 class="text-uppercase">Balsamo</h2>
                   <p class="item-intro text-muted">
                   Cera bálsamo para barba y bigote.                  
@@ -1045,11 +945,6 @@
                   <p>
                   Ossion Beard Balm ha sido desarrollado para suavizar la barba, eliminar la apariencia desordenada y aliviar la piel. Enriquecido con Aceite de argán y de almendras amargas, para prevenir el desgaste prematuro de la piel con sus antioxidantes. No contiene parabenos.
                   </p>
-                  <!--<ul class="list-inline">
-                  <li>Fecha: Abril 2020</li>
-                    <li>Cliente: Andres</li>
-                    <li>Categoria:  Design</li>
-                  </ul>-->
                   <button
                     class="btn btn-primary"
                     data-dismiss="modal"
@@ -1084,24 +979,19 @@
             <div class="row">
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
-                  <!-- Project Details Go Here -->
+                  <!-- Detalles del producto -->
                   <h2 class="text-uppercase">Shampoos</h2>
                   <p class="item-intro text-muted">
-                    Gran variedad de shampoos
+                    Shampoo Barcadia
                   </p>
                   <img
                     class="img-fluid d-block mx-auto"
-                    src="img/portfolio/005-thumbnail.jpeg"
+                    src="img/portfolio/005-full.jpeg"
                     alt=""
                   />
                   <p>
                   Fortalece tu cabello y barba, previniendo la caída y ayudando al crecimiento. Manteniéndolo limpio, brillante y libre de caspa.
                   </p>
-                  <!--<ul class="list-inline">
-                    <li>Fecha: Abril 2020</li>
-                    <li>Cliente: Andres</li>
-                    <li>Categoria: Website Design</li>
-                  </ul>-->
                   <button
                     class="btn btn-primary"
                     data-dismiss="modal"
@@ -1136,8 +1026,8 @@
             <div class="row">
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Suplementos</h2>
+                  <!-- Detalles del producto -->
+                  <h2 class="text-uppercase">Pomade Immortal Infuse</h2>
                   <p class="item-intro text-muted">
                     Lorem ipsum dolor sit amet consectetur.
                   </p>
@@ -1147,13 +1037,8 @@
                     alt=""
                   />
                   <p>
-                    This proyects is been created for barber shop Blaze
+                  Esta fórmula súper concentrada de bajo mantenimiento funciona en cualquier tipo de cabello, grosor o textura. Funciona bien con longitudes de pelo corto a mediano. Además, con una sujeción todo el día,
                   </p>
-                  <!--<ul class="list-inline">
-                    <li>Fehca: April 2020</li>
-                    <li>Cliente: Andres</li>
-                    <li>Categoria: Barbershop</li>
-                  </ul>-->
                   <button
                     class="btn btn-primary"
                     data-dismiss="modal"
