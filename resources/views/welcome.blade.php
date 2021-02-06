@@ -1,10 +1,4 @@
-<!-- Nos disculpamos por los comentarios inncesarios en este proyecto. 
-Sabemos de antemano que son malas practicas pero los hemos agregado por motivos academicos y porque nos lo han solicitado nuestros evaluadores
-
--->
-
-
-<!-- Esta el la vista de inicio de la aplicacion aqui estan todas las seciones y la barra de navegacion -->
+<!-- Esta el la vista de inicio de la aplicacion aqui estan todas las secciones y la barra de navegacion -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -61,7 +55,7 @@ Sabemos de antemano que son malas practicas pero los hemos agregado por motivos 
   </head>
 
   <body id="page-top">
-    <!-- Navigation -->
+    <!-- Navigacion -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top"
@@ -241,48 +235,46 @@ Sabemos de antemano que son malas practicas pero los hemos agregado por motivos 
     </header>
     <!-- Servicios  -->
     <section class="page-section" id="services">
-      <div class="container">
+      <div class="container" >
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">Servicios</h2>
             <h3 class="section-subheading text-muted">
-              Lorem ipsum dolor sit amet consectetur.
+              Ofrecemos calidad en nuestros servicios
             </h3>
           </div>
         </div>
         <div class="row text-center">
-          <div class="col-md-4">
+          <div class="col-md-6">
             <span class="fa-stack fa-4x">
                   <i class="fas fa-circle fa-stack-2x text-secundary"></i>
               <i class="fas fa-cut fa-stack-1x fa-inverse"></i>
             </span>
             <h4 class="service-heading">Cortes</h4>
             <p class="text-muted">
-              Los cortes que se realizan en la barberia son hechos con la mayor calidad posible
+              Para que te sientas comodo y explores nuevos estilos.       
             </p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-6">
             <span class="fa-stack fa-4x">
               <i class="fas fa-circle fa-stack-2x text-secundary"></i>
               <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
             </span>
             <h4 class="service-heading">Productos de belleza y cuidado</h4>
             <p class="text-muted">
-              ESTO ES UNA PRUEBA
+              Acá te ofrecemos productos para el cuidado de tu estética y así estés preparado para cualquier momento y ocasión. 
             </p>
           </div>
-          <div class="col-md-4">
+         <!-- <div class="col-md-4">
             <span class="fa-stack fa-4x">
               <i class="fas fa-circle fa-stack-2x text-secundary"></i>
               <i class="fas fa-gamepad fa-stack-1x fa-inverse"></i>
             </span>
             <h4 class="service-heading">Entretenimiento y mas</h4>
             <p class="text-muted">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
-              maxime quam architecto quo inventore harum ex magni, dicta
-              impedit.
+              para que la espera no sea eterna tenemos "..."
             </p>
-          </div>
+          </div>-->
         </div>
       </div>
     </section>
@@ -294,8 +286,9 @@ Sabemos de antemano que son malas practicas pero los hemos agregado por motivos 
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">Productos</h2>
             <h3 class="section-subheading text-muted">
-              Belleza y cuidado
-            </h3>
+              Belleza y cuidado             
+              <p>Estos son algunos productos que puedes en contrar</p>            
+            </h3>           
           </div>
         </div>
         <div class="row">
@@ -406,7 +399,7 @@ Sabemos de antemano que son malas practicas pero los hemos agregado por motivos 
             </a>
             <div class="portfolio-caption">
               <h4>Shampoos</h4>
-              <p class="text-muted">Difectes marcas, tipos y propositos</p>
+              <p class="text-muted">Diferentes marcas, tipos y propositos</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -427,8 +420,8 @@ Sabemos de antemano que son malas practicas pero los hemos agregado por motivos 
               />
             </a>
             <div class="portfolio-caption">
-              <h4>Puplementos</h4>
-              <p class="text-muted">Ganancia muscular</p>
+              <h4>Accesorios</h4>
+              <p class="text-muted">Prueba</p>
             </div>
           </div>
         </div>
@@ -464,10 +457,8 @@ Sabemos de antemano que son malas practicas pero los hemos agregado por motivos 
                   </div>
                   <div class="timeline-body">
                     <p class="text-muted">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Sunt ut voluptatum eius sapiente, totam reiciendis
-                      temporibus qui quibusdam, recusandae sit vero unde, sed,
-                      incidunt et ea quo dolore laudantium consectetur!
+                      Somos un lugar que quiere que los papás y sus hijos salgan feliz, esta barberia fue fundada por mí Andres Ocampo
+
                     </p>
                   </div>
                 </div>
@@ -556,16 +547,16 @@ Sabemos de antemano que son malas practicas pero los hemos agregado por motivos 
         <div class="row">
           <div class="col-sm-4">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/barbers/barber2.jpg" alt="" />
+              <img class="img-fluid rounded-circle" src="img/barbers/barber01.jpg" alt=""/>
               <h4>Anderson Granados</h4>
                <p class="text-muted">Barbero</p>
               <ul class="list-inline social-buttons">
-                <!----><li class="list-inline-item">
-                  <a href="#">
-                    <i class="fab fa-twitter"></i>
+                <li class="list-inline-item">
+                  <a target="blank" href="https://www.instagram.com/granados_31/">
+                    <i class="fab fa-instagram"></i>
                   </a>
                 </li>
-                <li class="list-inline-item">
+                <!--<li class="list-inline-item">
                   <a href="#">
                     <i class="fab fa-facebook-f"></i>
                   </a>
@@ -574,46 +565,46 @@ Sabemos de antemano que son malas practicas pero los hemos agregado por motivos 
                   <a href="#">
                     <i class="fab fa-linkedin-in"></i>
                   </a>
-                </li>
+                </li>-->
               </ul>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/barbers/barber1.jpg" alt="barber1 img" />
+              <img class="mx-auto rounded-circle" src="img/barbers/barber02.jpg" alt="barber1 img" />
               <h4>Andres Ocampo</h4>
               <p class="text-muted">Administrador y fundador</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fab fa-twitter"></i>
+                  <a target="blank" href="https://www.instagram.com/barberia_blaze/">
+                    <i class="fab fa-instagram"></i>
                   </a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="#">
+                  <a target="blank" href="https://www.facebook.com/Barberia.Blaze">
                     <i class="fab fa-facebook-f"></i>
                   </a>
                 </li>
-                <li class="list-inline-item">
+                <!--<li class="list-inline-item">
                   <a href="#">
-                    <i class="fab fa-linkedin-in"></i>
+                    <i class="fab fa-instagram"></i>
                   </a>
-                </li>
+                </li>-->
               </ul>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/barbers/barber2.jpg" alt="" />
+              <img class="mx-auto rounded-circle" src="img/barbers/barber3.jpg" alt="" />
               <h4>Sebastian Parra</h4>
               <p class="text-muted">Barbero</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fab fa-twitter"></i>
+                  <a target="blank" href="https://www.instagram.com/2blerr_18/">
+                    <i class="fab fa-instagram"></i>
                   </a>
                 </li>
-                <li class="list-inline-item">
+                <!--<li class="list-inline-item">
                   <a href="#">
                     <i class="fab fa-facebook-f"></i>
                   </a>
@@ -622,7 +613,7 @@ Sabemos de antemano que son malas practicas pero los hemos agregado por motivos 
                   <a href="#">
                     <i class="fab fa-linkedin-in"></i>
                   </a>
-                </li>
+                </li>-->
               </ul>
             </div>
           </div>
@@ -633,11 +624,11 @@ Sabemos de antemano que son malas practicas pero los hemos agregado por motivos 
               <p class="text-muted">Barbero</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fab fa-twitter"></i>
+                  <a target="blank" href="https://www.instagram.com/jp.estrada0/">
+                    <i class="fab fa-instagram"></i>
                   </a>
                 </li>
-                <li class="list-inline-item">
+                <!--<li class="list-inline-item">
                   <a href="#">
                     <i class="fab fa-facebook-f"></i>
                   </a>
@@ -646,22 +637,22 @@ Sabemos de antemano que son malas practicas pero los hemos agregado por motivos 
                   <a href="#">
                     <i class="fab fa-linkedin-in"></i>
                   </a>
-                </li>
+                </li>-->
               </ul>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/barbers/barber1.jpg" alt="barber1 img" />
+              <img class="mx-auto rounded-circle" src="img/barbers/barber5.jpg" alt="barber1 img" />
               <h4>Cristian Arroyave</h4>
               <p class="text-muted">Barbero</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fab fa-twitter"></i>
+                  <a target="blank" href="https://www.instagram.com/cristian_ac22/">
+                    <i class="fab fa-instagram"></i>
                   </a>
                 </li>
-                <li class="list-inline-item">
+                <!--<li class="list-inline-item">
                   <a href="#">
                     <i class="fab fa-facebook-f"></i>
                   </a>
@@ -670,7 +661,31 @@ Sabemos de antemano que son malas practicas pero los hemos agregado por motivos 
                   <a href="#">
                     <i class="fab fa-linkedin-in"></i>
                   </a>
+                </li>-->
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/barbers/barber6.jpg" alt="barber1 img" />
+              <h4>Austín Rincón</h4>
+              <p class="text-muted">Barbero</p>
+              <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                  <a target="blank" href="https://www.instagram.com/agustinerp/">
+                    <i class="fab fa-instagram"></i>
+                  </a>
                 </li>
+                <!--<li class="list-inline-item">
+                  <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </li>-->
               </ul>
             </div>
           </div>
@@ -808,20 +823,20 @@ Sabemos de antemano que son malas practicas pero los hemos agregado por motivos 
           <div class="col-md-4">
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
-                <a  target="blank" href="https://twitter.com/explore">
-                  <i class="fab fa-twitter"></i>
+                <a  target="blank" href="https://www.instagram.com/barberia_blaze/">
+                  <i class="fab fa-instagram"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a  target="blank" href="https://www.facebook.com/">
+                <a  target="blank" href="https://www.facebook.com/Barberia.Blaze">
                       <i class="fab fa-facebook-f"></i>
                     </a>
               </li>
-              <li  class="list-inline-item">
+              <!--<li  class="list-inline-item">
                 <a target="blank" href="https://www.linkedin.com/">
                   <i class="fab fa-linkedin-in"></i>
                 </a>
-              </li>
+              </li>-->
             </ul>
           </div>
           <div class="col-md-4">
