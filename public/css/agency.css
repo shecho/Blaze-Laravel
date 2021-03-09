@@ -96,6 +96,16 @@ img::-moz-selection {
   background-color: #fed136;
   border-color: #fed136;
 }
+.btn-primary-cita {
+  background-color: #4a0303;
+  border-color: #5a0303;
+  color:white;
+}
+.btn-primary-cita:active, .btn-primary-cita:hover {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+  color: rgb(255, 255, 255);
+}
 
 .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
   background-color: #fec810 !important;

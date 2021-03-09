@@ -124,7 +124,7 @@
           <div class="intro-lead-in">Bienvenido a Big Boy Blaze!</div>
           <div class="intro-heading text-uppercase">Agenda tu cita</div>
 
-          <button  type="button" class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" data-toggle="modal" data-target="#create-date" data-whatever="@mdo">Agendar Cita</button> 
+          <button  type="button" class="btn btn-primary-cita btn-xl text-uppercase js-scroll-trigger" data-toggle="modal" data-target="#create-date" data-whatever="@mdo">Agendar Cita</button> 
 
         
 
@@ -178,9 +178,7 @@
                           <option value="1">Cualquiera</option>
                         @foreach($barberos as $barber)
                           <option value="{{ $barber->barberName }}">{{ $barber->barberName }}</option>
-                        @endforeach
-              
-                          <!-- <option value="1">Barbero 1</option> -->
+                        @endforeach             
                         
                         </select>
                         {{-- <label for="message-text" class="col-form-label text-dark">Barber</label> --}}
@@ -188,7 +186,7 @@
                       </div>
                       <div class="form-group">
                         <select class="form-control" name="time" id="services-date-id">
-                          <option value="1">Asesoramiento</option>
+                          <option value="1">Asesoramiento</option>                          
                          @foreach($servicios as $servicio)
                           <option value="{{ $servicio->serviceName }}">{{ $servicio->serviceName }}</option>
                          @endforeach                               
@@ -207,7 +205,7 @@
                   <button id="confirm-date" type="button" class="btn btn-primary"> Confirmar</button>
 
                   <div class="">
-                  <a target="blank" href="https://api.whatsapp.com/send?phone=5703194853019&text=Hola%20quisiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x">
+                  <a target="blank" href="https://api.whatsapp.com/send?phone=5703105122321&text=Hola%20quisiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x">
               
                     <i class="fab 	fa-whatsapp fa-stack-1xa text-success"></i>
                   </a>
@@ -434,6 +432,7 @@
                 <div class="timeline-image">
                   <img
                     class="rounded-circle img-fluid"
+                    style="max-width:100%; max-height:100%; height:170px;"
                     src="img/about/1.jpg"
                     alt=""
                   />
@@ -455,6 +454,7 @@
                 <div class="timeline-image">
                   <img
                     class="rounded-circle img-fluid"
+                    style="max-width:100%; max-height:100%; height:170px;"
                     src="img/about/2.jpg"
                     alt=""
                   />
@@ -474,6 +474,7 @@
                 <div class="timeline-image">
                   <img
                     class="rounded-circle img-fluid"
+                    style="max-width:100%; max-height:100%; height:170px;"
                     src="img/about/3.jpg"
                     alt=""
                   />
@@ -493,6 +494,7 @@
                 <div class="timeline-image">
                   <img
                     class="rounded-circle img-fluid"
+                    style="max-width:100%; max-height:100%; height:170px;"
                     src="img/about/4.jpg"
                     alt=""
                   />
@@ -530,7 +532,7 @@
         <div class="row">
           <div class="col-sm-4">
             <div class="team-member">
-              <img class="img-fluid rounded-circle" src="img/barbers/barber01.jpg" alt=""/>
+              <img class="img-fluid rounded-circle" src="img/barbers/barber1.jpg" alt=""/>
               <h4>Anderson Granados</h4>
                <p class="text-muted">Barbero</p>
               <ul class="list-inline social-buttons">
@@ -544,7 +546,7 @@
           </div>
           <div class="col-sm-4">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/barbers/barber02.jpg" alt="barber1 img" />
+              <img class="mx-auto rounded-circle" src="img/barbers/barber2.jpg" alt="barber1 img" />
               <h4>Andres Ocampo</h4>
               <p class="text-muted">Administrador y fundador</p>
               <ul class="list-inline social-buttons">
@@ -577,7 +579,7 @@
           </div>
           <div class="col-sm-4">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/barbers/barber1.jpg" alt="barber1 img" />
+              <img class="mx-auto rounded-circle" src="img/barbers/barber4.jpg" alt="barber1 img" />
               <h4>Juan Pablo Estrada</h4>
               <p class="text-muted">Barbero</p>
               <ul class="list-inline social-buttons">
@@ -606,7 +608,7 @@
           <div class="col-sm-4">
             <div class="team-member">
               <img class="mx-auto rounded-circle" src="img/barbers/barber6.jpg" alt="barber1 img" />
-              <h4>Austín Rincón</h4>
+              <h4>Agustín Rincón</h4>
               <p class="text-muted">Barbero</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
@@ -621,7 +623,7 @@
       </div>
     </section>
 
-    <!-- Cleintes no se implemnta por el momento, pues no hay testitoniales -->
+    <!-- Cleintes no se implenta por el momento, pues no hay testimoniales -->
     <!-- 
     <section class="py-5">
       <div class="container">
@@ -722,7 +724,7 @@
                   >
                     Enviar Mensaje
                   </button>
-                  <a target="blank" href="https://api.whatsapp.com/send?phone=5703194853019&text=Hola%20Quiesiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x">
+                  <a target="blank" href="https://api.whatsapp.com/send?phone=5703105122321&text=Hola%20quisiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x">
              
                      <i class="fab 	fa-whatsapp fa-stack-1x fa-inverse"></i>
                   </a>

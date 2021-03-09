@@ -1,4 +1,4 @@
-<!-- Esta vista contiene el panle de controly reportes del administrador
+<!-- Esta vista contiene el panel de control y reportes del administrador
 Permite ver todos los reportes al administrador
  -->
  
@@ -40,13 +40,13 @@ Permite ver todos los reportes al administrador
                 </a>
                 <button type="button" class="btn btn-dark js-scroll-trigger" data-toggle="modal" data-target="#create-date" data-whatever="@mdo">Agendar Cita</button>
 
-                <a target="blank" href="https://api.whatsapp.com/send?phone=5703194853019&text=Hola%20quisiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x">
+                <a target="blank" href="https://api.whatsapp.com/send?phone=5703105122321&text=Hola%20quisiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x">
 
                         <i class="fab 	fa-whatsapp fa-stack-1xa text-success"></i>
                 </a>
 
                 {{--Modal crear cita  --}}
-                <!-- modal de cracionde citas -->
+                <!-- modal de cracion de citas -->
                 <div class="modal fade" id="create-date" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -71,7 +71,7 @@ Permite ver todos los reportes al administrador
                                         </div>
                                         <div class="form-group">
                                             {{-- <label for="message-text" class="col-form-label text-dark">Day</label> --}}
-                                            <input min="2020-04-10" max="2020-04-30" type="date" class="form-control" id="date-day">
+                                            <input min="2021-04-10" max="2021-04-30" type="date" class="form-control" id="date-day">
                                         </div>
                                         {{-- <label for="message-text" class="col-form-label text-dark">Hora</label> --}}
                                         <div class="form-group">
@@ -118,11 +118,11 @@ Permite ver todos los reportes al administrador
                             </div>
                             <div class="modal-footer">
 
-                            <a target="blank" href="https://api.whatsapp.com/send?phone=5703194853019&text=Hola%20quisiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x">
+                            <a target="blank" href="https://api.whatsapp.com/send?phone=5703105122321&text=Hola%20quisiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x">
                                 <i class="fab 	fa-whatsapp fa-stack-1xa text-success"> </i>
                             </a>
-                                <button type="button" class="btn btn-dark" data-dismiss="modal">Cancelar</button>
-                                <button id="confirm-date" type="button" class="btn btn-dark" onclick="sendForm()"> Confirmar</button>
+                                <button type="button" class="btn btn-dark" data-dismiss="modal">Cancelar</button>                                
+                                    <button id="confirm-date" type="button" class="btn btn-dark" onclick="sendForm()"> Confirmar</button>                                   
                             </div>
                         </div>
                     </div>
@@ -151,12 +151,14 @@ Permite ver todos los reportes al administrador
         <div class="card-header ">
             <a
                 onclick="showReporte1()"
+                target="blank"
                 href="{{ route('reporteClientes') }}"
                 id=""
                 class="btn btn-dark btn-sm" >Ver Clientes PDF
 
             </a>
             <a
+                target="blank"
                 onclick="showReporte1()"
                 href="{{ route('reporteCitas') }}"
                 id=""
@@ -270,7 +272,7 @@ Permite ver todos los reportes al administrador
                                 </a>
                             </button>
                         
-                            <a class="text-light btn btn-dark " href="http://54.226.97.124/Blaze-Laravel/public/deleteDate/{{$cita->id}}">
+                            <a class="text-light btn btn-dark " href="/deleteDate/{{$cita->id}}">
                                 <i class="fas fa-trash" id="trashIcon"></i>
                             </a>
 
@@ -325,7 +327,7 @@ Permite ver todos los reportes al administrador
                                 </a>
                             </button>
                             
-                            <a class="text-light btn btn-dark  " href="http://54.226.97.124/Blaze-Laravel/public/deleteService/{{$servicio->id}}">
+                            <a class="text-light btn btn-dark  " href="/deleteService/{{$servicio->id}}">
                                 <i class="fas fa-trash" id="trashIcon"></i>
                             </a>
                         </td>
@@ -387,7 +389,7 @@ Permite ver todos los reportes al administrador
                         </a>
                         </button>
                        
-                        <a class="text-light btn btn-dark  " href= "http://54.226.97.124/Blaze-Laravel/public/deleteUser/{{$user->id}}">
+                        <a class="text-light btn btn-dark  " href= "/deleteUser/{{$user->id}}">
                             <i class="fas fa-trash" id="trashIcon"></i>
                         </a>
                         </td>
@@ -445,7 +447,7 @@ Permite ver todos los reportes al administrador
                         </a>
                         </button>
                        
-                        <a class="text-light btn btn-dark  " href= "http://54.226.97.124/Blaze-Laravel/public/deleteBarber/{{$barber->id}}">
+                        <a class="text-light btn btn-dark  " href= "/deleteBarber/{{$barber->id}}">
                             <i class="fas fa-trash" id="trashIcon"></i>
                         </a>
                         </td>
@@ -659,8 +661,9 @@ Permite ver todos los reportes al administrador
             </div>
             <div class="modal-footer">
 
-                <button type="button" class="btn btn-dark" data-dismiss="modal">Cancelar</button>
-                <button id="confirm-date" type="button" class="btn btn-dark" onclick="handleService()">
+                <button type="button" class="btn btn-dark" data-dismiss="modal">Cancelar</button>                 
+                
+                <button id="confirm-date" type="button" class="btn btn-dark"  onclick="handleService()" >
                Crear
                 </button>
 
