@@ -1,4 +1,4 @@
-<!-- Esta vista aun no esta  okplementada. Contiene algunas posibles configuraciones e los clientes  pero contandra las configuraciones del usuario x -->
+<!-- Esta vista aun no esta  implementada. Contiene algunas posibles configuraciones e los clientes  pero contandra las configuraciones del usuario x -->
 
 <div class="container">
 <div class="container">

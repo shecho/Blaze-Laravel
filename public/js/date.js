@@ -40,9 +40,20 @@ function sendForm() {
             'Content-Type': 'application/json',
         }
     }).then(response => response.json())
-    .then(data => data == 1 ? modalResponse(1) : modalResponse(0))    
+    .then(data => data == 1 ? modalResponse(1) : modalResponse(0)) 
+
+    document.getElementById("form-modal-reseter").reset();
+ 
     //1 cuando ya esxiste una cita, 0 cuando se creo correctamente
     // console.log(data);
+    
+      
+}
+function dismissModal(){
+    setTimeout(() => {
+        $("[data-dismiss=modal]").trigger({ type: "click" });
+    }, 3000)
+    
 }
 
 // Valida el modal de citas
@@ -85,7 +96,8 @@ function modalResponse(state) {
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
         </button>`
-    }
+        dismissModal()
+    }    
 }
 // funcion en deshuso
 function showReporte1() {
@@ -185,6 +197,9 @@ function CheckMyDates() {
             </button>
          </div>`
     }
+    setTimeout(() => {
+        location.reload()
+    }, 1000)
 }
 // Captura el boton de las consultar citas
 let CheackMyDatesBtn = document.getElementById('CheackMyDates')

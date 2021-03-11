@@ -16,120 +16,40 @@ Permite ver todos los reportes al administrador
 
 <div class="container ">
     <div class="row justify-content-center">
-    <div class="col-md-10">
-        <div class="card lightOverlay">
-        
-            <div class="card-header bg-dark">
-            <a href="{{ route('welcome') }}" class="text-light float-left">
-                <i class="h4 fas fa-undo-alt"></i>
-            </a>
-                <h4>Panel de Control    </h4>
-               
-            </div>
-
-
-            <div class="card-body">
-                @if (session('status'))
-                <div class="alert alert-success" role="alert">
-                    {{ session('status') }}
+        <div class="col-md-10">
+            <div class="card lightOverlay">
+            
+                <div class="card-header bg-dark">
+                <a href="{{ route('welcome') }}" class="text-light float-left">
+                    <i class="h4 fas fa-undo-alt"></i>
+                </a>
+                    <h4>Panel de Control    </h4>
+                
                 </div>
-                @endif
 
-                <a name="" id="" class="btn btn-dark" href="{{ route('profile') }}" role="button">
-                    Perfil
-                </a>
-                <button type="button" class="btn btn-dark js-scroll-trigger" data-toggle="modal" data-target="#create-date" data-whatever="@mdo">Agendar Cita</button>
 
-                <a target="blank" href="https://api.whatsapp.com/send?phone=5703105122321&text=Hola%20quisiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x">
-
-                        <i class="fab 	fa-whatsapp fa-stack-1xa text-success"></i>
-                </a>
-
-                {{--Modal crear cita  --}}
-                <!-- modal de cracion de citas -->
-                <div class="modal fade" id="create-date" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header bg-dark text-lght">
-                                <h5 class="modal-title " id="ModalLabel">Agendar Cita</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <form>
-                                    @csrf
-                                    <input type="hidden" value="{{ csrf_token() }}" id="token" />
-                                    <div class="form-group">
-                                        {{-- <label for="recipient-name" class="col-form-label text-dark" place>Nombre Completo</label> --}}
-                                        <input autofocus="autofocus" placeholder="Nombre Completo" type="text" class="form-control" id="recipient-name">
-                                    </div>
-                                    <div class="form-group">
-                                        {{-- <label  for="message-text" class="col-form-label text-dark">Telefono</label> --}}
-                                        <div class="form-group">
-                                            <input placeholder="Teléfono" type="number" class="form-control" id="message-text">
-                                        </div>
-                                        <div class="form-group">
-                                            {{-- <label for="message-text" class="col-form-label text-dark">Day</label> --}}
-                                            <input min="2021-04-10" max="2021-04-30" type="date" class="form-control" id="date-day">
-                                        </div>
-                                        {{-- <label for="message-text" class="col-form-label text-dark">Hora</label> --}}
-                                        <div class="form-group">
-                                            <select class="form-control" name="time" id="date-time">
-                                                <option value="9">9 am</option>
-                                                <option value="10">10 am</option>
-                                                <option value="11">11 am</option>
-                                                <option value="12">12 am</option>
-
-                                                <option value="2">2 pm</option>
-                                                <option value="3">3 pm</option>
-                                                <option value="4">4 pm</option>
-                                                <option value="5">5 pm</option>
-                                            </select>
-                                            {{-- <label for="message-text" class="col-form-label text-dark">Barber</label> --}}
-                                            {{-- <input placeholder="Barber" type="text"  class="form-control" id="message-text"> --}}
-                                        </div>
-                                        <div class="form-group">
-                                            <select class="form-control" name="time" id="barber">
-                                            @foreach($barberos as $barber)
-                                              <option value="{{ $barber->barberName }}">{{ $barber->barberName }}</option>
-                                            @endforeach
-                                                <!-- <option value="1">Barbero 1</option> -->
-                                                <!-- <option value="2">Barbero 2</option>
-                                                <option value="3">Barbero 3</option> -->
-                                            </select>
-                                            {{-- <label for="message-text" class="col-form-label text-dark">Barber</label> --}}
-                                            {{-- <input placeholder="Barber" type="text"  class="form-control" id="message-text"> --}}
-                                        </div>
-                                        <div class="form-group">
-                                            <select class="form-control" name="time" id="services-date-id">
-                                            @foreach($servicios as $servicio)
-                                              <option value="{{ $servicio->serviceName }}">{{ $servicio->serviceName }}</option>
-                                             @endforeach
-                                           
-                                            </select>
-
-                                        </div>
-                                        <div class="form-group" id="modal-response">
-
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-
-                            <a target="blank" href="https://api.whatsapp.com/send?phone=5703105122321&text=Hola%20quisiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x">
-                                <i class="fab 	fa-whatsapp fa-stack-1xa text-success"> </i>
-                            </a>
-                                <button type="button" class="btn btn-dark" data-dismiss="modal">Cancelar</button>                                
-                                    <button id="confirm-date" type="button" class="btn btn-dark" onclick="sendForm()"> Confirmar</button>                                   
-                            </div>
-                        </div>
+                <div class="card-body">
+                    @if (session('status'))
+                    <div class="alert alert-success" role="alert">
+                        {{ session('status') }}
                     </div>
-                 </div>
+                    @endif
 
-            </div>
+                    <a name="" id="" class="btn btn-dark" href="{{ route('profile') }}" role="button">
+                        Perfil
+                    </a>
+                    <button type="button" class="btn btn-dark js-scroll-trigger" data-toggle="modal" data-target="#create-date" data-whatever="@mdo">Agendar Cita</button>
 
+                    <a target="blank" href="https://api.whatsapp.com/send?phone=5703105122321&text=Hola%20quisiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x">
+
+                            <i class="fab 	fa-whatsapp fa-stack-1xa text-success"></i>
+                    </a>
+
+                    {{--Modal crear cita  --}}
+                    <!-- modal de cracion de citas -->
+                    @include('partials.modal')
+                    
+                </div>
             </div>
         </div>
     </div>
@@ -154,7 +74,7 @@ Permite ver todos los reportes al administrador
                 target="blank"
                 href="{{ route('reporteClientes') }}"
                 id=""
-                class="btn btn-dark btn-sm" >Ver Clientes PDF
+                class="btn btn-dark btn-sm d-none">Ver Clientes PDF
 
             </a>
             <a
@@ -162,16 +82,16 @@ Permite ver todos los reportes al administrador
                 onclick="showReporte1()"
                 href="{{ route('reporteCitas') }}"
                 id=""
-                class="btn btn-dark btn-sm" >Ver Citas DPF
+                class="btn btn-dark btn-sm d-none" >Ver Citas DPF
 
             </a>
 
-            <a href="{{ route('exportAllDates') }}" id="export-dates-id" class="btn btn-dark btn-sm" >Exportar Citas Excel</a>
-            <a href="{{ route('exportAllusers') }}"  id="export-users-id" class="btn btn-dark btn-sm" >Exportar Clientes Excel</a>
+            <a href="{{ route('exportAllDates') }}" id="export-dates-id" class="btn btn-dark btn-sm d-none" >Exportar Citas Excel</a>
+            <a href="{{ route('exportAllusers') }}"  id="export-users-id" class="btn btn-dark btn-sm d-none" >Exportar Clientes Excel</a>
             <button id="show-users-id"  onclick="showUsers()" type="submit" class="btn btn-dark btn-sm" >Ver todos los Clientes</button>
             <br>
             
-            <button id="show-filters-id" onclick="showFilter()" type="submit" class="btn btn-outline-dark btn-sm">Ver  Filtros de Citas</button>
+            <button id="show-filters-id" onclick="showFilter()" type="submit" class="btn btn-outline-dark btn-sm d-none">Ver  Filtros de Citas</button>
             <button id="show-dates-id" onclick="showDates()" type="submit" class="btn btn-outline-dark btn-sm" >Ver todas las Citas</button>
             <br>
 
@@ -263,15 +183,12 @@ Permite ver todos los reportes al administrador
                 @foreach($citas as $cita)
 
                     <tr id="table-row-id">
-                        <td>
-                            <button onclick="" id="delete-icon-id" type="button" class="btn btn-danger js-scroll-trigger" data-toggle="modal" data-target="#delete-date" data-whatever="{{ $cita->id }}" data-cita ="{{ $cita->id }}" name="{{ $cita->id }}">
-
-                               
-                                <a class="" >
-                                    <i class="fas fa-trash" id="trashIcon"></i>
+                        <td> 
+                            <button onclick="" id="delete-icon-id" type="button" class="btn btn-danger js-scroll-trigger d-none" data-toggle="modal" data-target="#delete-date" data-whatever="{{ $cita->id }}" data-cita ="{{ $cita->id }}" name="{{ $cita->id }}">
+                               <a class="" >
+                                   <i class="fas fa-trash" id="trashIcon"></i>
                                 </a>
-                            </button>
-                        
+                            </button>                                                          
                             <a class="text-light btn btn-dark " href="/deleteDate/{{$cita->id}}">
                                 <i class="fas fa-trash" id="trashIcon"></i>
                             </a>
@@ -297,60 +214,50 @@ Permite ver todos los reportes al administrador
     </div>
 
 
-    <!-- vista de SAervicios  -->
+    <!-- vista de Servicios  -->
 
     <div class="d-none text-center containner reports m-0 lightOverlay col-md-12 " id="services-container-id" >
         <div class="container ">
 
         <!-- <div class=""> -->
-        <div class="card-header font-weight-bold bg-dark">Servicios</div>
-        <div class="card   text-center ">
+            <div class="card-header font-weight-bold bg-dark">Servicios</div>
+            <div class="card   text-center ">
 
-            <table class="table table-responsive-sm table-secondary text-center table-hover table" >
+                <table class="table table-responsive-sm table-secondary text-center table-hover table" >
 
-                <thead id="table-headers-services" class="">
-                    <tr>
-                    <th>Administrar</th>
-                    <th>id</th>
-                    <th>Nombre</th>
-                    <th>precio</th>
-                    </tr>
-                </thead>
-                <tbody id="table-body-id-services" class="">
-                @foreach($servicios as $servicio)
+                    <thead id="table-headers-services" class="">
+                        <tr>
+                        <th>Administrar</th>
+                        <th>id</th>
+                        <th>Nombre</th>
+                        <th>precio</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body-id-services" class="">
+                    @foreach($servicios as $servicio)
 
-                    <tr id="table-row-users ">
-                        <td>
-                            <button type="button" class="btn btn-danger js-scroll-trigger" data-toggle="modal" data-target="#delete-service" data-whatever="@mdo">
-                                <a class="" >
+                        <tr id="table-row-users ">
+                            <td>   
+                                <button onclick="" id="delete-icon-id" type="button" class="btn btn-danger js-scroll-trigger d-none" data-toggle="modal" data-target="#delete-date" data-whatever="{{ $cita->id }}" data-cita ="{{ $cita->id }}" name="{{ $cita->id }}">
+                                    <a class="" >
+                                        <i class="fas fa-trash" id="trashIcon"></i>
+                                    </a>
+                                </button>                                                    
+                                <a class="text-light btn btn-dark  " href="/deleteService/{{$servicio->id}}">
                                     <i class="fas fa-trash" id="trashIcon"></i>
                                 </a>
-                            </button>
-                            
-                            <a class="text-light btn btn-dark  " href="/deleteService/{{$servicio->id}}">
-                                <i class="fas fa-trash" id="trashIcon"></i>
-                            </a>
-                        </td>
-                        <td>{{ $servicio->id}}</td>
-                        <td>{{ $servicio->serviceName }}</td>
-                        <td>{{ $servicio->serviceDescription }}</td>
-                        <td>{{ $servicio->servicePrice }}</td>
+                            </td>
+                            <td>{{ $servicio->id}}</td>
+                            <td>{{ $servicio->serviceName }}</td>
+                            <td>{{ $servicio->serviceDescription }}</td>
+                            <td>{{ $servicio->servicePrice }}</td>
 
-                    </tr>
-
-
-                @endforeach
-                </tbody>
-
-
-                    </tr>
-
-
-
-                </tbody>
-            </table>
+                        </tr>
+                    @endforeach
+                    </tbody>
+                </table>
             </div>
-        <!-- </div> -->
+            <!-- </div> -->
         </div>
     </div>
 
@@ -362,51 +269,48 @@ Permite ver todos los reportes al administrador
 
         <!-- <div class=""> -->
         <div class="card-header font-weight-bold bg-dark">Clientes </div>
-        <div class="card   text-center ">
+            <div class="card   text-center ">
 
-            <table class="table table-responsive-sm table-secondary text-center table-hover table" >
+                <table class="table table-responsive-sm table-secondary text-center table-hover table" >
 
-                <thead id="table-headers-users" class="">
-                    <tr>
-                        <th>Administrar</th>
-                        <th>id</th>
-                        <th>Nombre</th>
-                        <th>Telefono</th>
-                        <th>Email</th>
+                    <thead id="table-headers-users" class="">
+                        <tr>
+                            <th>Administrar</th>
+                            <th>id</th>
+                            <th>Nombre</th>
+                            <th>Telefono</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body-id-users" class="">
+
+    
                     </tr>
-                </thead>
-                <tbody id="table-body-id-users" class="">
+                    @foreach($users as $user)
 
- 
-                </tr> -->
-                @foreach($users as $user)
+                        <tr id="table-row-users ">
+                            <td>
+                                <button type="button" class="btn btn-danger js-scroll-trigger d-none" data-toggle="modal" data-target="#delete-user" data-whatever="@mdo">
+                                    <a class="" >
+                                        <i class="fas fa-trash" id="trashIcon"></i>
+                                    </a>
+                                </button>
+                            
+                                <a class="text-light btn btn-dark  " href= "/deleteUser/{{$user->id}}">
+                                    <i class="fas fa-trash" id="trashIcon"></i>
+                                </a>
+                            </td>
+                            <td>{{ $user->id}}</td>
+                            <td>{{ $user->name }}</td>
+                            <td>{{ $user->phone }}</td>
+                            <td>{{ $user->email }}</td>
 
-                    <tr id="table-row-users ">
-                        <td>
-                        <button type="button" class="btn btn-danger js-scroll-trigger" data-toggle="modal" data-target="#delete-user" data-whatever="@mdo">
-                        <a class="" >
-                            <i class="fas fa-trash" id="trashIcon"></i>
-                        </a>
-                        </button>
-                       
-                        <a class="text-light btn btn-dark  " href= "/deleteUser/{{$user->id}}">
-                            <i class="fas fa-trash" id="trashIcon"></i>
-                        </a>
-                        </td>
-                        <td>{{ $user->id}}</td>
-                        <td>{{ $user->name }}</td>
-                        <td>{{ $user->phone }}</td>
-                        <td>{{ $user->email }}</td>
-
-                    </tr>
+                        </tr>
 
 
-                @endforeach
-                </tbody>
-
-
-                </tbody>
-            </table>
+                    @endforeach
+                    </tbody>
+                </table>
             </div>
         <!-- </div> -->
         </div>
@@ -441,11 +345,11 @@ Permite ver todos los reportes al administrador
 
                     <tr id="table-row-barber ">
                         <td>
-                        <button type="button" class="btn btn-danger js-scroll-trigger" data-toggle="modal" data-target="#delete-barber" data-whatever="@mdo">
-                        <a class="" >
-                            <i class="fas fa-trash" id="trashIcon"></i>
-                        </a>
-                        </button>
+                            <button type="button" class="btn btn-danger js-scroll-trigger d-none" data-toggle="modal" data-target="#delete-barber" data-whatever="@mdo">
+                                <a class="" >
+                                    <i class="fas fa-trash" id="trashIcon"></i>
+                                </a>    
+                            </button>
                        
                         <a class="text-light btn btn-dark  " href= "/deleteBarber/{{$barber->id}}">
                             <i class="fas fa-trash" id="trashIcon"></i>
