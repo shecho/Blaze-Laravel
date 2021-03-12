@@ -97,6 +97,7 @@ function modalResponse(state) {
         <span aria-hidden="true">&times;</span>
         </button>`
         dismissModal()
+        
     }    
 }
 // funcion en deshuso
@@ -186,7 +187,7 @@ function CheckMyDates() {
     // console.log(prueba);
     if (prueba) {
 
-        console.log("si hay datos    ");
+        console.log("si hay datos    ");   
         // console.log(tableMyDates.lastElementChild.innerHTML);
     } else {
         console.log("no");
@@ -197,9 +198,6 @@ function CheckMyDates() {
             </button>
          </div>`
     }
-    setTimeout(() => {
-        location.reload()
-    }, 1000)
 }
 // Captura el boton de las consultar citas
 let CheackMyDatesBtn = document.getElementById('CheackMyDates')

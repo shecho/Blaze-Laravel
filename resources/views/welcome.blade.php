@@ -629,8 +629,7 @@
                   <button
                     id="sendMessageButton"
                     class="btn btn-primary btn-xl text-uppercase"
-                    type="submit"
-                    onclick="envioFormulario()"
+                    type="submit"                    
                   >
                     Enviar Mensaje
                   </button>
