@@ -121,18 +121,18 @@
       <div class="container">
         <div class="intro-text">
 
-          <div class="intro-lead-in">Bienvenido a Big Boy Blaze!</div>
+          <div class="intro-lead-in">Bienvenido a la barbería Big Boy Blaze!</div>
           <div class="intro-heading text-uppercase">Agenda tu cita</div>
-
-          <button  type="button" class="btn btn-primary-cita btn-xl text-uppercase js-scroll-trigger" data-toggle="modal" data-target="#create-date" data-whatever="@mdo">Agendar Cita</button> 
-
-          {{--Modal crear cita  --}}
-
-         @include('partials.modal')
+          <div class="img-derechos ">Recuerda pedir tu cita con mínimo 2 horas de anticipación</div>
+          <a class="btn btn-primary-cita btn-xl text-uppercase js-scroll-trigger" target="blank" href="https://api.whatsapp.com/send?phone=5703105122321&text=Hola%20quisiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x position" >             
+              Agendar Cita<i class="fab 	fa-whatsapp fa-stack-1x fa-inverse fabwpp"></i>
+          </a>
 
         <!-- Derechos de uso de la imagen -->
-        <div clas="">Photo by Nick Demou from Pexels</div>
+        
       </div>
+      @include('partials.alert')
+      <div class="">Photo by Nick Demou from Pexels</div>
     </header>
     <!-- Servicios  -->
     <section class="page-section" id="services">
@@ -141,7 +141,7 @@
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">Servicios</h2>
             <h3 class="section-subheading text-muted">
-              Ofrecemos calidad en nuestros servicios
+              Ofrecemos calidad en nuestros servicios con un ambiente familiar y tranquilo
             </h3>
           </div>
         </div>
@@ -153,7 +153,7 @@
             </span>
             <h4 class="service-heading">Cortes</h4>
             <p class="text-muted">
-              Para que te sientas comodo y explores nuevos estilos.       
+              Para que te sientas comodo y explores nuevos estilos. te acesoramos a demás manejamos los cortes clasicos, moderno y femenino de barberia.     
             </p>
           </div>
           <div class="col-md-6">
@@ -417,7 +417,7 @@
               </li>
               <li class="timeline-inverted">
                 <div class="timeline-image">
-                  <h4>Se parte <br />de nuestra <br />Historia!</h4>
+                  <h4>Se parte <br />de nuestra <br />Familia!</h4>
                 </div>
               </li>
             </ul>
@@ -431,7 +431,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Nuestro genial equipo</h2>           
+            <h2 class="section-heading text-uppercase">Nuestro genial equipo de profecionales a tu servicio</h2>           
           </div>
         </div>
         <div class="row">
@@ -509,21 +509,7 @@
                 </li>              
               </ul>
             </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/barbers/barber6.jpg" alt="barber1 img" />
-              <h4>Agustín Rincón</h4>
-              <p class="text-muted">Barbero</p>
-              <ul class="list-inline social-buttons">
-                <li class="list-inline-item">
-                  <a target="blank" href="https://www.instagram.com/agustinerp/">
-                    <i class="fab fa-instagram"></i>
-                  </a>
-                </li>               
-              </ul>
-            </div>
-          </div>
+          </div>          
         </div>       
       </div>
     </section>
@@ -569,10 +555,14 @@
           </div>
         </div>
         <div class="row">
-          <h4 class="section-email">prueba@gmail.com </h4>
-          <a target="blank" href="https://api.whatsapp.com/send?phone=5703105122321&text=Hola%20quisiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x position">             
-              <i class="fab 	fa-whatsapp fa-stack-1x fa-inverse"></i>
+          <h4 class="section-email">afo.blaze@gmail.com </h4>
+          <a target="blank" href="https://api.whatsapp.com/send?phone=5703105122321&text=Hola%20quisiera%20expresar%20mi%20opinion:%20" class="fa-stack fa-4x position">             
+              <i class="fab 	fa-whatsapp fa-stack-1x fa-inverse fa-footer"></i>
           </a>
+          <h4 class="section-email ctn">estamos ubicados en sabaneta Calle 75B sur Cra. 40-320 </h4>
+          <h4 class="section-email">telefono fijo: 2889318</h4>
+          <h4 class="section-email">telefono Celular: 3105122321</h4>
+
           <div class="col-lg-12 d-none">
             <form id="contactForm" name="sentMessage" novalidate="novalidate">
               <div class="row">

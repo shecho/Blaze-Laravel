@@ -84,13 +84,14 @@
         </div>
         <div class="border"></div>
       </div>
-      <button type="button" class="btn btn-dark   js-scroll-trigger" data-toggle="modal" data-target="#create-date" data-whatever="@mdo">Agendar Cita
-      </button>
-      <button type="button" class="btn btn-dark   js-scroll-trigger" data-toggle="modal" data-target="" data-whatever="" onclick="CheckMyDates()">Ver mis Citas
-      </button>
-      <a target="blank" href="https://api.whatsapp.com/send?phone=5703105122321&text=Hola%20quisiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x">
-        <i class="fab 	fa-whatsapp fa-stack-1xa text-success"> </i>
+      <!-- <button type="button" class="btn btn-dark   js-scroll-trigger" data-toggle="modal" data-target="#create-date" data-whatever="@mdo">Agendar Cita
+      </button> -->
+      <a  class="btn btn-dark   js-scroll-trigger" target="blank" href="https://api.whatsapp.com/send?phone=5703105122321&text=Hola%20quisiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x">
+      Agendar Cita
       </a>
+      <button type="button" class="btn btn-dark   js-scroll-trigger d-none" data-toggle="modal" data-target="" data-whatever="" onclick="CheckMyDates()">Ver mis Citas
+      </button>
+      
 
 
   <!-- ver mis citas

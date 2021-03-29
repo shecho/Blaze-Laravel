@@ -6,10 +6,19 @@ Este archivo hace los siguiente:
     Envia las respuestas en caso de errores
     Hace la petition al backenbn 
     Procesa la respuesta del backend
+    
+    setTimeout(() => {
+        $("[data-dismiss=modal]").trigger({ type: "click" });
+    }, 3000)
 */
 // console.log("script linked2");
 
-
+function avisoSubscripcion(){
+    setTimeout(() => {
+        alert("funciona");
+    }, 3000)
+    
+   }
 // Envia el formulario de citas
 function sendForm() {
     console.log('Inside function send form');

@@ -1,3 +1,4 @@
+ <!-- este modal no esta en uso por peticion del cliente ya que se agedaran las citas por medio de wpp-->
  <!-- Modal para crear una cita -->
           
  <div class="modal fade" id="create-date" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
