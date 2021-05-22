@@ -4,7 +4,7 @@
 
 // Esta funcion maneja el modal de servcios captura los datos y hace una peticion por ajax al servidor para guardar los datos
 const handleService = () => {
-//   permite campturar los datos del formnulario de sercicios
+//   permite campturar los datos del formnulario de servicios
     let serviceName= document.getElementById("service-name-id").value
     // console.log(serviceName);
     let servicePrice= document.getElementById('service-price-id').value
@@ -20,6 +20,8 @@ const handleService = () => {
         "_token": token
     };
     // console.log(data);
+
+    let urlProduction ='/Blaze-Laravel/public/createNewService'
     let url = '/createNewService';
     fetch(url, {
         method: 'POST', // or 'PUT'
@@ -29,8 +31,9 @@ const handleService = () => {
         }
     }).then(response => response.json())
       .then(data =>{   
-            console.log(data) })
-    //  1 cuando ya esxiste una cita, 0 cuando se creo correctamente
+            console.log(data)                         
+        })
+    //  1 cuando ya existe una cita, 0 cuando se creo correctamente
     //  console.log(data);
 
 }
@@ -65,15 +68,18 @@ const valitadeService = (serviceName,servicePrice,serviceDescription) => {
     }
 
 }
-// maneja la respues del sercicio y imprime en consola
+
+// maneja la respues del servicio e imprime en consola
 const handleResponse = (state) => {
     console.log(state);
     // Maneja es estado de la peticion 
-    // si se dejo gfuardar en todo bien sino ya existe ese ser
+    // si se dejo guardar en todo bien si no ya existe ese ser
 }
 
-// Muestra el reportee de serviios en la vista de panel de control
-const showServices = () => {
+// Muestra el reporte de servicios en la vista de panel de control
+function showServices ()
+
+{
     // Muestra el reporte de sercicios que esta oculto
     let showServicesContainer= document.getElementById('services-container-id')
     showServicesContainer.classList.toggle("d-none")

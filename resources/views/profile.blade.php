@@ -1,5 +1,5 @@
 <!--
-  Esta vista muetra los datos de cliente registrado.
+  Esta vista muestra los datos de cliente registrado.
 
  -->
 
@@ -84,13 +84,14 @@
         </div>
         <div class="border"></div>
       </div>
-      <button type="button" class="btn btn-dark   js-scroll-trigger" data-toggle="modal" data-target="#create-date" data-whatever="@mdo">Agendar Cita
-      </button>
-      <button type="button" class="btn btn-dark   js-scroll-trigger" data-toggle="modal" data-target="" data-whatever="" onclick="CheckMyDates()">Ver mis Citas
-      </button>
-      <a target="blank" href="https://api.whatsapp.com/send?phone=5703194853019&text=Hola%20quisiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x">
-        <i class="fab 	fa-whatsapp fa-stack-1xa text-success"> </i>
+      <!-- <button type="button" class="btn btn-dark   js-scroll-trigger" data-toggle="modal" data-target="#create-date" data-whatever="@mdo">Agendar Cita
+      </button> -->
+      <a  class="btn btn-dark   js-scroll-trigger" target="blank" href="https://api.whatsapp.com/send?phone=5703105122321&text=Hola%20quisiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x">
+      Agendar Cita
       </a>
+      <button type="button" class="btn btn-dark   js-scroll-trigger d-none" data-toggle="modal" data-target="" data-whatever="" onclick="CheckMyDates()">Ver mis Citas
+      </button>
+      
 
 
   <!-- ver mis citas
@@ -120,7 +121,7 @@
                           <tr id="table-row-my-dates">
                             <td>
 
-                              <a target="_blank" class="text-light btn btn-dark  " href="https://api.whatsapp.com/send?phone=5703194853019&text=Hola%20quisiera%20Cancelar%20mi%20cita%20para%20el%20%20{{$cita->day}}%20a%20las%20{{$cita->time}}">
+                              <a target="_blank" class="text-light btn btn-dark  " href="https://api.whatsapp.com/send?phone=5703105122321&text=Hola%20quisiera%20Cancelar%20mi%20cita%20para%20el%20%20{{$cita->day}}%20a%20las%20{{$cita->time}}">
                                   <i class="fas fa-trash" id="trashIcon"></i>
                               </a>
                             </td>
@@ -153,97 +154,8 @@
 
 {{--Modal create date  --}}
 <!-- modal de cracion de citas -->
-<div class="modal fade" id="create-date" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header bg-dark text-light">
-        <h5 class="modal-title " id="ModalLabel">Agendar Cita</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form>
-          @csrf
-          <input type="hidden" value="{{ csrf_token() }}" id="token" />
-          <div class="form-group">
-            {{-- <label for="recipient-name" class="col-form-label text-dark" place>Full name</label> --}}
-            <input autofocus="autofocus" placeholder="Nombre Completo" type="text" class="form-control" id="recipient-name">
-          </div>
-          <div class="form-group">
-            {{-- <label  for="message-text" class="col-form-label text-dark">Telefono</label> --}}
-            <div class="form-group">
-              <input placeholder="Teléfono" type="number" class="form-control" id="message-text">
-            </div>
-            <div class="form-group">
-              {{-- <label for="message-text" class="col-form-label text-dark">Day</label> --}}
-              <input min="2020-04-10" max="2020-04-30" type="date" class="form-control" id="date-day">
-            </div>
-            {{-- <label for="message-text" class="col-form-label text-dark">Time</label> --}}
-            <div class="form-group">
-              <select class="form-control" name="time" id="date-time">
-                <option value="9">9 am</option>
-                <option value="10">10 am</option>
-                <option value="11">11 am</option>
-                <option value="12">12 am</option>
+@include('partials.modal')
 
-                <option value="2">2 pm</option>
-                <option value="3">3 pm</option>
-                <option value="4">4 pm</option>
-                <option value="5">5 pm</option>
-              </select>
-
-
-              {{-- <label for="message-text" class="col-form-label text-dark">Barber</label> --}}
-              {{-- <input placeholder="Barber" type="text"  class="form-control" id="message-text"> --}}
-            </div>
-            <div class="form-group">
-              <select class="form-control" name="time" id="barber">
-              @foreach($barberos as $barber)
-                <option value="{{ $barber->barberName }}">{{ $barber->barberName }}</option>
-              @endforeach  
-              <!-- <option value="1">Barbero 1</option>
-                <option value="2">Barbero 2</option>
-                <option value="3">Barbero 3</option> -->
-              </select>
-              {{-- <label for="message-text" class="col-form-label text-dark">Barber</label> --}}
-              {{-- <input placeholder="Barber" type="text"  class="form-control" id="message-text"> --}}
-            </div>
-            <div class="form-group">
-              <select class="form-control" name="time" id="services-date-id">
-              @foreach($servicios as $servicio)
-               <option value="{{ $servicio->serviceName }}">{{ $servicio->serviceName }}</option>
-              @endforeach
-                <!-- <option value="1">Corte</option>
-                <option value="2">Barba</option>
-                <option value="3">Corte y Barba</option> -->
-              </select>
-            </div>
-            <div class="form-group" id="modal-response">
-
-            </div>
-          </div>
-        </form>
-      </div>
-
-      <div class="modal-footer">
-      <a  target="_blank" href="https://api.whatsapp.com/send?phone=5703194853019&text=Hola%20quisiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x">
-        <i class="fab fa-whatsapp fa-stack-1xa text-success"> </i>
-      </a>
-        <button type="button" class="btn btn-dark" data-dismiss="modal">Cancelar</button>
-        <button
-          id="confirm-date"
-          type="button"
-          class="btn btn-dark"
-          onclick="sendForm()"
-          > Confirmar</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-</div>
 {{-- modal --}}
 
 

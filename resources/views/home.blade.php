@@ -1,4 +1,4 @@
-<!-- Esta vista contiene el panle de controly reportes del administrador
+<!-- Esta vista contiene el panel de control y reportes del administrador
 Permite ver todos los reportes al administrador
  -->
  
@@ -9,25 +9,20 @@ Permite ver todos los reportes al administrador
 @section('content')
 
 
-
-
-
-
-
 <div class="container ">
     <div class="row justify-content-center">
-    <div class="col-md-10">
-        <div class="card lightOverlay">
-        
-            <div class="card-header bg-dark">
-            <a href={{ route('welcome') }} class="text-light float-left">
-                <i class="h4 fas fa-undo-alt"></i>
-            </a>
-                <h4>Panel de Control    </h4>
-               
-            </div>
+        <div class="col-md-10">
+            <div class="card lightOverlay">
+            
+                <div class="card-header bg-dark">
+                    <a href="{{ route('welcome') }}" class="text-light float-left">
+                        <i class="h4 fas fa-undo-alt"></i>
+                    </a>
+                    <h4>Panel de Control    </h4>               
+                </div>
 
 
+<<<<<<< HEAD
             <div class="card-body">
                 @if (session('status'))
                 <div class="alert alert-success" role="alert">
@@ -126,11 +121,23 @@ Permite ver todos los reportes al administrador
                                 <button id="confirm-date" type="button" class="btn btn-dark" onclick="sendForm()"> Confirmar</button>
                             </div>
                         </div>
+=======
+                <div class="card-body">
+                    @if (session('status'))
+                    <div class="alert alert-success" role="alert">
+                        {{ session('status') }}
+>>>>>>> a6115f679dc3106fd2b1a2e32fdf98c4e6492959
                     </div>
-                 </div>
+                    @endif
 
-            </div>
-
+                    <a name="" id="" class="btn btn-dark" href="{{ route('profile') }}" role="button">
+                        Perfil
+                    </a>
+                    <button type="button" class="btn btn-dark js-scroll-trigger d-none" data-toggle="modal" data-target="#create-date" data-whatever="@mdo">Agendar Cita</button>
+                    <a class="btn btn-dark js-scroll-trigger" target="blank" href="https://api.whatsapp.com/send?phone=5703105122321&text=Hola%20quisiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x position">             
+                        Agendar Cita
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -152,26 +159,28 @@ Permite ver todos los reportes al administrador
         <div class="card-header ">
             <a
                 onclick="showReporte1()"
-                href="/reporteClientes"
+                target="blank"
+                href="{{ route('reporteClientes') }}"
                 id=""
-                class="btn btn-dark btn-sm" >Ver Clientes PDF
+                class="btn btn-dark btn-sm d-none">Ver Clientes PDF
 
             </a>
             <a
+                target="blank"
                 onclick="showReporte1()"
-                href="/reporteCitas"
+                href="{{ route('reporteCitas') }}"
                 id=""
-                class="btn btn-dark btn-sm" >Ver Citas DPF
+                class="btn btn-dark btn-sm d-none" >Ver Citas DPF
 
             </a>
 
-            <a href="/exportAllDates" id="export-dates-id" class="btn btn-dark btn-sm" >Exportar Citas Excel</a>
-            <a href="/exportAllusers" id="export-users-id" class="btn btn-dark btn-sm" >Exportar Clientes Excel</a>
-            <button id="show-users-id" onclick="showUsers()" type="submit" class="btn btn-dark btn-sm" >Ver todos los Clientes</button>
+            <a href="{{ route('exportAllDates') }}" id="export-dates-id" class="btn btn-dark btn-sm d-none" >Exportar Citas Excel</a>
+            <a href="{{ route('exportAllusers') }}"  id="export-users-id" class="btn btn-dark btn-sm d-none" >Exportar Clientes Excel</a>
+            <button id="show-users-id"  onclick="showUsers()" type="submit" class="btn btn-dark btn-sm" >Ver todos los Clientes</button>
             <br>
             
-            <button id="show-filters-id" onclick="showFilter()" type="submit" class="btn btn-outline-dark btn-sm">Ver  Filtros de Citas</button>
-            <button id="show-dates-id" onclick="showDates()" type="submit" class="btn btn-outline-dark btn-sm" >Ver todas las Citas</button>
+            <button id="show-filters-id" onclick="showFilter()" type="submit" class="btn btn-outline-dark btn-sm d-none">Ver  Filtros de Citas</button>
+            <button id="show-dates-id" onclick="showDates()" type="submit" class="btn btn-outline-dark btn-sm d-none" >Ver todas las Citas</button>
             <br>
 
 
@@ -179,14 +188,14 @@ Permite ver todos los reportes al administrador
                 id="service-id"
                 onclick=""
                 type="submit"
-                class="btn btn-dark btn-sm"
+                class="btn btn-dark btn-sm d-none"
                 data-target="#create-service"
                 data-toggle="modal"
                 data-whatever="@mdo">
                     Crear Servicio
 
             </button>
-            <button id="show-services-id" onclick="showServices()" type="submit" class="btn btn-dark btn-sm" >Ver todos los Servicios</button>
+            <button id="show-services-id" onclick="showServices()" type="submit" class="btn btn-dark btn-sm d-none" >Ver todos los Servicios</button>
             <br>
 
 
@@ -194,13 +203,13 @@ Permite ver todos los reportes al administrador
                 id="service-id"
                 onclick=""
                 type="submit"
-                class="btn btn-outline-dark btn-sm"
+                class="btn btn-outline-dark btn-sm d-none"
                 data-target="#create-barber"
                 data-toggle="modal"
                 data-whatever="@mdo">
                 Crear Empleado
             </button>
-            <button id="show-barber-id" onclick="showBarber()" type="submit" class="btn btn-outline-dark btn-sm" >Ver Empleados</button>
+            <button id="show-barber-id" onclick="showBarber()" type="submit" class="btn btn-outline-dark btn-sm d-none" >Ver Empleados</button>
 
 
 
@@ -227,7 +236,7 @@ Permite ver todos los reportes al administrador
 
                 </form>
                 <div>
-                    <a href="/home"  class="btn btn-outline-dark mt-2">
+                    <a href="{{ route('home') }}"  class="btn btn-outline-dark mt-2">
                         <i class=" fas fa-eraser"></i>
                         Remover filtros 
                     </a>
@@ -238,7 +247,7 @@ Permite ver todos los reportes al administrador
     <br>
 
     <!-- ver citas -->
-    <div class="col-lg-12 grid-margin stretch-card ">
+    <div class="col-lg-12 grid-margin stretch-card d-none">
      <div class="card-header bg-dark d-none" id="dates-title">Citas</div>
         <div class="card table table-dark text-center ">
             <table class="table table-dark table-hover text-center" >
@@ -262,16 +271,13 @@ Permite ver todos los reportes al administrador
                 @foreach($citas as $cita)
 
                     <tr id="table-row-id">
-                        <td>
-                            <button onclick="" id="delete-icon-id" type="button" class="btn btn-danger js-scroll-trigger" data-toggle="modal" data-target="#delete-date" data-whatever="{{ $cita->id }}" data-cita ="{{ $cita->id }}" name="{{ $cita->id }}">
-
-                               
-                                <a class="" >
-                                    <i class="fas fa-trash" id="trashIcon"></i>
+                        <td> 
+                            <button onclick="" id="delete-icon-id" type="button" class="btn btn-danger js-scroll-trigger d-none" data-toggle="modal" data-target="#delete-date" data-whatever="{{ $cita->id }}" data-cita ="{{ $cita->id }}" name="{{ $cita->id }}">
+                               <a class="" >
+                                   <i class="fas fa-trash" id="trashIcon"></i>
                                 </a>
-                            </button>
-                        
-                            <a class="text-light btn btn-dark " href="/deleteDate/{{ $cita->id }}">
+                            </button>                                                          
+                            <a class="text-light btn btn-dark " href="/deleteDate/{{$cita->id}}">
                                 <i class="fas fa-trash" id="trashIcon"></i>
                             </a>
 
@@ -296,59 +302,50 @@ Permite ver todos los reportes al administrador
     </div>
 
 
-    <!-- vista de SAervicios  -->
+    <!-- vista de Servicios  -->
 
-    <div class="d-none text-center containner reports m-0 lightOverlay col-md-12 " id="services-container-id" >
+    <div class="d-none text-center containner reports m-0 lightOverlay col-md-12 d-none" id="services-container-id" >
         <div class="container ">
 
         <!-- <div class=""> -->
-        <div class="card-header font-weight-bold bg-dark">Servicios</div>
-        <div class="card   text-center ">
+            <div class="card-header font-weight-bold bg-dark">Servicios</div>
+            <div class="card   text-center ">
 
-            <table class="table table-responsive-sm table-secondary text-center table-hover table" >
+                <table class="table table-responsive-sm table-secondary text-center table-hover table" >
 
-                <thead id="table-headers-services" class="">
-                    <tr>
-                    <th>Administrar</th>
-                    <th>id</th>
-                    <th>Nombre</th>
-                    <th>precio</th>
-                    </tr>
-                </thead>
-                <tbody id="table-body-id-services" class="">
-                @foreach($servicios as $servicio)
+                    <thead id="table-headers-services" class="">
+                        <tr>
+                        <th>Administrar</th>
+                        <th>id</th>
+                        <th>Nombre</th>
+                        <th>precio</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body-id-services" class="">
+                    @foreach($servicios as $servicio)
 
-                    <tr id="table-row-users ">
-                        <td>
-                            <button type="button" class="btn btn-danger js-scroll-trigger" data-toggle="modal" data-target="#delete-service" data-whatever="@mdo">
-                                <a class="" >
+                        <tr id="table-row-users ">
+                            <td>   
+                                <button onclick="" id="delete-icon-id" type="button" class="btn btn-danger js-scroll-trigger d-none" data-toggle="modal" data-target="#delete-date" data-whatever="{{ $cita->id }}" data-cita ="{{ $cita->id }}" name="{{ $cita->id }}">
+                                    <a class="" >
+                                        <i class="fas fa-trash" id="trashIcon"></i>
+                                    </a>
+                                </button>                                                    
+                                <a class="text-light btn btn-dark  " href="/deleteService/{{$servicio->id}}">
                                     <i class="fas fa-trash" id="trashIcon"></i>
                                 </a>
-                            </button>
-                            <a class="text-light btn btn-dark  " href="/deleteService/{{ $servicio->id }}">
-                                <i class="fas fa-trash" id="trashIcon"></i>
-                            </a>
-                        </td>
-                        <td>{{ $servicio->id}}</td>
-                        <td>{{ $servicio->serviceName }}</td>
-                        <td>{{ $servicio->serviceDescription }}</td>
-                        <td>{{ $servicio->servicePrice }}</td>
+                            </td>
+                            <td>{{ $servicio->id}}</td>
+                            <td>{{ $servicio->serviceName }}</td>
+                            <td>{{ $servicio->serviceDescription }}</td>
+                            <td>{{ $servicio->servicePrice }}</td>
 
-                    </tr>
-
-
-                @endforeach
-                </tbody>
-
-
-                    </tr>
-
-
-
-                </tbody>
-            </table>
+                        </tr>
+                    @endforeach
+                    </tbody>
+                </table>
             </div>
-        <!-- </div> -->
+            <!-- </div> -->
         </div>
     </div>
 
@@ -357,55 +354,44 @@ Permite ver todos los reportes al administrador
 
     <div class="d-none text-center containner reports m-0 lightOverlay col-md-12 " id="users-container-id" >
         <div class="container ">
+            <div class="card-header font-weight-bold bg-dark">Clientes </div>
+                <div class="card   text-center ">
 
-        <!-- <div class=""> -->
-        <div class="card-header font-weight-bold bg-dark">Clientes </div>
-        <div class="card   text-center ">
+                    <table class="table table-responsive-sm table-secondary text-center table-hover table" >
 
-            <table class="table table-responsive-sm table-secondary text-center table-hover table" >
+                        <thead id="table-headers-users" class="">
+                            <tr>
+                                <th>Administrar</th>
+                                <th>id</th>
+                                <th>Nombre</th>
+                                <th>Telefono</th>
+                                <th>Email</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body-id-users" class="">
+                        @foreach($users as $user)
+                            <tr id="table-row-users ">
+                                <td>
+                                    <button type="button" class="btn btn-danger js-scroll-trigger d-none" data-toggle="modal" data-target="#delete-user" data-whatever="@mdo">
+                                        <a class="" >
+                                            <i class="fas fa-trash" id="trashIcon"></i>
+                                        </a>
+                                    </button>
+                                
+                                    <a class="text-light btn btn-dark  " href= "/deleteUser/{{$user->id}}">
+                                        <i class="fas fa-trash" id="trashIcon"></i>
+                                    </a>
+                                </td>
+                                <td>{{ $user->id}}</td>
+                                <td>{{ $user->name }}</td>
+                                <td>{{ $user->phone }}</td>
+                                <td>{{ $user->email }}</td>
 
-                <thead id="table-headers-users" class="">
-                    <tr>
-                        <th>Administrar</th>
-                        <th>id</th>
-                        <th>Nombre</th>
-                        <th>Telefono</th>
-                        <th>Email</th>
-                    </tr>
-                </thead>
-                <tbody id="table-body-id-users" class="">
-
- 
-                </tr> -->
-                @foreach($users as $user)
-
-                    <tr id="table-row-users ">
-                        <td>
-                        <button type="button" class="btn btn-danger js-scroll-trigger" data-toggle="modal" data-target="#delete-user" data-whatever="@mdo">
-                        <a class="" >
-                            <i class="fas fa-trash" id="trashIcon"></i>
-                        </a>
-                        </button>
-                        <a class="text-light btn btn-dark  " href="/deleteUser/{{$user->id}}">
-                            <i class="fas fa-trash" id="trashIcon"></i>
-                        </a>
-                        </td>
-                        <td>{{ $user->id}}</td>
-                        <td>{{ $user->name }}</td>
-                        <td>{{ $user->phone }}</td>
-                        <td>{{ $user->email }}</td>
-
-                    </tr>
-
-
-                @endforeach
-                </tbody>
-
-
-                </tbody>
-            </table>
-            </div>
-        <!-- </div> -->
+                            </tr>
+                        @endforeach
+                        </tbody>
+                    </table>
+                </div>
         </div>
     </div>
 
@@ -416,55 +402,54 @@ Permite ver todos los reportes al administrador
     <div class="d-none text-center containner reports m-0 lightOverlay col-md-12 " id="barber-container-id" >
         <div class="container ">
 
-        <!-- <div class=""> -->
-        <div class="card-header font-weight-bold bg-dark">Empleados </div>
-        <div class="card  text-center ">
+            <!-- <div class=""> -->
+            <div class="card-header font-weight-bold bg-dark">Empleados </div>
+            <div class="card  text-center ">
 
-            <table class="table table-responsive-sm table-secondary text-center table-hover table" >
+                <table class="table table-responsive-sm table-secondary text-center table-hover table" >
 
-                <thead id="table-headers-barber" class="">
-                    <tr>
-                        <th>Administrar</th>
-                        <th>id</th>
-                        <th>Nombre</th>
-                        <th>Documento</th>
-                        <th>Telefono</th>
-                        <th>Email</th>
-                    </tr>
-                </thead>
-                <tbody id="table-body-id-barber" class="">
-                
-                @foreach($barberos as $barber)
+                    <thead id="table-headers-barber" class="">
+                        <tr>
+                            <th>Administrar</th>
+                            <th>id</th>
+                            <th>Nombre</th>
+                            <th>Documento</th>
+                            <th>Telefono</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body-id-barber" class="">
+                    
+                    @foreach($barberos as $barber)
 
-                    <tr id="table-row-barber ">
-                        <td>
-                        <button type="button" class="btn btn-danger js-scroll-trigger" data-toggle="modal" data-target="#delete-barber" data-whatever="@mdo">
-                        <a class="" >
-                            <i class="fas fa-trash" id="trashIcon"></i>
-                        </a>
-                        </button>
-                      
-                        <a class="text-light btn btn-dark  " href="/deleteBarber/{{$barber->id}}">
-                            <i class="fas fa-trash" id="trashIcon"></i>
-                        </a>
-                        </td>
-                        <td>{{ $barber->id }}</td>
-                        <td>{{ $barber->barberName }}</td>
-                        <td>{{ $barber->barberDocument }}</td>
-                        <td>{{ $barber->barberPhone }}</td>
-                        <td>{{ $barber->barberEmail }}</td>
+                        <tr id="table-row-barber ">
+                            <td>
+                                <button type="button" class="btn btn-danger js-scroll-trigger d-none" data-toggle="modal" data-target="#delete-barber" data-whatever="@mdo">
+                                    <a class="" >
+                                        <i class="fas fa-trash" id="trashIcon"></i>
+                                    </a>    
+                                </button>
+                        
+                                <a class="text-light btn btn-dark  " href= "/deleteBarber/{{$barber->id}}">
+                                <i class="fas fa-trash" id="trashIcon"></i>
+                                </a>
+                            </td>
+                            <td>{{ $barber->id }}</td>
+                            <td>{{ $barber->barberName }}</td>
+                            <td>{{ $barber->barberDocument }}</td>
+                            <td>{{ $barber->barberPhone }}</td>
+                            <td>{{ $barber->barberEmail }}</td>
 
-                    </tr>
-
-
-                @endforeach
-                </tbody>
+                        </tr>
 
 
-                </tbody>
-            </table>
+                    @endforeach
+                    </tbody>
+
+
+                    </tbody>
+                </table>
             </div>
-        <!-- </div> -->
         </div>
     </div>
 
@@ -473,7 +458,7 @@ Permite ver todos los reportes al administrador
 
     {{--Eliminar cita  --}}
     <!-- modal de eliminar citas -->
-    <div class="modal fade" id="delete-date" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade d-none" id="delete-date" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header bg-dark text-light">
@@ -545,8 +530,8 @@ Permite ver todos los reportes al administrador
                     <button id="confirm-delete-date" type="button" class="btn btn-danger" onclick="" >
                     
                        
-
-                        <a onclick="" class="text-decoration-none text-light" href="/deleteUser/{{ $user->id }}">
+                                 
+                        <a onclick="" class="text-decoration-none text-light" href="">
                             Confirmar
                         </a>
 
@@ -564,7 +549,7 @@ Permite ver todos los reportes al administrador
 
     {{--Eliminar servicio --}}
     <!-- modal de eliminar servicio -->
-    <div class="modal fade" id="delete-service" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade d-none" id="delete-service" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header bg-dark text-light">
@@ -658,8 +643,9 @@ Permite ver todos los reportes al administrador
             </div>
             <div class="modal-footer">
 
-                <button type="button" class="btn btn-dark" data-dismiss="modal">Cancelar</button>
-                <button id="confirm-date" type="button" class="btn btn-dark" onclick="handleService()">
+                <button type="button" class="btn btn-dark" data-dismiss="modal">Cancelar</button>                 
+                
+                <button id="confirm-date" type="button" class="btn btn-dark"  onclick="handleService()" >
                Crear
                 </button>
 

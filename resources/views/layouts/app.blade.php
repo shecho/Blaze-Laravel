@@ -15,7 +15,21 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{asset('js/services.js')}}" defer></script>
+    <script src="{{ asset('js/admin.js')}}" defer></script>
+   
+   <script src="{{asset('js/baber.js')}}" defer></script>
 
+   <script src="{{asset('js/users.js')}}" defer></script>
+
+
+   <script src="{{asset('js/date.js')}}" defer></script>
+
+   <script src="{{asset('js/deleteDate.js')}}" defer></script>
+
+   <script src="{{asset('js/edidProfile.js')}}" defer></script>
+
+   
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -46,14 +60,14 @@
 
     <link href="{{ asset('/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" />
     
-    <!-- <link href="/../bootstrap/css/bootstrap.min.css" rel="stylesheet" /> -->
+    
    
    <!-- font awesome -->
-    <script src="https://kit.fontawesome.com/d4bbca006e.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d4bbca006e.js" crossorigin="anonymous" defer></script>
     
 
     <link href="{{ asset('css/profilestyle.css') }}" rel="stylesheet">
-    <!-- <link href="/../css/profilestyle.css" rel="stylesheet" /> -->
+   
 
 
 </head>
@@ -114,30 +128,6 @@
             @yield('content')
         </main>
     </div>
-    <!-- <script src="/../js/admin.js"></script> -->
-    <script src="{{ asset('/js/admin.js')}}"></script>
-     <!-- Bootstrap core JavaScript -->
-        
-    <!-- no needed since they are in the temlate layout -->
 
-    <!-- Plugin JavaScript -->
-    <!-- <script src="/../jquery-easing/jquery.easing.min.js"></script> -->
-
-    <!-- Contact form JavaScript -->
-    <!-- <script src="/../js/jqBootstrapValidation.js"></script> -->
-    <!-- <script src="/../js/contact_me.js"></script> -->
-
-    
-    <!-- Custom scripts for this template
-    <script src="/../js/agency.min.js"></script>
-     -->
-     <script src="{{asset('/js/date.js')}}"></script>
-     <script src="{{asset('/js/deleteDate.js')}}"></script>
-     <script src="{{asset('/js/edidProfile.js')}}"></script>
-     <script src="{{asset('js/services.js')}}"></script>
-     <script src="{{asset('js/users.js')}}"></script>
-     <script src="{{asset('js/baber.js')}}"></script>
-     <!-- <script src="/../js/baber.js"></script>
-     <script src="/../js/users.js"></script> -->
 </body>
 </html>

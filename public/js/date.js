@@ -6,10 +6,19 @@ Este archivo hace los siguiente:
     Envia las respuestas en caso de errores
     Hace la petition al backenbn 
     Procesa la respuesta del backend
+    
+    setTimeout(() => {
+        $("[data-dismiss=modal]").trigger({ type: "click" });
+    }, 3000)
 */
 // console.log("script linked2");
 
-
+function avisoSubscripcion(){
+    setTimeout(() => {
+        alert("funciona");
+    }, 3000)
+    
+   }
 // Envia el formulario de citas
 function sendForm() {
     console.log('Inside function send form');
@@ -30,19 +39,30 @@ function sendForm() {
         "service": service,
         "_token": token
     };
-    modalValidate(fullName, phone, day, time,barber,service)
+    modalValidate(fullName, phone, day, time)
 
     let url = 'createNewDate/';
     fetch(url, {
-            method: 'POST', // or 'PUT'
-            body: JSON.stringify(data), // data can be `string` or {object}!
-            headers: {
-                'Content-Type': 'application/json',
-            }
-        }).then(response => response.json())
-        .then(data => data == 1 ? modalResponse(1) : modalResponse(0))
+        method: 'POST', // or 'PUT'
+        body: JSON.stringify(data), // data can be `string` or {object}!
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    }).then(response => response.json())
+    .then(data => data == 1 ? modalResponse(1) : modalResponse(0)) 
+
+    document.getElementById("form-modal-reseter").reset();
+ 
     //1 cuando ya esxiste una cita, 0 cuando se creo correctamente
     // console.log(data);
+    
+      
+}
+function dismissModal(){
+    setTimeout(() => {
+        $("[data-dismiss=modal]").trigger({ type: "click" });
+    }, 3000)
+    
 }
 
 // Valida el modal de citas
@@ -85,7 +105,9 @@ function modalResponse(state) {
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
         </button>`
-    }
+        dismissModal()
+        
+    }    
 }
 // funcion en deshuso
 function showReporte1() {
@@ -174,7 +196,7 @@ function CheckMyDates() {
     // console.log(prueba);
     if (prueba) {
 
-        console.log("si hay datos    ");
+        console.log("si hay datos    ");   
         // console.log(tableMyDates.lastElementChild.innerHTML);
     } else {
         console.log("no");
