@@ -10,6 +10,7 @@
     Nombre del barbero
     
     Boton de cancelacion
+    estamos perdiendo el tiempo
  -->
 
   
