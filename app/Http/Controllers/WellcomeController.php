@@ -1,5 +1,5 @@
 <?php
-/*Este controaldor es el responsable de  manejar el panel de control y de administracion de los usurtios y  del administrador  */
+/*Este controlador es el responsable de  manejar el panel de control y de administracion de los usuarios y  del administrador  */
 
 namespace App\Http\Controllers;
 
@@ -29,7 +29,7 @@ class WellcomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    // Esta es la funcioon principal que consulra la informacion del usario y de citas en la base de datos
+    // Esta es la funcioon principal que consulta la informacion del usario y de citas en la base de datos
     public function index()
 
     {

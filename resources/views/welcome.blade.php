@@ -1,10 +1,4 @@
-<!-- Nos disculpamos por los comentarios inncesarios en este proyecto. 
-Sabemos e antemano que son malas practicas pero los hemos agregado por motivos academicos y porque nos lo han solicitado nuestros evaluadores
-
--->
-
-
-<!-- Esta el la vista de inio de la aplicacion aqui estan todas las seciones y la barra de navegacion -->
+<!-- Esta el la vista de inicio de la aplicacion aqui estan todas las secciones y la barra de navegacion -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -61,7 +55,7 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
   </head>
 
   <body id="page-top">
-    <!-- Navigation -->
+    <!-- Navegacion -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top"
@@ -127,179 +121,74 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
       <div class="container">
         <div class="intro-text">
 
-          <div class="intro-lead-in">Bienvenido a Big Boy Blaze!</div>
+          <div class="intro-lead-in">Bienvenido a la barbería Big Boy Blaze!</div>
           <div class="intro-heading text-uppercase">Agenda tu cita</div>
-
-          <button  type="button" class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" data-toggle="modal" data-target="#create-date" data-whatever="@mdo">Agendar Cita</button> 
-
-        
-
-          {{--Modal crear cita  --}}
-          <!-- Modal para crear una cita -->
-          
-          <div class="modal fade" id="create-date" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-              <h5 class="modal-title text-dark" id="ModalLabel">Agendar Cita</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <form>
-                  @csrf
-                    <input type="hidden" value="{{ csrf_token() }}" id="token"/>
-                    <div class="form-group">
-                      {{-- <label for="recipient-name" class="col-form-label text-dark" place>Nombre Completo</label> --}}
-                      <input placeholder="Nombre Completo" type="text" class="form-control" id="recipient-name">
-                    </div>
-                    <div class="form-group">
-                      {{-- <label  for="message-text" class="col-form-label text-dark">Telefono</label> --}}
-                      <div class="form-group">
-                      <input placeholder="Telefono" type="number"  class="form-control" id="message-text">
-                    </div>
-                    <div class="form-group">
-                      {{-- <label for="message-text" class="col-form-label text-dark">Day</label> --}}
-                      <input min="2020-04-17" max="2020-04-29" type="date"  class="form-control" id="date-day">
-                    </div>
-                      {{-- <label for="message-text" class="col-form-label text-dark">Time</label> --}}
-                      <div class="form-group">
-                        <select class="form-control" name="time" id="date-time">
-                          <option value="9">9 am</option>
-                          <option value="10">10 am</option>
-                          <option value="11">11 am</option>
-                          <option value="12">12 am</option>
-                          
-                          <option value="2">2 pm</option>
-                          <option value="3">3 pm</option>
-                          <option value="4">4 pm</option>
-                          <option value="5">5 pm</option>
-                        </select>
-                        {{-- <label for="message-text" class="col-form-label text-dark">Barber</label> --}}
-                        {{-- <input placeholder="Barber" type="text"  class="form-control" id="message-text"> --}}
-                      </div>
-                      <div class="form-group">
-                        <select class="form-control" name="time" id="barber">
-                          <option value="1">Cualquiera</option>
-                        @foreach($barberos as $barber)
-                          <option value="{{ $barber->barberName }}">{{ $barber->barberName }}</option>
-                        @endforeach
-              
-                          <!-- <!-- <option value="1">Barbero 1</option> -->
-                        
-                        </select>
-                        {{-- <label for="message-text" class="col-form-label text-dark">Barber</label> --}}
-                        {{-- <input placeholder="Barber" type="text"  class="form-control" id="message-text"> --}}
-                      </div>
-                      <div class="form-group">
-                        <select class="form-control" name="time" id="services-date-id">
-                          <option value="1">Asesoramiento</option>
-                         @foreach($servicios as $servicio)
-                          <option value="{{ $servicio->serviceName }}">{{ $servicio->serviceName }}</option>
-                         @endforeach
-                                
-                        </select>
-                     
-                      </div>
-                      <div class="form-group" id="modal-response">
-
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                <div class="modal-footer">
-
-                
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                  <button id="confirm-date" type="button" class="btn btn-primary"> Confirmar</button>
-
-                  <div class="">
-                  <a target="blank" href="https://api.whatsapp.com/send?phone=5703194853019&text=Hola%20quisiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x">
-              
-                    <i class="fab 	fa-whatsapp fa-stack-1xa text-success"></i>
-                  </a>
-                </div>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-          
-
-        </div>
-        <!-- cierre del modal -->
-
-       
-
-
-
+          <div class="img-derechos ">Recuerda pedir tu cita con mínimo 2 horas de anticipación</div>
+          <a class="btn btn-primary-cita btn-xl text-uppercase js-scroll-trigger" target="blank" href="https://api.whatsapp.com/send?phone=5703105122321&text=Hola%20quisiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x position" >             
+              Agendar Cita<i class="fab 	fa-whatsapp fa-stack-1x fa-inverse fabwpp"></i>
+          </a>
 
         <!-- Derechos de uso de la imagen -->
-        <div clas="">Photo by Nick Demou from Pexels</div>
+        
       </div>
+      @include('partials.alert')
+      <div class="">Photo by Nick Demou from Pexels</div>
     </header>
     <!-- Servicios  -->
     <section class="page-section" id="services">
-      <div class="container">
+      <div class="container" >
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">Servicios</h2>
             <h3 class="section-subheading text-muted">
-              Lorem ipsum dolor sit amet consectetur.
+              Ofrecemos calidad en nuestros servicios con un ambiente familiar y tranquilo
             </h3>
           </div>
         </div>
         <div class="row text-center">
-          <div class="col-md-4">
-            <span class="fa-stack fa-4x">
-                  <i class="fas fa-circle fa-stack-2x text-secundary"></i>
-              <i class="fas fa-cut fa-stack-1x fa-inverse"></i>
-            </span>
-            <h4 class="service-heading">Cortes</h4>
+          <div class="col-md-6">
+              <a name="" id="" class="btn btn-light border border-dark rounded" href="{{ route('portfolio') }}" ><!-- -->  
+              <span class="fa-stack fa-4x">
+                <i class="fas fa-circle fa-stack-2x text-secundary"></i>
+                <i class="fas fa-cut fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>  <!--  -->
+            <a name="" id="" href="{{ route('portfolio') }}">
+              <h4 type="button" class="service-heading d-block btn btn-warning">Cortes</h4>
+            </a>
+
+            <!--<h4 class="service-heading">Cortes</h4>-->
+            
             <p class="text-muted">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
-              maxime quam architecto quo inventore harum ex magni, dicta
-              impedit
+              Echa un vistazo a nuestro portafolio de cortes solo dando clic al botón.
+              <!-- Para que te sientas comodo y explores nuevos estilos. te acesoramos a demás manejamos los cortes clasicos, moderno y femenino de barberia.  -->     
             </p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-6">
             <span class="fa-stack fa-4x">
               <i class="fas fa-circle fa-stack-2x text-secundary"></i>
               <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
             </span>
             <h4 class="service-heading">Productos de belleza y cuidado</h4>
+
             <p class="text-muted">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
-              maxime quam architecto quo inventore harum ex magni, dicta
-              impedit.
-            </p>
-          </div>
-          <div class="col-md-4">
-            <span class="fa-stack fa-4x">
-              <i class="fas fa-circle fa-stack-2x text-secundary"></i>
-              <i class="fas fa-gamepad fa-stack-1x fa-inverse"></i>
-            </span>
-            <h4 class="service-heading">Entretenimiento y mas</h4>
-            <p class="text-muted">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
-              maxime quam architecto quo inventore harum ex magni, dicta
-              impedit.
+              Acá te ofrecemos productos para el cuidado de tu estética y así estés preparado para cualquier momento y ocasión. 
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Grid de lportafoilio-->
+    <!-- Grid de portafolio-->
     <section class="bg-light page-section" id="portfolio">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">Productos</h2>
             <h3 class="section-subheading text-muted">
-              Belleza y cuidado
-            </h3>
+              Belleza y cuidado             
+              <p>Estos son algunos productos que puedes encontrar en nuestra barbería</p>            
+            </h3>           
           </div>
         </div>
         <div class="row">
@@ -316,13 +205,13 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
               </div>
               <img
                 class="img-fluid"
-                src="img/portfolio/01-thumbnail.jpg"
+                src="img/portfolio/001-thumbnail.jpg"
                 alt=""
               />
             </a>
             <div class="portfolio-caption">
-              <h4>Pomadas</h4>
-              <p class="text-muted">A base de agua </p>
+              <h4>Ceras</h4>
+              <p class="text-muted">Crea un peinado en vivaz</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -338,13 +227,13 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
               </div>
               <img
                 class="img-fluid"
-                src="img/portfolio/02-thumbnail.jpg"
+                src="img/portfolio/002-thumbnail.jpeg"
                 alt=""
               />
             </a>
             <div class="portfolio-caption">
-              <h4>Tratamientos para la barba</h4>
-              <p class="text-muted">Desarrollo y crecimiento</p>
+              <h4>Pomadas</h4>
+              <p class="text-muted">Crea nuevos estilos en tu cabello</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -365,8 +254,8 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
               />
             </a>
             <div class="portfolio-caption">
-              <h4>Tinturas</h4>
-              <p class="text-muted">Gran gama de colores</p>
+              <h4>Tratamientos para la barba</h4>
+              <p class="text-muted">Desarrollo y crecimiento</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -382,13 +271,13 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
               </div>
               <img
                 class="img-fluid"
-                src="img/portfolio/04-thumbnail.jpg"
+                src="img/portfolio/004-thumbnail.jpeg"
                 alt=""
               />
             </a>
             <div class="portfolio-caption">
-              <h4>Herrammientas profesionales</h4>
-              <p class="text-muted">Ecuantra aqui lo que necesitas para tu barberia</p>
+              <h4>Balsamo</h4>
+              <p class="text-muted">Para barba y bigote</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -404,13 +293,13 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
               </div>
               <img
                 class="img-fluid"
-                src="img/portfolio/05-thumbnail.jpg"
+                src="img/portfolio/005-thumbnail.jpeg"
                 alt=""
               />
             </a>
             <div class="portfolio-caption">
-              <h4>Vaporizadores</h4>
-              <p class="text-muted">Difectes marcaas, tipos y propositos</p>
+              <h4>Shampoos</h4>
+              <p class="text-muted">Diferentes marcas, tipos y propositos</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -426,13 +315,13 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
               </div>
               <img
                 class="img-fluid"
-                src="img/portfolio/06-thumbnail.jpg"
+                src="img/portfolio/006-thumbnail.jpeg"
                 alt=""
               />
             </a>
             <div class="portfolio-caption">
-              <h4>Puplementos</h4>
-              <p class="text-muted">Ganancia muscular</p>
+              <h4>Immortal Infuse</h4>
+              <p class="text-muted">Crea un aspecto pulido para cualquier estilo</p>
             </div>
           </div>
         </div>
@@ -446,7 +335,7 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">Acerca de</h2>
             <h3 class="section-subheading text-muted">
-              Lorem ipsum dolor sit amet consectetur.
+              Acá te contamos sobre como se ha convertido la barberia blaze en una familia
             </h3>
           </div>
         </div>
@@ -457,21 +346,20 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
                 <div class="timeline-image">
                   <img
                     class="rounded-circle img-fluid"
+                    style="max-width:100%; max-height:100%; height:170px;"
                     src="img/about/1.jpg"
                     alt=""
                   />
                 </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
-                    <h4>2009-2011</h4>
+                    <h4>2011</h4>
                     <h4 class="subheading">Nuentros inicios</h4>
                   </div>
                   <div class="timeline-body">
                     <p class="text-muted">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Sunt ut voluptatum eius sapiente, totam reiciendis
-                      temporibus qui quibusdam, recusandae sit vero unde, sed,
-                      incidunt et ea quo dolore laudantium consectetur!
+                    Todo empezó con una gran inspiración, mi hijo. Decidí emprender y así funde Big Boy Blaze. Somos un lugar que quiere que los padres y sus hijos salgan felices y satisfechos con nuestros servicios siempre atendiendo con la mejor actitud.
+
                     </p>
                   </div>
                 </div>
@@ -480,21 +368,18 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
                 <div class="timeline-image">
                   <img
                     class="rounded-circle img-fluid"
+                    style="max-width:100%; max-height:100%; height:170px;"
                     src="img/about/2.jpg"
                     alt=""
                   />
                 </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
-                    <h4>Marzo 2011</h4>
-                    <h4 class="subheading">Nuentra Creacion</h4>
+                    <h4 class="subheading">Siempre comprometidos</h4>
                   </div>
                   <div class="timeline-body">
                     <p class="text-muted">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Sunt ut voluptatum eius sapiente, totam reiciendis
-                      temporibus qui quibusdam, recusandae sit vero unde, sed,
-                      incidunt et ea quo dolore laudantium consectetur!
+                    Nos vemos dentro de las normas para laborar por nuestra transparencia hacia nuestros clientes y comunidad, con la responsabilidad de seguir las normas sanitarias y siempre asegurarnos que los clientes se sientan cómodos y satisfechos.
                     </p>
                   </div>
                 </div>
@@ -503,21 +388,18 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
                 <div class="timeline-image">
                   <img
                     class="rounded-circle img-fluid"
+                    style="max-width:100%; max-height:100%; height:170px;"
                     src="img/about/3.jpg"
                     alt=""
                   />
                 </div>
                 <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>Diciembre 2012</h4>
-                <h4 class="subheading">Nueva sede</h4>
+                  <div class="timeline-heading">                    
+                    <h4 class="subheading">Misión</h4>
                   </div>
                   <div class="timeline-body">
                     <p class="text-muted">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Sunt ut voluptatum eius sapiente, totam reiciendis
-                      temporibus qui quibusdam, recusandae sit vero unde, sed,
-                      incidunt et ea quo dolore laudantium consectetur!
+                    Brindar un servicio de alta calidad que satisfaga las necesidades y exigencias de cada cliente.   Contar con un personal profesional, calificado y responsable para que nuestra clientela experimente la sensación de  estar en un ambiente familiar y desee regresar a nuestra barberia.
                     </p>
                   </div>
                 </div>
@@ -526,28 +408,25 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
                 <div class="timeline-image">
                   <img
                     class="rounded-circle img-fluid"
+                    style="max-width:100%; max-height:100%; height:170px;"
                     src="img/about/4.jpg"
                     alt=""
                   />
                 </div>
                 <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>July 2014</h4>
-                    <h4 class="subheading">Expansion</h4>
+                  <div class="timeline-heading">                    
+                    <h4 class="subheading">Visión</h4>
                   </div>
                   <div class="timeline-body">
                     <p class="text-muted">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Sunt ut voluptatum eius sapiente, totam reiciendis
-                      temporibus qui quibusdam, recusandae sit vero unde, sed,
-                      incidunt et ea quo dolore laudantium consectetur!
+                    Que Big Boy Blaze sea reconocida no solo por brindar un servicio de calidad, sino también por su ética, compromiso y trato profesional.
                     </p>
                   </div>
                 </div>
               </li>
               <li class="timeline-inverted">
                 <div class="timeline-image">
-                  <h4>Se parte <br />de nuestra <br />Historia!</h4>
+                  <h4>Se parte <br />de nuestra <br />Familia!</h4>
                 </div>
               </li>
             </ul>
@@ -561,97 +440,104 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Nuestro genial equipo</h2>
-            <h3 class="section-subheading text-muted">
-             Profesionales destacados.
-            </h3>
+            <h2 class="section-heading text-uppercase">Nuestro genial equipo de profesionales a tu servicio</h2>           
           </div>
         </div>
         <div class="row">
           <div class="col-sm-4">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/barbers/barber2.jpg" alt="" />
-              <h4>Alejandro</h4>
-              <p class="text-muted">Barba y estilos</p>
+              <img class="img-fluid rounded-circle" src="img/barbers/barber1.jpg" alt=""/>
+              <h4>Anderson Granados</h4>
+               <p class="text-muted">Barbero</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fab fa-twitter"></i>
+                  <a target="blank" href="https://www.instagram.com/granados_31/">
+                    <i class="fab fa-instagram"></i>
                   </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fab fa-facebook-f"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fab fa-linkedin-in"></i>
-                  </a>
-                </li>
+                </li>               
               </ul>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/barbers/barber1.jpg" alt="barber1 img" />
-              <h4>Andres</h4>
+              <img class="mx-auto rounded-circle" src="img/barbers/barber2.jpg" alt="barber1 img" />
+              <h4>Andres Ocampo</h4>
               <p class="text-muted">Administrador y fundador</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fab fa-twitter"></i>
+                  <a target="blank" href="https://www.instagram.com/barberia_blaze/">
+                    <i class="fab fa-instagram"></i>
                   </a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="#">
+                  <a target="blank" href="https://www.facebook.com/Barberia.Blaze">
                     <i class="fab fa-facebook-f"></i>
                   </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fab fa-linkedin-in"></i>
-                  </a>
-                </li>
+                </li>                
               </ul>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="team-member">
-          <img class="mx-auto rounded-circle" src="img/barbers/barber2.jpg" alt="" />
-              <h4>Damian</h4>
-              <p class="text-muted">Barbas y tintes</p>
+              <img class="mx-auto rounded-circle" src="img/barbers/barber3.jpg" alt="" />
+              <h4>Sebastian Parra</h4>
+              <p class="text-muted">Barbero</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fab fa-twitter"></i>
+                  <a target="blank" href="https://www.instagram.com/2blerr_18/">
+                    <i class="fab fa-instagram"></i>
                   </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fab fa-facebook-f"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fab fa-linkedin-in"></i>
-                  </a>
-                </li>
+                </li>                
               </ul>
             </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <p class="large text-muted">
-              Este es solo un texto de ejemplo para los profresores que no saben ingles
-            </p>
+          <div class="col-sm-4">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/barbers/barber4.jpg" alt="barber1 img" />
+              <h4>Juan Pablo Estrada</h4>
+              <p class="text-muted">Barbero</p>
+              <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                  <a target="blank" href="https://www.instagram.com/jp.estrada0/">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>               
+              </ul>
+            </div>
           </div>
-        </div>
+          <div class="col-sm-4">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/barbers/barber5.jpg" alt="barber1 img" />
+              <h4>Cristian Arroyave</h4>
+              <p class="text-muted">Barbero</p>
+              <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                  <a target="blank" href="https://www.instagram.com/cristian_ac22/">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>              
+              </ul>
+            </div>
+          </div>   
+          <div class="col-sm-4">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/barbers/barber6.jpg" alt="barber1 img" />
+              <h4>Jonathan Sánchez </h4>
+              <p class="text-muted">Barbero</p>
+              <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                  <a target="blank" href="https://www.instagram.com/stiven_sanchez1999s/">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>              
+              </ul>
+            </div>
+          </div>       
+        </div>       
       </div>
     </section>
 
-    <!-- Cleintes no se implemnta por el momento, pues no hay testitoniales -->
+    <!-- Cleintes no se implenta por el momento, pues no hay testimoniales -->
     <!-- 
     <section class="py-5">
       <div class="container">
@@ -680,7 +566,7 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
       </div>
     </section> -->
 
-    <!-- Contactanos Se agrega  aunque esta fuera de la solcitud inical -->
+    <!-- Contactanos se agrega  aunque esta fuera de la solcitud inical -->
     <section class="page-section" id="contact">
       <div class="container">
         <div class="row">
@@ -692,7 +578,15 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-12">
+          <h4 class="section-email">afo.blaze@gmail.com </h4>
+          <a target="blank" href="https://api.whatsapp.com/send?phone=5703105122321&text=Hola%20quisiera%20expresar%20mi%20opinion:%20" class="fa-stack fa-4x position">             
+              <i class="fab 	fa-whatsapp fa-stack-1x fa-inverse fa-footer"></i>
+          </a>
+          <h4 class="section-email ctn">estamos ubicados en sabaneta Calle 75B sur Cra. 40-320 </h4>
+          <h4 class="section-email">telefono fijo: 2889318</h4>
+          <h4 class="section-email">telefono Celular: 3105122321</h4>
+
+          <div class="col-lg-12 d-none">
             <form id="contactForm" name="sentMessage" novalidate="novalidate">
               <div class="row">
                 <div class="col-md-6">
@@ -748,11 +642,11 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
                   <button
                     id="sendMessageButton"
                     class="btn btn-primary btn-xl text-uppercase"
-                    type="submit"
+                    type="submit"                    
                   >
                     Enviar Mensaje
                   </button>
-                  <a target="blank" href="https://api.whatsapp.com/send?phone=5703194853019&text=Hola%20Quiesiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x">
+                  <a target="blank" href="https://api.whatsapp.com/send?phone=5703105122321&text=Hola%20quisiera%20separar%20una%20cita%20para%20las%20" class="fa-stack fa-4x">
              
                      <i class="fab 	fa-whatsapp fa-stack-1x fa-inverse"></i>
                   </a>
@@ -774,19 +668,14 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
           <div class="col-md-4">
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
-                <a  target="blank" href="https://twitter.com/explore">
-                  <i class="fab fa-twitter"></i>
+                <a  target="blank" href="https://www.instagram.com/barberia_blaze/">
+                  <i class="fab fa-instagram"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a  target="blank" href="https://www.facebook.com/">
+                <a  target="blank" href="https://www.facebook.com/Barberia.Blaze">
                       <i class="fab fa-facebook-f"></i>
                     </a>
-              </li>
-              <li  class="list-inline-item">
-                <a target="blank" href="https://www.linkedin.com/">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
               </li>
             </ul>
           </div>
@@ -805,7 +694,6 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
     </footer>
 
     <!-- Modal del portafolio de servicios  -->
-    <!-- Portfolio Modals -->
 
     <!-- Modal 1 -->
     <div
@@ -826,28 +714,19 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
             <div class="row">
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Pomadas</h2>
+                  <!-- Detalles del producto-->
+                  <h2 class="text-uppercase">Cera</h2>
                   <p class="item-intro text-muted">
-                    Lorem ipsum dolor sit amet consectetur.
+                    Pacinos mate
                   </p>
                   <img
                     class="img-fluid d-block mx-auto"
-                    src="img/portfolio/01-full.jpg"
+                    src="img/portfolio/001-full.jpeg"
                     alt=""
                   />
                   <p>
-                    Descripción del Poductoa Lorem ipsum dolor
-                    sit amet, consectetur adipisicing elit. Est blanditiis
-                    dolorem culpa incidunt minus dignissimos deserunt repellat
-                    aperiam quasi sunt officia expedita beatae cupiditate,
-                    maiores repudiandae, nostrum, reiciendis facere nemo!
+                  Pacinos Mate es una Cera para el peinado del cabello de los hombres, con una fijación media y sin brillo, que proporcionan una definición duradera dejando el cabello natural.
                   </p>
-                  <ul class="list-inline">
-                    <li>Fecha: Abril 2020</li>
-                    <li>Cleinte: Andres</li>
-                    <li>Categoria: diseno</li>
-                  </ul>
                   <button
                     class="btn btn-primary"
                     data-dismiss="modal"
@@ -883,28 +762,19 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
             <div class="row">
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Barba</h2>
+                  <!-- Detalles del producto -->
+                  <h2 class="text-uppercase">Pomadas</h2>
                   <p class="item-intro text-muted">
-                    Lorem ipsum dolor sit amet consectetur.
+                    Pomada para peinar
                   </p>
                   <img
                     class="img-fluid d-block mx-auto"
-                    src="img/portfolio/02-full.jpg"
+                    src="img/portfolio/002-full.jpeg"
                     alt=""
                   />
                   <p>
-                    Lorem ipsum dolor
-                    sit amet, consectetur adipisicing elit. Est blanditiis
-                    dolorem culpa incidunt minus dignissimos deserunt repellat
-                    aperiam quasi sunt officia expedita beatae cupiditate,
-                    maiores repudiandae, nostrum, reiciendis facere nemo!
-                  </p>
-                  <ul class="list-inline">
-                  <li>Fecha: Abril 2020</li>
-                    <li>Cliente: Andres</li>
-                    <li>Categoria: Design</li>
-                  </ul>
+                  Es una Crema para peinar que ayuda a crear estilos propios con definición y textura. Proporciona peinados con control y duración, su novedosa fórmula aporta memoria de peinado a su cabello.                 
+                  </p>                  
                   <button
                     class="btn btn-primary"
                     data-dismiss="modal"
@@ -939,28 +809,19 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
             <div class="row">
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Tinturas</h2>
+                  <!-- Detalles del producto -->
+                  <h2 class="text-uppercase">Barbas</h2>
                   <p class="item-intro text-muted">
-                    Lorem ipsum dolor sit amet consectetur.
+                  Balsamo ossion para el cuidado de la barba
                   </p>
                   <img
                     class="img-fluid d-block mx-auto"
-                    src="img/portfolio/03-full.jpg"
+                    src="img/portfolio/003-full.jpeg"
                     alt=""
                   />
                   <p>
-                    Descripción del Poducto: Lorem ipsum dolor
-                    sit amet, consectetur adipisicing elit. Est blanditiis
-                    dolorem culpa incidunt minus dignissimos deserunt repellat
-                    aperiam quasi sunt officia expedita beatae cupiditate,
-                    maiores repudiandae, nostrum, reiciendis facere nemo!
+                  Ossion bálsamo de barba ha sido desarrollado para suavizar su barba, quitar el aspecto desordenado y aliviar su piel. Enriquecido con argán y aceite de almendra amargo, ayuda a suavizar tu barba. Evita el desgaste prematuro de la piel con sus antioxidantes. No contiene parabenos.
                   </p>
-                  <ul class="list-inline">
-                    <li>Fehca: Abril 2020</li>
-                    <li>Cliente: Andres</li>
-                    <li>Categoria: Design</li>
-                  </ul>
                   <button
                     class="btn btn-primary"
                     data-dismiss="modal"
@@ -995,28 +856,19 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
             <div class="row">
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Herramientas</h2>
+                  <!-- Detalles del producto -->
+                  <h2 class="text-uppercase">Balsamo</h2>
                   <p class="item-intro text-muted">
-                    Lorem ipsum dolor sit amet consectetur.
+                  Cera bálsamo para barba y bigote.                  
                   </p>
                   <img
                     class="img-fluid d-block mx-auto"
-                    src="img/portfolio/04-full.jpg"
+                    src="img/portfolio/004-full.jpeg"
                     alt=""
                   />
                   <p>
-                    Descripción del Poducto: Lorem ipsum dolor
-                    sit amet, consectetur adipisicing elit. Est blanditiis
-                    dolorem culpa incidunt minus dignissimos deserunt repellat
-                    aperiam quasi sunt officia expedita beatae cupiditate,
-                    maiores repudiandae, nostrum, reiciendis facere nemo!
+                  Ossion Beard Balm ha sido desarrollado para suavizar la barba, eliminar la apariencia desordenada y aliviar la piel. Enriquecido con Aceite de argán y de almendras amargas, para prevenir el desgaste prematuro de la piel con sus antioxidantes. No contiene parabenos.
                   </p>
-                  <ul class="list-inline">
-                  <li>Fehca: Abril 2020</li>
-                    <li>Cliente: Andres</li>
-                    <li>Categoria:  Design</li>
-                  </ul>
                   <button
                     class="btn btn-primary"
                     data-dismiss="modal"
@@ -1051,28 +903,19 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
             <div class="row">
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Vaporizadores</h2>
+                  <!-- Detalles del producto -->
+                  <h2 class="text-uppercase">Shampoos</h2>
                   <p class="item-intro text-muted">
-                    Lorem ipsum dolor sit amet consectetur.
+                    Shampoo Barcadia
                   </p>
                   <img
                     class="img-fluid d-block mx-auto"
-                    src="img/portfolio/05-full.jpg"
+                    src="img/portfolio/005-full.jpeg"
                     alt=""
                   />
                   <p>
-                    Descripción del Poducto: Lorem ipsum dolor
-                    sit amet, consectetur adipisicing elit. Est blanditiis
-                    dolorem culpa incidunt minus dignissimos deserunt repellat
-                    aperiam quasi sunt officia expedita beatae cupiditate,
-                    maiores repudiandae, nostrum, reiciendis facere nemo!
+                  Fortalece tu cabello y barba, previniendo la caída y ayudando al crecimiento. Manteniéndolo limpio, brillante y libre de caspa.
                   </p>
-                  <ul class="list-inline">
-                    <li>Fecha: Abril 2020</li>
-                    <li>Cliente: Andres</li>
-                    <li>Categoria: Website Design</li>
-                  </ul>
                   <button
                     class="btn btn-primary"
                     data-dismiss="modal"
@@ -1107,24 +950,19 @@ Sabemos e antemano que son malas practicas pero los hemos agregado por motivos a
             <div class="row">
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Suplementos</h2>
+                  <!-- Detalles del producto -->
+                  <h2 class="text-uppercase">Pomade Immortal Infuse</h2>
                   <p class="item-intro text-muted">
                     Lorem ipsum dolor sit amet consectetur.
                   </p>
                   <img
                     class="img-fluid d-block mx-auto"
-                    src="img/portfolio/06-full.jpg"
+                    src="img/portfolio/006-full.jpeg"
                     alt=""
                   />
                   <p>
-                    This proyects is been created for barber shop Blaze
+                  Esta fórmula súper concentrada de bajo mantenimiento funciona en cualquier tipo de cabello, grosor o textura. Funciona bien con longitudes de pelo corto a mediano. Además, con una sujeción todo el día,
                   </p>
-                  <ul class="list-inline">
-                    <li>Fehca: April 2020</li>
-                    <li>Cliente: Andres</li>
-                    <li>Categoria: Barbershop</li>
-                  </ul>
                   <button
                     class="btn btn-primary"
                     data-dismiss="modal"

@@ -1,5 +1,5 @@
-/* Esta funcion captura los eventos y lainformacion del formulario de la seccion de contactanos */
-// Si no sbae j querry no lo toque
+/* Esta funcion captura los eventos y la informacion del formulario de la seccion de contactanos */
+// Si no sabe j query no lo toque
 
 
 $(function() {

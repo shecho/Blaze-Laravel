@@ -15,19 +15,19 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="{{asset('js/services.js')}}"></script>
-    <script src="{{ asset('js/admin.js')}}"></script>
+    <script src="{{asset('js/services.js')}}" defer></script>
+    <script src="{{ asset('js/admin.js')}}" defer></script>
    
-   <script src="{{asset('js/baber.js')}}"></script>
+   <script src="{{asset('js/baber.js')}}" defer></script>
 
-   <script src="{{asset('js/users.js')}}"></script>
+   <script src="{{asset('js/users.js')}}" defer></script>
 
 
-   <script src="{{asset('js/date.js')}}"></script>
+   <script src="{{asset('js/date.js')}}" defer></script>
 
-   <script src="{{asset('js/deleteDate.js')}}"></script>
+   <script src="{{asset('js/deleteDate.js')}}" defer></script>
 
-   <script src="{{asset('js/edidProfile.js')}}"></script>
+   <script src="{{asset('js/edidProfile.js')}}" defer></script>
 
    
     <!-- Fonts -->
@@ -63,7 +63,7 @@
     
    
    <!-- font awesome -->
-    <script src="https://kit.fontawesome.com/d4bbca006e.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d4bbca006e.js" crossorigin="anonymous" defer></script>
     
 
     <link href="{{ asset('css/profilestyle.css') }}" rel="stylesheet">
@@ -128,12 +128,6 @@
             @yield('content')
         </main>
     </div>
-   
-    
-    
-
-
-
 
 </body>
 </html>
