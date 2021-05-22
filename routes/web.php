@@ -91,6 +91,8 @@ Route::get('/deleteService/{idService}', 'ServiceController@deleteService')->nam
 // Ruta par Borrar un usuario
 Route::get('/deleteBarber/{idBarber}', 'BarberController@deleteBarber')->name('deleteBarber');
 
+//Ruta para ver el portafolio de cortes PortafolioController@portafolio
+Route::get('/portafolio','PortfolioController@portfolio')->name('portfolio');
 
 
 

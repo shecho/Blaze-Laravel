@@ -2867,7 +2867,6 @@ fieldset:disabled a.btn {
   background-color: #ffed4a;
   border-color: #ffed4a;
 }
-
 .btn-warning:hover {
   color: #212529;
   background-color: #ffe924;
@@ -10887,4 +10886,6 @@ a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
-
+.margin{
+  padding:18px 0px;
+}

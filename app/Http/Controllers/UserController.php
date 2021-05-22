@@ -1,6 +1,6 @@
 <?php
 /* 
-Este conrtolador es responsavle de manejar los datos de los cluentes
+Este controlador es responsable de manejar los datos de los clientes
 */
 namespace App\Http\Controllers;
 
@@ -12,10 +12,10 @@ use DB;
 use App\Barber;
 use App\Service;
 
-// Esta clase es el controlador de que maneja los cluentes
+// Esta clase es el controlador de que maneja los clientes
 class UserController extends Controller
 {
-    //Esta funcion consulta los daros de los citas y usarios en la base de datos
+    //Esta funcion consulta los datos de las citas y usarios en la base de datos
     public function index()
     {
        

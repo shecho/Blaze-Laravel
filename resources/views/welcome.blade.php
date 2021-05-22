@@ -147,13 +147,21 @@
         </div>
         <div class="row text-center">
           <div class="col-md-6">
-            <span class="fa-stack fa-4x">
-                  <i class="fas fa-circle fa-stack-2x text-secundary"></i>
-              <i class="fas fa-cut fa-stack-1x fa-inverse"></i>
-            </span>
-            <h4 class="service-heading">Cortes</h4>
+              <a name="" id="" class="btn btn-light border border-dark rounded" href="{{ route('portfolio') }}" ><!-- -->  
+              <span class="fa-stack fa-4x">
+                <i class="fas fa-circle fa-stack-2x text-secundary"></i>
+                <i class="fas fa-cut fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>  <!--  -->
+            <a name="" id="" href="{{ route('portfolio') }}">
+              <h4 type="button" class="service-heading d-block btn btn-warning">Cortes</h4>
+            </a>
+
+            <!--<h4 class="service-heading">Cortes</h4>-->
+            
             <p class="text-muted">
-              Para que te sientas comodo y explores nuevos estilos. te acesoramos a demás manejamos los cortes clasicos, moderno y femenino de barberia.     
+              Echa un vistazo a nuestro portafolio de cortes solo dando clic al botón.
+              <!-- Para que te sientas comodo y explores nuevos estilos. te acesoramos a demás manejamos los cortes clasicos, moderno y femenino de barberia.  -->     
             </p>
           </div>
           <div class="col-md-6">
@@ -162,6 +170,7 @@
               <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
             </span>
             <h4 class="service-heading">Productos de belleza y cuidado</h4>
+
             <p class="text-muted">
               Acá te ofrecemos productos para el cuidado de tu estética y así estés preparado para cualquier momento y ocasión. 
             </p>
@@ -178,7 +187,7 @@
             <h2 class="section-heading text-uppercase">Productos</h2>
             <h3 class="section-subheading text-muted">
               Belleza y cuidado             
-              <p>Estos son algunos productos que puedes encontrar en nnuestra barberia</p>            
+              <p>Estos son algunos productos que puedes encontrar en nuestra barbería</p>            
             </h3>           
           </div>
         </div>
@@ -431,7 +440,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Nuestro genial equipo de profecionales a tu servicio</h2>           
+            <h2 class="section-heading text-uppercase">Nuestro genial equipo de profesionales a tu servicio</h2>           
           </div>
         </div>
         <div class="row">
@@ -509,7 +518,21 @@
                 </li>              
               </ul>
             </div>
-          </div>          
+          </div>   
+          <div class="col-sm-4">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/barbers/barber6.jpg" alt="barber1 img" />
+              <h4>Jonathan Sánchez </h4>
+              <p class="text-muted">Barbero</p>
+              <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                  <a target="blank" href="https://www.instagram.com/stiven_sanchez1999s/">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>              
+              </ul>
+            </div>
+          </div>       
         </div>       
       </div>
     </section>
